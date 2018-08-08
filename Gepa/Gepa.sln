@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web Projects", "Web Projects", "{4066811B-E643-4C52-A268-07AE75518BA3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Class Library", "Class Library", "{CDF1229A-E6ED-4686-9266-F221F2A1C997}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gepa.Entities", "Gepa.Entities\Gepa.Entities.csproj", "{D4F60DBD-CAD7-46D2-AAE5-4545B1E6BB2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gepa.DAO", "Gepa.DAO\Gepa.DAO.csproj", "{2A3965DF-A26E-4388-89B5-B6ADA1E5737B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gepa.Business", "Gepa.Business\Gepa.Business.csproj", "{E316570D-EEE4-4B43-A85C-A86A8FC86D8D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D4F60DBD-CAD7-46D2-AAE5-4545B1E6BB2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4F60DBD-CAD7-46D2-AAE5-4545B1E6BB2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4F60DBD-CAD7-46D2-AAE5-4545B1E6BB2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4F60DBD-CAD7-46D2-AAE5-4545B1E6BB2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A3965DF-A26E-4388-89B5-B6ADA1E5737B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A3965DF-A26E-4388-89B5-B6ADA1E5737B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A3965DF-A26E-4388-89B5-B6ADA1E5737B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A3965DF-A26E-4388-89B5-B6ADA1E5737B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E316570D-EEE4-4B43-A85C-A86A8FC86D8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E316570D-EEE4-4B43-A85C-A86A8FC86D8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E316570D-EEE4-4B43-A85C-A86A8FC86D8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E316570D-EEE4-4B43-A85C-A86A8FC86D8D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D4F60DBD-CAD7-46D2-AAE5-4545B1E6BB2C} = {CDF1229A-E6ED-4686-9266-F221F2A1C997}
+		{2A3965DF-A26E-4388-89B5-B6ADA1E5737B} = {CDF1229A-E6ED-4686-9266-F221F2A1C997}
+		{E316570D-EEE4-4B43-A85C-A86A8FC86D8D} = {CDF1229A-E6ED-4686-9266-F221F2A1C997}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {08A6AAA6-D301-4CB8-AA53-74BA41EB9AB4}
+	EndGlobalSection
+EndGlobal

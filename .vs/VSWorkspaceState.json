@@ -1,12 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\Gepa",
-    "\\Gepa\\Gepa.Business",
-    "\\Gepa\\Gepa.Business\\bin",
-    "\\Gepa\\Gepa.DAO",
-    "\\Gepa\\Gepa.Entities"
+    ""
   ],
-  "SelectedNode": "\\Gepa\\Gepa.Business\\Gepa.Business.csproj",
   "PreviewInSolutionExplorer": false
 }

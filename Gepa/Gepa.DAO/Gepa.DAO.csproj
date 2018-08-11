@@ -40,7 +40,36 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Accounts\AccountDAOImpl.cs" />
+    <Compile Include="Accounts\IAccountDAO.cs" />
+    <Compile Include="Calendar\AbstractSchoolEventDAOImpl.cs" />
+    <Compile Include="Calendar\IAbstractSchoolEventDAO.cs" />
+    <Compile Include="Calendar\ISchoolCalendarDAO.cs" />
+    <Compile Include="Calendar\SchoolCalendarDAOImpl.cs" />
+    <Compile Include="ClassPlans\ChoresDAOImpl.cs" />
+    <Compile Include="ClassPlans\ClassGoalsDAOImpl.cs" />
+    <Compile Include="ClassPlans\ClassPlanDAOImpl.cs" />
+    <Compile Include="ClassPlans\EvaluationDAOImpl.cs" />
+    <Compile Include="ClassPlans\IChoresDAO.cs" />
+    <Compile Include="ClassPlans\IClassGoalsDAO.cs" />
+    <Compile Include="ClassPlans\IClassPlanDAO.cs" />
+    <Compile Include="ClassPlans\IEvaluationDAO.cs" />
+    <Compile Include="ClassPlans\ILessonsContentDAO.cs" />
+    <Compile Include="ClassPlans\LessonsContentDAOImpl.cs" />
+    <Compile Include="ClassPlans\LessonsCOntetVO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SchoolClasses\ClassDiaryDAOImpl.cs" />
+    <Compile Include="SchoolClasses\ClassFrequencyDAOImpl.cs" />
+    <Compile Include="SchoolClasses\IClassDiaryDAO.cs" />
+    <Compile Include="SchoolClasses\IClassFrequencyDAO.cs" />
+    <Compile Include="SchoolClasses\ISchoolClassDAO.cs" />
+    <Compile Include="SchoolClasses\IStudentDAO.cs" />
+    <Compile Include="SchoolClasses\IStudentNoteDAO.cs" />
+    <Compile Include="SchoolClasses\SchoolClassDAOImpl.cs" />
+    <Compile Include="SchoolClasses\StudentDAOImpl.cs" />
+    <Compile Include="SchoolClasses\StudentNoteDAOImpl.cs" />
+    <Compile Include="Users\ITeacherDAO.cs" />
+    <Compile Include="Users\TeacherDAOImpl.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Gepa.Entities\Gepa.Entities.csproj">

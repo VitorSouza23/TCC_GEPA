@@ -1,13 +1,14 @@
-﻿using Gepa.Entities.ClassPlans;
+﻿using Gepa.DAO.ClassPlans;
+using Gepa.Entities.ClassPlans;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gepa.DAO.ClassPlans
+namespace Gepa.Business.ClassPlans
 {
-    public interface ILessonsContentDAO
+    public interface ILessonsContentService
     {
         void InsertLessonsContent(LessonContentVO newLessonsContent);
         void UpdateLessonsContent(LessonContentVO lessonsContent);

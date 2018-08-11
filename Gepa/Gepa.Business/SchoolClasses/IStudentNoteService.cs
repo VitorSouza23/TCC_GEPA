@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Gepa.DAO.SchoolClasses
+namespace Gepa.Business.SchoolClasses
 {
-    public interface IStudentNoteDAO
+    public interface IStudentNoteService
     {
         void InsertStudentNote(StudentNoteVO newStudentNote);
         void UpdateStudentNote(StudentNoteVO studentNote);

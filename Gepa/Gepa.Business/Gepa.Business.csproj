@@ -40,7 +40,37 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Accounts\AccountServiceImpl.cs" />
+    <Compile Include="Accounts\IAccountService.cs" />
+    <Compile Include="Calendar\AbstractSchoolEventServiceImpl.cs" />
+    <Compile Include="Calendar\IAbstractSchoolEventService.cs" />
+    <Compile Include="Calendar\ISchoolCalendarService.cs" />
+    <Compile Include="Calendar\SchoolCalendarServiceImpl.cs" />
+    <Compile Include="ClassPlans\ChoresServiceImpl.cs" />
+    <Compile Include="ClassPlans\ClassGoalsServiceImpl.cs" />
+    <Compile Include="ClassPlans\ClassPlanServiceImpl.cs" />
+    <Compile Include="ClassPlans\EvaluationServiceImpl.cs" />
+    <Compile Include="ClassPlans\IChoresService.cs" />
+    <Compile Include="ClassPlans\IClassGoalsService.cs" />
+    <Compile Include="ClassPlans\IClassPlanService.cs" />
+    <Compile Include="ClassPlans\IEvaluationService.cs" />
+    <Compile Include="ClassPlans\ILessonsContentService.cs" />
+    <Compile Include="ClassPlans\LessonsContentServiceImpl.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SchoolClasses\ClassDiaryServiceImpl.cs" />
+    <Compile Include="SchoolClasses\ClassFrequencyServiceImpl.cs" />
+    <Compile Include="SchoolClasses\IClassDiaryService.cs" />
+    <Compile Include="SchoolClasses\IClassFrequencyService.cs" />
+    <Compile Include="SchoolClasses\ISchoolClassService.cs" />
+    <Compile Include="SchoolClasses\IStudentNoteService.cs" />
+    <Compile Include="SchoolClasses\IStudentPresenceService.cs" />
+    <Compile Include="SchoolClasses\IStudentService.cs" />
+    <Compile Include="SchoolClasses\SchoolClassServiceImpl.cs" />
+    <Compile Include="SchoolClasses\StudentPresenceServiceImpl.cs" />
+    <Compile Include="SchoolClasses\StudentServiceImpl.cs" />
+    <Compile Include="SchoolClasses\StudnetNoteServiceImpl.cs" />
+    <Compile Include="Users\ITeacherService.cs" />
+    <Compile Include="Users\TeacherServiceImpl.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Gepa.DAO\Gepa.DAO.csproj">

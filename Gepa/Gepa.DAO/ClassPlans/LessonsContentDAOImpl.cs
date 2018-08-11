@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Gepa.Entities.ClassPlans;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,22 +9,22 @@ namespace Gepa.DAO.ClassPlans
 {
     public class LessonsContentDAOImpl : ILessonsContentDAO
     {
-        public void DeleteLessonsContent(LessonsContetVO lessonsContet)
+        public void DeleteLessonsContent(LessonContentVO lessonsContent)
         {
             throw new NotImplementedException();
         }
 
-        public LessonsContetVO FindLessonsContent(long lessonsContentId)
+        public LessonContentVO FindLessonsContent(long lessonsContentId)
         {
             throw new NotImplementedException();
         }
 
-        public void InsertLessonsContent(LessonsContetVO newLessonsContent)
+        public void InsertLessonsContent(LessonContentVO newLessonsContent)
         {
             throw new NotImplementedException();
         }
 
-        public void UpdateLessonsContent(LessonsContetVO lessonsContet)
+        public void UpdateLessonsContent(LessonContentVO lessonsContent)
         {
             throw new NotImplementedException();
         }

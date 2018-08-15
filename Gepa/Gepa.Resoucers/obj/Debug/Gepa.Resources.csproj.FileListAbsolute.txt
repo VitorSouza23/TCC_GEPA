@@ -1,0 +1,8 @@
+C:\Soluções\Gepa_Local\Gepa.Resources\bin\Debug\Gepa.Resources.dll
+C:\Soluções\Gepa_Local\Gepa.Resources\bin\Debug\Gepa.Resources.pdb
+C:\Soluções\Gepa_Local\Gepa.Resources\obj\Debug\Gepa.Resources.csprojAssemblyReference.cache
+C:\Soluções\Gepa_Local\Gepa.Resources\obj\Debug\Gepa.Resources.Languages.pt-BR.resources
+C:\Soluções\Gepa_Local\Gepa.Resources\obj\Debug\Gepa.Resources.csproj.GenerateResource.cache
+C:\Soluções\Gepa_Local\Gepa.Resources\obj\Debug\Gepa.Resources.csproj.CoreCompileInputs.cache
+C:\Soluções\Gepa_Local\Gepa.Resources\obj\Debug\Gepa.Resources.dll
+C:\Soluções\Gepa_Local\Gepa.Resources\obj\Debug\Gepa.Resources.pdb

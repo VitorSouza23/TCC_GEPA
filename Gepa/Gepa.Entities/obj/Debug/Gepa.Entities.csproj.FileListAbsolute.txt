@@ -1,0 +1,5 @@
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities\bin\Debug\Gepa.Entities.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities\bin\Debug\Gepa.Entities.pdb
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities\obj\Debug\Gepa.Entities.csproj.CoreCompileInputs.cache
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities\obj\Debug\Gepa.Entities.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities\obj\Debug\Gepa.Entities.pdb

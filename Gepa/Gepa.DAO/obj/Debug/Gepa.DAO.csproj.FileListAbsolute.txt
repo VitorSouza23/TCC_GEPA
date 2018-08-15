@@ -1,0 +1,9 @@
+C:\Projetos\TCC_GEPA\Gepa\Gepa.DAO\bin\Debug\Gepa.DAO.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.DAO\bin\Debug\Gepa.DAO.pdb
+C:\Projetos\TCC_GEPA\Gepa\Gepa.DAO\bin\Debug\Gepa.Entities.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.DAO\bin\Debug\Gepa.Entities.pdb
+C:\Projetos\TCC_GEPA\Gepa\Gepa.DAO\obj\Debug\Gepa.DAO.csprojAssemblyReference.cache
+C:\Projetos\TCC_GEPA\Gepa\Gepa.DAO\obj\Debug\Gepa.DAO.csproj.CoreCompileInputs.cache
+C:\Projetos\TCC_GEPA\Gepa\Gepa.DAO\obj\Debug\Gepa.DAO.csproj.CopyComplete
+C:\Projetos\TCC_GEPA\Gepa\Gepa.DAO\obj\Debug\Gepa.DAO.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.DAO\obj\Debug\Gepa.DAO.pdb

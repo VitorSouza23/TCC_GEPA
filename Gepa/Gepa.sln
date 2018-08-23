@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gepa.DAO", "Gepa.DAO\Gepa.D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gepa.Business", "Gepa.Business\Gepa.Business.csproj", "{E316570D-EEE4-4B43-A85C-A86A8FC86D8D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gepa.Site", "Gepa.Site\Gepa.Site.csproj", "{DD355ED9-A45A-47F3-8DD3-4FE9858EDB4E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{E316570D-EEE4-4B43-A85C-A86A8FC86D8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E316570D-EEE4-4B43-A85C-A86A8FC86D8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E316570D-EEE4-4B43-A85C-A86A8FC86D8D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD355ED9-A45A-47F3-8DD3-4FE9858EDB4E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD355ED9-A45A-47F3-8DD3-4FE9858EDB4E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD355ED9-A45A-47F3-8DD3-4FE9858EDB4E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD355ED9-A45A-47F3-8DD3-4FE9858EDB4E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +45,7 @@ Global
 		{D4F60DBD-CAD7-46D2-AAE5-4545B1E6BB2C} = {CDF1229A-E6ED-4686-9266-F221F2A1C997}
 		{2A3965DF-A26E-4388-89B5-B6ADA1E5737B} = {CDF1229A-E6ED-4686-9266-F221F2A1C997}
 		{E316570D-EEE4-4B43-A85C-A86A8FC86D8D} = {CDF1229A-E6ED-4686-9266-F221F2A1C997}
+		{DD355ED9-A45A-47F3-8DD3-4FE9858EDB4E} = {4066811B-E643-4C52-A268-07AE75518BA3}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {08A6AAA6-D301-4CB8-AA53-74BA41EB9AB4}

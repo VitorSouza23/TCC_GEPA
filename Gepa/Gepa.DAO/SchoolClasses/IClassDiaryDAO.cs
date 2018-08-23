@@ -1,4 +1,4 @@
-﻿using Gepa.Entities.SchoolClasses;
+﻿using Gepa.Entities.Framework.Entities.SchoolClasses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +9,9 @@ namespace Gepa.DAO.SchoolClasses
 {
     public interface IClassDiaryDAO
     {
-        void InsertClassDiary(ClassDiaryVO newClassDiary);
-        void UpdateClassDiary(ClassDiaryVO classDiary);
-        void DeleteClassDiary(ClassDiaryVO classDiary);
-        ClassDiaryVO FindClassDiary(long classDiaryID);
+        void InsertClassDiary(ClassDiary newClassDiary);
+        void UpdateClassDiary(ClassDiary classDiary);
+        void DeleteClassDiary(ClassDiary classDiary);
+        ClassDiary FindClassDiary(long classDiaryID);
     }
 }

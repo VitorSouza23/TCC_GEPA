@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Gepa.DAO.ClassPlans;
-using Gepa.Entities.ClassPlans;
+using Gepa.Entities.Framework.Entities.ClassPlans;
 
 namespace Gepa.Business.ClassPlans
 {
@@ -17,22 +17,22 @@ namespace Gepa.Business.ClassPlans
             _classPlanDAO = classPlanDAO;
         }
 
-        public void DeleteClassPlan(ClassPlanVO classPlan)
+        public void DeleteClassPlan(ClassPlan classPlan)
         {
             _classPlanDAO.DeleteClassPlan(classPlan);
         }
 
-        public ClassPlanVO FindClassPlan(long classPlanId)
+        public ClassPlan FindClassPlan(long classPlanId)
         {
             return _classPlanDAO.FindClassPlan(classPlanId);
         }
 
-        public void InsertClassPlan(ClassPlanVO newClassPlan)
+        public void InsertClassPlan(ClassPlan newClassPlan)
         {
             _classPlanDAO.InsertClassPlan(newClassPlan);
         }
 
-        public void UpdateClassPlan(ClassPlanVO classPlan)
+        public void UpdateClassPlan(ClassPlan classPlan)
         {
             _classPlanDAO.UpdateClassPlan(classPlan);
         }

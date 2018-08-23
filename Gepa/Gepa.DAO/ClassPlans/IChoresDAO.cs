@@ -1,4 +1,4 @@
-﻿using Gepa.Entities.ClassPlans;
+﻿using Gepa.Entities.Framework.Entities.ClassPlans;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +9,9 @@ namespace Gepa.DAO.ClassPlans
 {
     public interface IChoresDAO
     {
-        void InsertChores(ChoresVO newChores);
-        void UpdateChores(ChoresVO chores);
-        void DeleteChores(ChoresVO chores);
-        ChoresVO FindChores(long choresId);
+        void InsertChores(Chores newChores);
+        void UpdateChores(Chores chores);
+        void DeleteChores(Chores chores);
+        Chores FindChores(long choresId);
     }
 }

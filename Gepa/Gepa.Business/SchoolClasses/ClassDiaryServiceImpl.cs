@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Gepa.DAO.SchoolClasses;
-using Gepa.Entities.SchoolClasses;
+using Gepa.Entities.Framework.Entities.SchoolClasses;
 
 namespace Gepa.Business.SchoolClasses
 {
@@ -17,22 +17,22 @@ namespace Gepa.Business.SchoolClasses
             _classDiaryDAO = classDiaryDAO;
         }
 
-        public void DeleteClassDiary(ClassDiaryVO classDiary)
+        public void DeleteClassDiary(ClassDiary classDiary)
         {
             _classDiaryDAO.DeleteClassDiary(classDiary);
         }
 
-        public ClassDiaryVO FindClassDiary(long classDiaryID)
+        public ClassDiary FindClassDiary(long classDiaryID)
         {
             return _classDiaryDAO.FindClassDiary(classDiaryID);
         }
 
-        public void InsertClassDiary(ClassDiaryVO newClassDiary)
+        public void InsertClassDiary(ClassDiary newClassDiary)
         {
             _classDiaryDAO.InsertClassDiary(newClassDiary);
         }
 
-        public void UpdateClassDiary(ClassDiaryVO classDiary)
+        public void UpdateClassDiary(ClassDiary classDiary)
         {
             _classDiaryDAO.UpdateClassDiary(classDiary);
         }

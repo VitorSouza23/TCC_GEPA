@@ -1,4 +1,4 @@
-﻿using Gepa.Entities.SchoolClasses;
+﻿using Gepa.Entities.Framework.Entities.SchoolClasses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +9,9 @@ namespace Gepa.DAO.SchoolClasses
 {
     public interface IStudentNoteDAO
     {
-        void InsertStudentNote(StudentNoteVO newStudentNote);
-        void UpdateStudentNote(StudentNoteVO studentNote);
-        void DeleteStudentNote(StudentNoteVO studentNote);
-        StudentNoteVO FindStudentNote(long studentNoteId);
+        void InsertStudentNote(StudentNote newStudentNote);
+        void UpdateStudentNote(StudentNote studentNote);
+        void DeleteStudentNote(StudentNote studentNote);
+        StudentNote FindStudentNote(long studentNoteId);
     }
 }

@@ -1,0 +1,12 @@
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\obj\Debug\Gepa.Entities.Framework.csproj.CoreCompileInputs.cache
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\bin\Debug\Gepa.Entities.Framework.dll.config
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\bin\Debug\Gepa.Entities.Framework.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\bin\Debug\Gepa.Entities.Framework.pdb
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\bin\Debug\EntityFramework.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\bin\Debug\EntityFramework.SqlServer.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\bin\Debug\EntityFramework.xml
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\bin\Debug\EntityFramework.SqlServer.xml
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\obj\Debug\Gepa.Entities.Framework.csproj.CopyComplete
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\obj\Debug\Gepa.Entities.Framework.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\obj\Debug\Gepa.Entities.Framework.pdb
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\obj\Debug\Gepa.Entities.Framework.csprojAssemblyReference.cache

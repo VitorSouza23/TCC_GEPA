@@ -1,32 +1,56 @@
-﻿using System;
+﻿using Gepa.Entities.Framework;
+using Gepa.Entities.Framework.Entities.Calendar;
+using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Gepa.Entities.Calendar;
 
 namespace Gepa.DAO.Calendar
 {
-    public class AbstractSchoolEventDAOImpl : IAbstractSchoolEventDAO
+    public class AbstractSchoolEventDAOImpl : AbstractDAO, IAbstractSchoolEventDAO
     {
-        public void DeleteAbstractSchoolEvent(AbstractSchoolEventVO abstractSchoolEvent)
+
+        public AbstractSchoolEventDAOImpl(DbConnection dbConnection) : base(dbConnection)
         {
-            throw new NotImplementedException();
         }
 
-        public AbstractSchoolEventVO FindAbstractShoolEvent(long abstractSchoolEventId)
+        public void DeleteAbstractSchoolEvent(AbstractSchoolEvent abstractSchoolEvent)
         {
-            throw new NotImplementedException();
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.AbstractSchoolEvent.Remove(abstractSchoolEvent);
+                em.SaveChanges();
+            }
         }
 
-        public void InsertAbstractSchoolEvent(AbstractSchoolEventVO newAbstractSchoolEvent)
+        public AbstractSchoolEvent FindAbstractShoolEvent(long abstractSchoolEventId)
         {
-            throw new NotImplementedException();
+            AbstractSchoolEvent abstractSchoolEvent = null;
+            using(EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                abstractSchoolEvent = em.AbstractSchoolEvent.Single(a => a.AbstractSchoolEventId == abstractSchoolEventId);
+            }
+            return abstractSchoolEvent;
         }
 
-        public void UpdateAbstractSchoolEvent(AbstractSchoolEventVO abstractSchoolEvent)
+        public void InsertAbstractSchoolEvent(AbstractSchoolEvent newAbstractSchoolEvent)
         {
-            throw new NotImplementedException();
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.AbstractSchoolEvent.Add(newAbstractSchoolEvent);
+                em.SaveChanges();
+            }
+        }
+
+        public void UpdateAbstractSchoolEvent(AbstractSchoolEvent abstractSchoolEvent)
+        {
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.Entry(abstractSchoolEvent).State = System.Data.Entity.EntityState.Modified;
+                em.SaveChanges();
+            }
         }
     }
 }

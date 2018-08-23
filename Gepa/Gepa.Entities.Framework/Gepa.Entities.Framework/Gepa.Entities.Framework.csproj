@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E89050B7-B296-4ABA-ACFB-DA144327007E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Gepa.Entities.Framework</RootNamespace>
+    <AssemblyName>Gepa.Entities.Framework</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\Soluções\Gepa_Local\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\..\..\..\Soluções\Gepa_Local\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Calendar\AbstractSchoolEvent.cs" />
+    <Compile Include="Entities\Accounts\Account.cs" />
+    <Compile Include="Entities\Accounts\AdminAccount.cs" />
+    <Compile Include="Entities\ClassPlans\Chores.cs" />
+    <Compile Include="Entities\SchoolClasses\ClassDiary.cs" />
+    <Compile Include="Entities\SchoolClasses\ClassFrequency.cs" />
+    <Compile Include="Entities\ClassPlans\ClassGoals.cs" />
+    <Compile Include="Entities\ClassPlans\ClassPlan.cs" />
+    <Compile Include="Entities\Calendar\ClassSchedule.cs" />
+    <Compile Include="EntityModel.cs" />
+    <Compile Include="Entities\ClassPlans\Evaluetion.cs" />
+    <Compile Include="Entities\ClassPlans\LessonsContent.cs" />
+    <Compile Include="Mappings\Accounts\AccountMap.cs" />
+    <Compile Include="Mappings\Accounts\AdminAccountMap.cs" />
+    <Compile Include="Mappings\Accounts\TeacherAccountMap.cs" />
+    <Compile Include="Mappings\Calendar\AbstractSchoolEventMap.cs" />
+    <Compile Include="Mappings\Calendar\ClassScheduleMap.cs" />
+    <Compile Include="Mappings\Calendar\SchoolCalendarMap.cs" />
+    <Compile Include="Mappings\Calendar\SchoolEventMap.cs" />
+    <Compile Include="Mappings\ClassPlans\ChoresMap.cs" />
+    <Compile Include="Mappings\ClassPlans\ClassGoalsMap.cs" />
+    <Compile Include="Mappings\ClassPlans\ClassPlanMap.cs" />
+    <Compile Include="Mappings\ClassPlans\EvaluetionMap.cs" />
+    <Compile Include="Mappings\ClassPlans\LessonsContentMap.cs" />
+    <Compile Include="Mappings\SchoolClasses\ClassDiaryMap.cs" />
+    <Compile Include="Mappings\SchoolClasses\ClassFrequencyMap.cs" />
+    <Compile Include="Mappings\SchoolClasses\SchoolClassMap.cs" />
+    <Compile Include="Mappings\SchoolClasses\SchoolMap.cs" />
+    <Compile Include="Mappings\SchoolClasses\StudentMap.cs" />
+    <Compile Include="Mappings\SchoolClasses\StudentNoteMap.cs" />
+    <Compile Include="Mappings\SchoolClasses\StudentPresenceMap.cs" />
+    <Compile Include="Mappings\Users\TeacherMap.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Entities\SchoolClasses\School.cs" />
+    <Compile Include="Entities\Calendar\SchoolCalendar.cs" />
+    <Compile Include="Entities\SchoolClasses\SchoolClass.cs" />
+    <Compile Include="Entities\Calendar\SchoolEvent.cs" />
+    <Compile Include="Entities\SchoolClasses\Student.cs" />
+    <Compile Include="Entities\SchoolClasses\StudentNote.cs" />
+    <Compile Include="Entities\SchoolClasses\StudentPresence.cs" />
+    <Compile Include="sysdiagrams.cs" />
+    <Compile Include="Entities\Users\Teacher.cs" />
+    <Compile Include="Entities\Accounts\TeacherAccount.cs" />
+    <Compile Include="Utils\ClassPresenceEnum.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

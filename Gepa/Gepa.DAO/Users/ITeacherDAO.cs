@@ -1,4 +1,4 @@
-﻿using Gepa.Entities.Users;
+﻿using Gepa.Entities.Framework.Entities.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +9,9 @@ namespace Gepa.DAO.Users
 {
     public interface ITeacherDAO
     {
-        void InsertTeacher(TeacherVO newTeacher);
-        void UpdateTeacher(TeacherVO teacher);
-        void DeleteTeacher(TeacherVO teacher);
-        TeacherVO FindTeacher(long teacherId);
+        void InsertTeacher(Teacher newTeacher);
+        void UpdateTeacher(Teacher teacher);
+        void DeleteTeacher(Teacher teacher);
+        Teacher FindTeacher(long teacherId);
     }
 }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Gepa.DAO.Users;
-using Gepa.Entities.Users;
+using Gepa.Entities.Framework.Entities.Users;
 
 namespace Gepa.Business.Users
 {
@@ -17,22 +17,22 @@ namespace Gepa.Business.Users
             _teacherDAO = teacherDAO;
         }
 
-        public void DeleteTeacher(TeacherVO teacher)
+        public void DeleteTeacher(Teacher teacher)
         {
             _teacherDAO.DeleteTeacher(teacher);
         }
 
-        public TeacherVO FindTeacher(long teacherId)
+        public Teacher FindTeacher(long teacherId)
         {
             return _teacherDAO.FindTeacher(teacherId);
         }
 
-        public void InsertTeacher(TeacherVO newTeacher)
+        public void InsertTeacher(Teacher newTeacher)
         {
             _teacherDAO.InsertTeacher(newTeacher);
         }
 
-        public void UpdateTeacher(TeacherVO teacher)
+        public void UpdateTeacher(Teacher teacher)
         {
             _teacherDAO.UpdateTeacher(teacher);
         }

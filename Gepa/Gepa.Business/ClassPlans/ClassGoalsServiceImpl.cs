@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Gepa.DAO.ClassPlans;
-using Gepa.Entities.ClassPlans;
+using Gepa.Entities.Framework.Entities.ClassPlans;
 
 namespace Gepa.Business.ClassPlans
 {
@@ -17,22 +17,22 @@ namespace Gepa.Business.ClassPlans
             _classGoalsDAO = classGoalsDAO;
         }
 
-        public void DeleteClassGoals(ClassGoalsVO classGoals)
+        public void DeleteClassGoals(ClassGoals classGoals)
         {
             _classGoalsDAO.DeleteClassGoals(classGoals);
         }
 
-        public ClassGoalsVO FindClassGoals(long classGoalsId)
+        public ClassGoals FindClassGoals(long classGoalsId)
         {
             return _classGoalsDAO.FindClassGoals(classGoalsId);
         }
 
-        public void InsertClassGoals(ClassGoalsVO newClassGoals)
+        public void InsertClassGoals(ClassGoals newClassGoals)
         {
             _classGoalsDAO.InsertClassGoals(newClassGoals);
         }
 
-        public void UpdateClassGoals(ClassGoalsVO classGoals)
+        public void UpdateClassGoals(ClassGoals classGoals)
         {
             _classGoalsDAO.UpdateClassGoals(classGoals);
         }

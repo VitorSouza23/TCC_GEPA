@@ -1,4 +1,4 @@
-﻿using Gepa.Entities.ClassPlans;
+﻿using Gepa.Entities.Framework.Entities.ClassPlans;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +9,9 @@ namespace Gepa.DAO.ClassPlans
 {
     public interface IClassGoalsDAO
     {
-        void InsertClassGoals(ClassGoalsVO newClassGoals);
-        void UpdateClassGoals(ClassGoalsVO classGoals);
-        void DeleteClassGoals(ClassGoalsVO classGoals);
-        ClassGoalsVO FindClassGoals(long classGoalsId);
+        void InsertClassGoals(ClassGoals newClassGoals);
+        void UpdateClassGoals(ClassGoals classGoals);
+        void DeleteClassGoals(ClassGoals classGoals);
+        ClassGoals FindClassGoals(long classGoalsId);
     }
 }

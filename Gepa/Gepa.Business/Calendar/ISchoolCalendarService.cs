@@ -1,4 +1,4 @@
-﻿using Gepa.Entities.Calendar;
+﻿using Gepa.Entities.Framework.Entities.Calendar;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Gepa.Business.Calendar
 {
-    public interface ISchoolCalendarService
+    public interface ISchoolCalendarService : IGepaService
     {
-        void IsertSchoolCalendar(SchoolCalendarVO newSchoolCalendar);
-        void UpdateSchoolCalendar(SchoolCalendarVO schoolCalendar);
-        void DeleteSchoolCalendar(SchoolCalendarVO schoolCalendar);
-        SchoolCalendarVO FindSchoolCalendar(long schoolCalendarId);
+        void IsertSchoolCalendar(SchoolCalendar newSchoolCalendar);
+        void UpdateSchoolCalendar(SchoolCalendar schoolCalendar);
+        void DeleteSchoolCalendar(SchoolCalendar schoolCalendar);
+        SchoolCalendar FindSchoolCalendar(long schoolCalendarId);
     }
 }

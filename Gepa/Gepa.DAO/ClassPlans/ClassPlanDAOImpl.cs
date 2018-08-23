@@ -1,32 +1,55 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Gepa.Entities.ClassPlans;
+using Gepa.Entities.Framework;
+using Gepa.Entities.Framework.Entities.ClassPlans;
 
 namespace Gepa.DAO.ClassPlans
 {
-    public class ClassPlanDAOImpl : IClassPlanDAO
+    public class ClassPlanDAOImpl : AbstractDAO, IClassPlanDAO
     {
-        public void DeleteClassPlan(ClassPlanVO classPlan)
+        public ClassPlanDAOImpl(DbConnection dbConnectioOject) : base(dbConnectioOject)
         {
-            throw new NotImplementedException();
         }
 
-        public ClassPlanVO FindClassPlan(long classPlanId)
+        public void DeleteClassPlan(ClassPlan classPlan)
         {
-            throw new NotImplementedException();
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.ClassPlan.Remove(classPlan);
+                em.SaveChanges();
+            }
         }
 
-        public void InsertClassPlan(ClassPlanVO newClassPlan)
+        public ClassPlan FindClassPlan(long classPlanId)
         {
-            throw new NotImplementedException();
+            ClassPlan classPlan = null;
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                classPlan = em.ClassPlan.Single(a => a.ClassPlanId == classPlanId);
+            }
+            return classPlan;
         }
 
-        public void UpdateClassPlan(ClassPlanVO classPlan)
+        public void InsertClassPlan(ClassPlan newClassPlan)
         {
-            throw new NotImplementedException();
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.ClassPlan.Add(newClassPlan);
+                em.SaveChanges();
+            }
+        }
+
+        public void UpdateClassPlan(ClassPlan classPlan)
+        {
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.Entry(classPlan).State = System.Data.Entity.EntityState.Modified;
+                em.SaveChanges();
+            }
         }
     }
 }

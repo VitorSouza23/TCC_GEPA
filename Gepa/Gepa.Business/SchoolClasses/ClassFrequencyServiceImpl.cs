@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Gepa.DAO.SchoolClasses;
-using Gepa.Entities.SchoolClasses;
+using Gepa.Entities.Framework.Entities.SchoolClasses;
 
 namespace Gepa.Business.SchoolClasses
 {
@@ -17,22 +17,22 @@ namespace Gepa.Business.SchoolClasses
             _classFrequencyDAO = classFrequencyDAO;
         }
 
-        public void DeleteClassFrequency(ClassFrequencyVO classFrequency)
+        public void DeleteClassFrequency(ClassFrequency classFrequency)
         {
             _classFrequencyDAO.DeleteClassFrequency(classFrequency);
         }
 
-        public ClassFrequencyVO FindClassFrequency(long classFrequencyId)
+        public ClassFrequency FindClassFrequency(long classFrequencyId)
         {
             return _classFrequencyDAO.FindClassFrequency(classFrequencyId);
         }
 
-        public void InsertClassFrequency(ClassFrequencyVO newClassFrequency)
+        public void InsertClassFrequency(ClassFrequency newClassFrequency)
         {
             _classFrequencyDAO.InsertClassFrequency(newClassFrequency);
         }
 
-        public void UpdateClassFrequency(ClassFrequencyVO classFrequency)
+        public void UpdateClassFrequency(ClassFrequency classFrequency)
         {
             _classFrequencyDAO.UpdateClassFrequency(classFrequency);
         }

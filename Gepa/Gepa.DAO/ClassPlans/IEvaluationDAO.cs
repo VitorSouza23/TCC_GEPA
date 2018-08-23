@@ -1,4 +1,4 @@
-﻿using Gepa.Entities.ClassPlans;
+﻿using Gepa.Entities.Framework.Entities.ClassPlans;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +9,9 @@ namespace Gepa.DAO.ClassPlans
 {
     public interface IEvaluationDAO
     {
-        void InsertEvaluation(EvaluationVO newEvaluation);
-        void UpdateEvaluation(EvaluationVO evaluation);
-        void DeleteEvaluation(EvaluationVO evaluation);
-        EvaluationVO FindEvaluation(long evaluationId);
+        void InsertEvaluation(Evaluetion newEvaluation);
+        void UpdateEvaluation(Evaluetion evaluation);
+        void DeleteEvaluation(Evaluetion evaluation);
+        Evaluetion FindEvaluation(long evaluationId);
     }
 }

@@ -1,32 +1,55 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Gepa.Entities.SchoolClasses;
+using Gepa.Entities.Framework;
+using Gepa.Entities.Framework.Entities.SchoolClasses;
 
 namespace Gepa.DAO.SchoolClasses
 {
-    public class StudentDAOImpl : IStudentDAO
+    public class StudentDAOImpl : AbstractDAO, IStudentDAO
     {
-        public void DeleteStudent(StudentVO student)
+        public StudentDAOImpl(DbConnection dbConnectioOject) : base(dbConnectioOject)
         {
-            throw new NotImplementedException();
         }
 
-        public StudentVO FindStudent(long studentId)
+        public void DeleteStudent(Student student)
         {
-            throw new NotImplementedException();
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.Student.Remove(student);
+                em.SaveChanges();
+            }
         }
 
-        public void InsertStudent(StudentVO newStudent)
+        public Student FindStudent(long studentId)
         {
-            throw new NotImplementedException();
+            Student student = null;
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                student = em.Student.Single(a => a.StudentId == studentId);
+            }
+            return student;
         }
 
-        public void UpdateStudent(StudentVO student)
+        public void InsertStudent(Student newStudent)
         {
-            throw new NotImplementedException();
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.Student.Add(newStudent);
+                em.SaveChanges();
+            }
+        }
+
+        public void UpdateStudent(Student student)
+        {
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.Entry(student).State = System.Data.Entity.EntityState.Modified;
+                em.SaveChanges();
+            }
         }
     }
 }

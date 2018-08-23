@@ -56,19 +56,22 @@
     <Compile Include="ClassPlans\IEvaluationService.cs" />
     <Compile Include="ClassPlans\ILessonsContentService.cs" />
     <Compile Include="ClassPlans\LessonsContentServiceImpl.cs" />
+    <Compile Include="IGepaService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SchoolClasses\ClassDiaryServiceImpl.cs" />
     <Compile Include="SchoolClasses\ClassFrequencyServiceImpl.cs" />
     <Compile Include="SchoolClasses\IClassDiaryService.cs" />
     <Compile Include="SchoolClasses\IClassFrequencyService.cs" />
     <Compile Include="SchoolClasses\ISchoolClassService.cs" />
+    <Compile Include="SchoolClasses\ISchoolService.cs" />
     <Compile Include="SchoolClasses\IStudentNoteService.cs" />
     <Compile Include="SchoolClasses\IStudentPresenceService.cs" />
     <Compile Include="SchoolClasses\IStudentService.cs" />
     <Compile Include="SchoolClasses\SchoolClassServiceImpl.cs" />
+    <Compile Include="SchoolClasses\SchoolServiceImpl.cs" />
     <Compile Include="SchoolClasses\StudentPresenceServiceImpl.cs" />
     <Compile Include="SchoolClasses\StudentServiceImpl.cs" />
-    <Compile Include="SchoolClasses\StudnetNoteServiceImpl.cs" />
+    <Compile Include="SchoolClasses\StudentNoteServiceImpl.cs" />
     <Compile Include="Users\ITeacherService.cs" />
     <Compile Include="Users\TeacherServiceImpl.cs" />
   </ItemGroup>
@@ -77,9 +80,9 @@
       <Project>{2a3965df-a26e-4388-89b5-b6ada1e5737b}</Project>
       <Name>Gepa.DAO</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Gepa.Entities\Gepa.Entities.csproj">
-      <Project>{d4f60dbd-cad7-46d2-aae5-4545b1e6bb2c}</Project>
-      <Name>Gepa.Entities</Name>
+    <ProjectReference Include="..\Gepa.Entities.Framework\Gepa.Entities.Framework\Gepa.Entities.Framework.csproj">
+      <Project>{e89050b7-b296-4aba-acfb-da144327007e}</Project>
+      <Name>Gepa.Entities.Framework</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

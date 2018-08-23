@@ -1,32 +1,55 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Gepa.Entities.ClassPlans;
+using Gepa.Entities.Framework;
+using Gepa.Entities.Framework.Entities.ClassPlans;
 
 namespace Gepa.DAO.ClassPlans
 {
-    public class ClassGoalsDAOImpl : IClassGoalsDAO
+    public class ClassGoalsDAOImpl : AbstractDAO, IClassGoalsDAO
     {
-        public void DeleteClassGoals(ClassGoalsVO classGoals)
+        public ClassGoalsDAOImpl(DbConnection dbConnectioOject) : base(dbConnectioOject)
         {
-            throw new NotImplementedException();
         }
 
-        public ClassGoalsVO FindClassGoals(long classGoalsId)
+        public void DeleteClassGoals(ClassGoals classGoals)
         {
-            throw new NotImplementedException();
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.ClassGoals.Remove(classGoals);
+                em.SaveChanges();
+            }
         }
 
-        public void InsertClassGoals(ClassGoalsVO newClassGoals)
+        public ClassGoals FindClassGoals(long classGoalsId)
         {
-            throw new NotImplementedException();
+            ClassGoals classGoals = null;
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                classGoals = em.ClassGoals.Single(a => a.ClassGoalsId == classGoalsId);
+            }
+            return classGoals;
         }
 
-        public void UpdateClassGoals(ClassGoalsVO classGoals)
+        public void InsertClassGoals(ClassGoals newClassGoals)
         {
-            throw new NotImplementedException();
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.ClassGoals.Add(newClassGoals);
+                em.SaveChanges();
+            }
+        }
+
+        public void UpdateClassGoals(ClassGoals classGoals)
+        {
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.Entry(classGoals).State = System.Data.Entity.EntityState.Modified;
+                em.SaveChanges();
+            }
         }
     }
 }

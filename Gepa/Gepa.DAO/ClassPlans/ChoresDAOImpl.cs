@@ -1,32 +1,55 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Gepa.Entities.ClassPlans;
+using Gepa.Entities.Framework;
+using Gepa.Entities.Framework.Entities.ClassPlans;
 
 namespace Gepa.DAO.ClassPlans
 {
-    public class ChoresDAOImpl : IChoresDAO
+    public class ChoresDAOImpl : AbstractDAO, IChoresDAO
     {
-        public void DeleteChores(ChoresVO chores)
+        public ChoresDAOImpl(DbConnection dbConnectioOject) : base(dbConnectioOject)
         {
-            throw new NotImplementedException();
         }
 
-        public ChoresVO FindChores(long choresId)
+        public void DeleteChores(Chores chores)
         {
-            throw new NotImplementedException();
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.Chores.Remove(chores);
+                em.SaveChanges();
+            }
         }
 
-        public void InsertChores(ChoresVO newChores)
+        public Chores FindChores(long choresId)
         {
-            throw new NotImplementedException();
+            Chores chores = null;
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                chores = em.Chores.Single(a => a.ChoresId == choresId);
+            }
+            return chores;
         }
 
-        public void UpdateChores(ChoresVO chores)
+        public void InsertChores(Chores newChores)
         {
-            throw new NotImplementedException();
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.Chores.Add(newChores);
+                em.SaveChanges();
+            }
+        }
+
+        public void UpdateChores(Chores chores)
+        {
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.Entry(chores).State = System.Data.Entity.EntityState.Modified;
+                em.SaveChanges();
+            }
         }
     }
 }

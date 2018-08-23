@@ -1,32 +1,55 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Gepa.Entities.SchoolClasses;
+using Gepa.Entities.Framework;
+using Gepa.Entities.Framework.Entities.SchoolClasses;
 
 namespace Gepa.DAO.SchoolClasses
 {
-    public class StudentNoteDAOImpl : IStudentNoteDAO
+    public class StudentNoteDAOImpl : AbstractDAO, IStudentNoteDAO
     {
-        public void DeleteStudentNote(StudentNoteVO studentNote)
+        public StudentNoteDAOImpl(DbConnection dbConnectioOject) : base(dbConnectioOject)
         {
-            throw new NotImplementedException();
         }
 
-        public StudentNoteVO FindStudentNote(long studentNoteId)
+        public void DeleteStudentNote(StudentNote studentNote)
         {
-            throw new NotImplementedException();
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.StudentNote.Remove(studentNote);
+                em.SaveChanges();
+            }
         }
 
-        public void InsertStudentNote(StudentNoteVO newStudentNote)
+        public StudentNote FindStudentNote(long studentNoteId)
         {
-            throw new NotImplementedException();
+            StudentNote studentNote = null;
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                studentNote = em.StudentNote.Single(a => a.StudentNoteId == studentNoteId);
+            }
+            return studentNote;
         }
 
-        public void UpdateStudentNote(StudentNoteVO studentNote)
+        public void InsertStudentNote(StudentNote newStudentNote)
         {
-            throw new NotImplementedException();
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.StudentNote.Add(newStudentNote);
+                em.SaveChanges();
+            }
+        }
+
+        public void UpdateStudentNote(StudentNote studentNote)
+        {
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.Entry(studentNote).State = System.Data.Entity.EntityState.Modified;
+                em.SaveChanges();
+            }
         }
     }
 }

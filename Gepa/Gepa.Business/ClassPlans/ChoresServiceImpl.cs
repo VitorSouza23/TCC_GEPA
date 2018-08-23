@@ -3,30 +3,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Gepa.Entities.ClassPlans;
+using Gepa.DAO.ClassPlans;
+using Gepa.Entities.Framework.Entities.ClassPlans;
 
 namespace Gepa.Business.ClassPlans
 {
     public class ChoresServiceImpl : IChoresService
     {
-        public void DeleteChores(ChoresVO chores)
+        private IChoresDAO _choresDAO;
+
+        public ChoresServiceImpl(IChoresDAO choresDAO)
         {
-            throw new NotImplementedException();
+            _choresDAO = choresDAO;
         }
 
-        public ChoresVO FindChores(long choresId)
+        public void DeleteChores(Chores chores)
         {
-            throw new NotImplementedException();
+            _choresDAO.DeleteChores(chores);
         }
 
-        public void InsertChores(ChoresVO newChores)
+        public Chores FindChores(long choresId)
         {
-            throw new NotImplementedException();
+            return _choresDAO.FindChores(choresId);
         }
 
-        public void UpdateChores(ChoresVO chores)
+        public void InsertChores(Chores newChores)
         {
-            throw new NotImplementedException();
+            _choresDAO.InsertChores(newChores);
+        }
+
+        public void UpdateChores(Chores chores)
+        {
+            _choresDAO.UpdateChores(chores);
         }
     }
 }

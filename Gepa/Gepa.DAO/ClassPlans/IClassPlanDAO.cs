@@ -1,4 +1,4 @@
-﻿using Gepa.Entities.ClassPlans;
+﻿using Gepa.Entities.Framework.Entities.ClassPlans;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +9,9 @@ namespace Gepa.DAO.ClassPlans
 {
     public interface IClassPlanDAO
     {
-        void InsertClassPlan(ClassPlanVO newClassPlan);
-        void UpdateClassPlan(ClassPlanVO classPlan);
-        void DeleteClassPlan(ClassPlanVO classPlan);
-        ClassPlanVO FindClassPlan(long classPlanId);
+        void InsertClassPlan(ClassPlan newClassPlan);
+        void UpdateClassPlan(ClassPlan classPlan);
+        void DeleteClassPlan(ClassPlan classPlan);
+        ClassPlan FindClassPlan(long classPlanId);
     }
 }

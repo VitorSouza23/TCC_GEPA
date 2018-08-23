@@ -48,6 +48,8 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\Accounts\AccountDAOTest.cs" />
+    <Compile Include="DAO\SchoolClasses\ChoresDAOTest.cs" />
     <Compile Include="LanguageTests\PtBRTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -55,17 +57,13 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\Gepa.Business\Gepa.Business.csproj">
-      <Project>{e316570d-eee4-4b43-a85c-a86a8fc86d8d}</Project>
-      <Name>Gepa.Business</Name>
-    </ProjectReference>
     <ProjectReference Include="..\..\Gepa.DAO\Gepa.DAO.csproj">
       <Project>{2a3965df-a26e-4388-89b5-b6ada1e5737b}</Project>
       <Name>Gepa.DAO</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\Gepa.Entities\Gepa.Entities.csproj">
-      <Project>{d4f60dbd-cad7-46d2-aae5-4545b1e6bb2c}</Project>
-      <Name>Gepa.Entities</Name>
+    <ProjectReference Include="..\..\Gepa.Entities.Framework\Gepa.Entities.Framework\Gepa.Entities.Framework.csproj">
+      <Project>{e89050b7-b296-4aba-acfb-da144327007e}</Project>
+      <Name>Gepa.Entities.Framework</Name>
     </ProjectReference>
     <ProjectReference Include="..\..\Gepa.Resoucers\Gepa.Resources.csproj">
       <Project>{ba9ed67e-ffaf-4587-a1ab-8e9d1800d89d}</Project>

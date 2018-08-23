@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Gepa.DAO.ClassPlans;
-using Gepa.Entities.ClassPlans;
+using Gepa.Entities.Framework.Entities.ClassPlans;
 
 namespace Gepa.Business.ClassPlans
 {
@@ -17,22 +17,22 @@ namespace Gepa.Business.ClassPlans
             _evaluationDAO = evaluationDAO;
         }
 
-        public void DeleteEvaluation(EvaluationVO evaluation)
+        public void DeleteEvaluation(Evaluetion evaluation)
         {
             _evaluationDAO.DeleteEvaluation(evaluation);
         }
 
-        public EvaluationVO FindEvaluation(long evaluationId)
+        public Evaluetion FindEvaluation(long evaluationId)
         {
             return _evaluationDAO.FindEvaluation(evaluationId);
         }
 
-        public void InsertEvaluation(EvaluationVO newEvaluation)
+        public void InsertEvaluation(Evaluetion newEvaluation)
         {
             _evaluationDAO.InsertEvaluation(newEvaluation);
         }
 
-        public void UpdateEvaluation(EvaluationVO evaluation)
+        public void UpdateEvaluation(Evaluetion evaluation)
         {
             _evaluationDAO.UpdateEvaluation(evaluation);
         }

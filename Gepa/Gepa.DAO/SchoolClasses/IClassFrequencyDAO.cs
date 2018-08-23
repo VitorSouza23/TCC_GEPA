@@ -1,4 +1,4 @@
-﻿using Gepa.Entities.SchoolClasses;
+﻿using Gepa.Entities.Framework.Entities.SchoolClasses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +9,9 @@ namespace Gepa.DAO.SchoolClasses
 {
     public interface IClassFrequencyDAO
     {
-        void InsertClassFrequency(ClassFrequencyVO newClassFrequency);
-        void UpdateClassFrequency(ClassFrequencyVO classFrequency);
-        void DeleteClassFrequency(ClassFrequencyVO classFrequency);
-        ClassFrequencyVO FindClassFrequency(long classFrequencyId);
+        void InsertClassFrequency(ClassFrequency newClassFrequency);
+        void UpdateClassFrequency(ClassFrequency classFrequency);
+        void DeleteClassFrequency(ClassFrequency classFrequency);
+        ClassFrequency FindClassFrequency(long classFrequencyId);
     }
 }

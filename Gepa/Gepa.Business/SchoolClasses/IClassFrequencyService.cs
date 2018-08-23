@@ -1,4 +1,4 @@
-﻿using Gepa.Entities.SchoolClasses;
+﻿using Gepa.Entities.Framework.Entities.SchoolClasses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Gepa.Business.SchoolClasses
 {
-    public interface IClassFrequencyService
+    public interface IClassFrequencyService : IGepaService
     {
-        void InsertClassFrequency(ClassFrequencyVO newClassFrequency);
-        void UpdateClassFrequency(ClassFrequencyVO classFrequency);
-        void DeleteClassFrequency(ClassFrequencyVO classFrequency);
-        ClassFrequencyVO FindClassFrequency(long classFrequencyId);
+        void InsertClassFrequency(ClassFrequency newClassFrequency);
+        void UpdateClassFrequency(ClassFrequency classFrequency);
+        void DeleteClassFrequency(ClassFrequency classFrequency);
+        ClassFrequency FindClassFrequency(long classFrequencyId);
     }
 }

@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractDAO.cs" />
     <Compile Include="Accounts\AccountDAOImpl.cs" />
     <Compile Include="Accounts\IAccountDAO.cs" />
     <Compile Include="Calendar\AbstractSchoolEventDAOImpl.cs" />
@@ -62,10 +63,12 @@
     <Compile Include="SchoolClasses\IClassDiaryDAO.cs" />
     <Compile Include="SchoolClasses\IClassFrequencyDAO.cs" />
     <Compile Include="SchoolClasses\ISchoolClassDAO.cs" />
+    <Compile Include="SchoolClasses\ISchoolDAO.cs" />
     <Compile Include="SchoolClasses\IStudentDAO.cs" />
     <Compile Include="SchoolClasses\IStudentNoteDAO.cs" />
     <Compile Include="SchoolClasses\IStudentPresenceDAO.cs" />
     <Compile Include="SchoolClasses\SchoolClassDAOImpl.cs" />
+    <Compile Include="SchoolClasses\SchoolDAOImpl.cs" />
     <Compile Include="SchoolClasses\StudentDAOImpl.cs" />
     <Compile Include="SchoolClasses\StudentNoteDAOImpl.cs" />
     <Compile Include="SchoolClasses\StudentPresenceDAOImpl.cs" />
@@ -73,9 +76,14 @@
     <Compile Include="Users\TeacherDAOImpl.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Gepa.Entities\Gepa.Entities.csproj">
-      <Project>{d4f60dbd-cad7-46d2-aae5-4545b1e6bb2c}</Project>
-      <Name>Gepa.Entities</Name>
+    <PackageReference Include="EntityFramework">
+      <Version>6.2.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Gepa.Entities.Framework\Gepa.Entities.Framework\Gepa.Entities.Framework.csproj">
+      <Project>{e89050b7-b296-4aba-acfb-da144327007e}</Project>
+      <Name>Gepa.Entities.Framework</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

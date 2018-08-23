@@ -1,4 +1,4 @@
-﻿using Gepa.Entities.SchoolClasses;
+﻿using Gepa.Entities.Framework.Entities.SchoolClasses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Gepa.Business.SchoolClasses
 {
-    public interface IClassDiaryService
+    public interface IClassDiaryService : IGepaService
     {
-        void InsertClassDiary(ClassDiaryVO newClassDiary);
-        void UpdateClassDiary(ClassDiaryVO classDiary);
-        void DeleteClassDiary(ClassDiaryVO classDiary);
-        ClassDiaryVO FindClassDiary(long classDiaryID);
+        void InsertClassDiary(ClassDiary newClassDiary);
+        void UpdateClassDiary(ClassDiary classDiary);
+        void DeleteClassDiary(ClassDiary classDiary);
+        ClassDiary FindClassDiary(long classDiaryID);
     }
 }

@@ -1,4 +1,4 @@
-﻿using Gepa.Entities.SchoolClasses;
+﻿using Gepa.Entities.Framework.Entities.SchoolClasses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +9,9 @@ namespace Gepa.DAO.SchoolClasses
 {
     public interface ISchoolClassDAO
     {
-        void InserSchoolClass(SchoolClassVO newSchoolClass);
-        void UpdateSchoolClass(SchoolClassVO schoolClass);
-        void DeleteSchoolClass(SchoolClassVO schoolClass);
-        SchoolClassVO FindSchoolClass(long schoolClassId);
+        void InserSchoolClass(SchoolClass newSchoolClass);
+        void UpdateSchoolClass(SchoolClass schoolClass);
+        void DeleteSchoolClass(SchoolClass schoolClass);
+        SchoolClass FindSchoolClass(long schoolClassId);
     }
 }

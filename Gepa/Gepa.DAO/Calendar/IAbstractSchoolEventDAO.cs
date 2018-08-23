@@ -1,4 +1,4 @@
-﻿using Gepa.Entities.Calendar;
+﻿using Gepa.Entities.Framework.Entities.Calendar;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +9,9 @@ namespace Gepa.DAO.Calendar
 {
     public interface IAbstractSchoolEventDAO
     {
-        void InsertAbstractSchoolEvent(AbstractSchoolEventVO newAbstractSchoolEvent);
-        void UpdateAbstractSchoolEvent(AbstractSchoolEventVO abstractSchoolEvent);
-        void DeleteAbstractSchoolEvent(AbstractSchoolEventVO abstractSchoolEvent);
-        AbstractSchoolEventVO FindAbstractShoolEvent(long abstractSchoolEventId);
+        void InsertAbstractSchoolEvent(AbstractSchoolEvent newAbstractSchoolEvent);
+        void UpdateAbstractSchoolEvent(AbstractSchoolEvent abstractSchoolEvent);
+        void DeleteAbstractSchoolEvent(AbstractSchoolEvent abstractSchoolEvent);
+        AbstractSchoolEvent FindAbstractShoolEvent(long abstractSchoolEventId);
     }
 }

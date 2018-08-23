@@ -1,4 +1,4 @@
-﻿using Gepa.Entities.SchoolClasses;
+﻿using Gepa.Entities.Framework.Entities.SchoolClasses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Gepa.Business.SchoolClasses
 {
-    public interface IStudentPresenceService
+    public interface IStudentPresenceService : IGepaService
     {
-        void InsertStudentPresence(StudentPresenceVO newStudentPresnece);
-        void UpdateStudentPresence(StudentPresenceVO studentPresnece);
-        void DeleteStudentPresense(StudentPresenceVO studentPresence);
-        StudentPresenceVO FindStudentPresnece(long studentPresenceID);
+        void InsertStudentPresence(StudentPresence newStudentPresnece);
+        void UpdateStudentPresence(StudentPresence studentPresnece);
+        void DeleteStudentPresense(StudentPresence studentPresence);
+        StudentPresence FindStudentPresnece(long studentPresenceID);
     }
 }

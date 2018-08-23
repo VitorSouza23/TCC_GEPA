@@ -1,4 +1,4 @@
-﻿using Gepa.Entities.ClassPlans;
+﻿using Gepa.Entities.Framework.Entities.ClassPlans;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Gepa.Business.ClassPlans
 {
-    public interface IChoresService
+    public interface IChoresService : IGepaService
     {
-        void InsertChores(ChoresVO newChores);
-        void UpdateChores(ChoresVO chores);
-        void DeleteChores(ChoresVO chores);
-        ChoresVO FindChores(long choresId);
+        void InsertChores(Chores newChores);
+        void UpdateChores(Chores chores);
+        void DeleteChores(Chores chores);
+        Chores FindChores(long choresId);
     }
 }

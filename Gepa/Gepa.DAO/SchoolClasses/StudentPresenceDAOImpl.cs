@@ -1,32 +1,55 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Gepa.Entities.SchoolClasses;
+using Gepa.Entities.Framework;
+using Gepa.Entities.Framework.Entities.SchoolClasses;
 
 namespace Gepa.DAO.SchoolClasses
 {
-    public class StudentPresenceDAOImpl : IStudentPresenceDAO
+    public class StudentPresenceDAOImpl : AbstractDAO, IStudentPresenceDAO
     {
-        public void DeleteStudentPresense(StudentPresenceVO studentPresence)
+        public StudentPresenceDAOImpl(DbConnection dbConnectioOject) : base(dbConnectioOject)
         {
-            throw new NotImplementedException();
         }
 
-        public StudentPresenceVO FindStudentPresnece(long studentPresenceID)
+        public void DeleteStudentPresense(StudentPresence studentPresence)
         {
-            throw new NotImplementedException();
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.StudentPresence.Remove(studentPresence);
+                em.SaveChanges();
+            }
         }
 
-        public void InsertStudentPresence(StudentPresenceVO newStudentPresnece)
+        public StudentPresence FindStudentPresnece(long studentPresenceID)
         {
-            throw new NotImplementedException();
+            StudentPresence studentPresence = null;
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                studentPresence = em.StudentPresence.Single(a => a.StudentPresenceId == studentPresenceID);
+            }
+            return studentPresence;
         }
 
-        public void UpdateStudentPresence(StudentPresenceVO studentPresnece)
+        public void InsertStudentPresence(StudentPresence newStudentPresnece)
         {
-            throw new NotImplementedException();
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.StudentPresence.Add(newStudentPresnece);
+                em.SaveChanges();
+            }
+        }
+
+        public void UpdateStudentPresence(StudentPresence studentPresnece)
+        {
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.Entry(studentPresnece).State = System.Data.Entity.EntityState.Modified;
+                em.SaveChanges();
+            }
         }
     }
 }

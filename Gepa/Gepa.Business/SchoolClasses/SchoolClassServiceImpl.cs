@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Gepa.DAO.SchoolClasses;
-using Gepa.Entities.SchoolClasses;
+using Gepa.Entities.Framework.Entities.SchoolClasses;
 
 namespace Gepa.Business.SchoolClasses
 {
@@ -17,22 +17,22 @@ namespace Gepa.Business.SchoolClasses
             _schoolClassDAO = schoolClassDAO;
         }
 
-        public void DeleteSchoolClass(SchoolClassVO schoolClass)
+        public void DeleteSchoolClass(SchoolClass schoolClass)
         {
             _schoolClassDAO.DeleteSchoolClass(schoolClass);
         }
 
-        public SchoolClassVO FindSchoolClass(long schoolClassId)
+        public SchoolClass FindSchoolClass(long schoolClassId)
         {
             return _schoolClassDAO.FindSchoolClass(schoolClassId);
         }
 
-        public void InserSchoolClass(SchoolClassVO newSchoolClass)
+        public void InserSchoolClass(SchoolClass newSchoolClass)
         {
             _schoolClassDAO.InserSchoolClass(newSchoolClass);
         }
 
-        public void UpdateSchoolClass(SchoolClassVO schoolClass)
+        public void UpdateSchoolClass(SchoolClass schoolClass)
         {
             _schoolClassDAO.UpdateSchoolClass(schoolClass);
         }

@@ -14,7 +14,7 @@ namespace Gepa.Utilities.Algorithms
         public string DescryptString(string encryptedText)
         {
             string descryptedText = null;
-            if (string.IsNullOrEmpty(encryptedText))
+            if (string.IsNullOrEmpty(encryptedText) == false)
             {
                 byte[] data = Convert.FromBase64String(encryptedText);
                 using (MD5CryptoServiceProvider md5 = new MD5CryptoServiceProvider())

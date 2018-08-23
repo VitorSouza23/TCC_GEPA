@@ -1,32 +1,55 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Gepa.Entities.SchoolClasses;
+using Gepa.Entities.Framework;
+using Gepa.Entities.Framework.Entities.SchoolClasses;
 
 namespace Gepa.DAO.SchoolClasses
 {
-    public class ClassFrequencyDAOImpl : IClassFrequencyDAO
+    public class ClassFrequencyDAOImpl : AbstractDAO, IClassFrequencyDAO
     {
-        public void DeleteClassFrequency(ClassFrequencyVO classFrequency)
+        public ClassFrequencyDAOImpl(DbConnection dbConnectioOject) : base(dbConnectioOject)
         {
-            throw new NotImplementedException();
         }
 
-        public ClassFrequencyVO FindClassFrequency(long classFrequencyId)
+        public void DeleteClassFrequency(ClassFrequency classFrequency)
         {
-            throw new NotImplementedException();
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.ClassFrequency.Remove(classFrequency);
+                em.SaveChanges();
+            }
         }
 
-        public void InsertClassFrequency(ClassFrequencyVO newClassFrequency)
+        public ClassFrequency FindClassFrequency(long classFrequencyId)
         {
-            throw new NotImplementedException();
+            ClassFrequency classFrequency = null;
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                classFrequency = em.ClassFrequency.Single(a => a.ClassFrequencyId == classFrequencyId);
+            }
+            return classFrequency;
         }
 
-        public void UpdateClassFrequency(ClassFrequencyVO classFrequency)
+        public void InsertClassFrequency(ClassFrequency newClassFrequency)
         {
-            throw new NotImplementedException();
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.ClassFrequency.Add(newClassFrequency);
+                em.SaveChanges();
+            }
+        }
+
+        public void UpdateClassFrequency(ClassFrequency classFrequency)
+        {
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.Entry(classFrequency).State = System.Data.Entity.EntityState.Modified;
+                em.SaveChanges();
+            }
         }
     }
 }

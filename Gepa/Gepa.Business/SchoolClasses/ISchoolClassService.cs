@@ -1,4 +1,4 @@
-﻿using Gepa.Entities.SchoolClasses;
+﻿using Gepa.Entities.Framework.Entities.SchoolClasses;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace Gepa.Business.SchoolClasses
 {
-    public interface ISchoolClassService
+    public interface ISchoolClassService : IGepaService
     {
-        void InserSchoolClass(SchoolClassVO newSchoolClass);
-        void UpdateSchoolClass(SchoolClassVO schoolClass);
-        void DeleteSchoolClass(SchoolClassVO schoolClass);
-        SchoolClassVO FindSchoolClass(long schoolClassId);
+        void InserSchoolClass(SchoolClass newSchoolClass);
+        void UpdateSchoolClass(SchoolClass schoolClass);
+        void DeleteSchoolClass(SchoolClass schoolClass);
+        SchoolClass FindSchoolClass(long schoolClassId);
     }
 }

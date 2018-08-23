@@ -1,32 +1,55 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Gepa.Entities.SchoolClasses;
+using Gepa.Entities.Framework;
+using Gepa.Entities.Framework.Entities.SchoolClasses;
 
 namespace Gepa.DAO.SchoolClasses
 {
-    class ClassDiaryDAOImpl : IClassDiaryDAO
+    public class ClassDiaryDAOImpl : AbstractDAO, IClassDiaryDAO
     {
-        public void DeleteClassDiary(ClassDiaryVO classDiary)
+        public ClassDiaryDAOImpl(DbConnection dbConnectioOject) : base(dbConnectioOject)
         {
-            throw new NotImplementedException();
         }
 
-        public ClassDiaryVO FindClassDiary(long classDiaryID)
+        public void DeleteClassDiary(ClassDiary classDiary)
         {
-            throw new NotImplementedException();
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.ClassDiary.Remove(classDiary);
+                em.SaveChanges();
+            }
         }
 
-        public void InsertClassDiary(ClassDiaryVO newClassDiary)
+        public ClassDiary FindClassDiary(long classDiaryID)
         {
-            throw new NotImplementedException();
+            ClassDiary classDiary = null;
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                classDiary = em.ClassDiary.Single(a => a.ClassDiaryId == classDiaryID);
+            }
+            return classDiary;
         }
 
-        public void UpdateClassDiary(ClassDiaryVO classDiary)
+        public void InsertClassDiary(ClassDiary newClassDiary)
         {
-            throw new NotImplementedException();
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.ClassDiary.Add(newClassDiary);
+                em.SaveChanges();
+            }
+        }
+
+        public void UpdateClassDiary(ClassDiary classDiary)
+        {
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.Entry(classDiary).State = System.Data.Entity.EntityState.Modified;
+                em.SaveChanges();
+            }
         }
     }
 }

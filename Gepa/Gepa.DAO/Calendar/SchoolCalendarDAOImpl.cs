@@ -1,32 +1,55 @@
-﻿using System;
+﻿using Gepa.Entities.Framework;
+using Gepa.Entities.Framework.Entities.Calendar;
+using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Gepa.Entities.Calendar;
 
 namespace Gepa.DAO.Calendar
 {
-    public class SchoolCalendarDAOImpl : ISchoolCalendarDAO
+    public class SchoolCalendarDAOImpl : AbstractDAO, ISchoolCalendarDAO
     {
-        public void DeleteSchoolCalendar(SchoolCalendarVO schoolCalendar)
+        public SchoolCalendarDAOImpl(DbConnection dbConnectioOject) : base(dbConnectioOject)
         {
-            throw new NotImplementedException();
         }
 
-        public SchoolCalendarVO FindSchoolCalendar(long schoolCalendarId)
+        public void DeleteSchoolCalendar(SchoolCalendar schoolCalendar)
         {
-            throw new NotImplementedException();
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.SchoolCalendar.Remove(schoolCalendar);
+                em.SaveChanges();
+            }
         }
 
-        public void IsertSchoolCalendar(SchoolCalendarVO newSchoolCalendar)
+        public SchoolCalendar FindSchoolCalendar(long schoolCalendarId)
         {
-            throw new NotImplementedException();
+            SchoolCalendar schoolCalendar = null;
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                schoolCalendar = em.SchoolCalendar.Single(a => a.SchoolCalendarId == schoolCalendarId);
+            }
+            return schoolCalendar;
         }
 
-        public void UpdateSchoolCalendar(SchoolCalendarVO schoolCalendar)
+        public void IsertSchoolCalendar(SchoolCalendar newSchoolCalendar)
         {
-            throw new NotImplementedException();
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.SchoolCalendar.Add(newSchoolCalendar);
+                em.SaveChanges();
+            }
+        }
+
+        public void UpdateSchoolCalendar(SchoolCalendar schoolCalendar)
+        {
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.Entry(schoolCalendar).State = System.Data.Entity.EntityState.Modified;
+                em.SaveChanges();
+            }
         }
     }
 }

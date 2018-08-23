@@ -1,32 +1,55 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Gepa.Entities.Users;
+using Gepa.Entities.Framework;
+using Gepa.Entities.Framework.Entities.Users;
 
 namespace Gepa.DAO.Users
 {
-    public class TeacherDAOImpl : ITeacherDAO
+    public class TeacherDAOImpl : AbstractDAO, ITeacherDAO
     {
-        public void DeleteTeacher(TeacherVO teacher)
+        public TeacherDAOImpl(DbConnection dbConnectioOject) : base(dbConnectioOject)
         {
-            throw new NotImplementedException();
         }
 
-        public TeacherVO FindTeacher(long teacherId)
+        public void DeleteTeacher(Teacher teacher)
         {
-            throw new NotImplementedException();
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.Teacher.Remove(teacher);
+                em.SaveChanges();
+            }
         }
 
-        public void InsertTeacher(TeacherVO newTeacher)
+        public Teacher FindTeacher(long teacherId)
         {
-            throw new NotImplementedException();
+            Teacher teacher = null;
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                teacher = em.Teacher.Single(a => a.TeacherId == teacherId);
+            }
+            return teacher;
         }
 
-        public void UpdateTeacher(TeacherVO teacher)
+        public void InsertTeacher(Teacher newTeacher)
         {
-            throw new NotImplementedException();
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.Teacher.Add(newTeacher);
+                em.SaveChanges();
+            }
+        }
+
+        public void UpdateTeacher(Teacher teacher)
+        {
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.Entry(teacher).State = System.Data.Entity.EntityState.Modified;
+                em.SaveChanges();
+            }
         }
     }
 }

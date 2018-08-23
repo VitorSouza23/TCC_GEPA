@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Gepa.DAO.Calendar;
-using Gepa.Entities.Calendar;
+using Gepa.Entities.Framework.Entities.Calendar;
 
 namespace Gepa.Business.Calendar
 {
@@ -17,22 +17,22 @@ namespace Gepa.Business.Calendar
             _schoolCalendarDAO = schoolCalendarDAO;
         }
 
-        public void DeleteSchoolCalendar(SchoolCalendarVO schoolCalendar)
+        public void DeleteSchoolCalendar(SchoolCalendar schoolCalendar)
         {
             _schoolCalendarDAO.DeleteSchoolCalendar(schoolCalendar);
         }
 
-        public SchoolCalendarVO FindSchoolCalendar(long schoolCalendarId)
+        public SchoolCalendar FindSchoolCalendar(long schoolCalendarId)
         {
             return _schoolCalendarDAO.FindSchoolCalendar(schoolCalendarId);
         }
 
-        public void IsertSchoolCalendar(SchoolCalendarVO newSchoolCalendar)
+        public void IsertSchoolCalendar(SchoolCalendar newSchoolCalendar)
         {
             _schoolCalendarDAO.IsertSchoolCalendar(newSchoolCalendar);
         }
 
-        public void UpdateSchoolCalendar(SchoolCalendarVO schoolCalendar)
+        public void UpdateSchoolCalendar(SchoolCalendar schoolCalendar)
         {
             _schoolCalendarDAO.UpdateSchoolCalendar(schoolCalendar);
         }

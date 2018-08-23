@@ -1,0 +1,17 @@
+C:\Projetos\TCC_GEPA\Gepa\Gepa.ApplicationManagement\GepaManager\bin\Debug\GepaManager.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.ApplicationManagement\GepaManager\bin\Debug\GepaManager.pdb
+C:\Projetos\TCC_GEPA\Gepa\Gepa.ApplicationManagement\GepaManager\bin\Debug\Gepa.Business.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.ApplicationManagement\GepaManager\bin\Debug\Gepa.DAO.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.ApplicationManagement\GepaManager\bin\Debug\Gepa.Entities.Framework.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.ApplicationManagement\GepaManager\bin\Debug\Gepa.Utilities.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.ApplicationManagement\GepaManager\bin\Debug\EntityFramework.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.ApplicationManagement\GepaManager\bin\Debug\Gepa.Business.pdb
+C:\Projetos\TCC_GEPA\Gepa\Gepa.ApplicationManagement\GepaManager\bin\Debug\Gepa.DAO.pdb
+C:\Projetos\TCC_GEPA\Gepa\Gepa.ApplicationManagement\GepaManager\bin\Debug\Gepa.Entities.Framework.pdb
+C:\Projetos\TCC_GEPA\Gepa\Gepa.ApplicationManagement\GepaManager\bin\Debug\Gepa.Entities.Framework.dll.config
+C:\Projetos\TCC_GEPA\Gepa\Gepa.ApplicationManagement\GepaManager\bin\Debug\Gepa.Utilities.pdb
+C:\Projetos\TCC_GEPA\Gepa\Gepa.ApplicationManagement\GepaManager\obj\Debug\GepaManagement.csprojAssemblyReference.cache
+C:\Projetos\TCC_GEPA\Gepa\Gepa.ApplicationManagement\GepaManager\obj\Debug\GepaManagement.csproj.CoreCompileInputs.cache
+C:\Projetos\TCC_GEPA\Gepa\Gepa.ApplicationManagement\GepaManager\obj\Debug\GepaManagement.csproj.CopyComplete
+C:\Projetos\TCC_GEPA\Gepa\Gepa.ApplicationManagement\GepaManager\obj\Debug\GepaManager.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.ApplicationManagement\GepaManager\obj\Debug\GepaManager.pdb

@@ -1,32 +1,55 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Gepa.Entities.SchoolClasses;
+using Gepa.Entities.Framework;
+using Gepa.Entities.Framework.Entities.SchoolClasses;
 
 namespace Gepa.DAO.SchoolClasses
 {
-    public class SchoolClassDAOImpl : ISchoolClassDAO
+    public class SchoolClassDAOImpl : AbstractDAO, ISchoolClassDAO
     {
-        public void DeleteSchoolClass(SchoolClassVO schoolClass)
+        public SchoolClassDAOImpl(DbConnection dbConnectioOject) : base(dbConnectioOject)
         {
-            throw new NotImplementedException();
         }
 
-        public SchoolClassVO FindSchoolClass(long schoolClassId)
+        public void DeleteSchoolClass(SchoolClass schoolClass)
         {
-            throw new NotImplementedException();
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.SchoolClass.Remove(schoolClass);
+                em.SaveChanges();
+            }
         }
 
-        public void InserSchoolClass(SchoolClassVO newSchoolClass)
+        public SchoolClass FindSchoolClass(long schoolClassId)
         {
-            throw new NotImplementedException();
+            SchoolClass schoolClass = null;
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                schoolClass = em.SchoolClass.Single(a => a.SchoolClassId == schoolClassId);
+            }
+            return schoolClass;
         }
 
-        public void UpdateSchoolClass(SchoolClassVO schoolClass)
+        public void InserSchoolClass(SchoolClass newSchoolClass)
         {
-            throw new NotImplementedException();
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.SchoolClass.Add(newSchoolClass);
+                em.SaveChanges();
+            }
+        }
+
+        public void UpdateSchoolClass(SchoolClass schoolClass)
+        {
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.Entry(schoolClass).State = System.Data.Entity.EntityState.Modified;
+                em.SaveChanges();
+            }
         }
     }
 }

@@ -1,32 +1,55 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Common;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Gepa.Entities.ClassPlans;
+using Gepa.Entities.Framework;
+using Gepa.Entities.Framework.Entities.ClassPlans;
 
 namespace Gepa.DAO.ClassPlans
 {
-    public class EvaluationDAOImpl : IEvaluationDAO
+    public class EvaluationDAOImpl : AbstractDAO, IEvaluationDAO
     {
-        public void DeleteEvaluation(EvaluationVO evaluation)
+        public EvaluationDAOImpl(DbConnection dbConnectioOject) : base(dbConnectioOject)
         {
-            throw new NotImplementedException();
         }
 
-        public EvaluationVO FindEvaluation(long evaluationId)
+        public void DeleteEvaluation(Evaluetion evaluation)
         {
-            throw new NotImplementedException();
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.Evaluetion.Remove(evaluation);
+                em.SaveChanges();
+            }
         }
 
-        public void InsertEvaluation(EvaluationVO newEvaluation)
+        public Evaluetion FindEvaluation(long evaluationId)
         {
-            throw new NotImplementedException();
+            Evaluetion evaluetion = null;
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                evaluetion = em.Evaluetion.Single(a => a.EvaluetionId == evaluationId);
+            }
+            return evaluetion;
         }
 
-        public void UpdateEvaluation(EvaluationVO evaluation)
+        public void InsertEvaluation(Evaluetion newEvaluation)
         {
-            throw new NotImplementedException();
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.Evaluetion.Add(newEvaluation);
+                em.SaveChanges();
+            }
+        }
+
+        public void UpdateEvaluation(Evaluetion evaluation)
+        {
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                em.Entry(evaluation).State = System.Data.Entity.EntityState.Modified;
+                em.SaveChanges();
+            }
         }
     }
 }

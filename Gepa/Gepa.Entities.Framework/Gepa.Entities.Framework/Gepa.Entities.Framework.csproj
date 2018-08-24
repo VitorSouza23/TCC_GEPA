@@ -81,6 +81,11 @@
     <Compile Include="Mappings\SchoolClasses\StudentNoteMap.cs" />
     <Compile Include="Mappings\SchoolClasses\StudentPresenceMap.cs" />
     <Compile Include="Mappings\Users\TeacherMap.cs" />
+    <Compile Include="MigrationsConfig.cs" />
+    <Compile Include="Migrations\201808240138563_Initial.cs" />
+    <Compile Include="Migrations\201808240138563_Initial.Designer.cs">
+      <DependentUpon>201808240138563_Initial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Entities\SchoolClasses\School.cs" />
     <Compile Include="Entities\Calendar\SchoolCalendar.cs" />
@@ -93,10 +98,16 @@
     <Compile Include="Entities\Users\Teacher.cs" />
     <Compile Include="Entities\Accounts\TeacherAccount.cs" />
     <Compile Include="Utils\ClassPresenceEnum.cs" />
+    <Compile Include="Utils\CultureLanguageEnum.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201808240138563_Initial.resx">
+      <DependentUpon>201808240138563_Initial.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

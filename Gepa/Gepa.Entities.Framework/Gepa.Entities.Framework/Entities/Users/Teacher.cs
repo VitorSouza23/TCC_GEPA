@@ -4,6 +4,7 @@ namespace Gepa.Entities.Framework.Entities.Users
     using Gepa.Entities.Framework.Entities.Calendar;
     using Gepa.Entities.Framework.Entities.ClassPlans;
     using Gepa.Entities.Framework.Entities.SchoolClasses;
+    using Gepa.Entities.Framework.Utils;
     using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
@@ -26,6 +27,8 @@ namespace Gepa.Entities.Framework.Entities.Users
 
         [StringLength(50)]
         public string Name { get; set; }
+
+        public CultureLanguageEnum CultureLanguage { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ClassPlan> ClassPlan { get; set; }

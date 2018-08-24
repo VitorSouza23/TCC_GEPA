@@ -10,3 +10,5 @@ C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\obj\De
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\obj\Debug\Gepa.Entities.Framework.dll
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\obj\Debug\Gepa.Entities.Framework.pdb
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\obj\Debug\Gepa.Entities.Framework.csprojAssemblyReference.cache
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\obj\Debug\Gepa.Entities.Framework.Initial.resources
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\obj\Debug\Gepa.Entities.Framework.csproj.GenerateResource.cache

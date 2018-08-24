@@ -21,9 +21,13 @@ namespace Gepa.Entities.Framework
         public EntityModel(DbConnection dbConnection)
             : base(dbConnection, false)
         {
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<EntityModel, MigrationsConfig>());
         }
 
-        public EntityModel() :base("name=EntityModel") { }
+        public EntityModel() :base("name=EntityModel")
+        {
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<EntityModel, MigrationsConfig>());
+        }
 
         public virtual DbSet<AbstractSchoolEvent> AbstractSchoolEvent { get; set; }
         public virtual DbSet<Account> Account { get; set; }

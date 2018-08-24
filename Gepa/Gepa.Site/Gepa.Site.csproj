@@ -154,6 +154,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Helpers\GepaBaseController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -248,6 +249,32 @@
   </ItemGroup>
   <ItemGroup>
     <TypeScriptCompile Include="Scripts\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Gepa.ApplicationManagement\GepaManager\Gepa.Management.csproj">
+      <Project>{8f41facb-72b1-4cc8-8ec7-f5657205dc34}</Project>
+      <Name>Gepa.Management</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gepa.Business\Gepa.Business.csproj">
+      <Project>{e316570d-eee4-4b43-a85c-a86a8fc86d8d}</Project>
+      <Name>Gepa.Business</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gepa.DAO\Gepa.DAO.csproj">
+      <Project>{2a3965df-a26e-4388-89b5-b6ada1e5737b}</Project>
+      <Name>Gepa.DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gepa.Entities.Framework\Gepa.Entities.Framework\Gepa.Entities.Framework.csproj">
+      <Project>{e89050b7-b296-4aba-acfb-da144327007e}</Project>
+      <Name>Gepa.Entities.Framework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gepa.Resoucers\Gepa.Resources.csproj">
+      <Project>{ba9ed67e-ffaf-4587-a1ab-8e9d1800d89d}</Project>
+      <Name>Gepa.Resources</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Gepa.Utilities\Gepa.Utilities\Gepa.Utilities.csproj">
+      <Project>{f52438ae-0d1d-4323-bde6-9c84d3f85580}</Project>
+      <Name>Gepa.Utilities</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

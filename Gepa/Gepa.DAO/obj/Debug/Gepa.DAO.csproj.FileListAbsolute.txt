@@ -10,3 +10,15 @@ C:\Projetos\TCC_GEPA\Gepa\Gepa.DAO\bin\Debug\EntityFramework.dll
 C:\Projetos\TCC_GEPA\Gepa\Gepa.DAO\bin\Debug\Gepa.Entities.Framework.dll
 C:\Projetos\TCC_GEPA\Gepa\Gepa.DAO\bin\Debug\Gepa.Entities.Framework.pdb
 C:\Projetos\TCC_GEPA\Gepa\Gepa.DAO\bin\Debug\Gepa.Entities.Framework.dll.config
+C:\Solutions\Gepa\Gepa.DAO\bin\Debug\Gepa.DAO.dll
+C:\Solutions\Gepa\Gepa.DAO\bin\Debug\Gepa.DAO.pdb
+C:\Solutions\Gepa\Gepa.DAO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Solutions\Gepa\Gepa.DAO\bin\Debug\EntityFramework.dll
+C:\Solutions\Gepa\Gepa.DAO\bin\Debug\Gepa.Entities.Framework.dll
+C:\Solutions\Gepa\Gepa.DAO\bin\Debug\Gepa.Entities.Framework.pdb
+C:\Solutions\Gepa\Gepa.DAO\bin\Debug\Gepa.Entities.Framework.dll.config
+C:\Solutions\Gepa\Gepa.DAO\obj\Debug\Gepa.DAO.csprojAssemblyReference.cache
+C:\Solutions\Gepa\Gepa.DAO\obj\Debug\Gepa.DAO.csproj.CoreCompileInputs.cache
+C:\Solutions\Gepa\Gepa.DAO\obj\Debug\Gepa.DAO.csproj.CopyComplete
+C:\Solutions\Gepa\Gepa.DAO\obj\Debug\Gepa.DAO.dll
+C:\Solutions\Gepa\Gepa.DAO\obj\Debug\Gepa.DAO.pdb

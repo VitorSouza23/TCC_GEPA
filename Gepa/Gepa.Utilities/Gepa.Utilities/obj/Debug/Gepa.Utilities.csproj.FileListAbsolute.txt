@@ -4,3 +4,8 @@ C:\Projetos\TCC_GEPA\Gepa\Gepa.Utilities\Gepa.Utilities\obj\Debug\Gepa.Utilities
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Utilities\Gepa.Utilities\obj\Debug\Gepa.Utilities.csproj.CoreCompileInputs.cache
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Utilities\Gepa.Utilities\obj\Debug\Gepa.Utilities.dll
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Utilities\Gepa.Utilities\obj\Debug\Gepa.Utilities.pdb
+C:\Solutions\Gepa\Gepa.Utilities\Gepa.Utilities\bin\Debug\Gepa.Utilities.dll
+C:\Solutions\Gepa\Gepa.Utilities\Gepa.Utilities\bin\Debug\Gepa.Utilities.pdb
+C:\Solutions\Gepa\Gepa.Utilities\Gepa.Utilities\obj\Debug\Gepa.Utilities.csproj.CoreCompileInputs.cache
+C:\Solutions\Gepa\Gepa.Utilities\Gepa.Utilities\obj\Debug\Gepa.Utilities.dll
+C:\Solutions\Gepa\Gepa.Utilities\Gepa.Utilities\obj\Debug\Gepa.Utilities.pdb

@@ -11,3 +11,16 @@ C:\Projetos\TCC_GEPA\Gepa\Gepa.Tools\Gepa.Tools.EncryptAndDecryptTool\obj\Debug\
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Tools\Gepa.Tools.EncryptAndDecryptTool\obj\Debug\Gepa.Tools.EncryptAndDecryptTool.csproj.CopyComplete
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Tools\Gepa.Tools.EncryptAndDecryptTool\obj\Debug\Gepa.Tools.EncryptAndDecryptTool.exe
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Tools\Gepa.Tools.EncryptAndDecryptTool\obj\Debug\Gepa.Tools.EncryptAndDecryptTool.pdb
+C:\Solutions\Gepa\Gepa.Tools\Gepa.Tools.EncryptAndDecryptTool\bin\Debug\Gepa.Tools.EncryptAndDecryptTool.exe.config
+C:\Solutions\Gepa\Gepa.Tools\Gepa.Tools.EncryptAndDecryptTool\bin\Debug\Gepa.Tools.EncryptAndDecryptTool.exe
+C:\Solutions\Gepa\Gepa.Tools\Gepa.Tools.EncryptAndDecryptTool\bin\Debug\Gepa.Tools.EncryptAndDecryptTool.pdb
+C:\Solutions\Gepa\Gepa.Tools\Gepa.Tools.EncryptAndDecryptTool\bin\Debug\Gepa.Utilities.dll
+C:\Solutions\Gepa\Gepa.Tools\Gepa.Tools.EncryptAndDecryptTool\bin\Debug\Gepa.Utilities.pdb
+C:\Solutions\Gepa\Gepa.Tools\Gepa.Tools.EncryptAndDecryptTool\obj\Debug\Gepa.Tools.EncryptAndDecryptTool.csprojAssemblyReference.cache
+C:\Solutions\Gepa\Gepa.Tools\Gepa.Tools.EncryptAndDecryptTool\obj\Debug\Gepa.Tools.EncryptAndDecryptTool.EncryptAndDescryptTool.resources
+C:\Solutions\Gepa\Gepa.Tools\Gepa.Tools.EncryptAndDecryptTool\obj\Debug\Gepa.Tools.EncryptAndDecryptTool.Properties.Resources.resources
+C:\Solutions\Gepa\Gepa.Tools\Gepa.Tools.EncryptAndDecryptTool\obj\Debug\Gepa.Tools.EncryptAndDecryptTool.csproj.GenerateResource.cache
+C:\Solutions\Gepa\Gepa.Tools\Gepa.Tools.EncryptAndDecryptTool\obj\Debug\Gepa.Tools.EncryptAndDecryptTool.csproj.CoreCompileInputs.cache
+C:\Solutions\Gepa\Gepa.Tools\Gepa.Tools.EncryptAndDecryptTool\obj\Debug\Gepa.Tools.EncryptAndDecryptTool.csproj.CopyComplete
+C:\Solutions\Gepa\Gepa.Tools\Gepa.Tools.EncryptAndDecryptTool\obj\Debug\Gepa.Tools.EncryptAndDecryptTool.exe
+C:\Solutions\Gepa\Gepa.Tools\Gepa.Tools.EncryptAndDecryptTool\obj\Debug\Gepa.Tools.EncryptAndDecryptTool.pdb

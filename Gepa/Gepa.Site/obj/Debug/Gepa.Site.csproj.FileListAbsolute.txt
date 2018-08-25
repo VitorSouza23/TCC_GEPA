@@ -50,6 +50,12 @@ C:\Solutions\Gepa\Gepa.Site\bin\roslyn\VBCSCompiler.exe
 C:\Solutions\Gepa\Gepa.Site\bin\roslyn\VBCSCompiler.exe.config
 C:\Solutions\Gepa\Gepa.Site\bin\Antlr3.Runtime.dll
 C:\Solutions\Gepa\Gepa.Site\bin\AutoMapper.dll
+C:\Solutions\Gepa\Gepa.Site\bin\Gepa.Business.dll
+C:\Solutions\Gepa\Gepa.Site\bin\Gepa.DAO.dll
+C:\Solutions\Gepa\Gepa.Site\bin\Gepa.Entities.Framework.dll
+C:\Solutions\Gepa\Gepa.Site\bin\Gepa.Resources.dll
+C:\Solutions\Gepa\Gepa.Site\bin\Gepa.Utilities.dll
+C:\Solutions\Gepa\Gepa.Site\bin\GepaManager.dll
 C:\Solutions\Gepa\Gepa.Site\bin\Microsoft.AI.Agent.Intercept.dll
 C:\Solutions\Gepa\Gepa.Site\bin\Microsoft.AI.DependencyCollector.dll
 C:\Solutions\Gepa\Gepa.Site\bin\Microsoft.AI.PerfCounterCollector.dll
@@ -71,6 +77,14 @@ C:\Solutions\Gepa\Gepa.Site\bin\System.Web.WebPages.Deployment.dll
 C:\Solutions\Gepa\Gepa.Site\bin\System.Web.WebPages.dll
 C:\Solutions\Gepa\Gepa.Site\bin\System.Web.WebPages.Razor.dll
 C:\Solutions\Gepa\Gepa.Site\bin\WebGrease.dll
+C:\Solutions\Gepa\Gepa.Site\bin\EntityFramework.dll
+C:\Solutions\Gepa\Gepa.Site\bin\GepaManager.pdb
+C:\Solutions\Gepa\Gepa.Site\bin\Gepa.Business.pdb
+C:\Solutions\Gepa\Gepa.Site\bin\Gepa.DAO.pdb
+C:\Solutions\Gepa\Gepa.Site\bin\Gepa.Entities.Framework.pdb
+C:\Solutions\Gepa\Gepa.Site\bin\Gepa.Entities.Framework.dll.config
+C:\Solutions\Gepa\Gepa.Site\bin\Gepa.Resources.pdb
+C:\Solutions\Gepa\Gepa.Site\bin\Gepa.Utilities.pdb
 C:\Solutions\Gepa\Gepa.Site\bin\AutoMapper.pdb
 C:\Solutions\Gepa\Gepa.Site\bin\AutoMapper.xml
 C:\Solutions\Gepa\Gepa.Site\bin\Microsoft.AI.DependencyCollector.xml

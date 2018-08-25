@@ -23,3 +23,5 @@ C:\Projetos\TCC_GEPA\Gepa\Gepa.UnitTest\Gepa.UnitTests\bin\Debug\Gepa.Entities.F
 C:\Projetos\TCC_GEPA\Gepa\Gepa.UnitTest\Gepa.UnitTests\bin\Debug\EntityFramework.dll
 C:\Projetos\TCC_GEPA\Gepa\Gepa.UnitTest\Gepa.UnitTests\bin\Debug\Gepa.Entities.Framework.pdb
 C:\Projetos\TCC_GEPA\Gepa\Gepa.UnitTest\Gepa.UnitTests\bin\Debug\Gepa.Entities.Framework.dll.config
+C:\Solutions\Gepa\Gepa.UnitTest\Gepa.UnitTests\obj\Debug\Gepa.UnitTests.dll
+C:\Solutions\Gepa\Gepa.UnitTest\Gepa.UnitTests\obj\Debug\Gepa.UnitTests.pdb

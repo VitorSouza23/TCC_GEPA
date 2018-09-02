@@ -1,0 +1,35 @@
+﻿@model  IEnumerable<Gepa.Identity.Models.UsersModel>
+@{
+    ViewBag.Title = "Todos os Usuários";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="container">
+    <div class="jumbotron">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>ID do usuário</th>
+                    <th>Nome</th>
+                    <th>Email</th>
+                    <th>Regras</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach(var user in Model)
+                {
+                    <tr>
+                        <td>@user.UserId</td>
+                        <td>@user.UserName</td>
+                        <td>@user.Email</td>
+                        <td>@user.RolesNames</td>
+                        <td>@Html.ActionLink("Editar", "EditUserView", "Admin", new { userId = user.UserId}, null)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

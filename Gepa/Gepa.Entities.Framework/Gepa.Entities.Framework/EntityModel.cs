@@ -6,8 +6,6 @@ namespace Gepa.Entities.Framework
     using System.Linq;
     using Gepa.Entities.Framework.Mappings.Calendar;
     using Gepa.Entities.Framework.Entities.Calendar;
-    using Gepa.Entities.Framework.Mappings.Accounts;
-    using Gepa.Entities.Framework.Entities.Accounts;
     using Gepa.Entities.Framework.Mappings.ClassPlans;
     using Gepa.Entities.Framework.Entities.ClassPlans;
     using Gepa.Entities.Framework.Mappings.SchoolClasses;
@@ -30,7 +28,6 @@ namespace Gepa.Entities.Framework
         }
 
         public virtual DbSet<AbstractSchoolEvent> AbstractSchoolEvent { get; set; }
-        public virtual DbSet<Account> Account { get; set; }
         public virtual DbSet<Chores> Chores { get; set; }
         public virtual DbSet<ClassDiary> ClassDiary { get; set; }
         public virtual DbSet<ClassFrequency> ClassFrequency { get; set; }
@@ -53,9 +50,6 @@ namespace Gepa.Entities.Framework
             modelBuilder.Configurations.Add(new ClassScheduleMap());
             modelBuilder.Configurations.Add(new SchoolCalendarMap());
             modelBuilder.Configurations.Add(new SchoolEventMap());
-            modelBuilder.Configurations.Add(new AccountMap());
-            modelBuilder.Configurations.Add(new AdminAccountMap());
-            modelBuilder.Configurations.Add(new TeacherAccountMap());
             modelBuilder.Configurations.Add(new ChoresMap());
             modelBuilder.Configurations.Add(new ClassGoalsMap());
             modelBuilder.Configurations.Add(new ClassPlanMap());

@@ -14,6 +14,11 @@ namespace Gepa.Identity
             bundles.Add(new ScriptBundle("~/bundles/jqueryval").Include(
                         "~/Scripts/jquery.validate*"));
 
+            bundles.Add(new ScriptBundle("~/bundles/chosen").Include(
+                "~/Scripts/chosen.jquery.min.js",
+                "~/Scripts/chosen.proto.min.js"
+                ));
+
             // Use a versão em desenvolvimento do Modernizr para desenvolver e aprender. Em seguida, quando estiver
             // pronto para a produção, utilize a ferramenta de build em https://modernizr.com para escolher somente os testes que precisa.
             bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
@@ -24,7 +29,8 @@ namespace Gepa.Identity
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
-                      "~/Content/site.css"));
+                      "~/Content/site.css",
+                      "~/Content/chosen.min.css"));
         }
     }
 }

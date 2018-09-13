@@ -141,3 +141,8 @@ C:\Projetos\TCC_GEPA\Gepa\Gepa.Identity\Gepa.Identity\obj\Debug\Gepa.Identity.dl
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Identity\Gepa.Identity\obj\Debug\Gepa.Identity.pdb
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Identity\Gepa.Identity\bin\Gepa.Identity.Base.dll
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Identity\Gepa.Identity\bin\Gepa.Identity.Base.pdb
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Identity\Gepa.Identity\bin\AutoMapper.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Identity\Gepa.Identity\bin\System.ValueTuple.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Identity\Gepa.Identity\bin\AutoMapper.pdb
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Identity\Gepa.Identity\bin\AutoMapper.xml
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Identity\Gepa.Identity\bin\System.ValueTuple.xml

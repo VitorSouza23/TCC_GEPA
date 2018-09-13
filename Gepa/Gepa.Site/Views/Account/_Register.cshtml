@@ -1,0 +1,38 @@
+﻿@{
+    ViewBag.Title = Language.Register;
+}
+
+<div class="container">
+    <h1 class="gepaTitles">Registre-se</h1>
+
+    <div class="gepaLogin">
+
+        <div class="gepaLoginDivs">
+            <button class="connectButtons">
+                <i class="fab fa-facebook-f"></i>
+                @Language.ConnectFacebook
+            </button>
+
+            <button class="connectButtons">
+                <i class="fab fa-google"></i>
+                @Language.ConnectGoogle
+            </button>
+        </div>
+
+        <div class="text-left gepaLoginDivs displayInlineGrid">
+            <span class="loginComponents loginLabels">@Language.EnterYourEmailAddressOrUsername</span>
+            @Html.TextBox("usernameOrEmail", null, new { @class = "loginComponents" })
+
+            <span class="loginComponents loginLabels">@Language.EnterYourPassword</span>
+            @Html.Password("password", null, new { @class = "loginComponents" })
+        </div>
+
+        <div class="gepaLoginDivs">
+            <button class="loginButton">@Language.Register</button>
+        </div>
+
+        <div class="text-center gepaLoginDivs displayInlineGrid">
+            <a href="@Url.Action("Login","Account")">@Language.AlreadyRegisteredSignIn</a>
+        </div>
+    </div>
+</div>

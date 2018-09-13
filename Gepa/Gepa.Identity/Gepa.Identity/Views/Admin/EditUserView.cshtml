@@ -1,0 +1,75 @@
+﻿@model Gepa.Identity.Models.EditUserModel
+@{
+    ViewBag.Title = "Editor de Usuário";
+}
+
+
+<h2>@ViewBag.Title</h2>
+
+<div class="content">
+    <div class="jumbotron">
+        @using (@Html.BeginForm("SaveUserInformations", "Admin", FormMethod.Post, new { @class = "form-horizontal", role = "form", id = "editUderForm" }))
+        {
+            @Html.HiddenFor(m => m.UserId)
+            @Html.HiddenFor(m => m.AllAvailableRoles)
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(u => u.UserId, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.DisplayFor(u => u.UserId, new { @class = "form-control" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.UserName, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Email, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control" })
+                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.RolesIds, new { @class = "col-md-2 control-label" })
+                <div class="col-md-10">
+                    @Html.ListBoxFor(m => m.RolesIds, new MultiSelectList(Model.AllAvailableRoles, "RoleId", "RoleName"), new { @class = "roles-chosen form-control", data_placeholder = "Selecione os papéis..." })
+                    @Html.ValidationMessageFor(m => m.RolesIds, "", new { @class = "text-danger" })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Salvar Alterações" class="btn btn-default" />
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/chosen")
+    <script type="text/javascript">
+        var initialValues = @Html.Raw(JSON.Serialize(Model.RolesIds));
+
+        $(document).ready(function () {
+            $(".roles-chosen").chosen().change(function (e) {
+                console.log($(this).val());
+            });
+            $(".roles-chosen").val(initialValues);
+            $(".roles-chosen").trigger("chosen:updated");
+
+            $('#editUderForm').submit(function (e) {
+                
+                var user = $(this).serializeArray();
+                console.log(user);
+            });
+        })
+    </script>
+}
+
+

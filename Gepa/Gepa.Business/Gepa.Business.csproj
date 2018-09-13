@@ -40,8 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Accounts\AccountServiceImpl.cs" />
-    <Compile Include="Accounts\IAccountService.cs" />
     <Compile Include="Calendar\AbstractSchoolEventServiceImpl.cs" />
     <Compile Include="Calendar\IAbstractSchoolEventService.cs" />
     <Compile Include="Calendar\ISchoolCalendarService.cs" />

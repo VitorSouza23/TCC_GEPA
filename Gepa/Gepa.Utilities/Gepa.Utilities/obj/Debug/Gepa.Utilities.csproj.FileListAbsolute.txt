@@ -10,3 +10,5 @@ C:\Solutions\Gepa\Gepa.Utilities\Gepa.Utilities\obj\Debug\Gepa.Utilities.csprojA
 C:\Solutions\Gepa\Gepa.Utilities\Gepa.Utilities\obj\Debug\Gepa.Utilities.csproj.CoreCompileInputs.cache
 C:\Solutions\Gepa\Gepa.Utilities\Gepa.Utilities\obj\Debug\Gepa.Utilities.dll
 C:\Solutions\Gepa\Gepa.Utilities\Gepa.Utilities\obj\Debug\Gepa.Utilities.pdb
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Utilities\Gepa.Utilities\bin\Debug\Newtonsoft.Json.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Utilities\Gepa.Utilities\obj\Debug\Gepa.Utilities.csproj.CopyComplete

@@ -50,8 +50,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entities\Calendar\AbstractSchoolEvent.cs" />
-    <Compile Include="Entities\Accounts\Account.cs" />
-    <Compile Include="Entities\Accounts\AdminAccount.cs" />
     <Compile Include="Entities\ClassPlans\Chores.cs" />
     <Compile Include="Entities\SchoolClasses\ClassDiary.cs" />
     <Compile Include="Entities\SchoolClasses\ClassFrequency.cs" />
@@ -61,9 +59,6 @@
     <Compile Include="EntityModel.cs" />
     <Compile Include="Entities\ClassPlans\Evaluetion.cs" />
     <Compile Include="Entities\ClassPlans\LessonsContent.cs" />
-    <Compile Include="Mappings\Accounts\AccountMap.cs" />
-    <Compile Include="Mappings\Accounts\AdminAccountMap.cs" />
-    <Compile Include="Mappings\Accounts\TeacherAccountMap.cs" />
     <Compile Include="Mappings\Calendar\AbstractSchoolEventMap.cs" />
     <Compile Include="Mappings\Calendar\ClassScheduleMap.cs" />
     <Compile Include="Mappings\Calendar\SchoolCalendarMap.cs" />
@@ -96,7 +91,6 @@
     <Compile Include="Entities\SchoolClasses\StudentPresence.cs" />
     <Compile Include="sysdiagrams.cs" />
     <Compile Include="Entities\Users\Teacher.cs" />
-    <Compile Include="Entities\Accounts\TeacherAccount.cs" />
     <Compile Include="Utils\ClassPresenceEnum.cs" />
     <Compile Include="Utils\CultureLanguageEnum.cs" />
   </ItemGroup>

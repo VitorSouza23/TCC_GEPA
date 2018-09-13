@@ -8,21 +8,20 @@ namespace GepaManagement.ServicesTypes
 {
     public enum GepaServicesTypes
     {
-        AccountService = 1,
-        AbstractShoolEventService = 2,
-        SchoolCalendarService = 3,
-        ChoresService = 4,
-        ClassGoalsService = 5,
-        ClassPlanService = 6,
-        EvaluationService = 7,
-        LessonsContentService = 8,
-        ClassDiaryService = 9,
-        ClassFrequencyService = 10,
-        SchoolClassService = 11,
-        StudentPresenceService = 12,
-        StudentService = 13,
-        StudentNoteService = 14,
-        TeacherService = 15,
-        SchoolService = 16
+        AbstractShoolEventService = 1,
+        SchoolCalendarService = 2,
+        ChoresService = 3,
+        ClassGoalsService = 4,
+        ClassPlanService = 5,
+        EvaluationService = 6,
+        LessonsContentService = 7,
+        ClassDiaryService = 8,
+        ClassFrequencyService = 9,
+        SchoolClassService = 10,
+        StudentPresenceService = 11,
+        StudentService = 12,
+        StudentNoteService = 13,
+        TeacherService = 14,
+        SchoolService = 15
     }
 }

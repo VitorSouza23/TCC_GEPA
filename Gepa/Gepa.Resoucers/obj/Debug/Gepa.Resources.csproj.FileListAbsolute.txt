@@ -14,3 +14,11 @@ C:\Solutions\Gepa\Gepa.Resoucers\obj\Debug\Gepa.Resources.csproj.GenerateResourc
 C:\Solutions\Gepa\Gepa.Resoucers\obj\Debug\Gepa.Resources.csproj.CoreCompileInputs.cache
 C:\Solutions\Gepa\Gepa.Resoucers\obj\Debug\Gepa.Resources.dll
 C:\Solutions\Gepa\Gepa.Resoucers\obj\Debug\Gepa.Resources.pdb
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Resoucers\bin\Debug\Gepa.Resources.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Resoucers\bin\Debug\Gepa.Resources.pdb
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Resoucers\obj\Debug\Gepa.Resources.csprojAssemblyReference.cache
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Resoucers\obj\Debug\Gepa.Resources.Languages.pt-BR.resources
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Resoucers\obj\Debug\Gepa.Resources.csproj.GenerateResource.cache
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Resoucers\obj\Debug\Gepa.Resources.csproj.CoreCompileInputs.cache
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Resoucers\obj\Debug\Gepa.Resources.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Resoucers\obj\Debug\Gepa.Resources.pdb

@@ -1,10 +1,8 @@
 ﻿using Gepa.Business;
-using Gepa.Business.Accounts;
 using Gepa.Business.Calendar;
 using Gepa.Business.ClassPlans;
 using Gepa.Business.SchoolClasses;
 using Gepa.Business.Users;
-using Gepa.DAO.Accounts;
 using Gepa.DAO.Calendar;
 using Gepa.DAO.ClassPlans;
 using Gepa.DAO.SchoolClasses;
@@ -45,19 +43,24 @@ namespace GepaManagement
 
         private static string _CONNECTION_STRING = string.Empty;
         private static string _PROVIDER_NAME = string.Empty;
+        private static string _IDENTITY_CONNECTION_STRING = string.Empty;
         private static string _PROVAIDER_KEY_VALUE_NAME = "Provider";
         private static string _CONNECTION_STRING_KEY_VALUE_NAME = "Connection";
+        private static string _IDENTITY_CONNECTION_STRING_KEY_VALUE_NAME = "IdentityConnection";
         private static object _LOCK = new Object();
         private static DbConnection _DB_CONNECTION;
+        private static DbConnection _IDENTITY_DB_CONNECTION;
 
         private static void ReadRegistryKeys()
         {
             string conectionStringEncrypted = GepaRegistryKeyManager.GetStringValueOfKey(_CONNECTION_STRING_KEY_VALUE_NAME);
             string providerNameEncrypted = GepaRegistryKeyManager.GetStringValueOfKey(_PROVAIDER_KEY_VALUE_NAME);
+            string identityStringEncrypted = GepaRegistryKeyManager.GetStringValueOfKey(_IDENTITY_CONNECTION_STRING_KEY_VALUE_NAME);
 
             IEncryptionHelper encryptor = new MD5CryptoHelper();
             _CONNECTION_STRING = encryptor.DescryptString(conectionStringEncrypted);
             _PROVIDER_NAME = encryptor.DescryptString(providerNameEncrypted);
+            _IDENTITY_CONNECTION_STRING = encryptor.DescryptString(identityStringEncrypted);
         }
 
         private void CreateDBConnection()
@@ -69,6 +72,23 @@ namespace GepaManagement
             _DB_CONNECTION.ConnectionString = _CONNECTION_STRING;
         }
 
+        private void CreateIdentityDBConnection()
+        {
+            if (string.IsNullOrWhiteSpace(_PROVIDER_NAME) || string.IsNullOrWhiteSpace(_IDENTITY_CONNECTION_STRING))
+                ReadRegistryKeys();
+
+            _IDENTITY_DB_CONNECTION = DbProviderFactories.GetFactory(_PROVIDER_NAME).CreateConnection();
+            _IDENTITY_DB_CONNECTION.ConnectionString = _IDENTITY_CONNECTION_STRING;
+        }
+
+        public DbConnection GetIdentityDbConnection()
+        {
+            if (_IDENTITY_DB_CONNECTION == null)
+                CreateIdentityDBConnection();
+            return _IDENTITY_DB_CONNECTION;
+        }
+
+
         public IGepaService GetService(GepaServicesTypes serviceType)
         {
             if (_DB_CONNECTION == null)
@@ -78,8 +98,6 @@ namespace GepaManagement
             {
                 case GepaServicesTypes.AbstractShoolEventService:
                     return new AbstractSchoolEventServiceImpl(new AbstractSchoolEventDAOImpl(_DB_CONNECTION));
-                case GepaServicesTypes.AccountService:
-                    return new AccountServiceImpl(new AccountDAOImpl(_DB_CONNECTION));
                 case GepaServicesTypes.ChoresService:
                     return new ChoresServiceImpl(new ChoresDAOImpl(_DB_CONNECTION));
                 case GepaServicesTypes.ClassDiaryService:

@@ -19,5 +19,6 @@ namespace Gepa.Site
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AutoMapperConfig.ConfigureMappings();
         }
+
     }
 }

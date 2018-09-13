@@ -1,0 +1,36 @@
+﻿@model List<Gepa.Identity.Models.RoleModel>
+@{
+    ViewBag.Title = "Gerenciar papéis de usuário";
+}
+
+<h2>@ViewBag.Title</h2>
+
+<div class="container">
+    <div class="jumbotron">
+        <a href="@Url.Action("Index", "Admin")" role="button">< Voltar</a> <br/><br/>
+        <a class="btn btn-primary" href="@Url.Action("NewRoleView", "Admin")" role="button">Novo Papél</a>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>
+                        ID
+                    </th>
+                    <th>
+                        Pápel
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var role in Model)
+                {
+                    <tr>
+                        <td>@role.RoleId</td>
+                        <td>@role.RoleName</td>
+                        <td>@Html.ActionLink("Editar", "EditRoleView", "Admin", new { roleId = role.RoleId }, null)</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+

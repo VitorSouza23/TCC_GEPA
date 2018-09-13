@@ -1,6 +1,5 @@
 namespace Gepa.Entities.Framework.Entities.Users
 {
-    using Gepa.Entities.Framework.Entities.Accounts;
     using Gepa.Entities.Framework.Entities.Calendar;
     using Gepa.Entities.Framework.Entities.ClassPlans;
     using Gepa.Entities.Framework.Entities.SchoolClasses;
@@ -42,6 +41,6 @@ namespace Gepa.Entities.Framework.Entities.Users
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SchoolClass> SchoolClass { get; set; }
 
-        public virtual TeacherAccount TeacherAccount { get; set; }
+        public virtual string UserId { get; set; }
     }
 }

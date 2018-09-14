@@ -76,11 +76,8 @@ C:\Projetos\TCC_GEPA\Gepa\Gepa.Identity\Gepa.Identity\bin\Microsoft.Owin.Securit
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Identity\Gepa.Identity\bin\Microsoft.Web.Infrastructure.dll
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Identity\Gepa.Identity\bin\Newtonsoft.Json.dll
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Identity\Gepa.Identity\bin\Owin.dll
-C:\Projetos\TCC_GEPA\Gepa\Gepa.Identity\Gepa.Identity\bin\System.Diagnostics.DiagnosticSource.dll
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Identity\Gepa.Identity\bin\System.Web.Helpers.dll
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Identity\Gepa.Identity\bin\System.Web.Mvc.dll
-C:\Projetos\TCC_GEPA\Gepa\Gepa.Identity\Gepa.Identity\bin\System.Web.Optimization.dll
-C:\Projetos\TCC_GEPA\Gepa\Gepa.Identity\Gepa.Identity\bin\System.Web.Razor.dll
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Identity\Gepa.Identity\bin\System.Web.WebPages.Deployment.dll
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Identity\Gepa.Identity\bin\System.Web.WebPages.dll
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Identity\Gepa.Identity\bin\System.Web.WebPages.Razor.dll

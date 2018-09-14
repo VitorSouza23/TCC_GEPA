@@ -239,7 +239,6 @@ C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\obj\Debug\Gepa.Site.csproj.CopyComplete
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\obj\Debug\Gepa.Site.dll
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\obj\Debug\Gepa.Site.pdb
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\EntityFramework.SqlServer.dll
-C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\Microsoft.AspNet.Identity.Core.dll
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\Microsoft.AspNet.Identity.EntityFramework.dll
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\Microsoft.AspNet.Identity.Owin.dll
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\Microsoft.Owin.Cors.dll

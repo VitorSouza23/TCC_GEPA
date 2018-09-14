@@ -1,24 +1,104 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿.account-buttons {
+    position: absolute;
+    border-radius: 50px;
+    border: 0.5px solid #4cff00;
+    width: 120px;
+    margin: 0 10px;
+    font-weight: 500;
+    background-color: white;
+    color: #5c5c3d;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+    .account-buttons:hover {
+        color: #8a8a5c;
+        border: 1.5px solid #4cff00;
+    }
+
+#loginButton {
+    right: 0;
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
+#registerButton {
+    right: 125px;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+.gepa-features {
+    margin: 5px 0;
+}
+
+    .gepa-features .row {
+        border: 1px solid #4cff00;
+        padding: 35px 20px;
+        background-color: #eafff0;
+        margin: 40px 0;
+    }
+
+        .gepa-features .row .col {
+            text-align: justify;
+        }
+
+.gepa-features-img {
+    width: 375px;
+    height: 210px;
+}
+
+.gepaTitles {
+    margin: 30px 0;
+    color: #4cff00;
+}
+
+
+
+
+
+
+.connectButtons {
+    width: 250px;
+    border-radius: 25px;
+    background-color: #d3ffe0;
+    padding: 5px;
+    border: 1px solid #bcffd0;
+    margin: 0 5px;
+}
+
+    .connectButtons i {
+        font-family: FontAwesome;
+        font-style: normal;
+        color: #B8B8B8;
+    }
+
+.gepaLogin {
+    width: 700px;
+    border: 1px solid #aeff8b;
+    margin: 0 auto;
+    padding: 20px 0;
+    border-radius: 25px;
+    margin-bottom: 75px;
+}
+
+.loginComponents {
+    margin: 2.5px 0;
+    width: 500px;
+}
+
+.loginLabels {
+    margin: 2.5px 0 0 0;
+}
+
+.loginButton {
+    width: 250px;
+    padding: 10px;
+    border: 1px solid #d3ffe0;
+    border-radius: 25px;
+    background-color: #aeff8b;
+    font-weight: bold;
+    color: #38381c;
+}
+
+.gepaLoginDivs {
+    margin: 15px 0;
+}
+
+.displayInlineGrid {
+    display: inline-grid;
 }

@@ -56,6 +56,7 @@ C:\Solutions\Gepa\Gepa.Site\bin\Gepa.Entities.Framework.dll
 C:\Solutions\Gepa\Gepa.Site\bin\Gepa.Resources.dll
 C:\Solutions\Gepa\Gepa.Site\bin\Gepa.Utilities.dll
 C:\Solutions\Gepa\Gepa.Site\bin\GepaManager.dll
+C:\Solutions\Gepa\Gepa.Site\bin\Less.dll
 C:\Solutions\Gepa\Gepa.Site\bin\Microsoft.AI.Agent.Intercept.dll
 C:\Solutions\Gepa\Gepa.Site\bin\Microsoft.AI.DependencyCollector.dll
 C:\Solutions\Gepa\Gepa.Site\bin\Microsoft.AI.PerfCounterCollector.dll
@@ -87,6 +88,7 @@ C:\Solutions\Gepa\Gepa.Site\bin\Gepa.Resources.pdb
 C:\Solutions\Gepa\Gepa.Site\bin\Gepa.Utilities.pdb
 C:\Solutions\Gepa\Gepa.Site\bin\AutoMapper.pdb
 C:\Solutions\Gepa\Gepa.Site\bin\AutoMapper.xml
+C:\Solutions\Gepa\Gepa.Site\bin\Less.pdb
 C:\Solutions\Gepa\Gepa.Site\bin\Microsoft.AI.DependencyCollector.xml
 C:\Solutions\Gepa\Gepa.Site\bin\Microsoft.AI.PerfCounterCollector.xml
 C:\Solutions\Gepa\Gepa.Site\bin\Microsoft.AI.ServerTelemetryChannel.xml

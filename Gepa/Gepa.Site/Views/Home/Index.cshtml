@@ -2,30 +2,55 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<nav class="navbar navbar-light bg-light">
+    <a class="navbar-brand" href="#">
+        <img src="~/Content/Images/Gepa_Logo.png" class="d-inline-block align-top" alt="">
+        @Language.Gepa
+    </a>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+    <a href="@Url.Action("Register", "Account")" id="registerButton" class="btn account-buttons" role="button">@Language.Register</a>
+    <a href="@Url.Action("Login", "Account")" id="loginButton" class="btn account-buttons" role="button">@Language.Login</a>
+</nav>
+
+<div class="container">
+    <h1 class="gepaTitles">Gerenciador de Planos de Aula - Gepa</h1>
+
+    <div class="gepa-features">
+        <div class="row">
+            <div class="col">
+                Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado.
+            </div>
+            <div class="col" style="text-align: center;">
+                <img class="gepa-features-img" src="~/Content/Images/teacher_home1.png" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col" style="text-align: center;">
+                <img class="gepa-features-img" src="~/Content/Images/teacher_home1.png" />
+            </div>
+            <div class="col">
+                Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado.
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado.
+            </div>
+            <div class="col" style="text-align: center;">
+                <img class="gepa-features-img" src="~/Content/Images/teacher_home1.png" />
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col" style="text-align: center;">
+                <img class="gepa-features-img" src="~/Content/Images/teacher_home1.png" />
+            </div>
+            <div class="col">
+                Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica e de impressos, e vem sendo utilizado desde o século XVI, quando um impressor desconhecido pegou uma bandeja de tipos e os embaralhou para fazer um livro de modelos de tipos. Lorem Ipsum sobreviveu não só a cinco séculos, como também ao salto para a editoração eletrônica, permanecendo essencialmente inalterado.
+            </div>
+        </div>
+
     </div>
 </div>

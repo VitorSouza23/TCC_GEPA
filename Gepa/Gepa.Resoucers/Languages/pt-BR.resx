@@ -117,7 +117,34 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AlreadyRegisteredSignIn" xml:space="preserve">
+    <value>Já é cadastrado? Faça o login</value>
+  </data>
+  <data name="ConnectFacebook" xml:space="preserve">
+    <value>Conecte-se com Facebook</value>
+  </data>
+  <data name="ConnectGoogle" xml:space="preserve">
+    <value>Conecte-se com Google</value>
+  </data>
+  <data name="DontHaveAccountYetDoRegister" xml:space="preserve">
+    <value>Não tem cadastro ainda? Registre-se</value>
+  </data>
+  <data name="EnterYourEmailAddressOrUsername" xml:space="preserve">
+    <value>Informe seu endereço de e-mail ou nome de usuário:</value>
+  </data>
+  <data name="EnterYourPassword" xml:space="preserve">
+    <value>Informe sua senha:</value>
+  </data>
+  <data name="ForgotYourPassword" xml:space="preserve">
+    <value>Esqueceu sua senha?</value>
+  </data>
   <data name="Gepa" xml:space="preserve">
     <value>Gepa</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Register" xml:space="preserve">
+    <value>Registre-se</value>
   </data>
 </root>

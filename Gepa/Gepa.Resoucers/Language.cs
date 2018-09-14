@@ -8,10 +8,10 @@ using System.Threading.Tasks;
 
 namespace Gepa.Resources
 {
-    public class Language
+    public static class Language
     {
 
-        protected static string GetString(string stringName)
+        public static string GetString(string stringName)
         {
             switch (Thread.CurrentThread.CurrentCulture.Name)
             {

@@ -32,4 +32,3 @@ C:\Solutions\Gepa\Gepa.ApplicationManagement\GepaManager\obj\Debug\Gepa.Manageme
 C:\Solutions\Gepa\Gepa.ApplicationManagement\GepaManager\obj\Debug\Gepa.Management.csproj.CopyComplete
 C:\Solutions\Gepa\Gepa.ApplicationManagement\GepaManager\obj\Debug\GepaManager.dll
 C:\Solutions\Gepa\Gepa.ApplicationManagement\GepaManager\obj\Debug\GepaManager.pdb
-C:\Projetos\TCC_GEPA\Gepa\Gepa.ApplicationManagement\GepaManager\bin\Debug\Newtonsoft.Json.dll

@@ -273,3 +273,5 @@ C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\pt-br\Microsoft.AspNet.Identity.EntityFr
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\pt-br\Microsoft.AspNet.Identity.Owin.resources.dll
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\Gepa.Identity.Base.dll
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\Gepa.Identity.Base.pdb
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\Less.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\Less.pdb

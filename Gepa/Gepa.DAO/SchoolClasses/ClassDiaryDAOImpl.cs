@@ -29,7 +29,17 @@ namespace Gepa.DAO.SchoolClasses
             ClassDiary classDiary = null;
             using (EntityModel em = new EntityModel(DbConnectioOject))
             {
-                classDiary = em.ClassDiary.Single(a => a.ClassDiaryId == classDiaryID);
+                classDiary = em.ClassDiary.Find(classDiaryID);
+            }
+            return classDiary;
+        }
+
+        public async Task<ClassDiary> FindClassDiaryAsync(long classDiaryID)
+        {
+            ClassDiary classDiary = null;
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                classDiary = await em.ClassDiary.FindAsync(classDiaryID);
             }
             return classDiary;
         }

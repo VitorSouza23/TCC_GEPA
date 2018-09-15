@@ -13,5 +13,6 @@ namespace Gepa.Business.Calendar
         void UpdateAbstractSchoolEvent(AbstractSchoolEvent abstractSchoolEvent);
         void DeleteAbstractSchoolEvent(AbstractSchoolEvent abstractSchoolEvent);
         AbstractSchoolEvent FindAbstractShoolEvent(long abstractSchoolEventId);
+        Task<AbstractSchoolEvent> FindAbstractShoolEventAsnyc(long abstractSchoolEventId);
     }
 }

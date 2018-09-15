@@ -27,6 +27,11 @@ namespace Gepa.Business.ClassPlans
             return _classGoalsDAO.FindClassGoals(classGoalsId);
         }
 
+        public async Task<ClassGoals> FindClassGoalsAsync(long classGoalsId)
+        {
+            return await _classGoalsDAO.FindClassGoalsAsync(classGoalsId);
+        }
+
         public void InsertClassGoals(ClassGoals newClassGoals)
         {
             _classGoalsDAO.InsertClassGoals(newClassGoals);

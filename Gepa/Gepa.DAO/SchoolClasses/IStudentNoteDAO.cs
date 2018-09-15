@@ -13,5 +13,6 @@ namespace Gepa.DAO.SchoolClasses
         void UpdateStudentNote(StudentNote studentNote);
         void DeleteStudentNote(StudentNote studentNote);
         StudentNote FindStudentNote(long studentNoteId);
+        Task<StudentNote> FindStudentNoteAsync(long studentNoteId);
     }
 }

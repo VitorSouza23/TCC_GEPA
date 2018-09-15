@@ -29,7 +29,17 @@ namespace Gepa.DAO.ClassPlans
             Evaluetion evaluetion = null;
             using (EntityModel em = new EntityModel(DbConnectioOject))
             {
-                evaluetion = em.Evaluetion.Single(a => a.EvaluetionId == evaluationId);
+                evaluetion = em.Evaluetion.Find(evaluationId);
+            }
+            return evaluetion;
+        }
+
+        public async Task<Evaluetion> FindEvaluationAsync(long evaluationId)
+        {
+            Evaluetion evaluetion = null;
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                evaluetion = await em.Evaluetion.FindAsync(evaluationId);
             }
             return evaluetion;
         }

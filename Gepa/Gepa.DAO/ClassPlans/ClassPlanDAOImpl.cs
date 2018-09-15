@@ -34,6 +34,16 @@ namespace Gepa.DAO.ClassPlans
             return classPlan;
         }
 
+        public async Task<ClassPlan> FindClassPlanAsync(long classPlanId)
+        {
+            ClassPlan classPlan = null;
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                classPlan = await em.ClassPlan.FindAsync(classPlanId);
+            }
+            return classPlan;
+        }
+
         public void InsertClassPlan(ClassPlan newClassPlan)
         {
             using (EntityModel em = new EntityModel(DbConnectioOject))

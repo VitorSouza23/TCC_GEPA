@@ -27,6 +27,11 @@ namespace Gepa.Business.ClassPlans
             return _choresDAO.FindChores(choresId);
         }
 
+        public async Task<Chores> FindChoresAsync(long choresId)
+        {
+            return await _choresDAO.FindChoresAsync(choresId);
+        }
+
         public void InsertChores(Chores newChores)
         {
             _choresDAO.InsertChores(newChores);

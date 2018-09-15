@@ -29,7 +29,17 @@ namespace Gepa.DAO.SchoolClasses
             School school = null;
             using (EntityModel em = new EntityModel(DbConnectioOject))
             {
-                school = em.School.Single(a => a.SchoolId == schoolId);
+                school = em.School.Find(schoolId);
+            }
+            return school;
+        }
+
+        public async Task<School> FindStudentAsync(long schoolId)
+        {
+            School school = null;
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                school = await em.School.FindAsync(schoolId);
             }
             return school;
         }

@@ -29,7 +29,17 @@ namespace Gepa.DAO.Calendar
             SchoolCalendar schoolCalendar = null;
             using (EntityModel em = new EntityModel(DbConnectioOject))
             {
-                schoolCalendar = em.SchoolCalendar.Single(a => a.SchoolCalendarId == schoolCalendarId);
+                schoolCalendar = em.SchoolCalendar.Find(schoolCalendarId);
+            }
+            return schoolCalendar;
+        }
+
+        public async Task<SchoolCalendar> FindSchoolCalendarAsync(long schoolCalendarId)
+        {
+            SchoolCalendar schoolCalendar = null;
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                schoolCalendar = await em.SchoolCalendar.FindAsync(schoolCalendarId);
             }
             return schoolCalendar;
         }

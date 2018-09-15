@@ -13,5 +13,6 @@ namespace Gepa.Business.ClassPlans
         void UpdateClassPlan(ClassPlan classPlan);
         void DeleteClassPlan(ClassPlan classPlan);
         ClassPlan FindClassPlan(long classPlanId);
+        Task<ClassPlan> FindClassPlanAsync(long classPlanId);
     }
 }

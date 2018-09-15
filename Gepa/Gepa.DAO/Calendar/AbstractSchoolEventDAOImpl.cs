@@ -30,7 +30,17 @@ namespace Gepa.DAO.Calendar
             AbstractSchoolEvent abstractSchoolEvent = null;
             using(EntityModel em = new EntityModel(DbConnectioOject))
             {
-                abstractSchoolEvent = em.AbstractSchoolEvent.Single(a => a.AbstractSchoolEventId == abstractSchoolEventId);
+                abstractSchoolEvent = em.AbstractSchoolEvent.Find(abstractSchoolEventId);
+            }
+            return abstractSchoolEvent;
+        }
+
+        public async Task<AbstractSchoolEvent> FindAbstractShoolEventAsync(long abstractSchoolEventId)
+        {
+            AbstractSchoolEvent abstractSchoolEvent = null;
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                abstractSchoolEvent = await em.AbstractSchoolEvent.FindAsync(abstractSchoolEventId);
             }
             return abstractSchoolEvent;
         }

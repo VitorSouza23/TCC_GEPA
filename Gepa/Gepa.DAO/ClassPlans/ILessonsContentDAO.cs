@@ -13,5 +13,6 @@ namespace Gepa.DAO.ClassPlans
         void UpdateLessonsContent(LessonsContent lessonsContent);
         void DeleteLessonsContent(LessonsContent lessonsContent);
         LessonsContent FindLessonsContent(long lessonsContentId);
+        Task<LessonsContent> FindLessonsContentAsync(long lessonsContentId);
     }
 }

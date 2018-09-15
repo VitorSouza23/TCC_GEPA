@@ -27,6 +27,11 @@ namespace Gepa.Business.SchoolClasses
             return _classDiaryDAO.FindClassDiary(classDiaryID);
         }
 
+        public async Task<ClassDiary> FindClassDiaryAsync(long classDiaryID)
+        {
+            return await _classDiaryDAO.FindClassDiaryAsync(classDiaryID);
+        }
+
         public void InsertClassDiary(ClassDiary newClassDiary)
         {
             _classDiaryDAO.InsertClassDiary(newClassDiary);

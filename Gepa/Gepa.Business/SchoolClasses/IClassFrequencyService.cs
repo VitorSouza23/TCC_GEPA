@@ -13,5 +13,6 @@ namespace Gepa.Business.SchoolClasses
         void UpdateClassFrequency(ClassFrequency classFrequency);
         void DeleteClassFrequency(ClassFrequency classFrequency);
         ClassFrequency FindClassFrequency(long classFrequencyId);
+        Task<ClassFrequency> FindClassFrequencyAsync(long classFrequencyId);
     }
 }

@@ -13,5 +13,6 @@ namespace Gepa.Business.SchoolClasses
         void UpdateClassDiary(ClassDiary classDiary);
         void DeleteClassDiary(ClassDiary classDiary);
         ClassDiary FindClassDiary(long classDiaryID);
+        Task<ClassDiary> FindClassDiaryAsync(long classDiaryID);
     }
 }

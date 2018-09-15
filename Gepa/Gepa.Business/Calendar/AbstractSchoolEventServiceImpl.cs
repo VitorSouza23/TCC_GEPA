@@ -27,6 +27,11 @@ namespace Gepa.Business.Calendar
             return _abstractSchoolEventDAO.FindAbstractShoolEvent(abstractSchoolEventId);
         }
 
+        public async Task<AbstractSchoolEvent> FindAbstractShoolEventAsnyc(long abstractSchoolEventId)
+        {
+            return await _abstractSchoolEventDAO.FindAbstractShoolEventAsync(abstractSchoolEventId);
+        }
+
         public void InsertAbstractSchoolEvent(AbstractSchoolEvent newAbstractSchoolEvent)
         {
             _abstractSchoolEventDAO.InsertAbstractSchoolEvent(newAbstractSchoolEvent);

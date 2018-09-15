@@ -27,6 +27,11 @@ namespace Gepa.Business.SchoolClasses
             return _classFrequencyDAO.FindClassFrequency(classFrequencyId);
         }
 
+        public async Task<ClassFrequency> FindClassFrequencyAsync(long classFrequencyId)
+        {
+            return await _classFrequencyDAO.FindClassFrequencyAsync(classFrequencyId);
+        }
+
         public void InsertClassFrequency(ClassFrequency newClassFrequency)
         {
             _classFrequencyDAO.InsertClassFrequency(newClassFrequency);

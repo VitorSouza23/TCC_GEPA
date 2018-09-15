@@ -13,5 +13,6 @@ namespace Gepa.DAO.Calendar
         void UpdateSchoolCalendar(SchoolCalendar schoolCalendar);
         void DeleteSchoolCalendar(SchoolCalendar schoolCalendar);
         SchoolCalendar FindSchoolCalendar(long schoolCalendarId);
+        Task<SchoolCalendar> FindSchoolCalendarAsync(long schoolCalendarId);
     }
 }

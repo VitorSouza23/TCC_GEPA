@@ -27,6 +27,11 @@ namespace Gepa.Business.Users
             return _teacherDAO.FindTeacher(teacherId);
         }
 
+        public async Task<Teacher> FindTeacherAsync(long teacherId)
+        {
+            return await _teacherDAO.FindTeacherAsync(teacherId);
+        }
+
         public void InsertTeacher(Teacher newTeacher)
         {
             _teacherDAO.InsertTeacher(newTeacher);

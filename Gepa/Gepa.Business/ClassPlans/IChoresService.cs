@@ -13,5 +13,6 @@ namespace Gepa.Business.ClassPlans
         void UpdateChores(Chores chores);
         void DeleteChores(Chores chores);
         Chores FindChores(long choresId);
+        Task<Chores> FindChoresAsync(long choresId);
     }
 }

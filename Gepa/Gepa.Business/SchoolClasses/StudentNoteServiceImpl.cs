@@ -27,6 +27,11 @@ namespace Gepa.Business.SchoolClasses
             return _studentNoteDAO.FindStudentNote(studentNoteId);
         }
 
+        public async Task<StudentNote> FindStudentNoteAsync(long studentNoteId)
+        {
+            return await _studentNoteDAO.FindStudentNoteAsync(studentNoteId);
+        }
+
         public void InsertStudentNote(StudentNote newStudentNote)
         {
             _studentNoteDAO.InsertStudentNote(newStudentNote);

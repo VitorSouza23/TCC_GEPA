@@ -29,7 +29,17 @@ namespace Gepa.DAO.SchoolClasses
             StudentNote studentNote = null;
             using (EntityModel em = new EntityModel(DbConnectioOject))
             {
-                studentNote = em.StudentNote.Single(a => a.StudentNoteId == studentNoteId);
+                studentNote = em.StudentNote.Find(studentNoteId);
+            }
+            return studentNote;
+        }
+
+        public async Task<StudentNote> FindStudentNoteAsync(long studentNoteId)
+        {
+            StudentNote studentNote = null;
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                studentNote = await em.StudentNote.FindAsync(studentNoteId);
             }
             return studentNote;
         }

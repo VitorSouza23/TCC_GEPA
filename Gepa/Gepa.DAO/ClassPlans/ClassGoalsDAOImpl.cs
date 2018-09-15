@@ -29,7 +29,17 @@ namespace Gepa.DAO.ClassPlans
             ClassGoals classGoals = null;
             using (EntityModel em = new EntityModel(DbConnectioOject))
             {
-                classGoals = em.ClassGoals.Single(a => a.ClassGoalsId == classGoalsId);
+                classGoals = em.ClassGoals.Find(classGoalsId);
+            }
+            return classGoals;
+        }
+
+        public async Task<ClassGoals> FindClassGoalsAsync(long classGoalsId)
+        {
+            ClassGoals classGoals = null;
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                classGoals = await em.ClassGoals.FindAsync(classGoalsId);
             }
             return classGoals;
         }

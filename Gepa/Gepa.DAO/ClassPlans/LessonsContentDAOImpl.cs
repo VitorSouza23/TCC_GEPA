@@ -29,7 +29,17 @@ namespace Gepa.DAO.ClassPlans
             LessonsContent lessonsContent = null;
             using (EntityModel em = new EntityModel(DbConnectioOject))
             {
-                lessonsContent = em.LessonsContent.Single(a => a.LessonsContentId == lessonsContentId);
+                lessonsContent = em.LessonsContent.Find(lessonsContentId);
+            }
+            return lessonsContent;
+        }
+
+        public async Task<LessonsContent> FindLessonsContentAsync(long lessonsContentId)
+        {
+            LessonsContent lessonsContent = null;
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                lessonsContent = await em.LessonsContent.FindAsync(lessonsContentId);
             }
             return lessonsContent;
         }

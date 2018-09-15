@@ -27,6 +27,11 @@ namespace Gepa.Business.ClassPlans
             return _classPlanDAO.FindClassPlan(classPlanId);
         }
 
+        public async Task<ClassPlan> FindClassPlanAsync(long classPlanId)
+        {
+            return await _classPlanDAO.FindClassPlanAsync(classPlanId);
+        }
+
         public void InsertClassPlan(ClassPlan newClassPlan)
         {
             _classPlanDAO.InsertClassPlan(newClassPlan);

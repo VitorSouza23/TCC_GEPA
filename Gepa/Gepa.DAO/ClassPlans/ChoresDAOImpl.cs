@@ -29,7 +29,17 @@ namespace Gepa.DAO.ClassPlans
             Chores chores = null;
             using (EntityModel em = new EntityModel(DbConnectioOject))
             {
-                chores = em.Chores.Single(a => a.ChoresId == choresId);
+                chores = em.Chores.Find(choresId);
+            }
+            return chores;
+        }
+
+        public async Task<Chores> FindChoresAsync(long choresId)
+        {
+            Chores chores = null;
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                chores = await em.Chores.FindAsync(choresId);
             }
             return chores;
         }

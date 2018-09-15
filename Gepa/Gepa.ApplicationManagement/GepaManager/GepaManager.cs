@@ -44,9 +44,11 @@ namespace GepaManagement
         private static string _CONNECTION_STRING = string.Empty;
         private static string _PROVIDER_NAME = string.Empty;
         private static string _IDENTITY_CONNECTION_STRING = string.Empty;
+        private static string _GOOGLE_CLIENT = string.Empty;
         private static string _PROVAIDER_KEY_VALUE_NAME = "Provider";
         private static string _CONNECTION_STRING_KEY_VALUE_NAME = "Connection";
         private static string _IDENTITY_CONNECTION_STRING_KEY_VALUE_NAME = "IdentityConnection";
+        private static string _GOOLGE_CLIENT_KEY_NAME = "GoogleClient";
         private static object _LOCK = new Object();
         private static DbConnection _DB_CONNECTION;
         private static DbConnection _IDENTITY_DB_CONNECTION;
@@ -56,11 +58,14 @@ namespace GepaManagement
             string conectionStringEncrypted = GepaRegistryKeyManager.GetStringValueOfKey(_CONNECTION_STRING_KEY_VALUE_NAME);
             string providerNameEncrypted = GepaRegistryKeyManager.GetStringValueOfKey(_PROVAIDER_KEY_VALUE_NAME);
             string identityStringEncrypted = GepaRegistryKeyManager.GetStringValueOfKey(_IDENTITY_CONNECTION_STRING_KEY_VALUE_NAME);
+            string googleClientEncrypted = GepaRegistryKeyManager.GetStringValueOfKey(_GOOLGE_CLIENT_KEY_NAME);
 
             IEncryptionHelper encryptor = new MD5CryptoHelper();
             _CONNECTION_STRING = encryptor.DescryptString(conectionStringEncrypted);
             _PROVIDER_NAME = encryptor.DescryptString(providerNameEncrypted);
             _IDENTITY_CONNECTION_STRING = encryptor.DescryptString(identityStringEncrypted);
+            _GOOGLE_CLIENT = encryptor.DescryptString(googleClientEncrypted);
+
         }
 
         private void CreateDBConnection()
@@ -86,6 +91,13 @@ namespace GepaManagement
             if (_IDENTITY_DB_CONNECTION == null)
                 CreateIdentityDBConnection();
             return _IDENTITY_DB_CONNECTION;
+        }
+
+        public string GetGoogleClientSecret()
+        {
+            if (string.IsNullOrWhiteSpace(_GOOGLE_CLIENT))
+                ReadRegistryKeys();
+            return _GOOGLE_CLIENT;
         }
 
 

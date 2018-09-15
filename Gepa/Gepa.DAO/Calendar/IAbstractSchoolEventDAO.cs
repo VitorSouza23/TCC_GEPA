@@ -13,5 +13,6 @@ namespace Gepa.DAO.Calendar
         void UpdateAbstractSchoolEvent(AbstractSchoolEvent abstractSchoolEvent);
         void DeleteAbstractSchoolEvent(AbstractSchoolEvent abstractSchoolEvent);
         AbstractSchoolEvent FindAbstractShoolEvent(long abstractSchoolEventId);
+        Task<AbstractSchoolEvent> FindAbstractShoolEventAsync(long abstractSchoolEventId);
     }
 }

@@ -27,6 +27,11 @@ namespace Gepa.Business.Calendar
             return _schoolCalendarDAO.FindSchoolCalendar(schoolCalendarId);
         }
 
+        public async Task<SchoolCalendar> FindSchoolCalendarAsync(long schoolCalendarId)
+        {
+            return await _schoolCalendarDAO.FindSchoolCalendarAsync(schoolCalendarId);
+        }
+
         public void IsertSchoolCalendar(SchoolCalendar newSchoolCalendar)
         {
             _schoolCalendarDAO.IsertSchoolCalendar(newSchoolCalendar);

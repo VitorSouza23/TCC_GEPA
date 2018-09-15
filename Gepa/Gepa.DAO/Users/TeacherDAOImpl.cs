@@ -29,7 +29,17 @@ namespace Gepa.DAO.Users
             Teacher teacher = null;
             using (EntityModel em = new EntityModel(DbConnectioOject))
             {
-                teacher = em.Teacher.Single(a => a.TeacherId == teacherId);
+                teacher = em.Teacher.Find(teacherId);
+            }
+            return teacher;
+        }
+
+        public async Task<Teacher> FindTeacherAsync(long teacherId)
+        {
+            Teacher teacher = null;
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                teacher = await em.Teacher.FindAsync(teacherId);
             }
             return teacher;
         }

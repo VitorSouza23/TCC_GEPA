@@ -27,6 +27,11 @@ namespace Gepa.Business.SchoolClasses
             return _schoolClassDAO.FindSchoolClass(schoolClassId);
         }
 
+        public async Task<SchoolClass> FindSchoolClassAsync(long schoolClassId)
+        {
+            return await _schoolClassDAO.FindSchoolClassAsync(schoolClassId);
+        }
+
         public void InserSchoolClass(SchoolClass newSchoolClass)
         {
             _schoolClassDAO.InserSchoolClass(newSchoolClass);

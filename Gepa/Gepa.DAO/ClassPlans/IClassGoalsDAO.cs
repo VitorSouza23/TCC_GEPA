@@ -13,5 +13,6 @@ namespace Gepa.DAO.ClassPlans
         void UpdateClassGoals(ClassGoals classGoals);
         void DeleteClassGoals(ClassGoals classGoals);
         ClassGoals FindClassGoals(long classGoalsId);
+        Task<ClassGoals> FindClassGoalsAsync(long classGoalsId);
     }
 }

@@ -13,5 +13,6 @@ namespace Gepa.Business.SchoolClasses
         void UpdateSchoolClass(SchoolClass schoolClass);
         void DeleteSchoolClass(SchoolClass schoolClass);
         SchoolClass FindSchoolClass(long schoolClassId);
+        Task<SchoolClass> FindSchoolClassAsync(long schoolClassId);
     }
 }

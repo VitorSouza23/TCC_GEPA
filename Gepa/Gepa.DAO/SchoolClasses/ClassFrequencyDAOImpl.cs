@@ -29,7 +29,17 @@ namespace Gepa.DAO.SchoolClasses
             ClassFrequency classFrequency = null;
             using (EntityModel em = new EntityModel(DbConnectioOject))
             {
-                classFrequency = em.ClassFrequency.Single(a => a.ClassFrequencyId == classFrequencyId);
+                classFrequency = em.ClassFrequency.Find(classFrequencyId);
+            }
+            return classFrequency;
+        }
+
+        public async Task<ClassFrequency> FindClassFrequencyAsync(long classFrequencyId)
+        {
+            ClassFrequency classFrequency = null;
+            using (EntityModel em = new EntityModel(DbConnectioOject))
+            {
+                classFrequency = await em.ClassFrequency.FindAsync(classFrequencyId);
             }
             return classFrequency;
         }

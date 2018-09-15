@@ -27,6 +27,11 @@ namespace Gepa.Business.ClassPlans
             return _evaluationDAO.FindEvaluation(evaluationId);
         }
 
+        public async Task<Evaluetion> FindEvaluationAsync(long evaluationId)
+        {
+            return await _evaluationDAO.FindEvaluationAsync(evaluationId);
+        }
+
         public void InsertEvaluation(Evaluetion newEvaluation)
         {
             _evaluationDAO.InsertEvaluation(newEvaluation);

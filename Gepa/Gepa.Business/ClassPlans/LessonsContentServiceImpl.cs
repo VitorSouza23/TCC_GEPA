@@ -27,6 +27,11 @@ namespace Gepa.Business.ClassPlans
             return _lessonsContentDAO.FindLessonsContent(lessonsContentId);
         }
 
+        public async Task<LessonsContent> FindLessonsContentAsync(long lessonsContentId)
+        {
+            return await _lessonsContentDAO.FindLessonsContentAsync(lessonsContentId);
+        }
+
         public void InsertLessonsContent(LessonsContent newLessonsContent)
         {
             _lessonsContentDAO.InsertLessonsContent(newLessonsContent);

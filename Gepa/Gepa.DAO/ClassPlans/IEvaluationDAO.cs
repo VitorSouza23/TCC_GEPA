@@ -13,5 +13,6 @@ namespace Gepa.DAO.ClassPlans
         void UpdateEvaluation(Evaluetion evaluation);
         void DeleteEvaluation(Evaluetion evaluation);
         Evaluetion FindEvaluation(long evaluationId);
+        Task<Evaluetion> FindEvaluationAsync(long evaluationId);
     }
 }

@@ -3,6 +3,7 @@ using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
+using Microsoft.Owin.Security.Google;
 using Owin;
 using System;
 using System.Collections.Generic;
@@ -62,11 +63,11 @@ namespace Gepa.Identity.Base.StartConfig
             //   appId: "",
             //   appSecret: "");
 
-            //app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
-            //{
-            //    ClientId = "",
-            //    ClientSecret = ""
-            //});
+            app.UseGoogleAuthentication(new GoogleOAuth2AuthenticationOptions()
+            {
+                ClientId = "586790727703-oo0eln3474nsn4ehvoe39bppblp3ftdu.apps.googleusercontent.com",
+                ClientSecret = GepaManagement.GepaManager.Instance.GetGoogleClientSecret()
+            });
         }
     }
 

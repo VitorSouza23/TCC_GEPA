@@ -169,6 +169,44 @@
           "lib/net45/Microsoft.Owin.Security.Cookies.dll": {}
         }
       },
+      "Microsoft.Owin.Security.Facebook/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Owin": "4.0.0",
+          "Microsoft.Owin.Security": "4.0.0",
+          "Newtonsoft.Json": "9.0.1",
+          "Owin": "1.0.0"
+        },
+        "frameworkAssemblies": [
+          "System.Net.Http",
+          "System.Net.Http.WebRequest"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.Owin.Security.Facebook.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.Owin.Security.Facebook.dll": {}
+        }
+      },
+      "Microsoft.Owin.Security.Google/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Owin": "4.0.0",
+          "Microsoft.Owin.Security": "4.0.0",
+          "Newtonsoft.Json": "9.0.1",
+          "Owin": "1.0.0"
+        },
+        "frameworkAssemblies": [
+          "System.Net.Http",
+          "System.Net.Http.WebRequest"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.Owin.Security.Google.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.Owin.Security.Google.dll": {}
+        }
+      },
       "Microsoft.Owin.Security.OAuth/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -433,6 +471,44 @@
         },
         "runtime": {
           "lib/net45/Microsoft.Owin.Security.Cookies.dll": {}
+        }
+      },
+      "Microsoft.Owin.Security.Facebook/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Owin": "4.0.0",
+          "Microsoft.Owin.Security": "4.0.0",
+          "Newtonsoft.Json": "9.0.1",
+          "Owin": "1.0.0"
+        },
+        "frameworkAssemblies": [
+          "System.Net.Http",
+          "System.Net.Http.WebRequest"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.Owin.Security.Facebook.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.Owin.Security.Facebook.dll": {}
+        }
+      },
+      "Microsoft.Owin.Security.Google/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Owin": "4.0.0",
+          "Microsoft.Owin.Security": "4.0.0",
+          "Newtonsoft.Json": "9.0.1",
+          "Owin": "1.0.0"
+        },
+        "frameworkAssemblies": [
+          "System.Net.Http",
+          "System.Net.Http.WebRequest"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.Owin.Security.Google.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.Owin.Security.Google.dll": {}
         }
       },
       "Microsoft.Owin.Security.OAuth/4.0.0": {
@@ -701,6 +777,44 @@
           "lib/net45/Microsoft.Owin.Security.Cookies.dll": {}
         }
       },
+      "Microsoft.Owin.Security.Facebook/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Owin": "4.0.0",
+          "Microsoft.Owin.Security": "4.0.0",
+          "Newtonsoft.Json": "9.0.1",
+          "Owin": "1.0.0"
+        },
+        "frameworkAssemblies": [
+          "System.Net.Http",
+          "System.Net.Http.WebRequest"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.Owin.Security.Facebook.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.Owin.Security.Facebook.dll": {}
+        }
+      },
+      "Microsoft.Owin.Security.Google/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Owin": "4.0.0",
+          "Microsoft.Owin.Security": "4.0.0",
+          "Newtonsoft.Json": "9.0.1",
+          "Owin": "1.0.0"
+        },
+        "frameworkAssemblies": [
+          "System.Net.Http",
+          "System.Net.Http.WebRequest"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.Owin.Security.Google.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.Owin.Security.Google.dll": {}
+        }
+      },
       "Microsoft.Owin.Security.OAuth/4.0.0": {
         "type": "package",
         "dependencies": {
@@ -965,6 +1079,44 @@
         },
         "runtime": {
           "lib/net45/Microsoft.Owin.Security.Cookies.dll": {}
+        }
+      },
+      "Microsoft.Owin.Security.Facebook/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Owin": "4.0.0",
+          "Microsoft.Owin.Security": "4.0.0",
+          "Newtonsoft.Json": "9.0.1",
+          "Owin": "1.0.0"
+        },
+        "frameworkAssemblies": [
+          "System.Net.Http",
+          "System.Net.Http.WebRequest"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.Owin.Security.Facebook.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.Owin.Security.Facebook.dll": {}
+        }
+      },
+      "Microsoft.Owin.Security.Google/4.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.Owin": "4.0.0",
+          "Microsoft.Owin.Security": "4.0.0",
+          "Newtonsoft.Json": "9.0.1",
+          "Owin": "1.0.0"
+        },
+        "frameworkAssemblies": [
+          "System.Net.Http",
+          "System.Net.Http.WebRequest"
+        ],
+        "compile": {
+          "lib/net451/Microsoft.Owin.Security.Google.dll": {}
+        },
+        "runtime": {
+          "lib/net451/Microsoft.Owin.Security.Google.dll": {}
         }
       },
       "Microsoft.Owin.Security.OAuth/4.0.0": {
@@ -1236,6 +1388,28 @@
         "microsoft.owin.security.cookies.nuspec"
       ]
     },
+    "Microsoft.Owin.Security.Facebook/4.0.0": {
+      "sha512": "CCbZd8p8VcxA4uHKiK6ucMuwg5bWG8xN4cWrM+Gy9amIpR/Sze72aDMJGyOCAWpHRFBfUICX0rG/mb0sYTTp1g==",
+      "type": "package",
+      "path": "microsoft.owin.security.facebook/4.0.0",
+      "files": [
+        "lib/net451/Microsoft.Owin.Security.Facebook.XML",
+        "lib/net451/Microsoft.Owin.Security.Facebook.dll",
+        "microsoft.owin.security.facebook.4.0.0.nupkg.sha512",
+        "microsoft.owin.security.facebook.nuspec"
+      ]
+    },
+    "Microsoft.Owin.Security.Google/4.0.0": {
+      "sha512": "SNBbdzm/pmV+mlcbDoDuXlmqBmOkSG0ltTnwaP2ltA4qwSBGNwvpf/0qXZUt8FwZKqjiNLIM+wEAr4suYqvlCw==",
+      "type": "package",
+      "path": "microsoft.owin.security.google/4.0.0",
+      "files": [
+        "lib/net451/Microsoft.Owin.Security.Google.XML",
+        "lib/net451/Microsoft.Owin.Security.Google.dll",
+        "microsoft.owin.security.google.4.0.0.nupkg.sha512",
+        "microsoft.owin.security.google.nuspec"
+      ]
+    },
     "Microsoft.Owin.Security.OAuth/4.0.0": {
       "sha512": "O5QhUEb7LVXCl/4lasHpd48raGqSQdBk5Z8rojFGcDa90n4u15DTPaNtQGje4Oh+bhSdQjvaoW2kKb8B5szDIw==",
       "type": "package",
@@ -1319,6 +1493,8 @@
       "Microsoft.AspNet.WebApi.Owin >= 5.2.6",
       "Microsoft.Owin.Cors >= 4.0.0",
       "Microsoft.Owin.Host.SystemWeb >= 4.0.0",
+      "Microsoft.Owin.Security.Facebook >= 4.0.0",
+      "Microsoft.Owin.Security.Google >= 4.0.0",
       "Microsoft.Owin.Security.OAuth >= 4.0.0"
     ]
   },
@@ -1376,6 +1552,14 @@
             "version": "[4.0.0, )"
           },
           "Microsoft.Owin.Host.SystemWeb": {
+            "target": "Package",
+            "version": "[4.0.0, )"
+          },
+          "Microsoft.Owin.Security.Facebook": {
+            "target": "Package",
+            "version": "[4.0.0, )"
+          },
+          "Microsoft.Owin.Security.Google": {
             "target": "Package",
             "version": "[4.0.0, )"
           },

@@ -25,6 +25,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gepa.UnitTests", "Gepa.Unit
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gepa.Utilities", "Gepa.Utilities\Gepa.Utilities\Gepa.Utilities.csproj", "{F52438AE-0D1D-4323-BDE6-9C84D3F85580}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gepa.Identity", "Gepa.Identity\Gepa.Identity\Gepa.Identity.csproj", "{232DE082-81AE-42A0-84C1-AB8111349F3A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gepa.Identity.Base", "Gepa.Identity\Gepa.Identity.Base\Gepa.Identity.Base.csproj", "{5415026C-0630-4179-A183-AE046EE1D9B2}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +71,14 @@ Global
 		{F52438AE-0D1D-4323-BDE6-9C84D3F85580}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F52438AE-0D1D-4323-BDE6-9C84D3F85580}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F52438AE-0D1D-4323-BDE6-9C84D3F85580}.Release|Any CPU.Build.0 = Release|Any CPU
+		{232DE082-81AE-42A0-84C1-AB8111349F3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{232DE082-81AE-42A0-84C1-AB8111349F3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{232DE082-81AE-42A0-84C1-AB8111349F3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{232DE082-81AE-42A0-84C1-AB8111349F3A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5415026C-0630-4179-A183-AE046EE1D9B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5415026C-0630-4179-A183-AE046EE1D9B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5415026C-0630-4179-A183-AE046EE1D9B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5415026C-0630-4179-A183-AE046EE1D9B2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -81,6 +93,8 @@ Global
 		{60A37E45-7ABD-4D77-B75A-396452F8FD78} = {CDF1229A-E6ED-4686-9266-F221F2A1C997}
 		{5C77398D-C98A-49A3-9078-3D9917FB9EB0} = {CDF1229A-E6ED-4686-9266-F221F2A1C997}
 		{F52438AE-0D1D-4323-BDE6-9C84D3F85580} = {CDF1229A-E6ED-4686-9266-F221F2A1C997}
+		{232DE082-81AE-42A0-84C1-AB8111349F3A} = {CDF1229A-E6ED-4686-9266-F221F2A1C997}
+		{5415026C-0630-4179-A183-AE046EE1D9B2} = {CDF1229A-E6ED-4686-9266-F221F2A1C997}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {08A6AAA6-D301-4CB8-AA53-74BA41EB9AB4}

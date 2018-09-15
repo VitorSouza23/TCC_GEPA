@@ -22,6 +22,7 @@ C:\Solutions\Gepa\Gepa.ApplicationManagement\GepaManager\bin\Debug\Gepa.DAO.dll
 C:\Solutions\Gepa\Gepa.ApplicationManagement\GepaManager\bin\Debug\Gepa.Entities.Framework.dll
 C:\Solutions\Gepa\Gepa.ApplicationManagement\GepaManager\bin\Debug\Gepa.Utilities.dll
 C:\Solutions\Gepa\Gepa.ApplicationManagement\GepaManager\bin\Debug\EntityFramework.dll
+C:\Solutions\Gepa\Gepa.ApplicationManagement\GepaManager\bin\Debug\Newtonsoft.Json.dll
 C:\Solutions\Gepa\Gepa.ApplicationManagement\GepaManager\bin\Debug\Gepa.Business.pdb
 C:\Solutions\Gepa\Gepa.ApplicationManagement\GepaManager\bin\Debug\Gepa.DAO.pdb
 C:\Solutions\Gepa\Gepa.ApplicationManagement\GepaManager\bin\Debug\Gepa.Entities.Framework.pdb

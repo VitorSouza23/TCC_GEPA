@@ -70,6 +70,24 @@ namespace Gepa.Resources.Languages {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Associe sua conta.
+        /// </summary>
+        internal static string AssociateYourAccount {
+            get {
+                return ResourceManager.GetString("AssociateYourAccount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Formas de associação.
+        /// </summary>
+        internal static string AssociationForms {
+            get {
+                return ResourceManager.GetString("AssociationForms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Conecte-se com Facebook.
         /// </summary>
         internal static string ConnectFacebook {
@@ -111,6 +129,24 @@ namespace Gepa.Resources.Languages {
         internal static string DontHaveAccountYetDoRegister {
             get {
                 return ResourceManager.GetString("DontHaveAccountYetDoRegister", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a E-mail.
+        /// </summary>
+        internal static string Email {
+            get {
+                return ResourceManager.GetString("Email", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Email ou Nome de Usuário.
+        /// </summary>
+        internal static string EmailOrUserName {
+            get {
+                return ResourceManager.GetString("EmailOrUserName", resourceCulture);
             }
         }
         
@@ -178,11 +214,56 @@ namespace Gepa.Resources.Languages {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a O e-mail ou nome de usuário e senha não correspondem, verifique se os campos foram preenchidos corretamente..
+        /// </summary>
+        internal static string InvalidLoginError {
+            get {
+                return ResourceManager.GetString("InvalidLoginError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Login.
         /// </summary>
         internal static string Login {
             get {
                 return ResourceManager.GetString("Login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Falha de logon.
+        /// </summary>
+        internal static string LogonFailure {
+            get {
+                return ResourceManager.GetString("LogonFailure", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Falha ao fazer logon no serviço..
+        /// </summary>
+        internal static string LogonFailureMessage {
+            get {
+                return ResourceManager.GetString("LogonFailureMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a A senha pode estar incorreta..
+        /// </summary>
+        internal static string MaybeThePasswordBeIncorrectError {
+            get {
+                return ResourceManager.GetString("MaybeThePasswordBeIncorrectError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Talvez o e-mail ou nome de usuário não exista..
+        /// </summary>
+        internal static string MaybeTheUserNameDoesNotExistError {
+            get {
+                return ResourceManager.GetString("MaybeTheUserNameDoesNotExistError", resourceCulture);
             }
         }
         
@@ -205,11 +286,29 @@ namespace Gepa.Resources.Languages {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Senha.
+        /// </summary>
+        internal static string Password {
+            get {
+                return ResourceManager.GetString("Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Registre-se.
         /// </summary>
         internal static string Register {
             get {
                 return ResourceManager.GetString("Register", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Você se autenticou com êxito com &lt;strong&gt;{0}&lt;/strong&gt;. Insira um nome de usuário para este site abaixo e clique no botão Registrar para concluir o login..
+        /// </summary>
+        internal static string SuccessfulAuthenticationMessage {
+            get {
+                return ResourceManager.GetString("SuccessfulAuthenticationMessage", resourceCulture);
             }
         }
         

@@ -1,32 +1,32 @@
-﻿@{
-    ViewBag.Title = "Login";
+﻿@model Gepa.Site.Models.Account.LoginViewModel
+@{
+    ViewBag.Title = Language.Login;
 }
 
 <div class="container">
-    <h1 class="gepaTitles">@Language.Login</h1>
+    <h1 class="gepaTitles">@ViewBag.Title</h1>
 
     <div class="gepaLogin">
 
-        <div class="gepaLoginDivs">         
+        @Html.Partial("_ExternalGoogleLogin")
+        @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { role = "form" }))
+        {
+            @Html.AntiForgeryToken()
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="text-left gepaLoginDivs displayInlineGrid">
+                <span class="loginComponents loginLabels">@Language.EnterYourEmailAddressOrUsername</span>
+                @Html.TextBoxFor(m => m.EmailOrUserName, null, new { @class = "loginComponents" })
+                @Html.ValidationMessageFor(m => m.EmailOrUserName, "", new { @class = "text-danger" })
 
-            <button class="connectButtons">
-                <i class="fab fa-google"></i>
-                @Language.ConnectGoogle
-            </button>
-        </div>
+                <span class="loginComponents loginLabels">@Language.EnterYourPassword</span>
+                @Html.PasswordFor(m => m.Password, new { @class = "loginComponents" })
+                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+            </div>
 
-        <div class="text-left gepaLoginDivs displayInlineGrid">
-            <span class="loginComponents loginLabels">@Language.EnterYourEmailAddressOrUsername</span>
-            @Html.TextBox("usernameOrEmail", null, new { @class = "loginComponents" })
-
-            <span class="loginComponents loginLabels">@Language.EnterYourPassword</span>
-            @Html.Password("password", null, new { @class = "loginComponents" })
-        </div>
-
-        <div class="gepaLoginDivs">
-            <button class="loginButton">@Language.Login</button>
-        </div>
-
+            <div class="gepaLoginDivs">
+                <input type="submit" value="@Language.Login" class="loginButton" />
+            </div>
+        }
         <div class="text-center gepaLoginDivs displayInlineGrid">
             <a href="@Url.Action("RecoverPassword", "Account")">@Language.ForgotYourPassword</a>
             <a href="@Url.Action("Register", "Account")">@Language.DontHaveAccountYetDoRegister</a>

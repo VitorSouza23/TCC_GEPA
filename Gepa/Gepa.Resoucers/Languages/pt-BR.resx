@@ -120,6 +120,12 @@
   <data name="AlreadyRegisteredSignIn" xml:space="preserve">
     <value>Já é cadastrado? Faça o login</value>
   </data>
+  <data name="AssociateYourAccount" xml:space="preserve">
+    <value>Associe sua conta</value>
+  </data>
+  <data name="AssociationForms" xml:space="preserve">
+    <value>Formas de associação</value>
+  </data>
   <data name="ConnectFacebook" xml:space="preserve">
     <value>Conecte-se com Facebook</value>
   </data>
@@ -134,6 +140,12 @@
   </data>
   <data name="DontHaveAccountYetDoRegister" xml:space="preserve">
     <value>Não tem cadastro ainda? Registre-se</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>E-mail</value>
+  </data>
+  <data name="EmailOrUserName" xml:space="preserve">
+    <value>Email ou Nome de Usuário</value>
   </data>
   <data name="EnterFieldValueFormatted" xml:space="preserve">
     <value>Insira a {0}</value>
@@ -156,8 +168,23 @@
   <data name="Gepa" xml:space="preserve">
     <value>Gepa</value>
   </data>
+  <data name="InvalidLoginError" xml:space="preserve">
+    <value>O e-mail ou nome de usuário e senha não correspondem, verifique se os campos foram preenchidos corretamente.</value>
+  </data>
   <data name="Login" xml:space="preserve">
     <value>Login</value>
+  </data>
+  <data name="LogonFailure" xml:space="preserve">
+    <value>Falha de logon</value>
+  </data>
+  <data name="LogonFailureMessage" xml:space="preserve">
+    <value>Falha ao fazer logon no serviço.</value>
+  </data>
+  <data name="MaybeThePasswordBeIncorrectError" xml:space="preserve">
+    <value>A senha pode estar incorreta.</value>
+  </data>
+  <data name="MaybeTheUserNameDoesNotExistError" xml:space="preserve">
+    <value>Talvez o e-mail ou nome de usuário não exista.</value>
   </data>
   <data name="Methodology" xml:space="preserve">
     <value>Metodologia</value>
@@ -165,8 +192,14 @@
   <data name="Observations" xml:space="preserve">
     <value>Observações</value>
   </data>
+  <data name="Password" xml:space="preserve">
+    <value>Senha</value>
+  </data>
   <data name="Register" xml:space="preserve">
     <value>Registre-se</value>
+  </data>
+  <data name="SuccessfulAuthenticationMessage" xml:space="preserve">
+    <value>Você se autenticou com êxito com &lt;strong&gt;{0}&lt;/strong&gt;. Insira um nome de usuário para este site abaixo e clique no botão Registrar para concluir o login.</value>
   </data>
   <data name="Title" xml:space="preserve">
     <value>Título</value>

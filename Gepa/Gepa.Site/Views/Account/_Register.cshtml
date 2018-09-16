@@ -7,13 +7,7 @@
 
     <div class="gepaLogin">
 
-        <div class="gepaLoginDivs">         
-
-            <button class="connectButtons">
-                <i class="fab fa-google"></i>
-                @Language.ConnectGoogle
-            </button>
-        </div>
+        @Html.Partial("_ExternalGoogleLogin")
 
         <div class="text-left gepaLoginDivs displayInlineGrid">
             <span class="loginComponents loginLabels">@Language.EnterYourEmailAddressOrUsername</span>

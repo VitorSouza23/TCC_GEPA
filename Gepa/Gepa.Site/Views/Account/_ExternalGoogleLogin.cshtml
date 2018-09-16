@@ -1,0 +1,10 @@
+﻿<div class="gepaLoginDivs">
+    @using (Html.BeginForm("ExternalLogin", "Account", FormMethod.Post, new { role = "form"}))
+    {
+        @Html.AntiForgeryToken()
+        <button class="connectButtons" id="googleButton" value="Google" name="provider">
+            <i class="fab fa-google"></i>
+            @Language.ConnectGoogle
+        </button>
+    }
+</div>

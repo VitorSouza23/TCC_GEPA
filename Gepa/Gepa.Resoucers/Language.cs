@@ -217,5 +217,125 @@ namespace Gepa.Resources
                 return GetString("EnterFieldValueFormatted3");
             }
         }
+
+        /// <summary>
+        /// Senha
+        /// </summary>
+        public static string Password
+        {
+            get
+            {
+                return GetString("Password");
+            }
+        }
+
+        /// <summary>
+        /// Email ou Nome de Usuário
+        /// </summary>
+        public static string EmailOrUserName
+        {
+            get
+            {
+                return GetString("EmailOrUserName");
+            }
+        }
+
+        /// <summary>
+        /// O e-mail ou nome de usuário e senha não correposndem, verifique se os campos foram preechisdos corretamente.
+        /// </summary>
+        public static string InvalidLoginError
+        {
+            get
+            {
+                return GetString("InvalidLoginError");
+            }
+        }
+
+        /// <summary>
+        /// Talvez o e-mail ou nome de usuário não exista.
+        /// </summary>
+        public static string MaybeTheUserNameDoesNotExistError
+        {
+            get
+            {
+                return GetString("MaybeTheUserNameDoesNotExistError");
+            }
+        }
+
+        /// <summary>
+        /// Talvez a senha esteja incorreta.
+        /// </summary>
+        public static string MaybeThePasswordBeIncorrectError
+        {
+            get
+            {
+                return GetString("MaybeThePasswordBeIncorrectError");
+            }
+        }
+
+        /// <summary>
+        /// E-mail
+        /// </summary>
+        public static string Email
+        {
+            get
+            {
+                return GetString("Email");
+            }
+        }
+
+        /// <summary>
+        /// Falha de logon
+        /// </summary>
+        public static string LogonFailure
+        {
+            get
+            {
+                return GetString("LogonFailure");
+            }
+        }
+
+        /// <summary>
+        /// Falha ao fazer logon no serviço.
+        /// </summary>
+        public static string LogonFailureMessage
+        {
+            get
+            {
+                return GetString("LogonFailureMessage");
+            }
+        }
+
+        /// <summary>
+        /// Associe sua conta
+        /// </summary>
+        public static string AssociateYourAccount
+        {
+            get
+            {
+                return GetString("AssociateYourAccount");
+            }
+        }
+
+        /// <summary>
+        /// Formas de associação
+        /// </summary>
+        public static string AssociationForms
+        {
+            get
+            {
+                return GetString("AssociationForms");
+            }
+        }
+
+        /// <summary>
+        /// Você se autenticou com êxito com <strong>{0}</strong>. Insira um nome de usuário para este site abaixo e clique no botão Registrar para concluir o login.
+        /// </summary>
+        /// <param name="loginProvider"></param>
+        /// <returns></returns>
+        public static string SuccessfulAuthenticationMessage(string loginProvider)
+        {
+            return string.Format(GetString("SuccessfulAuthenticationMessage"), loginProvider);
+        }
     }
 }

@@ -54,9 +54,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\..\Gepa.DAO\Gepa.DAO.csproj">
       <Project>{2a3965df-a26e-4388-89b5-b6ada1e5737b}</Project>
       <Name>Gepa.DAO</Name>
@@ -69,6 +66,9 @@
       <Project>{ba9ed67e-ffaf-4587-a1ab-8e9d1800d89d}</Project>
       <Name>Gepa.Resources</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

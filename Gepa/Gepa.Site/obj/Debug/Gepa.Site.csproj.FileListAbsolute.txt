@@ -134,7 +134,6 @@ C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\System.Web.Http.dll
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\System.Web.Http.Owin.dll
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\EntityFramework.xml
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\EntityFramework.SqlServer.xml
-C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\Microsoft.AspNet.Identity.Core.xml
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\Microsoft.AspNet.Identity.Owin.xml
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\Microsoft.Owin.xml
@@ -146,7 +145,6 @@ C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\System.Net.Http.Formatting.xml
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\System.Web.Http.xml
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\System.Web.Http.Owin.xml
-C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\pt-br\Microsoft.AspNet.Identity.Core.resources.dll
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\pt-br\Microsoft.AspNet.Identity.EntityFramework.resources.dll
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\pt-br\Microsoft.AspNet.Identity.Owin.resources.dll
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\Gepa.Identity.Base.dll
@@ -308,3 +306,7 @@ C:\Solutions\Gepa\Gepa.Site\obj\Debug\Gepa.Site.csproj.CoreCompileInputs.cache
 C:\Solutions\Gepa\Gepa.Site\obj\Debug\Gepa.Site.csproj.CopyComplete
 C:\Solutions\Gepa\Gepa.Site\obj\Debug\Gepa.Site.dll
 C:\Solutions\Gepa\Gepa.Site\obj\Debug\Gepa.Site.pdb
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\Microsoft.Owin.Security.Google.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\pt-br\Microsoft.AspNet.Identity.Core.resources.dll

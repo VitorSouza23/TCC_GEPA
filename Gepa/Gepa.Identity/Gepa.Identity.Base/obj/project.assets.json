@@ -1499,20 +1499,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\arnal\\.nuget\\packages\\": {}
+    "C:\\Users\\vitor\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Solutions\\Gepa\\Gepa.Identity\\Gepa.Identity.Base\\Gepa.Identity.Base.csproj",
+      "projectUniqueName": "C:\\Projetos\\TCC_GEPA\\Gepa\\Gepa.Identity\\Gepa.Identity.Base\\Gepa.Identity.Base.csproj",
       "projectName": "Gepa.Identity.Base",
-      "projectPath": "C:\\Solutions\\Gepa\\Gepa.Identity\\Gepa.Identity.Base\\Gepa.Identity.Base.csproj",
-      "packagesPath": "C:\\Users\\arnal\\.nuget\\packages\\",
-      "outputPath": "C:\\Solutions\\Gepa\\Gepa.Identity\\Gepa.Identity.Base\\obj\\",
+      "projectPath": "C:\\Projetos\\TCC_GEPA\\Gepa\\Gepa.Identity\\Gepa.Identity.Base\\Gepa.Identity.Base.csproj",
+      "packagesPath": "C:\\Users\\vitor\\.nuget\\packages\\",
+      "outputPath": "C:\\Projetos\\TCC_GEPA\\Gepa\\Gepa.Identity\\Gepa.Identity.Base\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\arnal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\vitor\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1525,8 +1525,8 @@
       "frameworks": {
         "net461": {
           "projectReferences": {
-            "C:\\Solutions\\Gepa\\Gepa.ApplicationManagement\\GepaManager\\Gepa.Management.csproj": {
-              "projectPath": "C:\\Solutions\\Gepa\\Gepa.ApplicationManagement\\GepaManager\\Gepa.Management.csproj"
+            "C:\\Projetos\\TCC_GEPA\\Gepa\\Gepa.ApplicationManagement\\GepaManager\\Gepa.Management.csproj": {
+              "projectPath": "C:\\Projetos\\TCC_GEPA\\Gepa\\Gepa.ApplicationManagement\\GepaManager\\Gepa.Management.csproj"
             }
           }
         }

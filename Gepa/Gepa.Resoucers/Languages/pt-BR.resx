@@ -126,8 +126,23 @@
   <data name="ConnectGoogle" xml:space="preserve">
     <value>Conecte-se com Google</value>
   </data>
+  <data name="Date" xml:space="preserve">
+    <value>Data</value>
+  </data>
+  <data name="Description" xml:space="preserve">
+    <value>Descrição</value>
+  </data>
   <data name="DontHaveAccountYetDoRegister" xml:space="preserve">
     <value>Não tem cadastro ainda? Registre-se</value>
+  </data>
+  <data name="EnterFieldValueFormatted" xml:space="preserve">
+    <value>Insira a {0}</value>
+  </data>
+  <data name="EnterFieldValueFormatted2" xml:space="preserve">
+    <value>Insira o {0}</value>
+  </data>
+  <data name="EnterFieldValueFormatted3" xml:space="preserve">
+    <value>Insira as {0}</value>
   </data>
   <data name="EnterYourEmailAddressOrUsername" xml:space="preserve">
     <value>Informe seu endereço de e-mail ou nome de usuário:</value>
@@ -144,7 +159,16 @@
   <data name="Login" xml:space="preserve">
     <value>Login</value>
   </data>
+  <data name="Methodology" xml:space="preserve">
+    <value>Metodologia</value>
+  </data>
+  <data name="Observations" xml:space="preserve">
+    <value>Observações</value>
+  </data>
   <data name="Register" xml:space="preserve">
     <value>Registre-se</value>
+  </data>
+  <data name="Title" xml:space="preserve">
+    <value>Título</value>
   </data>
 </root>

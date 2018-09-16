@@ -4,8 +4,7 @@
     "\\Gepa",
     "\\Gepa\\Gepa.Business",
     "\\Gepa\\Gepa.Business\\bin",
-    "\\Gepa\\Gepa.DAO",
-    "\\Gepa\\Gepa.Entities"
+    "\\Gepa\\Gepa.DAO"
   ],
   "SelectedNode": "\\Gepa\\Gepa.Business\\Gepa.Business.csproj",
   "PreviewInSolutionExplorer": false

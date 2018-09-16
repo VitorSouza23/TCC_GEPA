@@ -88,11 +88,56 @@ namespace Gepa.Resources.Languages {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Data.
+        /// </summary>
+        internal static string Date {
+            get {
+                return ResourceManager.GetString("Date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Descrição.
+        /// </summary>
+        internal static string Description {
+            get {
+                return ResourceManager.GetString("Description", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Não tem cadastro ainda? Registre-se.
         /// </summary>
         internal static string DontHaveAccountYetDoRegister {
             get {
                 return ResourceManager.GetString("DontHaveAccountYetDoRegister", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Insira a {0}.
+        /// </summary>
+        internal static string EnterFieldValueFormatted {
+            get {
+                return ResourceManager.GetString("EnterFieldValueFormatted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Insira o {0}.
+        /// </summary>
+        internal static string EnterFieldValueFormatted2 {
+            get {
+                return ResourceManager.GetString("EnterFieldValueFormatted2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Insira as {0}.
+        /// </summary>
+        internal static string EnterFieldValueFormatted3 {
+            get {
+                return ResourceManager.GetString("EnterFieldValueFormatted3", resourceCulture);
             }
         }
         
@@ -142,11 +187,38 @@ namespace Gepa.Resources.Languages {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Metodologia.
+        /// </summary>
+        internal static string Methodology {
+            get {
+                return ResourceManager.GetString("Methodology", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Observações.
+        /// </summary>
+        internal static string Observations {
+            get {
+                return ResourceManager.GetString("Observations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Registre-se.
         /// </summary>
         internal static string Register {
             get {
                 return ResourceManager.GetString("Register", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Título.
+        /// </summary>
+        internal static string Title {
+            get {
+                return ResourceManager.GetString("Title", resourceCulture);
             }
         }
     }

@@ -1,0 +1,41 @@
+﻿@model Gepa.Site.Models.ClassPlans.ClassPlanModel
+
+@{ 
+    ViewBag.Title = "Cadastro do Plano de Aula";
+}
+
+<div class="container">
+    <h1 class="gepaTitles">Cadastrar plano de aula</h1>
+
+    @using (Html.BeginForm("CreateClassPlan", "ClassPlans", FormMethod.Post))
+    {
+        @Html.HiddenFor(m => m.Id)
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Title)
+            @Html.TextBoxFor(m => m.Title, new { @class = "form-control", placeholder = string.Format(Language.EnterFieldValueFormatted2, Language.Title.ToLower()) })
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Description)
+            @Html.TextAreaFor(m => m.Description, new { @class = "form-control gepaTextArea", placeholder = string.Format(Language.EnterFieldValueFormatted, Language.Description.ToLower()) })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Methodology)
+            @Html.TextAreaFor(m => m.Methodology, new { @class = "form-control gepaTextArea", placeholder = string.Format(Language.EnterFieldValueFormatted, Language.Methodology.ToLower()) })
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(m => m.Observation)
+            @Html.TextAreaFor(m => m.Observation, new { @class = "form-control gepaTextArea", placeholder = string.Format(Language.EnterFieldValueFormatted3, Language.Observations.ToLower()) })
+        </div>
+        <button type="submit" class="btn gepaFormButtons">Salvar</button>
+        <button class="btn gepaFormButtons">Cancelar</button>
+    }
+</div>
+
+<style>
+    .gepaFormButtons{
+        border-radius: 25px;
+        width: 150px;
+    }
+</style>

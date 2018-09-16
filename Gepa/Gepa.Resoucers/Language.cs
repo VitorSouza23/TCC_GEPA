@@ -129,5 +129,93 @@ namespace Gepa.Resources
                 return GetString("AlreadyRegisteredSignIn");
             }
         }
+
+        /// <summary>
+        /// Título
+        /// </summary>
+        public static string Title
+        {
+            get
+            {
+                return GetString("Title");
+            }
+        }
+
+        /// <summary>
+        /// Descrição
+        /// </summary>
+        public static string Description
+        {
+            get
+            {
+                return GetString("Description");
+            }
+        }
+
+        /// <summary>
+        /// Metodologia
+        /// </summary>
+        public static string Methodology
+        {
+            get
+            {
+                return GetString("Methodology");
+            }
+        }
+
+        /// <summary>
+        /// Data
+        /// </summary>
+        public static string Date
+        {
+            get
+            {
+                return GetString("Date");
+            }
+        }
+
+        /// <summary>
+        /// Observações
+        /// </summary>
+        public static string Observations
+        {
+            get
+            {
+                return GetString("Observations");
+            }
+        }
+
+        /// <summary>
+        /// Insira a {0}
+        /// </summary>
+        public static string EnterFieldValueFormatted
+        {
+            get
+            {
+                return GetString("EnterFieldValueFormatted");
+            }
+        }
+
+        /// <summary>
+        /// Insira o {0}
+        /// </summary>
+        public static string EnterFieldValueFormatted2
+        {
+            get
+            {
+                return GetString("EnterFieldValueFormatted2");
+            }
+        }
+
+        /// <summary>
+        /// Insira as {0}
+        /// </summary>
+        public static string EnterFieldValueFormatted3
+        {
+            get
+            {
+                return GetString("EnterFieldValueFormatted3");
+            }
+        }
     }
 }

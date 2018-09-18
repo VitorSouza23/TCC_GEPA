@@ -1,6 +1,6 @@
 ﻿@model Gepa.Site.Models.ClassPlans.ClassPlanModel
 
-@{ 
+@{
     ViewBag.Title = "Cadastro do Plano de Aula";
 }
 
@@ -24,6 +24,23 @@
             @Html.LabelFor(m => m.Methodology)
             @Html.TextAreaFor(m => m.Methodology, new { @class = "form-control gepaTextArea", placeholder = string.Format(Language.EnterFieldValueFormatted, Language.Methodology.ToLower()) })
         </div>
+
+        <div class="form-group">
+            <label>Divisão do conteúdo</label>
+            <div class="list-group border" style="height: 150px; max-height: 150px;">
+
+            </div>
+
+            <div style="margin: 10px 0;">
+                <button id="addLessonContent" class="btn btn-outline-secondary" data-toggle="modal" data-target="#exampleModal">Adicionar</button>
+                <button id="editLessonContent" class="btn btn-outline-secondary">Editar</button>
+                <button id="removeLessonContent" class="btn btn-outline-secondary">Remover</button>
+            </div>
+
+            @Html.Partial("_AddLessonContentModal")
+
+        </div>
+
         <div class="form-group">
             @Html.LabelFor(m => m.Observation)
             @Html.TextAreaFor(m => m.Observation, new { @class = "form-control gepaTextArea", placeholder = string.Format(Language.EnterFieldValueFormatted3, Language.Observations.ToLower()) })
@@ -33,9 +50,21 @@
     }
 </div>
 
-<style>
-    .gepaFormButtons{
-        border-radius: 25px;
-        width: 150px;
-    }
-</style>
+<script>
+    $(document).ready(function () {
+        $("#addLessonContent").click(function (e) {
+            e.preventDefault();
+            console.log("Oi");
+        });
+
+        $("#editLessonContent").click(function (e) {
+            e.preventDefault();
+            console.log("Oi");
+        });
+
+        $("#removeLessonContent").click(function (e) {
+            e.preventDefault();
+            console.log("Oi");
+        });
+    });
+</script>

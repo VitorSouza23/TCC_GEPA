@@ -11,13 +11,13 @@ namespace Gepa.DAO.SchoolClasses
 {
     public class StudentPresenceDAOImpl : AbstractDAO, IStudentPresenceDAO
     {
-        public StudentPresenceDAOImpl(DbConnection dbConnectioOject) : base(dbConnectioOject)
+        public StudentPresenceDAOImpl() : base()
         {
         }
 
         public void DeleteStudentPresense(StudentPresence studentPresence)
         {
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 em.StudentPresence.Remove(studentPresence);
                 em.SaveChanges();
@@ -27,7 +27,7 @@ namespace Gepa.DAO.SchoolClasses
         public StudentPresence FindStudentPresnece(long studentPresenceID)
         {
             StudentPresence studentPresence = null;
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 studentPresence = em.StudentPresence.Find(studentPresenceID);
             }
@@ -37,7 +37,7 @@ namespace Gepa.DAO.SchoolClasses
         public async Task<StudentPresence> FindStudentPresneceAsync(long studentPresenceID)
         {
             StudentPresence studentPresence = null;
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 studentPresence = await em.StudentPresence.FindAsync(studentPresenceID);
             }
@@ -46,7 +46,7 @@ namespace Gepa.DAO.SchoolClasses
 
         public void InsertStudentPresence(StudentPresence newStudentPresnece)
         {
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 em.StudentPresence.Add(newStudentPresnece);
                 em.SaveChanges();
@@ -55,7 +55,7 @@ namespace Gepa.DAO.SchoolClasses
 
         public void UpdateStudentPresence(StudentPresence studentPresnece)
         {
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 em.Entry(studentPresnece).State = System.Data.Entity.EntityState.Modified;
                 em.SaveChanges();

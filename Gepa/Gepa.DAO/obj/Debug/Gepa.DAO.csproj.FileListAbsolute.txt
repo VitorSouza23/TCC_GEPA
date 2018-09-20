@@ -22,3 +22,8 @@ C:\Solutions\Gepa\Gepa.DAO\obj\Debug\Gepa.DAO.csproj.CoreCompileInputs.cache
 C:\Solutions\Gepa\Gepa.DAO\obj\Debug\Gepa.DAO.csproj.CopyComplete
 C:\Solutions\Gepa\Gepa.DAO\obj\Debug\Gepa.DAO.dll
 C:\Solutions\Gepa\Gepa.DAO\obj\Debug\Gepa.DAO.pdb
+C:\Projetos\TCC_GEPA\Gepa\Gepa.DAO\bin\Debug\Newtonsoft.Json.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.DAO\bin\Debug\GepaManager.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.DAO\bin\Debug\Gepa.Utilities.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.DAO\bin\Debug\GepaManager.pdb
+C:\Projetos\TCC_GEPA\Gepa\Gepa.DAO\bin\Debug\Gepa.Utilities.pdb

@@ -310,3 +310,5 @@ C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\Microsoft.Owin.Security.Google.dll
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\Microsoft.AspNet.Identity.Core.dll
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\Microsoft.AspNet.Identity.Core.xml
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\pt-br\Microsoft.AspNet.Identity.Core.resources.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\Gepa.Management.Services.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\Gepa.Management.Services.pdb

@@ -13,6 +13,7 @@ namespace Gepa.Entities.Framework
     using Gepa.Entities.Framework.Mappings.Users;
     using Gepa.Entities.Framework.Entities.Users;
     using System.Data.Common;
+    using GepaManagement;
 
     public partial class EntityModel : DbContext
     {
@@ -22,7 +23,8 @@ namespace Gepa.Entities.Framework
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<EntityModel, MigrationsConfig>());
         }
 
-        public EntityModel() :base("name=EntityModel")
+        public EntityModel()
+            : base(GepaManager.Instance.GetDataBaseDefaultConnection(), false)
         {
             Database.SetInitializer(new MigrateDatabaseToLatestVersion<EntityModel, MigrationsConfig>());
         }

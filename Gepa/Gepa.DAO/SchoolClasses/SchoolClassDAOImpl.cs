@@ -11,13 +11,13 @@ namespace Gepa.DAO.SchoolClasses
 {
     public class SchoolClassDAOImpl : AbstractDAO, ISchoolClassDAO
     {
-        public SchoolClassDAOImpl(DbConnection dbConnectioOject) : base(dbConnectioOject)
+        public SchoolClassDAOImpl() : base()
         {
         }
 
         public void DeleteSchoolClass(SchoolClass schoolClass)
         {
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 em.SchoolClass.Remove(schoolClass);
                 em.SaveChanges();
@@ -27,7 +27,7 @@ namespace Gepa.DAO.SchoolClasses
         public SchoolClass FindSchoolClass(long schoolClassId)
         {
             SchoolClass schoolClass = null;
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 schoolClass = em.SchoolClass.Find(schoolClassId);
             }
@@ -37,7 +37,7 @@ namespace Gepa.DAO.SchoolClasses
         public async Task<SchoolClass> FindSchoolClassAsync(long schoolClassId)
         {
             SchoolClass schoolClass = null;
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 schoolClass = await em.SchoolClass.FindAsync(schoolClassId);
             }
@@ -46,7 +46,7 @@ namespace Gepa.DAO.SchoolClasses
 
         public void InserSchoolClass(SchoolClass newSchoolClass)
         {
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 em.SchoolClass.Add(newSchoolClass);
                 em.SaveChanges();
@@ -55,7 +55,7 @@ namespace Gepa.DAO.SchoolClasses
 
         public void UpdateSchoolClass(SchoolClass schoolClass)
         {
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 em.Entry(schoolClass).State = System.Data.Entity.EntityState.Modified;
                 em.SaveChanges();

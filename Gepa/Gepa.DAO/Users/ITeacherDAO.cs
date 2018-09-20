@@ -14,5 +14,6 @@ namespace Gepa.DAO.Users
         void DeleteTeacher(Teacher teacher);
         Teacher FindTeacher(long teacherId);
         Task<Teacher> FindTeacherAsync(long teacherId);
+        Task<Teacher> FindTeacherByUserIdAsync(string userId);
     }
 }

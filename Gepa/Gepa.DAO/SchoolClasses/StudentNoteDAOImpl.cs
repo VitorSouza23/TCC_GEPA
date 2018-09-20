@@ -11,13 +11,13 @@ namespace Gepa.DAO.SchoolClasses
 {
     public class StudentNoteDAOImpl : AbstractDAO, IStudentNoteDAO
     {
-        public StudentNoteDAOImpl(DbConnection dbConnectioOject) : base(dbConnectioOject)
+        public StudentNoteDAOImpl() : base()
         {
         }
 
         public void DeleteStudentNote(StudentNote studentNote)
         {
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 em.StudentNote.Remove(studentNote);
                 em.SaveChanges();
@@ -27,7 +27,7 @@ namespace Gepa.DAO.SchoolClasses
         public StudentNote FindStudentNote(long studentNoteId)
         {
             StudentNote studentNote = null;
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 studentNote = em.StudentNote.Find(studentNoteId);
             }
@@ -37,7 +37,7 @@ namespace Gepa.DAO.SchoolClasses
         public async Task<StudentNote> FindStudentNoteAsync(long studentNoteId)
         {
             StudentNote studentNote = null;
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 studentNote = await em.StudentNote.FindAsync(studentNoteId);
             }
@@ -46,7 +46,7 @@ namespace Gepa.DAO.SchoolClasses
 
         public void InsertStudentNote(StudentNote newStudentNote)
         {
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 em.StudentNote.Add(newStudentNote);
                 em.SaveChanges();
@@ -55,7 +55,7 @@ namespace Gepa.DAO.SchoolClasses
 
         public void UpdateStudentNote(StudentNote studentNote)
         {
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 em.Entry(studentNote).State = System.Data.Entity.EntityState.Modified;
                 em.SaveChanges();

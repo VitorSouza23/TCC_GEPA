@@ -11,8 +11,8 @@ namespace Gepa.Entities.Framework
     {
         public MigrationsConfig()
         {
-            AutomaticMigrationsEnabled = true;
-            AutomaticMigrationDataLossAllowed = true;
+            //AutomaticMigrationsEnabled = true;
+            //AutomaticMigrationDataLossAllowed = true;
         }
     }
 }

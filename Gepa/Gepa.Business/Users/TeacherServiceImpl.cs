@@ -41,5 +41,10 @@ namespace Gepa.Business.Users
         {
             _teacherDAO.UpdateTeacher(teacher);
         }
+
+        public async Task<Teacher> FindTeacherByUserIdAsync(string userId)
+        {
+            return await _teacherDAO.FindTeacherByUserIdAsync(userId);
+        }
     }
 }

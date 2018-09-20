@@ -11,13 +11,13 @@ namespace Gepa.DAO.ClassPlans
 {
     public class LessonsContentDAOImpl : AbstractDAO, ILessonsContentDAO
     {
-        public LessonsContentDAOImpl(DbConnection dbConnectioOject) : base(dbConnectioOject)
+        public LessonsContentDAOImpl() : base()
         {
         }
 
         public void DeleteLessonsContent(LessonsContent lessonsContent)
         {
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 em.LessonsContent.Remove(lessonsContent);
                 em.SaveChanges();
@@ -27,7 +27,7 @@ namespace Gepa.DAO.ClassPlans
         public LessonsContent FindLessonsContent(long lessonsContentId)
         {
             LessonsContent lessonsContent = null;
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 lessonsContent = em.LessonsContent.Find(lessonsContentId);
             }
@@ -37,7 +37,7 @@ namespace Gepa.DAO.ClassPlans
         public async Task<LessonsContent> FindLessonsContentAsync(long lessonsContentId)
         {
             LessonsContent lessonsContent = null;
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 lessonsContent = await em.LessonsContent.FindAsync(lessonsContentId);
             }
@@ -46,7 +46,7 @@ namespace Gepa.DAO.ClassPlans
 
         public void InsertLessonsContent(LessonsContent newLessonsContent)
         {
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 em.LessonsContent.Add(newLessonsContent);
                 em.SaveChanges();
@@ -55,7 +55,7 @@ namespace Gepa.DAO.ClassPlans
 
         public void UpdateLessonsContent(LessonsContent lessonsContent)
         {
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 em.Entry(lessonsContent).State = System.Data.Entity.EntityState.Modified;
                 em.SaveChanges();

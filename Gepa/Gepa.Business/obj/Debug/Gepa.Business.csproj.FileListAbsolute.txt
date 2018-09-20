@@ -24,3 +24,8 @@ C:\Solutions\Gepa\Gepa.Business\obj\Debug\Gepa.Business.csproj.CoreCompileInputs
 C:\Solutions\Gepa\Gepa.Business\obj\Debug\Gepa.Business.csproj.CopyComplete
 C:\Solutions\Gepa\Gepa.Business\obj\Debug\Gepa.Business.dll
 C:\Solutions\Gepa\Gepa.Business\obj\Debug\Gepa.Business.pdb
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Business\bin\Debug\GepaManager.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Business\bin\Debug\Gepa.Utilities.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Business\bin\Debug\Newtonsoft.Json.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Business\bin\Debug\GepaManager.pdb
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Business\bin\Debug\Gepa.Utilities.pdb

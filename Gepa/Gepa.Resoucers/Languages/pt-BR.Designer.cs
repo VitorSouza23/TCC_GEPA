@@ -88,6 +88,24 @@ namespace Gepa.Resources.Languages {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Plano de Aula.
+        /// </summary>
+        internal static string ClassPlan {
+            get {
+                return ResourceManager.GetString("ClassPlan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Confirmar senha.
+        /// </summary>
+        internal static string ConfirmPassword {
+            get {
+                return ResourceManager.GetString("ConfirmPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Conecte-se com Facebook.
         /// </summary>
         internal static string ConnectFacebook {
@@ -214,6 +232,15 @@ namespace Gepa.Resources.Languages {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Sair.
+        /// </summary>
+        internal static string GetOut {
+            get {
+                return ResourceManager.GetString("GetOut", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a O e-mail ou nome de usuário e senha não correspondem, verifique se os campos foram preenchidos corretamente..
         /// </summary>
         internal static string InvalidLoginError {
@@ -295,11 +322,29 @@ namespace Gepa.Resources.Languages {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a A {0} deve ter no mínimo {2} caracteres..
+        /// </summary>
+        internal static string PasswordWithInvalidSizeErrorMessage {
+            get {
+                return ResourceManager.GetString("PasswordWithInvalidSizeErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Registre-se.
         /// </summary>
         internal static string Register {
             get {
                 return ResourceManager.GetString("Register", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Cadastrar.
+        /// </summary>
+        internal static string Register2 {
+            get {
+                return ResourceManager.GetString("Register2", resourceCulture);
             }
         }
         
@@ -313,11 +358,38 @@ namespace Gepa.Resources.Languages {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Configurações do professor.
+        /// </summary>
+        internal static string TeacherSettings {
+            get {
+                return ResourceManager.GetString("TeacherSettings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Título.
         /// </summary>
         internal static string Title {
             get {
                 return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a A senha e a senha de confirmação não correspondem..
+        /// </summary>
+        internal static string VerificationPasswordDoesNotMatchErrorMessage {
+            get {
+                return ResourceManager.GetString("VerificationPasswordDoesNotMatchErrorMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Bem-vindo, {0}.
+        /// </summary>
+        internal static string WelComeUserMessage {
+            get {
+                return ResourceManager.GetString("WelComeUserMessage", resourceCulture);
             }
         }
     }

@@ -16,10 +16,10 @@
 
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Plano de Aula
+                    @Language.ClassPlan
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Cadastrar</a>
+                    <a class="dropdown-item" href="#">@Language.Register2</a>
                 </div>
             </li>
 
@@ -27,6 +27,6 @@
                 <a class="nav-link" href="#">Módulos</a>
             </li>
         </ul>
-       
+        @Html.Partial("_UserMenuPartial")
     </div>
 </nav>

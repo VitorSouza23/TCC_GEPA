@@ -11,13 +11,13 @@ namespace Gepa.DAO.ClassPlans
 {
     public class EvaluationDAOImpl : AbstractDAO, IEvaluationDAO
     {
-        public EvaluationDAOImpl(DbConnection dbConnectioOject) : base(dbConnectioOject)
+        public EvaluationDAOImpl() : base()
         {
         }
 
         public void DeleteEvaluation(Evaluetion evaluation)
         {
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 em.Evaluetion.Remove(evaluation);
                 em.SaveChanges();
@@ -27,7 +27,7 @@ namespace Gepa.DAO.ClassPlans
         public Evaluetion FindEvaluation(long evaluationId)
         {
             Evaluetion evaluetion = null;
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 evaluetion = em.Evaluetion.Find(evaluationId);
             }
@@ -37,7 +37,7 @@ namespace Gepa.DAO.ClassPlans
         public async Task<Evaluetion> FindEvaluationAsync(long evaluationId)
         {
             Evaluetion evaluetion = null;
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 evaluetion = await em.Evaluetion.FindAsync(evaluationId);
             }
@@ -46,7 +46,7 @@ namespace Gepa.DAO.ClassPlans
 
         public void InsertEvaluation(Evaluetion newEvaluation)
         {
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 em.Evaluetion.Add(newEvaluation);
                 em.SaveChanges();
@@ -55,7 +55,7 @@ namespace Gepa.DAO.ClassPlans
 
         public void UpdateEvaluation(Evaluetion evaluation)
         {
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 em.Entry(evaluation).State = System.Data.Entity.EntityState.Modified;
                 em.SaveChanges();

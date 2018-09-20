@@ -11,13 +11,13 @@ namespace Gepa.DAO.SchoolClasses
 {
     public class ClassDiaryDAOImpl : AbstractDAO, IClassDiaryDAO
     {
-        public ClassDiaryDAOImpl(DbConnection dbConnectioOject) : base(dbConnectioOject)
+        public ClassDiaryDAOImpl() : base()
         {
         }
 
         public void DeleteClassDiary(ClassDiary classDiary)
         {
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 em.ClassDiary.Remove(classDiary);
                 em.SaveChanges();
@@ -27,7 +27,7 @@ namespace Gepa.DAO.SchoolClasses
         public ClassDiary FindClassDiary(long classDiaryID)
         {
             ClassDiary classDiary = null;
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 classDiary = em.ClassDiary.Find(classDiaryID);
             }
@@ -37,7 +37,7 @@ namespace Gepa.DAO.SchoolClasses
         public async Task<ClassDiary> FindClassDiaryAsync(long classDiaryID)
         {
             ClassDiary classDiary = null;
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 classDiary = await em.ClassDiary.FindAsync(classDiaryID);
             }
@@ -46,7 +46,7 @@ namespace Gepa.DAO.SchoolClasses
 
         public void InsertClassDiary(ClassDiary newClassDiary)
         {
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 em.ClassDiary.Add(newClassDiary);
                 em.SaveChanges();
@@ -55,7 +55,7 @@ namespace Gepa.DAO.SchoolClasses
 
         public void UpdateClassDiary(ClassDiary classDiary)
         {
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 em.Entry(classDiary).State = System.Data.Entity.EntityState.Modified;
                 em.SaveChanges();

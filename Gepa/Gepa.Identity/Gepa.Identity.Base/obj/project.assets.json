@@ -2,7 +2,7 @@
   "version": 3,
   "targets": {
     ".NETFramework,Version=v4.6.1": {
-      "EntityFramework/6.2.0": {
+      "EntityFramework/6.1.0": {
         "type": "package",
         "frameworkAssemblies": [
           "System.ComponentModel.DataAnnotations"
@@ -240,48 +240,9 @@
           "lib/net40/Owin.dll": {}
         }
       },
-      "Gepa.Business/1.0.0": {
-        "type": "project",
-        "dependencies": {
-          "Gepa.DAO": "1.0.0",
-          "Gepa.Entities.Framework": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Gepa.Business.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Gepa.Business.dll": {}
-        }
-      },
-      "Gepa.DAO/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.6.1",
-        "dependencies": {
-          "EntityFramework": "6.2.0",
-          "Gepa.Entities.Framework": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Gepa.DAO.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Gepa.DAO.dll": {}
-        }
-      },
-      "Gepa.Entities.Framework/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/Gepa.Entities.Framework.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Gepa.Entities.Framework.dll": {}
-        }
-      },
       "Gepa.Management/1.0.0": {
         "type": "project",
         "dependencies": {
-          "Gepa.Business": "1.0.0",
-          "Gepa.DAO": "1.0.0",
-          "Gepa.Entities.Framework": "1.0.0",
           "Gepa.Utilities": "1.0.0"
         },
         "compile": {
@@ -306,7 +267,7 @@
       }
     },
     ".NETFramework,Version=v4.6.1/win": {
-      "EntityFramework/6.2.0": {
+      "EntityFramework/6.1.0": {
         "type": "package",
         "frameworkAssemblies": [
           "System.ComponentModel.DataAnnotations"
@@ -544,48 +505,9 @@
           "lib/net40/Owin.dll": {}
         }
       },
-      "Gepa.Business/1.0.0": {
-        "type": "project",
-        "dependencies": {
-          "Gepa.DAO": "1.0.0",
-          "Gepa.Entities.Framework": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Gepa.Business.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Gepa.Business.dll": {}
-        }
-      },
-      "Gepa.DAO/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.6.1",
-        "dependencies": {
-          "EntityFramework": "6.2.0",
-          "Gepa.Entities.Framework": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Gepa.DAO.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Gepa.DAO.dll": {}
-        }
-      },
-      "Gepa.Entities.Framework/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/Gepa.Entities.Framework.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Gepa.Entities.Framework.dll": {}
-        }
-      },
       "Gepa.Management/1.0.0": {
         "type": "project",
         "dependencies": {
-          "Gepa.Business": "1.0.0",
-          "Gepa.DAO": "1.0.0",
-          "Gepa.Entities.Framework": "1.0.0",
           "Gepa.Utilities": "1.0.0"
         },
         "compile": {
@@ -610,7 +532,7 @@
       }
     },
     ".NETFramework,Version=v4.6.1/win-x64": {
-      "EntityFramework/6.2.0": {
+      "EntityFramework/6.1.0": {
         "type": "package",
         "frameworkAssemblies": [
           "System.ComponentModel.DataAnnotations"
@@ -848,48 +770,9 @@
           "lib/net40/Owin.dll": {}
         }
       },
-      "Gepa.Business/1.0.0": {
-        "type": "project",
-        "dependencies": {
-          "Gepa.DAO": "1.0.0",
-          "Gepa.Entities.Framework": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Gepa.Business.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Gepa.Business.dll": {}
-        }
-      },
-      "Gepa.DAO/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.6.1",
-        "dependencies": {
-          "EntityFramework": "6.2.0",
-          "Gepa.Entities.Framework": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Gepa.DAO.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Gepa.DAO.dll": {}
-        }
-      },
-      "Gepa.Entities.Framework/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/Gepa.Entities.Framework.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Gepa.Entities.Framework.dll": {}
-        }
-      },
       "Gepa.Management/1.0.0": {
         "type": "project",
         "dependencies": {
-          "Gepa.Business": "1.0.0",
-          "Gepa.DAO": "1.0.0",
-          "Gepa.Entities.Framework": "1.0.0",
           "Gepa.Utilities": "1.0.0"
         },
         "compile": {
@@ -914,7 +797,7 @@
       }
     },
     ".NETFramework,Version=v4.6.1/win-x86": {
-      "EntityFramework/6.2.0": {
+      "EntityFramework/6.1.0": {
         "type": "package",
         "frameworkAssemblies": [
           "System.ComponentModel.DataAnnotations"
@@ -1152,48 +1035,9 @@
           "lib/net40/Owin.dll": {}
         }
       },
-      "Gepa.Business/1.0.0": {
-        "type": "project",
-        "dependencies": {
-          "Gepa.DAO": "1.0.0",
-          "Gepa.Entities.Framework": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Gepa.Business.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Gepa.Business.dll": {}
-        }
-      },
-      "Gepa.DAO/1.0.0": {
-        "type": "project",
-        "framework": ".NETFramework,Version=v4.6.1",
-        "dependencies": {
-          "EntityFramework": "6.2.0",
-          "Gepa.Entities.Framework": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Gepa.DAO.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Gepa.DAO.dll": {}
-        }
-      },
-      "Gepa.Entities.Framework/1.0.0": {
-        "type": "project",
-        "compile": {
-          "bin/placeholder/Gepa.Entities.Framework.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Gepa.Entities.Framework.dll": {}
-        }
-      },
       "Gepa.Management/1.0.0": {
         "type": "project",
         "dependencies": {
-          "Gepa.Business": "1.0.0",
-          "Gepa.DAO": "1.0.0",
-          "Gepa.Entities.Framework": "1.0.0",
           "Gepa.Utilities": "1.0.0"
         },
         "compile": {
@@ -1219,14 +1063,14 @@
     }
   },
   "libraries": {
-    "EntityFramework/6.2.0": {
-      "sha512": "ptGyXOf26qLrtn+2doAmylIlCxOnBJANwlyyLrXDmqIk9O18IzLWHyxDwwAyhgXkxmbiaA0WNpRy67WRReInBw==",
+    "EntityFramework/6.1.0": {
+      "sha512": "u/M0OEfqxTUsL5BwzD66eBGm278/ozqdLK3JvMO6QwUxxc+z7ZUkTYm4suDhWRqzkc6mOhvXDQY5dZUwbldxyQ==",
       "type": "package",
-      "path": "entityframework/6.2.0",
+      "path": "entityframework/6.1.0",
       "files": [
-        "content/net40/App.config.transform",
-        "content/net40/Web.config.transform",
-        "entityframework.6.2.0.nupkg.sha512",
+        "content/App.config.transform",
+        "content/Web.config.transform",
+        "entityframework.6.1.0.nupkg.sha512",
         "entityframework.nuspec",
         "lib/net40/EntityFramework.SqlServer.dll",
         "lib/net40/EntityFramework.SqlServer.xml",
@@ -1458,21 +1302,6 @@
         "owin.1.0.0.nupkg.sha512",
         "owin.nuspec"
       ]
-    },
-    "Gepa.Business/1.0.0": {
-      "type": "project",
-      "path": "../../Gepa.Business/Gepa.Business.csproj",
-      "msbuildProject": "../../Gepa.Business/Gepa.Business.csproj"
-    },
-    "Gepa.DAO/1.0.0": {
-      "type": "project",
-      "path": "../../Gepa.DAO/Gepa.DAO.csproj",
-      "msbuildProject": "../../Gepa.DAO/Gepa.DAO.csproj"
-    },
-    "Gepa.Entities.Framework/1.0.0": {
-      "type": "project",
-      "path": "../../Gepa.Entities.Framework/Gepa.Entities.Framework/Gepa.Entities.Framework.csproj",
-      "msbuildProject": "../../Gepa.Entities.Framework/Gepa.Entities.Framework/Gepa.Entities.Framework.csproj"
     },
     "Gepa.Management/1.0.0": {
       "type": "project",

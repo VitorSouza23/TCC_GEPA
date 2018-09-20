@@ -8,6 +8,11 @@ using Microsoft.AspNet.Identity.Owin;
 using Gepa.Identity.Base.StartConfig;
 using Microsoft.AspNet.Identity.EntityFramework;
 using Gepa.Identity.Base.Commun;
+using Gepa.Entities.Framework.Entities.Users;
+using Gepa.Business.Users;
+using Gepa.Management.Services;
+using Gepa.Management.Services.ServicesTypes;
+using System.Threading.Tasks;
 
 namespace Gepa.Site.Helpers
 {
@@ -43,6 +48,18 @@ namespace Gepa.Site.Helpers
         public static bool IsCurrentUserLoggedIn()
         {
             return HttpContext.Current.User != null && HttpContext.Current.User.Identity.IsAuthenticated;
+        }
+
+        public static async Task<Teacher> GetCurrentTeacherAsync()
+        {
+            Teacher teacher = null;
+            if (IsCurrentUserLoggedIn())
+            {
+                ITeacherService _teacherService = (ITeacherService)GepaServices.Instance.GetService(GepaServicesTypes.TeacherService);
+                teacher = await _teacherService.FindTeacherByUserIdAsync(HttpContext.Current.User.Identity.GetUserId());
+            }
+            return teacher;
+
         }
     }
 }

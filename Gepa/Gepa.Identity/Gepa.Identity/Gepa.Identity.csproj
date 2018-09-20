@@ -299,6 +299,10 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\Gepa.ApplicationManagement\Gepa.Management.Services\Gepa.Management.Services.csproj">
+      <Project>{bcc084a9-4345-49d9-855d-b13ce9764805}</Project>
+      <Name>Gepa.Management.Services</Name>
+    </ProjectReference>
     <ProjectReference Include="..\..\Gepa.ApplicationManagement\GepaManager\Gepa.Management.csproj">
       <Project>{8f41facb-72b1-4cc8-8ec7-f5657205dc34}</Project>
       <Name>Gepa.Management</Name>

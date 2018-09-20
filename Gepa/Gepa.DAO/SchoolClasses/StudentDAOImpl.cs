@@ -11,13 +11,13 @@ namespace Gepa.DAO.SchoolClasses
 {
     public class StudentDAOImpl : AbstractDAO, IStudentDAO
     {
-        public StudentDAOImpl(DbConnection dbConnectioOject) : base(dbConnectioOject)
+        public StudentDAOImpl() : base()
         {
         }
 
         public void DeleteStudent(Student student)
         {
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 em.Student.Remove(student);
                 em.SaveChanges();
@@ -27,7 +27,7 @@ namespace Gepa.DAO.SchoolClasses
         public Student FindStudent(long studentId)
         {
             Student student = null;
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 student = em.Student.Find(studentId);
             }
@@ -37,7 +37,7 @@ namespace Gepa.DAO.SchoolClasses
         public async Task<Student> FindStudentAsync(long studentId)
         {
             Student student = null;
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 student = await em.Student.FindAsync(studentId);
             }
@@ -46,7 +46,7 @@ namespace Gepa.DAO.SchoolClasses
 
         public void InsertStudent(Student newStudent)
         {
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 em.Student.Add(newStudent);
                 em.SaveChanges();
@@ -55,7 +55,7 @@ namespace Gepa.DAO.SchoolClasses
 
         public void UpdateStudent(Student student)
         {
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 em.Entry(student).State = System.Data.Entity.EntityState.Modified;
                 em.SaveChanges();

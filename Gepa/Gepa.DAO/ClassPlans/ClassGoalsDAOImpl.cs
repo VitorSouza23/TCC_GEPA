@@ -11,13 +11,13 @@ namespace Gepa.DAO.ClassPlans
 {
     public class ClassGoalsDAOImpl : AbstractDAO, IClassGoalsDAO
     {
-        public ClassGoalsDAOImpl(DbConnection dbConnectioOject) : base(dbConnectioOject)
+        public ClassGoalsDAOImpl() : base()
         {
         }
 
         public void DeleteClassGoals(ClassGoals classGoals)
         {
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 em.ClassGoals.Remove(classGoals);
                 em.SaveChanges();
@@ -27,7 +27,7 @@ namespace Gepa.DAO.ClassPlans
         public ClassGoals FindClassGoals(long classGoalsId)
         {
             ClassGoals classGoals = null;
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 classGoals = em.ClassGoals.Find(classGoalsId);
             }
@@ -37,7 +37,7 @@ namespace Gepa.DAO.ClassPlans
         public async Task<ClassGoals> FindClassGoalsAsync(long classGoalsId)
         {
             ClassGoals classGoals = null;
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 classGoals = await em.ClassGoals.FindAsync(classGoalsId);
             }
@@ -46,7 +46,7 @@ namespace Gepa.DAO.ClassPlans
 
         public void InsertClassGoals(ClassGoals newClassGoals)
         {
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 em.ClassGoals.Add(newClassGoals);
                 em.SaveChanges();
@@ -55,7 +55,7 @@ namespace Gepa.DAO.ClassPlans
 
         public void UpdateClassGoals(ClassGoals classGoals)
         {
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 em.Entry(classGoals).State = System.Data.Entity.EntityState.Modified;
                 em.SaveChanges();

@@ -9,11 +9,9 @@ namespace Gepa.DAO
 {
     public abstract class AbstractDAO
     {
-        protected DbConnection DbConnectioOject { get; set; }
 
-        protected AbstractDAO(DbConnection dbConnectioOject)
+        protected AbstractDAO()
         {
-            DbConnectioOject = dbConnectioOject;
         }
     }
 }

@@ -337,5 +337,92 @@ namespace Gepa.Resources
         {
             return string.Format(GetString("SuccessfulAuthenticationMessage"), loginProvider);
         }
+
+        /// <summary>
+        /// Confirmar senha
+        /// </summary>
+        public static string ConfirmPassword
+        {
+            get
+            {
+                return GetString("ConfirmPassword");
+            }
+        }
+
+        /// <summary>
+        /// A {0} deve ter no mínimo {2} caracteres.
+        /// </summary>
+        public static string PasswordWithInvalidSizeErrorMessage
+        {
+            get
+            {
+                return GetString("PasswordWithInvalidSizeErrorMessage");
+            }
+        }
+
+        /// <summary>
+        /// A senha e a senha de confirmação não correspondem.
+        /// </summary>
+        public static string VerificationPasswordDoesNotMatchErrorMessage
+        {
+            get
+            {
+                return GetString("VerificationPasswordDoesNotMatchErrorMessage");
+            }
+        }
+
+        /// <summary>
+        /// Bem-vindo, {0}
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <returns></returns>
+        public static string WelComeUserMessage(string userName)
+        {
+            return string.Format(GetString("WelComeUserMessage"), userName);
+        }
+
+        /// <summary>
+        /// Cadastrar
+        /// </summary>
+        public static string Register2
+        {
+            get
+            {
+                return GetString("Register2");
+            }
+        }
+
+        /// <summary>
+        /// Plano de aula
+        /// </summary>
+        public static string ClassPlan
+        {
+            get
+            {
+                return GetString("ClassPlan");
+            }
+        }
+
+        /// <summary>
+        /// Configurações do professor
+        /// </summary>
+        public static string TeacherSettings
+        {
+            get
+            {
+                return GetString("TeacherSettings");
+            }
+        }
+
+        /// <summary>
+        /// Sair
+        /// </summary>
+        public static string GetOut
+        {
+            get
+            {
+                return GetString("GetOut");
+            }
+        }
     }
 }

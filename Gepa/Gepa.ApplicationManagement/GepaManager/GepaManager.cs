@@ -1,21 +1,6 @@
-﻿using Gepa.Business;
-using Gepa.Business.Calendar;
-using Gepa.Business.ClassPlans;
-using Gepa.Business.SchoolClasses;
-using Gepa.Business.Users;
-using Gepa.DAO.Calendar;
-using Gepa.DAO.ClassPlans;
-using Gepa.DAO.SchoolClasses;
-using Gepa.DAO.Users;
-using Gepa.Utilities.Algorithms;
+﻿using Gepa.Utilities.Algorithms;
 using Gepa.Utilities.Interfaces;
-using GepaManagement.ServicesTypes;
-using System;
-using System.Collections.Generic;
 using System.Data.Common;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GepaManagement
 {
@@ -49,7 +34,7 @@ namespace GepaManagement
         private static string _CONNECTION_STRING_KEY_VALUE_NAME = "Connection";
         private static string _IDENTITY_CONNECTION_STRING_KEY_VALUE_NAME = "IdentityConnection";
         private static string _GOOLGE_CLIENT_KEY_NAME = "GoogleClient";
-        private static object _LOCK = new Object();
+        private static object _LOCK = new object();
         private static DbConnection _DB_CONNECTION;
         private static DbConnection _IDENTITY_DB_CONNECTION;
 
@@ -100,47 +85,11 @@ namespace GepaManagement
             return _GOOGLE_CLIENT;
         }
 
-
-        public IGepaService GetService(GepaServicesTypes serviceType)
+        public DbConnection GetDataBaseDefaultConnection()
         {
             if (_DB_CONNECTION == null)
                 CreateDBConnection();
-
-            switch (serviceType)
-            {
-                case GepaServicesTypes.AbstractShoolEventService:
-                    return new AbstractSchoolEventServiceImpl(new AbstractSchoolEventDAOImpl(_DB_CONNECTION));
-                case GepaServicesTypes.ChoresService:
-                    return new ChoresServiceImpl(new ChoresDAOImpl(_DB_CONNECTION));
-                case GepaServicesTypes.ClassDiaryService:
-                    return new ClassDiaryServiceImpl(new ClassDiaryDAOImpl(_DB_CONNECTION));
-                case GepaServicesTypes.ClassFrequencyService:
-                    return new ClassFrequencyServiceImpl(new ClassFrequencyDAOImpl(_DB_CONNECTION));
-                case GepaServicesTypes.ClassGoalsService:
-                    return new ClassGoalsServiceImpl(new ClassGoalsDAOImpl(_DB_CONNECTION));
-                case GepaServicesTypes.ClassPlanService:
-                    return new ClassPlanServiceImpl(new ClassPlanDAOImpl(_DB_CONNECTION));
-                case GepaServicesTypes.EvaluationService:
-                    return new EvaluationServiceImpl(new EvaluationDAOImpl(_DB_CONNECTION));
-                case GepaServicesTypes.LessonsContentService:
-                    return new LessonsContentServiceImpl(new LessonsContentDAOImpl(_DB_CONNECTION));
-                case GepaServicesTypes.SchoolCalendarService:
-                    return new SchoolCalendarServiceImpl(new SchoolCalendarDAOImpl(_DB_CONNECTION));
-                case GepaServicesTypes.SchoolClassService:
-                    return new SchoolClassServiceImpl(new SchoolClassDAOImpl(_DB_CONNECTION));
-                case GepaServicesTypes.StudentNoteService:
-                    return new StudentNoteServiceImpl(new StudentNoteDAOImpl(_DB_CONNECTION));
-                case GepaServicesTypes.StudentPresenceService:
-                    return new StudentPresenceServiceImpl(new StudentPresenceDAOImpl(_DB_CONNECTION));
-                case GepaServicesTypes.StudentService:
-                    return new StudentServiceImpl(new StudentDAOImpl(_DB_CONNECTION));
-                case GepaServicesTypes.TeacherService:
-                    return new TeacherServiceImpl(new TeacherDAOImpl(_DB_CONNECTION));
-                case GepaServicesTypes.SchoolService:
-                    return new SchoolServiceImpl(new SchoolDAOImpl(_DB_CONNECTION));
-                default:
-                    return null;
-            }
+            return _DB_CONNECTION;
         }
 
     }

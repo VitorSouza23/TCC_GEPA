@@ -126,6 +126,12 @@
   <data name="AssociationForms" xml:space="preserve">
     <value>Formas de associação</value>
   </data>
+  <data name="ClassPlan" xml:space="preserve">
+    <value>Plano de Aula</value>
+  </data>
+  <data name="ConfirmPassword" xml:space="preserve">
+    <value>Confirmar senha</value>
+  </data>
   <data name="ConnectFacebook" xml:space="preserve">
     <value>Conecte-se com Facebook</value>
   </data>
@@ -168,6 +174,9 @@
   <data name="Gepa" xml:space="preserve">
     <value>Gepa</value>
   </data>
+  <data name="GetOut" xml:space="preserve">
+    <value>Sair</value>
+  </data>
   <data name="InvalidLoginError" xml:space="preserve">
     <value>O e-mail ou nome de usuário e senha não correspondem, verifique se os campos foram preenchidos corretamente.</value>
   </data>
@@ -195,13 +204,28 @@
   <data name="Password" xml:space="preserve">
     <value>Senha</value>
   </data>
+  <data name="PasswordWithInvalidSizeErrorMessage" xml:space="preserve">
+    <value>A {0} deve ter no mínimo {2} caracteres.</value>
+  </data>
   <data name="Register" xml:space="preserve">
     <value>Registre-se</value>
+  </data>
+  <data name="Register2" xml:space="preserve">
+    <value>Cadastrar</value>
   </data>
   <data name="SuccessfulAuthenticationMessage" xml:space="preserve">
     <value>Você se autenticou com êxito com &lt;strong&gt;{0}&lt;/strong&gt;. Insira um nome de usuário para este site abaixo e clique no botão Registrar para concluir o login.</value>
   </data>
+  <data name="TeacherSettings" xml:space="preserve">
+    <value>Configurações do professor</value>
+  </data>
   <data name="Title" xml:space="preserve">
     <value>Título</value>
+  </data>
+  <data name="VerificationPasswordDoesNotMatchErrorMessage" xml:space="preserve">
+    <value>A senha e a senha de confirmação não correspondem.</value>
+  </data>
+  <data name="WelComeUserMessage" xml:space="preserve">
+    <value>Bem-vindo, {0}</value>
   </data>
 </root>

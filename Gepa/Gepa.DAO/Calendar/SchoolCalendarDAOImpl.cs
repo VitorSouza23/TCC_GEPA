@@ -11,13 +11,13 @@ namespace Gepa.DAO.Calendar
 {
     public class SchoolCalendarDAOImpl : AbstractDAO, ISchoolCalendarDAO
     {
-        public SchoolCalendarDAOImpl(DbConnection dbConnectioOject) : base(dbConnectioOject)
+        public SchoolCalendarDAOImpl() : base()
         {
         }
 
         public void DeleteSchoolCalendar(SchoolCalendar schoolCalendar)
         {
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 em.SchoolCalendar.Remove(schoolCalendar);
                 em.SaveChanges();
@@ -27,7 +27,7 @@ namespace Gepa.DAO.Calendar
         public SchoolCalendar FindSchoolCalendar(long schoolCalendarId)
         {
             SchoolCalendar schoolCalendar = null;
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 schoolCalendar = em.SchoolCalendar.Find(schoolCalendarId);
             }
@@ -37,7 +37,7 @@ namespace Gepa.DAO.Calendar
         public async Task<SchoolCalendar> FindSchoolCalendarAsync(long schoolCalendarId)
         {
             SchoolCalendar schoolCalendar = null;
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 schoolCalendar = await em.SchoolCalendar.FindAsync(schoolCalendarId);
             }
@@ -46,7 +46,7 @@ namespace Gepa.DAO.Calendar
 
         public void IsertSchoolCalendar(SchoolCalendar newSchoolCalendar)
         {
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 em.SchoolCalendar.Add(newSchoolCalendar);
                 em.SaveChanges();
@@ -55,7 +55,7 @@ namespace Gepa.DAO.Calendar
 
         public void UpdateSchoolCalendar(SchoolCalendar schoolCalendar)
         {
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 em.Entry(schoolCalendar).State = System.Data.Entity.EntityState.Modified;
                 em.SaveChanges();

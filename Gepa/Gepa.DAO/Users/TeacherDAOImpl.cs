@@ -6,18 +6,19 @@ using System.Text;
 using System.Threading.Tasks;
 using Gepa.Entities.Framework;
 using Gepa.Entities.Framework.Entities.Users;
+using System.Data.Entity;
 
 namespace Gepa.DAO.Users
 {
     public class TeacherDAOImpl : AbstractDAO, ITeacherDAO
     {
-        public TeacherDAOImpl(DbConnection dbConnectioOject) : base(dbConnectioOject)
+        public TeacherDAOImpl() : base()
         {
         }
 
         public void DeleteTeacher(Teacher teacher)
         {
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 em.Teacher.Remove(teacher);
                 em.SaveChanges();
@@ -27,7 +28,7 @@ namespace Gepa.DAO.Users
         public Teacher FindTeacher(long teacherId)
         {
             Teacher teacher = null;
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 teacher = em.Teacher.Find(teacherId);
             }
@@ -37,7 +38,7 @@ namespace Gepa.DAO.Users
         public async Task<Teacher> FindTeacherAsync(long teacherId)
         {
             Teacher teacher = null;
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 teacher = await em.Teacher.FindAsync(teacherId);
             }
@@ -46,7 +47,7 @@ namespace Gepa.DAO.Users
 
         public void InsertTeacher(Teacher newTeacher)
         {
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 em.Teacher.Add(newTeacher);
                 em.SaveChanges();
@@ -55,11 +56,21 @@ namespace Gepa.DAO.Users
 
         public void UpdateTeacher(Teacher teacher)
         {
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
-                em.Entry(teacher).State = System.Data.Entity.EntityState.Modified;
+                em.Entry(teacher).State = EntityState.Modified;
                 em.SaveChanges();
             }
+        }
+
+        public async Task<Teacher> FindTeacherByUserIdAsync(string userId)
+        {
+            Teacher teacher = null;
+            using (EntityModel em = new EntityModel())
+            {
+                teacher = await em.Teacher.SingleAsync(t => t.UserId == userId);
+            }
+            return teacher;
         }
     }
 }

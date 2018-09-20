@@ -1,0 +1,23 @@
+﻿@if (Request.IsAuthenticated)
+{
+    <div class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropDown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            @Language.WelComeUserMessage(Helper.GetCurrentUser().UserName)
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">@Language.TeacherSettings</a>
+            <div class="dropdown-divider"></div>
+            @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
+            {
+                @Html.AntiForgeryToken()
+                <a class="dropdown-item" href="javascript:document.getElementById('logoutForm').submit()">@Language.GetOut</a>
+            }
+        </div>
+    </div>
+}
+else
+{
+    <span class="navbar-text">
+        Ops! Teoricamente Isso não é possível!
+    </span>
+}

@@ -11,13 +11,13 @@ namespace Gepa.DAO.ClassPlans
 {
     public class ChoresDAOImpl : AbstractDAO, IChoresDAO
     {
-        public ChoresDAOImpl(DbConnection dbConnectioOject) : base(dbConnectioOject)
+        public ChoresDAOImpl() : base()
         {
         }
 
         public void DeleteChores(Chores chores)
         {
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 em.Chores.Remove(chores);
                 em.SaveChanges();
@@ -27,7 +27,7 @@ namespace Gepa.DAO.ClassPlans
         public Chores FindChores(long choresId)
         {
             Chores chores = null;
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 chores = em.Chores.Find(choresId);
             }
@@ -37,7 +37,7 @@ namespace Gepa.DAO.ClassPlans
         public async Task<Chores> FindChoresAsync(long choresId)
         {
             Chores chores = null;
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 chores = await em.Chores.FindAsync(choresId);
             }
@@ -46,7 +46,7 @@ namespace Gepa.DAO.ClassPlans
 
         public void InsertChores(Chores newChores)
         {
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 em.Chores.Add(newChores);
                 em.SaveChanges();
@@ -55,7 +55,7 @@ namespace Gepa.DAO.ClassPlans
 
         public void UpdateChores(Chores chores)
         {
-            using (EntityModel em = new EntityModel(DbConnectioOject))
+            using (EntityModel em = new EntityModel())
             {
                 em.Entry(chores).State = System.Data.Entity.EntityState.Modified;
                 em.SaveChanges();

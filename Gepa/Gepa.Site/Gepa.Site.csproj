@@ -209,6 +209,7 @@
     <Compile Include="Mappers\AutoMapperConfig.cs" />
     <Compile Include="Models\Account\ExternalLoginConfirmationViewModel.cs" />
     <Compile Include="Models\Account\LoginViewModel.cs" />
+    <Compile Include="Models\Account\RegisterViewModel.cs" />
     <Compile Include="Models\ClassPlans\ClassPlanModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -302,6 +303,7 @@
     <Content Include="Views\Account\_ExternalGoogleLogin.cshtml" />
     <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\Shared\_UserMenuPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -311,6 +313,10 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Gepa.ApplicationManagement\Gepa.Management.Services\Gepa.Management.Services.csproj">
+      <Project>{bcc084a9-4345-49d9-855d-b13ce9764805}</Project>
+      <Name>Gepa.Management.Services</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Gepa.ApplicationManagement\GepaManager\Gepa.Management.csproj">
       <Project>{8f41facb-72b1-4cc8-8ec7-f5657205dc34}</Project>
       <Name>Gepa.Management</Name>

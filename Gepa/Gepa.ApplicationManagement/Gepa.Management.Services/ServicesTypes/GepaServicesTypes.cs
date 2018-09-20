@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace GepaManagement.ServicesTypes
+namespace Gepa.Management.Services.ServicesTypes
 {
     public enum GepaServicesTypes
     {

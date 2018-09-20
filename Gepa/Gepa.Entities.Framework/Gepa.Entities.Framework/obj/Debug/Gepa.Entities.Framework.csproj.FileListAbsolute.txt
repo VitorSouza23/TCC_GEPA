@@ -24,3 +24,9 @@ C:\Solutions\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\obj\Debug\Gepa
 C:\Solutions\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\obj\Debug\Gepa.Entities.Framework.csproj.CopyComplete
 C:\Solutions\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\obj\Debug\Gepa.Entities.Framework.dll
 C:\Solutions\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\obj\Debug\Gepa.Entities.Framework.pdb
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\obj\Debug\Gepa.Entities.Framework.UpdateTeacher.resources
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\bin\Debug\GepaManager.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\bin\Debug\Gepa.Utilities.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\bin\Debug\Newtonsoft.Json.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\bin\Debug\GepaManager.pdb
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\bin\Debug\Gepa.Utilities.pdb

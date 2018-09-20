@@ -1,7 +1,9 @@
-﻿using Gepa.Identity.Base.Model;
+﻿using Gepa.Entities.Framework.Entities.Users;
+using Gepa.Identity.Base.Model;
 using Gepa.Resources;
 using Gepa.Site.Helpers;
 using Gepa.Site.Models.Account;
+using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using System.Threading.Tasks;
@@ -40,9 +42,18 @@ namespace Gepa.Site.Controllers
             }
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult LogOff()
+        {
+            AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
+            return RedirectToAction("Index", "Home");
+        }
+
+        [AllowAnonymous]
         public ActionResult Register()
         {
-            return View("_Register");
+            return View("_Register", new RegisterViewModel());
         }
 
         public ActionResult RecoverPassword()
@@ -105,12 +116,36 @@ namespace Gepa.Site.Controllers
                     if (result.Succeeded)
                     {
                         await SignInService.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+                        var teacher = new Teacher { UserId = user.Id };
+                        TeacherService.InsertTeacher(teacher);
                         return RedirectToAction("Index", "Dashboard");
                     }
                 }
                 AddErrors(result);
             }
 
+            return View(model);
+        }
+
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> Register(RegisterViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = new ApplicationUser { UserName = model.Email, Email = model.Email };
+                var result = await UserService.CreateAsync(user, model.Password);
+                if (result.Succeeded)
+                {
+                    await SignInService.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+                    var teacher = new Teacher { UserId = user.Id };
+                    TeacherService.InsertTeacher(teacher);
+                    
+                    return RedirectToAction("Index", "Dashboard");
+                }
+                AddErrors(result);
+            }
             return View(model);
         }
     }

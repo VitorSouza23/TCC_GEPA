@@ -7,6 +7,7 @@ using System.Web.Mvc;
 
 namespace Gepa.Site.Controllers
 {
+    [Authorize]
     public class HomeController : GepaBaseController
     {
         public ActionResult Index()

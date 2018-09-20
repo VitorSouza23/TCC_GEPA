@@ -209,8 +209,12 @@
     <Compile Include="Mappers\AutoMapperConfig.cs" />
     <Compile Include="Models\Account\ExternalLoginConfirmationViewModel.cs" />
     <Compile Include="Models\Account\LoginViewModel.cs" />
+    <Compile Include="Models\ClassPlans\ChoresModel.cs" />
+    <Compile Include="Models\ClassPlans\ClassGoalsModel.cs" />
     <Compile Include="Models\Account\RegisterViewModel.cs" />
     <Compile Include="Models\ClassPlans\ClassPlanModel.cs" />
+    <Compile Include="Models\ClassPlans\EvaluationModel.cs" />
+    <Compile Include="Models\ClassPlans\LessonsContentModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -303,6 +307,7 @@
     <Content Include="Views\Account\_ExternalGoogleLogin.cshtml" />
     <Content Include="Views\Account\ExternalLoginFailure.cshtml" />
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
+    <Content Include="Views\ClassPlans\_AddLessonContentModal.cshtml" />
     <Content Include="Views\Shared\_UserMenuPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>

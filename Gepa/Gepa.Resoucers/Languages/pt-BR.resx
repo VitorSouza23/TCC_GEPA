@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Add" xml:space="preserve">
+    <value>Adicionar</value>
+  </data>
+  <data name="AddContent" xml:space="preserve">
+    <value>Adicionar Conteúdo</value>
+  </data>
   <data name="AlreadyRegisteredSignIn" xml:space="preserve">
     <value>Já é cadastrado? Faça o login</value>
   </data>
@@ -125,6 +131,9 @@
   </data>
   <data name="AssociationForms" xml:space="preserve">
     <value>Formas de associação</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancelar</value>
   </data>
   <data name="ClassPlan" xml:space="preserve">
     <value>Plano de Aula</value>
@@ -138,6 +147,12 @@
   <data name="ConnectGoogle" xml:space="preserve">
     <value>Conecte-se com Google</value>
   </data>
+  <data name="Content" xml:space="preserve">
+    <value>Conteúdo</value>
+  </data>
+  <data name="CreateClassPlan" xml:space="preserve">
+    <value>Cadastro do Plano de Aula</value>
+  </data>
   <data name="CultureLanguage" xml:space="preserve">
     <value>Linguagem</value>
   </data>
@@ -147,8 +162,14 @@
   <data name="Description" xml:space="preserve">
     <value>Descrição</value>
   </data>
+  <data name="DivisionOfContent" xml:space="preserve">
+    <value>Divisão do conteúdo</value>
+  </data>
   <data name="DontHaveAccountYetDoRegister" xml:space="preserve">
     <value>Não tem cadastro ainda? Registre-se</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Editar</value>
   </data>
   <data name="Email" xml:space="preserve">
     <value>E-mail</value>
@@ -170,6 +191,9 @@
   </data>
   <data name="EnterYourPassword" xml:space="preserve">
     <value>Informe sua senha:</value>
+  </data>
+  <data name="Exclude" xml:space="preserve">
+    <value>Excluir</value>
   </data>
   <data name="ForgotYourPassword" xml:space="preserve">
     <value>Esqueceu sua senha?</value>
@@ -221,6 +245,9 @@
   </data>
   <data name="Register2" xml:space="preserve">
     <value>Cadastrar</value>
+  </data>
+  <data name="RegisterClassPlan" xml:space="preserve">
+    <value>Cadastrar plano de aula</value>
   </data>
   <data name="Save" xml:space="preserve">
     <value>Salvar</value>

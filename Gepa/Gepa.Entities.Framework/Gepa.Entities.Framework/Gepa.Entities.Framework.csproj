@@ -76,7 +76,6 @@
     <Compile Include="Mappings\SchoolClasses\StudentNoteMap.cs" />
     <Compile Include="Mappings\SchoolClasses\StudentPresenceMap.cs" />
     <Compile Include="Mappings\Users\TeacherMap.cs" />
-    <Compile Include="MigrationsConfig.cs" />
     <Compile Include="Migrations\201808240138563_Initial.cs" />
     <Compile Include="Migrations\201808240138563_Initial.Designer.cs">
       <DependentUpon>201808240138563_Initial.cs</DependentUpon>

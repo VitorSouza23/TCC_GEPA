@@ -82,20 +82,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\arnal\\.nuget\\packages\\": {}
+    "C:\\Users\\vitor\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Solutions\\Gepa\\Gepa.Utilities\\Gepa.Utilities\\Gepa.Utilities.csproj",
+      "projectUniqueName": "C:\\Projetos\\TCC_GEPA\\Gepa\\Gepa.Utilities\\Gepa.Utilities\\Gepa.Utilities.csproj",
       "projectName": "Gepa.Utilities",
-      "projectPath": "C:\\Solutions\\Gepa\\Gepa.Utilities\\Gepa.Utilities\\Gepa.Utilities.csproj",
-      "packagesPath": "C:\\Users\\arnal\\.nuget\\packages\\",
-      "outputPath": "C:\\Solutions\\Gepa\\Gepa.Utilities\\Gepa.Utilities\\obj\\",
+      "projectPath": "C:\\Projetos\\TCC_GEPA\\Gepa\\Gepa.Utilities\\Gepa.Utilities\\Gepa.Utilities.csproj",
+      "packagesPath": "C:\\Users\\vitor\\.nuget\\packages\\",
+      "outputPath": "C:\\Projetos\\TCC_GEPA\\Gepa\\Gepa.Utilities\\Gepa.Utilities\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\arnal\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\vitor\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

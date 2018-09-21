@@ -13,31 +13,32 @@
         @Html.HiddenFor(m => m.UserId)
 
         @Html.AntiForgeryToken()
-        @Html.ValidationSummary("", new { @class = "text-danger" })
+        <div class="gepaLoginDivs displayInlineGrid">
+            @Html.ValidationSummary("", new { @class = "loginComponents loginLabels text-danger" })
 
-        <div class="form-group">
-            @Html.LabelFor(m => m.Name)
-            @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
-            @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(m => m.Name, new { @class = "loginComponents loginLabels text-left" })
+                @Html.TextBoxFor(m => m.Name, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.Name, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.CultureLanguage, new { @class = "loginComponents loginLabels text-left" })
+                @Html.EnumDropDownListFor(m => m.CultureLanguage, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.CultureLanguage, "", new { @class = "text-danger" })
+            </div>
+
+            <hr />
+
+            <div class="form-group">
+                @Html.LabelFor(m => m.UserName, new { @class = "loginComponents loginLabels text-left" })
+                @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+                @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="btn gepaFormButtons">@Language.Save</button>
+            </div>
         </div>
-
-        <div class="form-group">
-            @Html.LabelFor(m => m.CultureLanguage)
-            @Html.EnumDropDownListFor(m => m.CultureLanguage, new { @class = "form-control" })
-            @Html.ValidationMessageFor(m => m.CultureLanguage, "", new { @class = "text-danger" })
-        </div>
-
-        <hr />
-
-        <div class="form-group">
-            @Html.LabelFor(m => m.UserName)
-            @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
-            @Html.ValidationMessageFor(m => m.UserName, "", new { @class = "text-danger" })
-        </div>
-
-        <div class="form-group">
-            <button type="submit" class="btn gepaFormButtons">@Language.Save</button>
-        </div>
-
     }
 </div>

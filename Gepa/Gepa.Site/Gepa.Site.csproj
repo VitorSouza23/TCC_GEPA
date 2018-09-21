@@ -209,6 +209,7 @@
     <Compile Include="Mappers\AutoMapperConfig.cs" />
     <Compile Include="Models\Account\ExternalLoginConfirmationViewModel.cs" />
     <Compile Include="Models\Account\LoginViewModel.cs" />
+    <Compile Include="Models\Account\TeacherEditModel.cs" />
     <Compile Include="Models\ClassPlans\ChoresModel.cs" />
     <Compile Include="Models\ClassPlans\ClassGoalsModel.cs" />
     <Compile Include="Models\Account\RegisterViewModel.cs" />
@@ -309,6 +310,7 @@
     <Content Include="Views\Account\ExternalLoginConfirmation.cshtml" />
     <Content Include="Views\ClassPlans\_AddLessonContentModal.cshtml" />
     <Content Include="Views\Shared\_UserMenuPartial.cshtml" />
+    <Content Include="Views\Account\TeacherSettingsView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

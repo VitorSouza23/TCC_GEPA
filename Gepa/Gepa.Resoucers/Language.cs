@@ -424,5 +424,60 @@ namespace Gepa.Resources
                 return GetString("GetOut");
             }
         }
+
+        /// <summary>
+        /// Linguagem
+        /// </summary>
+        public static string CultureLanguage
+        {
+            get
+            {
+                return GetString("CultureLanguage");
+            }
+        }
+
+        /// <summary>
+        /// Nome
+        /// </summary>
+        public static string Name
+        {
+            get
+            {
+                return GetString("Name");
+            }
+        }
+
+        /// <summary>
+        /// Nome de usuário
+        /// </summary>
+        public static string UserName
+        {
+            get
+            {
+                return GetString("UserName");
+            }
+        }
+
+        /// <summary>
+        /// Português (Brsil)
+        /// </summary>
+        public static string PtBR
+        {
+            get
+            {
+                return GetString("PtBR");
+            }
+        }
+
+        /// <summary>
+        /// Salvar
+        /// </summary>
+        public static string Save
+        {
+            get
+            {
+                return GetString("Save");
+            }
+        }
     }
 }

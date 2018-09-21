@@ -124,6 +124,15 @@ namespace Gepa.Resources.Languages {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Linguagem.
+        /// </summary>
+        internal static string CultureLanguage {
+            get {
+                return ResourceManager.GetString("CultureLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Data.
         /// </summary>
         internal static string Date {
@@ -304,6 +313,15 @@ namespace Gepa.Resources.Languages {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Nome.
+        /// </summary>
+        internal static string Name {
+            get {
+                return ResourceManager.GetString("Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Observações.
         /// </summary>
         internal static string Observations {
@@ -331,6 +349,15 @@ namespace Gepa.Resources.Languages {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Português (Brasil).
+        /// </summary>
+        internal static string PtBR {
+            get {
+                return ResourceManager.GetString("PtBR", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Registre-se.
         /// </summary>
         internal static string Register {
@@ -345,6 +372,15 @@ namespace Gepa.Resources.Languages {
         internal static string Register2 {
             get {
                 return ResourceManager.GetString("Register2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Salvar.
+        /// </summary>
+        internal static string Save {
+            get {
+                return ResourceManager.GetString("Save", resourceCulture);
             }
         }
         
@@ -372,6 +408,15 @@ namespace Gepa.Resources.Languages {
         internal static string Title {
             get {
                 return ResourceManager.GetString("Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Nome de usuário.
+        /// </summary>
+        internal static string UserName {
+            get {
+                return ResourceManager.GetString("UserName", resourceCulture);
             }
         }
         

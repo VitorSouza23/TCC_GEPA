@@ -13,6 +13,7 @@ using Gepa.Business.Users;
 using Gepa.Management.Services;
 using Gepa.Management.Services.ServicesTypes;
 using System.Threading.Tasks;
+using System.Net.Mail;
 
 namespace Gepa.Site.Helpers
 {
@@ -60,6 +61,19 @@ namespace Gepa.Site.Helpers
             }
             return teacher;
 
+        }
+
+        public static bool IsEmail(string emailAddres)
+        {
+            try
+            {
+                MailAddress m = new MailAddress(emailAddres);
+                return true;
+            }
+            catch (FormatException)
+            {
+                return false;
+            }
         }
     }
 }

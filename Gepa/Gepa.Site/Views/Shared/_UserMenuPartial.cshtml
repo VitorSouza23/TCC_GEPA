@@ -5,7 +5,7 @@
             @Language.WelComeUserMessage(Helper.GetCurrentUser().UserName)
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <a class="dropdown-item" href="#">@Language.TeacherSettings</a>
+            <a class="dropdown-item" href="@Url.Action("TeacherSettingsView", "Account")">@Language.TeacherSettings</a>
             <div class="dropdown-divider"></div>
             @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))
             {

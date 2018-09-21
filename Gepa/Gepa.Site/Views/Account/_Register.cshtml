@@ -16,21 +16,22 @@
             @Html.AntiForgeryToken()
             @Html.ValidationSummary("", new { @class = "text-danger" })
             <div class="text-left gepaLoginDivs displayInlineGrid">
-                @*<span class="loginComponents loginLabels">@Language.EnterYourEmailAddressOrUsername</span>
-                    @Html.TextBox("usernameOrEmail", null, new { @class = "loginComponents" })*@
-                @Html.LabelFor(m => m.Email, new { @class = "loginComponents loginLabels" })
-                @Html.TextBoxFor(m => m.Email, new { @class = "loginComponents" })
-                @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
 
-                @*<span class="loginComponents loginLabels">@Language.EnterYourPassword</span>
-                    @Html.Password("password", null, new { @class = "loginComponents" })*@
-                @Html.LabelFor(m => m.Password, new { @class = "loginComponents loginLabels" })
-                @Html.PasswordFor(m => m.Password, new { @class = "loginComponents" })
-                @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
-
-                @Html.LabelFor(m => m.ConfirmPassword, new { @class = "loginComponents loginLabels" })
-                @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "loginComponents" })
-                @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "text-danger" })
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Email, new { @class = "loginComponents loginLabels" })
+                    @Html.TextBoxFor(m => m.Email, new { @class = "loginComponents" })
+                    @Html.ValidationMessageFor(m => m.Email, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.Password, new { @class = "loginComponents loginLabels" })
+                    @Html.PasswordFor(m => m.Password, new { @class = "loginComponents" })
+                    @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                </div>
+                <div class="form-group">
+                    @Html.LabelFor(m => m.ConfirmPassword, new { @class = "loginComponents loginLabels" })
+                    @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "loginComponents" })
+                    @Html.ValidationMessageFor(m => m.ConfirmPassword, "", new { @class = "text-danger" })
+                </div>
             </div>
 
             <div class="gepaLoginDivs">

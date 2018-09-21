@@ -28,7 +28,8 @@
       "Gepa.Entities.Framework/1.0.0": {
         "type": "project",
         "dependencies": {
-          "Gepa.Management": "1.0.0"
+          "Gepa.Management": "1.0.0",
+          "Gepa.Resources": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Gepa.Entities.Framework.dll": {}
@@ -47,6 +48,15 @@
         },
         "runtime": {
           "bin/placeholder/Gepa.Management.dll": {}
+        }
+      },
+      "Gepa.Resources/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Gepa.Resources.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Gepa.Resources.dll": {}
         }
       },
       "Gepa.Utilities/1.0.0": {
@@ -90,7 +100,8 @@
       "Gepa.Entities.Framework/1.0.0": {
         "type": "project",
         "dependencies": {
-          "Gepa.Management": "1.0.0"
+          "Gepa.Management": "1.0.0",
+          "Gepa.Resources": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Gepa.Entities.Framework.dll": {}
@@ -109,6 +120,15 @@
         },
         "runtime": {
           "bin/placeholder/Gepa.Management.dll": {}
+        }
+      },
+      "Gepa.Resources/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Gepa.Resources.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Gepa.Resources.dll": {}
         }
       },
       "Gepa.Utilities/1.0.0": {
@@ -152,7 +172,8 @@
       "Gepa.Entities.Framework/1.0.0": {
         "type": "project",
         "dependencies": {
-          "Gepa.Management": "1.0.0"
+          "Gepa.Management": "1.0.0",
+          "Gepa.Resources": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Gepa.Entities.Framework.dll": {}
@@ -171,6 +192,15 @@
         },
         "runtime": {
           "bin/placeholder/Gepa.Management.dll": {}
+        }
+      },
+      "Gepa.Resources/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Gepa.Resources.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Gepa.Resources.dll": {}
         }
       },
       "Gepa.Utilities/1.0.0": {
@@ -214,7 +244,8 @@
       "Gepa.Entities.Framework/1.0.0": {
         "type": "project",
         "dependencies": {
-          "Gepa.Management": "1.0.0"
+          "Gepa.Management": "1.0.0",
+          "Gepa.Resources": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Gepa.Entities.Framework.dll": {}
@@ -233,6 +264,15 @@
         },
         "runtime": {
           "bin/placeholder/Gepa.Management.dll": {}
+        }
+      },
+      "Gepa.Resources/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Gepa.Resources.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Gepa.Resources.dll": {}
         }
       },
       "Gepa.Utilities/1.0.0": {
@@ -315,6 +355,11 @@
       "type": "project",
       "path": "../Gepa.ApplicationManagement/GepaManager/Gepa.Management.csproj",
       "msbuildProject": "../Gepa.ApplicationManagement/GepaManager/Gepa.Management.csproj"
+    },
+    "Gepa.Resources/1.0.0": {
+      "type": "project",
+      "path": "../Gepa.Resoucers/Gepa.Resources.csproj",
+      "msbuildProject": "../Gepa.Resoucers/Gepa.Resources.csproj"
     },
     "Gepa.Utilities/1.0.0": {
       "type": "project",

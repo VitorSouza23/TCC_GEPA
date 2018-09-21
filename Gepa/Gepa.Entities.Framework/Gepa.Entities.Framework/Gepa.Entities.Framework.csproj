@@ -115,6 +115,10 @@
       <Project>{8f41facb-72b1-4cc8-8ec7-f5657205dc34}</Project>
       <Name>Gepa.Management</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\Gepa.Resoucers\Gepa.Resources.csproj">
+      <Project>{ba9ed67e-ffaf-4587-a1ab-8e9d1800d89d}</Project>
+      <Name>Gepa.Resources</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

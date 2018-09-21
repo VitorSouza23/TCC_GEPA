@@ -1,4 +1,5 @@
-﻿using Gepa.Entities.Framework.Entities.Users;
+﻿using AutoMapper;
+using Gepa.Entities.Framework.Entities.Users;
 using Gepa.Identity.Base.Model;
 using Gepa.Resources;
 using Gepa.Site.Helpers;
@@ -28,7 +29,15 @@ namespace Gepa.Site.Controllers
             if (!ModelState.IsValid)
                 return View("_Login", model);
 
-            var result = await SignInService.PasswordSignInAsync(model.EmailOrUserName, model.Password, isPersistent: false, shouldLockout: false);
+            SignInStatus result = SignInStatus.Failure;
+            if (Helper.IsEmail(model.EmailOrUserName))
+            {
+                var user = await UserService.FindByEmailAsync(model.EmailOrUserName);
+                result = await SignInService.PasswordSignInAsync(user.UserName, model.Password, isPersistent: false, shouldLockout: false);
+            }
+            else
+                result = await SignInService.PasswordSignInAsync(model.EmailOrUserName, model.Password, isPersistent: false, shouldLockout: false);
+
             switch (result)
             {
                 case SignInStatus.Success:
@@ -141,12 +150,43 @@ namespace Gepa.Site.Controllers
                     await SignInService.SignInAsync(user, isPersistent: false, rememberBrowser: false);
                     var teacher = new Teacher { UserId = user.Id };
                     TeacherService.InsertTeacher(teacher);
-                    
+
                     return RedirectToAction("Index", "Dashboard");
                 }
                 AddErrors(result);
             }
             return View(model);
+        }
+
+
+        public async Task<ActionResult> TeacherSettingsView()
+        {
+            var currentUser = Helper.GetCurrentUser();
+            var teacher = await TeacherService.FindTeacherByUserIdAsync(currentUser.Id);
+            var model = Mapper.Map<Teacher, TeacherEditModel>(teacher);
+
+            return View(model);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> SaveTeacherSettings(TeacherEditModel teacherModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await UserService.FindByIdAsync(teacherModel.UserId);
+                user.UserName = teacherModel.UserName;
+
+                var teacher = await TeacherService.FindTeacherAsync(teacherModel.TeacherId);
+                teacher.Name = teacherModel.Name;
+                teacher.CultureLanguage = teacherModel.CultureLanguage;
+
+                await UserService.UpdateAsync(user);
+                TeacherService.UpdateTeacher(teacher);
+
+                return RedirectToAction("Index", "Dashboard");
+            }
+            return View("TeacherSettingsView", teacherModel);
         }
     }
 }

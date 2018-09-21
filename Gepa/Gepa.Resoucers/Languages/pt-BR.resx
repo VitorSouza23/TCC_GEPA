@@ -138,6 +138,9 @@
   <data name="ConnectGoogle" xml:space="preserve">
     <value>Conecte-se com Google</value>
   </data>
+  <data name="CultureLanguage" xml:space="preserve">
+    <value>Linguagem</value>
+  </data>
   <data name="Date" xml:space="preserve">
     <value>Data</value>
   </data>
@@ -198,6 +201,9 @@
   <data name="Methodology" xml:space="preserve">
     <value>Metodologia</value>
   </data>
+  <data name="Name" xml:space="preserve">
+    <value>Nome</value>
+  </data>
   <data name="Observations" xml:space="preserve">
     <value>Observações</value>
   </data>
@@ -207,11 +213,17 @@
   <data name="PasswordWithInvalidSizeErrorMessage" xml:space="preserve">
     <value>A {0} deve ter no mínimo {2} caracteres.</value>
   </data>
+  <data name="PtBR" xml:space="preserve">
+    <value>Português (Brasil)</value>
+  </data>
   <data name="Register" xml:space="preserve">
     <value>Registre-se</value>
   </data>
   <data name="Register2" xml:space="preserve">
     <value>Cadastrar</value>
+  </data>
+  <data name="Save" xml:space="preserve">
+    <value>Salvar</value>
   </data>
   <data name="SuccessfulAuthenticationMessage" xml:space="preserve">
     <value>Você se autenticou com êxito com &lt;strong&gt;{0}&lt;/strong&gt;. Insira um nome de usuário para este site abaixo e clique no botão Registrar para concluir o login.</value>
@@ -221,6 +233,9 @@
   </data>
   <data name="Title" xml:space="preserve">
     <value>Título</value>
+  </data>
+  <data name="UserName" xml:space="preserve">
+    <value>Nome de usuário</value>
   </data>
   <data name="VerificationPasswordDoesNotMatchErrorMessage" xml:space="preserve">
     <value>A senha e a senha de confirmação não correspondem.</value>

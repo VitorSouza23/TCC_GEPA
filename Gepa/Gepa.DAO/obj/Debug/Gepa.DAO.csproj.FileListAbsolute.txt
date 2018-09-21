@@ -27,3 +27,5 @@ C:\Projetos\TCC_GEPA\Gepa\Gepa.DAO\bin\Debug\GepaManager.dll
 C:\Projetos\TCC_GEPA\Gepa\Gepa.DAO\bin\Debug\Gepa.Utilities.dll
 C:\Projetos\TCC_GEPA\Gepa\Gepa.DAO\bin\Debug\GepaManager.pdb
 C:\Projetos\TCC_GEPA\Gepa\Gepa.DAO\bin\Debug\Gepa.Utilities.pdb
+C:\Projetos\TCC_GEPA\Gepa\Gepa.DAO\bin\Debug\Gepa.Resources.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.DAO\bin\Debug\Gepa.Resources.pdb

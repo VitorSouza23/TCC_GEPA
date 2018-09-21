@@ -18,3 +18,5 @@ C:\Projetos\TCC_GEPA\Gepa\Gepa.ApplicationManagement\Gepa.Management.Services\ob
 C:\Projetos\TCC_GEPA\Gepa\Gepa.ApplicationManagement\Gepa.Management.Services\obj\Debug\Gepa.Management.Services.csproj.CopyComplete
 C:\Projetos\TCC_GEPA\Gepa\Gepa.ApplicationManagement\Gepa.Management.Services\obj\Debug\Gepa.Management.Services.dll
 C:\Projetos\TCC_GEPA\Gepa\Gepa.ApplicationManagement\Gepa.Management.Services\obj\Debug\Gepa.Management.Services.pdb
+C:\Projetos\TCC_GEPA\Gepa\Gepa.ApplicationManagement\Gepa.Management.Services\bin\Debug\Gepa.Resources.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.ApplicationManagement\Gepa.Management.Services\bin\Debug\Gepa.Resources.pdb

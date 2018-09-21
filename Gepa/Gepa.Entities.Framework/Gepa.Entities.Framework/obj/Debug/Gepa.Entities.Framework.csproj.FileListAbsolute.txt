@@ -30,3 +30,5 @@ C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\bin\De
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\bin\Debug\Newtonsoft.Json.dll
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\bin\Debug\GepaManager.pdb
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\bin\Debug\Gepa.Utilities.pdb
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\bin\Debug\Gepa.Resources.dll
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\bin\Debug\Gepa.Resources.pdb

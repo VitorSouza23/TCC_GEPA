@@ -25,3 +25,4 @@ C:\Solutions\Gepa\Gepa.Tools\Gepa.Tools.EncryptAndDecryptTool\obj\Debug\Gepa.Too
 C:\Solutions\Gepa\Gepa.Tools\Gepa.Tools.EncryptAndDecryptTool\obj\Debug\Gepa.Tools.EncryptAndDecryptTool.exe
 C:\Solutions\Gepa\Gepa.Tools\Gepa.Tools.EncryptAndDecryptTool\obj\Debug\Gepa.Tools.EncryptAndDecryptTool.pdb
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Tools\Gepa.Tools.EncryptAndDecryptTool\bin\Debug\Newtonsoft.Json.dll
+C:\Solutions\Gepa\Gepa.Tools\Gepa.Tools.EncryptAndDecryptTool\bin\Debug\Newtonsoft.Json.dll

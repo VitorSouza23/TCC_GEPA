@@ -374,20 +374,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\vitor\\.nuget\\packages\\": {}
+    "C:\\Users\\arnal\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Projetos\\TCC_GEPA\\Gepa\\Gepa.DAO\\Gepa.DAO.csproj",
+      "projectUniqueName": "C:\\Solutions\\Gepa\\Gepa.DAO\\Gepa.DAO.csproj",
       "projectName": "Gepa.DAO",
-      "projectPath": "C:\\Projetos\\TCC_GEPA\\Gepa\\Gepa.DAO\\Gepa.DAO.csproj",
-      "packagesPath": "C:\\Users\\vitor\\.nuget\\packages\\",
-      "outputPath": "C:\\Projetos\\TCC_GEPA\\Gepa\\Gepa.DAO\\obj\\",
+      "projectPath": "C:\\Solutions\\Gepa\\Gepa.DAO\\Gepa.DAO.csproj",
+      "packagesPath": "C:\\Users\\arnal\\.nuget\\packages\\",
+      "outputPath": "C:\\Solutions\\Gepa\\Gepa.DAO\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\vitor\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\arnal\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -400,8 +400,8 @@
       "frameworks": {
         "net461": {
           "projectReferences": {
-            "C:\\Projetos\\TCC_GEPA\\Gepa\\Gepa.Entities.Framework\\Gepa.Entities.Framework\\Gepa.Entities.Framework.csproj": {
-              "projectPath": "C:\\Projetos\\TCC_GEPA\\Gepa\\Gepa.Entities.Framework\\Gepa.Entities.Framework\\Gepa.Entities.Framework.csproj"
+            "C:\\Solutions\\Gepa\\Gepa.Entities.Framework\\Gepa.Entities.Framework\\Gepa.Entities.Framework.csproj": {
+              "projectPath": "C:\\Solutions\\Gepa\\Gepa.Entities.Framework\\Gepa.Entities.Framework\\Gepa.Entities.Framework.csproj"
             }
           }
         }

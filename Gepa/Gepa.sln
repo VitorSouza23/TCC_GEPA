@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gepa.Identity", "Gepa.Ident
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gepa.Identity.Base", "Gepa.Identity\Gepa.Identity.Base\Gepa.Identity.Base.csproj", "{5415026C-0630-4179-A183-AE046EE1D9B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gepa.Management.Services", "Gepa.ApplicationManagement\Gepa.Management.Services\Gepa.Management.Services.csproj", "{BCC084A9-4345-49D9-855D-B13CE9764805}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -79,6 +81,10 @@ Global
 		{5415026C-0630-4179-A183-AE046EE1D9B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5415026C-0630-4179-A183-AE046EE1D9B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5415026C-0630-4179-A183-AE046EE1D9B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCC084A9-4345-49D9-855D-B13CE9764805}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCC084A9-4345-49D9-855D-B13CE9764805}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCC084A9-4345-49D9-855D-B13CE9764805}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCC084A9-4345-49D9-855D-B13CE9764805}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -95,6 +101,7 @@ Global
 		{F52438AE-0D1D-4323-BDE6-9C84D3F85580} = {CDF1229A-E6ED-4686-9266-F221F2A1C997}
 		{232DE082-81AE-42A0-84C1-AB8111349F3A} = {CDF1229A-E6ED-4686-9266-F221F2A1C997}
 		{5415026C-0630-4179-A183-AE046EE1D9B2} = {CDF1229A-E6ED-4686-9266-F221F2A1C997}
+		{BCC084A9-4345-49D9-855D-B13CE9764805} = {CDF1229A-E6ED-4686-9266-F221F2A1C997}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {08A6AAA6-D301-4CB8-AA53-74BA41EB9AB4}

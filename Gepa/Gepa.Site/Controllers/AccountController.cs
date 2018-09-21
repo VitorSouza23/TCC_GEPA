@@ -155,7 +155,7 @@ namespace Gepa.Site.Controllers
                 }
                 AddErrors(result);
             }
-            return View(model);
+            return View("_Register",model);
         }
 
 

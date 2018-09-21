@@ -14,19 +14,15 @@ namespace Gepa.Entities.Framework
     using Gepa.Entities.Framework.Entities.Users;
     using System.Data.Common;
     using GepaManagement;
+    using Gepa.Entities.Framework.Migrations;
 
     public partial class EntityModel : DbContext
     {
-        public EntityModel(DbConnection dbConnection)
-            : base(dbConnection, false)
-        {
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<EntityModel, MigrationsConfig>());
-        }
 
         public EntityModel()
             : base(GepaManager.Instance.GetDataBaseDefaultConnection(), false)
         {
-            Database.SetInitializer(new MigrateDatabaseToLatestVersion<EntityModel, MigrationsConfig>());
+            Database.SetInitializer(new MigrateDatabaseToLatestVersion<EntityModel, Configuration>());
         }
 
         public virtual DbSet<AbstractSchoolEvent> AbstractSchoolEvent { get; set; }

@@ -579,16 +579,5 @@ namespace Gepa.Resources
                 return GetString("PtBR");
             }
         }
-
-        /// <summary>
-        /// Salvar
-        /// </summary>
-        public static string Save
-        {
-            get
-            {
-                return GetString("Save");
-            }
-        }
     }
 }

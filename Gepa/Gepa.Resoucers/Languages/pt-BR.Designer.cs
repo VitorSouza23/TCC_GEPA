@@ -61,6 +61,24 @@ namespace Gepa.Resources.Languages {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Adicionar.
+        /// </summary>
+        internal static string Add {
+            get {
+                return ResourceManager.GetString("Add", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Adicionar Conteúdo.
+        /// </summary>
+        internal static string AddContent {
+            get {
+                return ResourceManager.GetString("AddContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Já é cadastrado? Faça o login.
         /// </summary>
         internal static string AlreadyRegisteredSignIn {
@@ -84,6 +102,15 @@ namespace Gepa.Resources.Languages {
         internal static string AssociationForms {
             get {
                 return ResourceManager.GetString("AssociationForms", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Cancelar.
+        /// </summary>
+        internal static string Cancel {
+            get {
+                return ResourceManager.GetString("Cancel", resourceCulture);
             }
         }
         
@@ -124,6 +151,24 @@ namespace Gepa.Resources.Languages {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Conteúdo.
+        /// </summary>
+        internal static string Content {
+            get {
+                return ResourceManager.GetString("Content", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Cadastro do Plano de Aula.
+        /// </summary>
+        internal static string CreateClassPlan {
+            get {
+                return ResourceManager.GetString("CreateClassPlan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Data.
         /// </summary>
         internal static string Date {
@@ -142,11 +187,29 @@ namespace Gepa.Resources.Languages {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Divisão do conteúdo.
+        /// </summary>
+        internal static string DivisionOfContent {
+            get {
+                return ResourceManager.GetString("DivisionOfContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Não tem cadastro ainda? Registre-se.
         /// </summary>
         internal static string DontHaveAccountYetDoRegister {
             get {
                 return ResourceManager.GetString("DontHaveAccountYetDoRegister", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Editar.
+        /// </summary>
+        internal static string Edit {
+            get {
+                return ResourceManager.GetString("Edit", resourceCulture);
             }
         }
         
@@ -210,6 +273,15 @@ namespace Gepa.Resources.Languages {
         internal static string EnterYourPassword {
             get {
                 return ResourceManager.GetString("EnterYourPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Excluir.
+        /// </summary>
+        internal static string Exclude {
+            get {
+                return ResourceManager.GetString("Exclude", resourceCulture);
             }
         }
         
@@ -345,6 +417,24 @@ namespace Gepa.Resources.Languages {
         internal static string Register2 {
             get {
                 return ResourceManager.GetString("Register2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Cadastrar plano de aula.
+        /// </summary>
+        internal static string RegisterClassPlan {
+            get {
+                return ResourceManager.GetString("RegisterClassPlan", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Salvar.
+        /// </summary>
+        internal static string Save {
+            get {
+                return ResourceManager.GetString("Save", resourceCulture);
             }
         }
         

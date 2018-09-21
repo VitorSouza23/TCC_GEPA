@@ -424,5 +424,116 @@ namespace Gepa.Resources
                 return GetString("GetOut");
             }
         }
+
+        /// <summary>
+        /// Cadastro do Plano de Aula
+        /// </summary>
+        public static string CreateClassPlan
+        {
+            get
+            {
+                return GetString("CreateClassPlan");
+            }
+        }
+
+        /// <summary>
+        /// Cadastrar plano de aula
+        /// </summary>
+        public static string RegisterClassPlan
+        {
+            get
+            {
+                return GetString("RegisterClassPlan");
+            }
+        }
+
+        /// <summary>
+        /// Divisão do conteúdo
+        /// </summary>
+        public static string DivisionOfContent
+        {
+            get
+            {
+                return GetString("DivisionOfContent");
+            }
+        }
+
+        /// <summary>
+        /// Adicionar
+        /// </summary>
+        public static string Add
+        {
+            get
+            {
+                return GetString("Add");
+            }
+        }
+
+        /// <summary>
+        /// Editar
+        /// </summary>
+        public static string Edit
+        {
+            get
+            {
+                return GetString("Edit");
+            }
+        }
+
+
+        // <summary>
+        /// Excluir
+        /// </summary>
+        public static string Exclude
+        {
+            get
+            {
+                return GetString("Exclude");
+            }
+        }
+
+        // <summary>
+        /// Salvar
+        /// </summary>
+        public static string Save
+        {
+            get
+            {
+                return GetString("Save");
+            }
+        }
+
+        // <summary>
+        /// Cancelar
+        /// </summary>
+        public static string Cancel
+        {
+            get
+            {
+                return GetString("Cancel");
+            }
+        }
+
+        // <summary>
+        /// Adicionar Conteúdo
+        /// </summary>
+        public static string AddContent
+        {
+            get
+            {
+                return GetString("AddContent");
+            }
+        }
+
+        // <summary>
+        /// Conteúdo
+        /// </summary>
+        public static string Content
+        {
+            get
+            {
+                return GetString("Content");
+            }
+        }
     }
 }

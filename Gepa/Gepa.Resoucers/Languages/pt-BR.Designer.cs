@@ -394,11 +394,29 @@ namespace Gepa.Resources.Languages {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Não há conteúdo selecionado!.
+        /// </summary>
+        internal static string NoLessonContentSelected {
+            get {
+                return ResourceManager.GetString("NoLessonContentSelected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Observações.
         /// </summary>
         internal static string Observations {
             get {
                 return ResourceManager.GetString("Observations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a OK.
+        /// </summary>
+        internal static string Ok {
+            get {
+                return ResourceManager.GetString("Ok", resourceCulture);
             }
         }
         
@@ -462,6 +480,15 @@ namespace Gepa.Resources.Languages {
         internal static string Save {
             get {
                 return ResourceManager.GetString("Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Selecione um conteúdo para continuar a operação desejada..
+        /// </summary>
+        internal static string SelectContentToContinueOperationMessage {
+            get {
+                return ResourceManager.GetString("SelectContentToContinueOperationMessage", resourceCulture);
             }
         }
         

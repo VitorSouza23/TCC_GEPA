@@ -13,7 +13,8 @@
 
         <div class="form-group">
             @Html.LabelFor(m => m.Title)
-            @Html.TextBoxFor(m => m.Title, new { @class = "form-control", placeholder = string.Format(Language.EnterFieldValueFormatted2, Language.Title.ToLower()) })
+            @Html.TextBoxFor(m => m.Title, new { @class = "form-control", required = "required", placeholder = string.Format(Language.EnterFieldValueFormatted2, Language.Title.ToLower()) })
+            @Html.ValidationMessageFor(m => m.Title)
         </div>
 
         <div class="form-group">
@@ -27,12 +28,12 @@
 
         <div class="form-group">
             <label>@Language.DivisionOfContent</label>
-            <div class="list-group border" style="height: 150px; max-height: 150px;">
+            <div id="lessonContentListGroup" class="list-group border">
 
             </div>
 
             <div style="margin: 10px 0;">
-                <button id="addLessonContent" class="btn btn-outline-secondary btnGepaCRUD" data-toggle="modal" data-target="#exampleModal">@Language.Add</button>
+                <button id="addLessonContent" type="button" class="btn btn-outline-secondary btnGepaCRUD" data-toggle="modal" data-target="#lessonContentModal">@Language.Add</button>
                 <button id="editLessonContent" class="btn btn-outline-secondary btnGepaCRUD">@Language.Edit</button>
                 <button id="removeLessonContent" class="btn btn-outline-secondary btnGepaCRUD">@Language.Exclude</button>
             </div>
@@ -46,29 +47,69 @@
         <button class="btn gepaFormButtons">@Language.Cancel</button>
     }
 
-    @Html.Partial("_AddLessonContentModal");
+    @Html.Partial("_AddLessonContentModal")
+
+    @Html.Partial("_NoLessonContentSelected")
 </div>
 
-<style>
-    .btnGepaCRUD {
-        width: 125px;
-        border-radius: 50px;
-        padding: 2.5px;
-    }
-</style>
-
 <script>
+    var lessonContentList = [];
+    var currentLessonContentObject = null;
+
     $(document).ready(function () {
         $("#addLessonContent").click(function (e) {
             e.preventDefault();
+            currentLessonContentObject = null;
+
         });
 
         $("#editLessonContent").click(function (e) {
             e.preventDefault();
+
+            if (currentLessonContentObject != null) {
+                $('#lessonContentModal').modal('toggle');
+            } else {
+                $("#noLessonContentSelectedModal").modal('toggle');
+            }
+
         });
 
         $("#removeLessonContent").click(function (e) {
             e.preventDefault();
+
+            if (currentLessonContentObject != null) {
+                $(".gepaContentsItem").each(function (index) {
+                    if ($(this).attr('data-guid') == currentLessonContentObject.guid) {
+                        $(this).remove();
+
+                        for (var i = 0; i < lessonContentList.length; i++) {
+                            if (lessonContentList[i].guid == currentLessonContentObject.guid) {
+                                lessonContentList.splice(i, 1);
+                                currentLessonContentObject = null;
+                            }
+                        }
+                    }
+                });
+            } else {
+                $("#noLessonContentSelectedModal").modal('toggle');
+            }
+        });
+
+        $(document).off("click", ".gepaContentsItem");
+        $(document).on("click", ".gepaContentsItem", function () {
+            if ($(this).hasClass("active")) {
+                currentLessonContentObject = null;
+                $(this).removeClass("active")
+            } else {
+                var selectedLessonContentGuid = $(this).attr('data-guid');
+
+                for (var i = 0; i < lessonContentList.length; i++) {
+                    currentLessonContentObject = lessonContentList[i];
+                }
+
+                $(".gepaContentsItem").removeClass("active")
+                $(this).addClass("active")
+            }
         });
     });
 </script>

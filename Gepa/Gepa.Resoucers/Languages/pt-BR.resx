@@ -228,8 +228,14 @@
   <data name="Name" xml:space="preserve">
     <value>Nome</value>
   </data>
+  <data name="NoLessonContentSelected" xml:space="preserve">
+    <value>Não há conteúdo selecionado!</value>
+  </data>
   <data name="Observations" xml:space="preserve">
     <value>Observações</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>OK</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>Senha</value>
@@ -251,6 +257,9 @@
   </data>
   <data name="Save" xml:space="preserve">
     <value>Salvar</value>
+  </data>
+  <data name="SelectContentToContinueOperationMessage" xml:space="preserve">
+    <value>Selecione um conteúdo para continuar a operação desejada.</value>
   </data>
   <data name="SuccessfulAuthenticationMessage" xml:space="preserve">
     <value>Você se autenticou com êxito com &lt;strong&gt;{0}&lt;/strong&gt;. Insira um nome de usuário para este site abaixo e clique no botão Registrar para concluir o login.</value>

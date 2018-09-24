@@ -579,5 +579,39 @@ namespace Gepa.Resources
                 return GetString("PtBR");
             }
         }
+
+        /// <summary>
+        /// OK
+        /// </summary>
+        public static string Ok
+        {
+            get
+            {
+                return GetString("Ok");
+            }
+        }
+
+
+        /// <summary>
+        /// Selecione um conteúdo para continuar a operação desejada.
+        /// </summary>
+        public static string SelectContentToContinueOperationMessage
+        {
+            get
+            {
+                return GetString("SelectContentToContinueOperationMessage");
+            }
+        }
+
+        /// <summary>
+        /// Não há conteúdo selecionado!
+        /// </summary>
+        public static string NoLessonContentSelected
+        {
+            get
+            {
+                return GetString("NoLessonContentSelected");
+            }
+        }
     }
 }

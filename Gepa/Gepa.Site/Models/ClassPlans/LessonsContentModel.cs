@@ -10,6 +10,7 @@ namespace Gepa.Site.Models.ClassPlans
     {
         public long Id { get; set; }
         [Display(Name = "Content", ResourceType = typeof(Resources.Language))]
+        [Required]
         public string ContentValue { get; set; }
     }
 }

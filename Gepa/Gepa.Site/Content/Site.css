@@ -52,10 +52,6 @@
     width: 150px;
 }
 
-
-
-
-
 .connectButtons {
     width: 250px;
     border-radius: 25px;
@@ -105,4 +101,10 @@
 
 .displayInlineGrid {
     display: inline-grid;
+}
+
+.btnGepaCRUD {
+    width: 125px;
+    border-radius: 50px;
+    padding: 2.5px;
 }

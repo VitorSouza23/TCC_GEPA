@@ -613,5 +613,49 @@ namespace Gepa.Resources
                 return GetString("NoLessonContentSelected");
             }
         }
+
+        /// <summary>
+        /// Objetivo concluído
+        /// </summary>
+        public static string IsCompletedGoal
+        {
+            get
+            {
+                return GetString("IsCompletedGoal");
+            }
+        }
+
+        /// <summary>
+        /// Objetivo
+        /// </summary>
+        public static string Goal
+        {
+            get
+            {
+                return GetString("Goal");
+            }
+        }
+
+        /// <summary>
+        /// Objetivos
+        /// </summary>
+        public static string Goals
+        {
+            get
+            {
+                return GetString("Goals");
+            }
+        }
+
+        /// <summary>
+        /// Adicionar Objetivo
+        /// </summary>
+        public static string AddClassGoal
+        {
+            get
+            {
+                return GetString("AddClassGoal");
+            }
+        }
     }
 }

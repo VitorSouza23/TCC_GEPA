@@ -29,13 +29,24 @@
         <div class="form-group">
             <label>@Language.DivisionOfContent</label>
             <div id="lessonContentListGroup" class="list-group border">
-
             </div>
 
             <div style="margin: 10px 0;">
                 <button id="addLessonContent" type="button" class="btn btn-outline-secondary btnGepaCRUD" data-toggle="modal" data-target="#lessonContentModal">@Language.Add</button>
                 <button id="editLessonContent" class="btn btn-outline-secondary btnGepaCRUD">@Language.Edit</button>
                 <button id="removeLessonContent" class="btn btn-outline-secondary btnGepaCRUD">@Language.Exclude</button>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>@Language.Goals</label>
+            <div id="classGoalsListGroup" class="list-group border">
+            </div>
+
+            <div style="margin: 10px 0;">
+                <button id="addClassGoals" type="button" class="btn btn-outline-secondary btnGepaCRUD" data-toggle="modal" data-target="#classGoalsModal">@Language.Add</button>
+                <button id="editClassGoals" class="btn btn-outline-secondary btnGepaCRUD">@Language.Edit</button>
+                <button id="removeClassGoals" class="btn btn-outline-secondary btnGepaCRUD">@Language.Exclude</button>
             </div>
         </div>
 
@@ -48,13 +59,16 @@
     }
 
     @Html.Partial("_AddLessonContentModal")
-
+    @Html.Partial("_AddClassGoalsModal")
     @Html.Partial("_NoLessonContentSelected")
 </div>
 
 <script>
     var lessonContentList = [];
     var currentLessonContentObject = null;
+
+    var classGoalList = [];
+    var currentClassGoalObject = null;
 
     $(document).ready(function () {
         $("#addLessonContent").click(function (e) {
@@ -93,6 +107,18 @@
             } else {
                 $("#noLessonContentSelectedModal").modal('toggle');
             }
+        });
+
+        $("#addClassGoals").click(function (e) {
+            e.preventDefault();          
+        });
+
+        $("#editClassGoals").click(function (e) {
+            e.preventDefault();
+        });
+
+        $("#removeClassGoals").click(function (e) {
+            e.preventDefault();
         });
 
         $(document).off("click", ".gepaContentsItem");

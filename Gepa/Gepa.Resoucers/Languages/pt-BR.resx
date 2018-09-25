@@ -120,6 +120,9 @@
   <data name="Add" xml:space="preserve">
     <value>Adicionar</value>
   </data>
+  <data name="AddClassGoal" xml:space="preserve">
+    <value>Adicionar Objetivo</value>
+  </data>
   <data name="AddContent" xml:space="preserve">
     <value>Adicionar Conteúdo</value>
   </data>
@@ -204,8 +207,17 @@
   <data name="GetOut" xml:space="preserve">
     <value>Sair</value>
   </data>
+  <data name="Goal" xml:space="preserve">
+    <value>Objetivo</value>
+  </data>
+  <data name="Goals" xml:space="preserve">
+    <value>Objetivos</value>
+  </data>
   <data name="InvalidLoginError" xml:space="preserve">
     <value>O e-mail ou nome de usuário e senha não correspondem, verifique se os campos foram preenchidos corretamente.</value>
+  </data>
+  <data name="IsCompletedGoal" xml:space="preserve">
+    <value>Objetivo concluído</value>
   </data>
   <data name="Login" xml:space="preserve">
     <value>Login</value>

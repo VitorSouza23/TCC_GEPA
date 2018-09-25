@@ -70,6 +70,15 @@ namespace Gepa.Resources.Languages {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Adicionar Objetivo.
+        /// </summary>
+        internal static string AddClassGoal {
+            get {
+                return ResourceManager.GetString("AddClassGoal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Adicionar Conteúdo.
         /// </summary>
         internal static string AddContent {
@@ -322,11 +331,38 @@ namespace Gepa.Resources.Languages {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Objetivo.
+        /// </summary>
+        internal static string Goal {
+            get {
+                return ResourceManager.GetString("Goal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Objetivos.
+        /// </summary>
+        internal static string Goals {
+            get {
+                return ResourceManager.GetString("Goals", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a O e-mail ou nome de usuário e senha não correspondem, verifique se os campos foram preenchidos corretamente..
         /// </summary>
         internal static string InvalidLoginError {
             get {
                 return ResourceManager.GetString("InvalidLoginError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Objetivo concluído.
+        /// </summary>
+        internal static string IsCompletedGoal {
+            get {
+                return ResourceManager.GetString("IsCompletedGoal", resourceCulture);
             }
         }
         

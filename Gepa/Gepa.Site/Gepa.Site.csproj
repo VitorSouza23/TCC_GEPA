@@ -356,6 +356,7 @@
     <Content Include="Views\Shared\_UserMenuPartial.cshtml" />
     <Content Include="Views\Account\TeacherSettingsView.cshtml" />
     <Content Include="Views\ClassPlans\_NoLessonContentSelected.cshtml" />
+    <Content Include="Views\ClassPlans\_AddClassGoalsModal.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

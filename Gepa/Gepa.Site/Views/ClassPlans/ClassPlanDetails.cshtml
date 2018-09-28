@@ -110,15 +110,42 @@
         });
 
         $("#addClassGoals").click(function (e) {
-            e.preventDefault();          
+
+            e.preventDefault();   
+            currentClassGoalObject = null;
         });
 
         $("#editClassGoals").click(function (e) {
             e.preventDefault();
+
+            if (currentClassGoalObject != null) {
+                $('#classGoalsModal').modal('toggle');
+            } else {
+               
+                alert("Selecione um objetivo! (Mensagem provisória)");
+            }
         });
 
         $("#removeClassGoals").click(function (e) {
             e.preventDefault();
+
+            if (currentClassGoalObject != null) {
+                $(".gepaClassGoalsItem").each(function (index) {
+                    if ($(this).attr('data-guid') == currentClassGoalObject.guid) {
+                        $(this).remove();
+
+                        for (var i = 0; i < classGoalList.length; i++) {
+                            if (classGoalList[i].guid == currentClassGoalObject.guid) {
+                                classGoalList.splice(i, 1);
+                                currentLessonContentObject = null;
+                            }
+                        }
+                    }
+                });
+            } else {
+                alert("Selecione um objetivo! (Mensagem provisória)");
+                //$("#noLessonContentSelectedModal").modal('toggle');
+            }
         });
 
         $(document).off("click", ".gepaContentsItem");
@@ -134,6 +161,23 @@
                 }
 
                 $(".gepaContentsItem").removeClass("active")
+                $(this).addClass("active")
+            }
+        });
+
+        $(document).off("click", ".gepaClassGoalsItem");
+        $(document).on("click", ".gepaClassGoalsItem", function () {
+            if ($(this).hasClass("active")) {
+                currentClassGoalObject = null;
+                $(this).removeClass("active")
+            } else {
+                var selectedLessonContentGuid = $(this).attr('data-guid');
+
+                for (var i = 0; i < classGoalList.length; i++) {
+                    currentClassGoalObject = classGoalList[i];
+                }
+
+                $(".gepaClassGoalsItem").removeClass("active")
                 $(this).addClass("active")
             }
         });

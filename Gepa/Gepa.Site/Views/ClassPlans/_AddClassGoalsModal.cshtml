@@ -42,11 +42,19 @@
             event.preventDefault();
 
             if (currentClassGoalObject == null) {
-                var classGoalObject = objectifyForm($(this).serializeArray());       
+                var classGoalObject = objectifyForm($(this).serializeArray());
                 classGoalObject.IsCompleted = $("#IsCompleted").prop('checked');
                 classGoalObject.guid = generateNewGuid();
                 classGoalList.push(classGoalObject);
                 $("#classGoalsListGroup").append('<a class="list-group-item list-group-item-action gepaClassGoalsItem" data-guid="' + classGoalObject.guid + '" >' + classGoalObject.Objective + '</a>');
+            } else {
+                currentClassGoalObject.Objective = $("#Objective").val();
+                currentClassGoalObject.IsCompleted = $("#IsCompleted").prop('checked');
+                $(".gepaClassGoalsItem").each(function (index) {
+                    if ($(this).attr('data-guid') == currentClassGoalObject.guid) {
+                        $(this).text(currentClassGoalObject.Objective);
+                    }
+                });
             }
 
             $('#classGoalsModal').modal('toggle');
@@ -54,6 +62,13 @@
 
         $('#classGoalsModal').on("hide.bs.modal", function () {
             $("#classGoalForm").trigger('reset');
+        });
+
+        $('#classGoalsModal').on("show.bs.modal", function () {
+            if (currentClassGoalObject != null) {
+                $("#Objective").val(currentClassGoalObject.Objective);
+                $("#IsCompleted").prop('checked', currentClassGoalObject.IsCompleted);
+            }
         });
     });
 </script>

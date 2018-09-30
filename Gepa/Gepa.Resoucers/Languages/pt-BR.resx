@@ -120,6 +120,9 @@
   <data name="Add" xml:space="preserve">
     <value>Adicionar</value>
   </data>
+  <data name="AddClassGoal" xml:space="preserve">
+    <value>Adicionar Objetivo</value>
+  </data>
   <data name="AddContent" xml:space="preserve">
     <value>Adicionar Conteúdo</value>
   </data>
@@ -192,6 +195,9 @@
   <data name="EnterYourPassword" xml:space="preserve">
     <value>Informe sua senha:</value>
   </data>
+  <data name="Evaluations" xml:space="preserve">
+    <value>Avaliações</value>
+  </data>
   <data name="Exclude" xml:space="preserve">
     <value>Excluir</value>
   </data>
@@ -204,8 +210,17 @@
   <data name="GetOut" xml:space="preserve">
     <value>Sair</value>
   </data>
+  <data name="Goal" xml:space="preserve">
+    <value>Objetivo</value>
+  </data>
+  <data name="Goals" xml:space="preserve">
+    <value>Objetivos</value>
+  </data>
   <data name="InvalidLoginError" xml:space="preserve">
     <value>O e-mail ou nome de usuário e senha não correspondem, verifique se os campos foram preenchidos corretamente.</value>
+  </data>
+  <data name="IsCompletedGoal" xml:space="preserve">
+    <value>Objetivo concluído</value>
   </data>
   <data name="Login" xml:space="preserve">
     <value>Login</value>
@@ -228,8 +243,17 @@
   <data name="Name" xml:space="preserve">
     <value>Nome</value>
   </data>
+  <data name="NoItemSelected" xml:space="preserve">
+    <value>Nenhum item selecionado!</value>
+  </data>
+  <data name="NoLessonContentSelected" xml:space="preserve">
+    <value>Não há conteúdo selecionado!</value>
+  </data>
   <data name="Observations" xml:space="preserve">
     <value>Observações</value>
+  </data>
+  <data name="Ok" xml:space="preserve">
+    <value>OK</value>
   </data>
   <data name="Password" xml:space="preserve">
     <value>Senha</value>
@@ -251,6 +275,9 @@
   </data>
   <data name="Save" xml:space="preserve">
     <value>Salvar</value>
+  </data>
+  <data name="SelectContentToContinueOperationMessage" xml:space="preserve">
+    <value>Selecione um conteúdo para continuar a operação desejada.</value>
   </data>
   <data name="SuccessfulAuthenticationMessage" xml:space="preserve">
     <value>Você se autenticou com êxito com &lt;strong&gt;{0}&lt;/strong&gt;. Insira um nome de usuário para este site abaixo e clique no botão Registrar para concluir o login.</value>

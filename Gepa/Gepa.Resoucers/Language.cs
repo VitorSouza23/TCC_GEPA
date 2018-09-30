@@ -579,5 +579,105 @@ namespace Gepa.Resources
                 return GetString("PtBR");
             }
         }
+
+        /// <summary>
+        /// OK
+        /// </summary>
+        public static string Ok
+        {
+            get
+            {
+                return GetString("Ok");
+            }
+        }
+
+
+        /// <summary>
+        /// Selecione um conteúdo para continuar a operação desejada.
+        /// </summary>
+        public static string SelectContentToContinueOperationMessage
+        {
+            get
+            {
+                return GetString("SelectContentToContinueOperationMessage");
+            }
+        }
+
+        /// <summary>
+        /// Não há conteúdo selecionado!
+        /// </summary>
+        public static string NoLessonContentSelected
+        {
+            get
+            {
+                return GetString("NoLessonContentSelected");
+            }
+        }
+
+        /// <summary>
+        /// Objetivo concluído
+        /// </summary>
+        public static string IsCompletedGoal
+        {
+            get
+            {
+                return GetString("IsCompletedGoal");
+            }
+        }
+
+        /// <summary>
+        /// Objetivo
+        /// </summary>
+        public static string Goal
+        {
+            get
+            {
+                return GetString("Goal");
+            }
+        }
+
+        /// <summary>
+        /// Objetivos
+        /// </summary>
+        public static string Goals
+        {
+            get
+            {
+                return GetString("Goals");
+            }
+        }
+
+        /// <summary>
+        /// Adicionar Objetivo
+        /// </summary>
+        public static string AddClassGoal
+        {
+            get
+            {
+                return GetString("AddClassGoal");
+            }
+        }
+
+        /// <summary>
+        /// Nenhum item selecionado!
+        /// </summary>
+        public static string NoItemSelected
+        {
+            get
+            {
+                return GetString("NoItemSelected");
+            }
+        }
+
+        /// <summary>
+        /// Avaliações
+        /// </summary>
+        public static string Evaluations
+        {
+            get
+            {
+                return GetString("Evaluations");
+            }
+        }
     }
 }

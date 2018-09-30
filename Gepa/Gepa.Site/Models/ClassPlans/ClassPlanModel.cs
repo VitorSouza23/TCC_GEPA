@@ -18,6 +18,7 @@ namespace Gepa.Site.Models.ClassPlans
         [Display(Name = "Methodology", ResourceType = typeof(Resources.Language))]
         public string Methodology { get; set; }
         [Display(Name = "Date", ResourceType = typeof(Resources.Language))]
+        [DisplayFormat(DataFormatString = "{0:dd-mm-yyyy}", ApplyFormatInEditMode = true)]
         public DateTime? Date { get; set; }
         [Display(Name = "Observations", ResourceType = typeof(Resources.Language))]
         public string Observation { get; set; }

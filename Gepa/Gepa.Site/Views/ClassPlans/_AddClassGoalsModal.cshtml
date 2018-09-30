@@ -1,0 +1,78 @@
+﻿@model Gepa.Site.Models.ClassPlans.ClassGoalsModel
+
+<div class="modal fade" id="classGoalsModal" tabindex="-1" role="dialog" aria-labelledby="classGoalsModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">@Language.AddClassGoal</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+            <form id="classGoalForm">
+                <div class="modal-body">
+                    @Html.HiddenFor(m => m.Id)
+
+                    <div class="form-group">
+                        @Html.LabelFor(m => m.Objective)
+                        @Html.TextBoxFor(m => m.Objective, new { @class = "form-control", required = "required" })
+                        @Html.ValidationMessageFor(m => m.Objective)
+                    </div>
+
+                    <div class="form-check">
+                        @Html.CheckBoxFor(m => m.IsCompleted, new { @class = "form-check-input" })
+                        @Html.LabelFor(m => m.IsCompleted, new { @class = "form-check-label" })
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">@Language.Cancel</button>
+                    <button type="submit" class="btn btn-primary">@Language.Save</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#classGoalForm").submit(function (event) {
+            event.preventDefault();
+
+            if (currentClassGoalObject == null) {
+                var classGoalObject = objectifyForm($(this).serializeArray());
+                classGoalObject.IsCompleted = $("#IsCompleted").prop('checked');
+                classGoalObject.guid = generateNewGuid();
+                classGoalList.push(classGoalObject);
+
+                var checkBoxStatus = classGoalObject.IsCompleted ? "checked" : "";
+
+                $("#classGoalsListGroup").append('<a class="list-group-item list-group-item-action gepaClassGoalsItem" data-guid="' + classGoalObject.guid + '"><input type="checkbox" class="form-check-input objectiveStatus" ' + checkBoxStatus + '>' + classGoalObject.Objective + '</a>');
+            } else {
+                currentClassGoalObject.Objective = $("#Objective").val();
+                currentClassGoalObject.IsCompleted = $("#IsCompleted").prop('checked');
+                $(".gepaClassGoalsItem").each(function (index) {
+                    if ($(this).attr('data-guid') == currentClassGoalObject.guid) {
+                        var checkBoxStatus = currentClassGoalObject.IsCompleted ? "checked" : "";
+                        $(this).text('').append('<input type="checkbox" class="form-check-input objectiveStatus" ' + checkBoxStatus + ' >' + currentClassGoalObject.Objective);
+                    }
+                });
+            }
+
+            $('#classGoalsModal').modal('toggle');
+        });
+
+        $('#classGoalsModal').on("hide.bs.modal", function () {
+            $("#classGoalForm").trigger('reset');
+        });
+
+        $('#classGoalsModal').on("show.bs.modal", function () {
+            if (currentClassGoalObject != null) {
+                $("#Objective").val(currentClassGoalObject.Objective);
+                $("#IsCompleted").prop('checked', currentClassGoalObject.IsCompleted);
+            }
+        });
+    });
+</script>

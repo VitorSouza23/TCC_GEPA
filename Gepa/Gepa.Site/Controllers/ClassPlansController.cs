@@ -1,4 +1,5 @@
 ﻿using Gepa.Site.Helpers;
+using Gepa.Site.Models.ClassPlans;
 using System;
 using System.Collections.Generic;
 using System.Linq;

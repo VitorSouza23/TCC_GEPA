@@ -70,6 +70,15 @@ namespace Gepa.Resources.Languages {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Adicionar Objetivo.
+        /// </summary>
+        internal static string AddClassGoal {
+            get {
+                return ResourceManager.GetString("AddClassGoal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Adicionar Conteúdo.
         /// </summary>
         internal static string AddContent {
@@ -286,6 +295,15 @@ namespace Gepa.Resources.Languages {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Avaliações.
+        /// </summary>
+        internal static string Evaluations {
+            get {
+                return ResourceManager.GetString("Evaluations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Excluir.
         /// </summary>
         internal static string Exclude {
@@ -322,11 +340,38 @@ namespace Gepa.Resources.Languages {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Objetivo.
+        /// </summary>
+        internal static string Goal {
+            get {
+                return ResourceManager.GetString("Goal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Objetivos.
+        /// </summary>
+        internal static string Goals {
+            get {
+                return ResourceManager.GetString("Goals", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a O e-mail ou nome de usuário e senha não correspondem, verifique se os campos foram preenchidos corretamente..
         /// </summary>
         internal static string InvalidLoginError {
             get {
                 return ResourceManager.GetString("InvalidLoginError", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Objetivo concluído.
+        /// </summary>
+        internal static string IsCompletedGoal {
+            get {
+                return ResourceManager.GetString("IsCompletedGoal", resourceCulture);
             }
         }
         
@@ -394,11 +439,38 @@ namespace Gepa.Resources.Languages {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Nenhum item selecionado!.
+        /// </summary>
+        internal static string NoItemSelected {
+            get {
+                return ResourceManager.GetString("NoItemSelected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Não há conteúdo selecionado!.
+        /// </summary>
+        internal static string NoLessonContentSelected {
+            get {
+                return ResourceManager.GetString("NoLessonContentSelected", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Observações.
         /// </summary>
         internal static string Observations {
             get {
                 return ResourceManager.GetString("Observations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a OK.
+        /// </summary>
+        internal static string Ok {
+            get {
+                return ResourceManager.GetString("Ok", resourceCulture);
             }
         }
         
@@ -462,6 +534,15 @@ namespace Gepa.Resources.Languages {
         internal static string Save {
             get {
                 return ResourceManager.GetString("Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Selecione um conteúdo para continuar a operação desejada..
+        /// </summary>
+        internal static string SelectContentToContinueOperationMessage {
+            get {
+                return ResourceManager.GetString("SelectContentToContinueOperationMessage", resourceCulture);
             }
         }
         

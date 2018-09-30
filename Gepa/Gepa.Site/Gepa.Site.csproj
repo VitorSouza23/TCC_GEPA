@@ -302,6 +302,7 @@
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
+    <Content Include="Scripts\GepaScripts.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
     <Content Include="Scripts\jquery-3.3.1.slim.js" />
@@ -354,6 +355,9 @@
     <Content Include="Views\ClassPlans\_AddLessonContentModal.cshtml" />
     <Content Include="Views\Shared\_UserMenuPartial.cshtml" />
     <Content Include="Views\Account\TeacherSettingsView.cshtml" />
+    <Content Include="Views\ClassPlans\_AddClassGoalsModal.cshtml" />
+    <Content Include="Views\ClassPlans\_AddEvaluationModal.cshtml" />
+    <Content Include="Views\ClassPlans\_NoItemSelectedModal.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

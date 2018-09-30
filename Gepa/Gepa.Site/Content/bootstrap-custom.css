@@ -12,3 +12,11 @@
 .container {
     text-align: center;
 }
+
+.list-group {
+    min-height: 100px;
+}
+
+.list-group-item {
+    padding: 5px 0;
+}

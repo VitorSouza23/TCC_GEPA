@@ -13,7 +13,8 @@
 
         <div class="form-group">
             @Html.LabelFor(m => m.Title)
-            @Html.TextBoxFor(m => m.Title, new { @class = "form-control", placeholder = string.Format(Language.EnterFieldValueFormatted2, Language.Title.ToLower()) })
+            @Html.TextBoxFor(m => m.Title, new { @class = "form-control", required = "required", placeholder = string.Format(Language.EnterFieldValueFormatted2, Language.Title.ToLower()) })
+            @Html.ValidationMessageFor(m => m.Title)
         </div>
 
         <div class="form-group">
@@ -27,15 +28,55 @@
 
         <div class="form-group">
             <label>@Language.DivisionOfContent</label>
-            <div class="list-group border" style="height: 150px; max-height: 150px;">
-
+            <div id="lessonContentListGroup" class="list-group border">
             </div>
 
             <div style="margin: 10px 0;">
-                <button id="addLessonContent" class="btn btn-outline-secondary btnGepaCRUD" data-toggle="modal" data-target="#exampleModal">@Language.Add</button>
+                <button id="addLessonContent" type="button" class="btn btn-outline-secondary btnGepaCRUD" data-toggle="modal" data-target="#lessonContentModal">@Language.Add</button>
                 <button id="editLessonContent" class="btn btn-outline-secondary btnGepaCRUD">@Language.Edit</button>
                 <button id="removeLessonContent" class="btn btn-outline-secondary btnGepaCRUD">@Language.Exclude</button>
             </div>
+        </div>
+
+        <div class="form-group">
+            <label>@Language.Goals</label>
+            <div id="classGoalsListGroup" class="list-group border">
+            </div>
+
+            <div style="margin: 10px 0;">
+                <button id="addClassGoals" type="button" class="btn btn-outline-secondary btnGepaCRUD" data-toggle="modal" data-target="#classGoalsModal">@Language.Add</button>
+                <button id="editClassGoals" class="btn btn-outline-secondary btnGepaCRUD">@Language.Edit</button>
+                <button id="removeClassGoals" class="btn btn-outline-secondary btnGepaCRUD">@Language.Exclude</button>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>@Language.Goals</label>
+            <div id="classGoalsListGroup" class="list-group border">
+            </div>
+
+            <div style="margin: 10px 0;">
+                <button id="addClassGoals" type="button" class="btn btn-outline-secondary btnGepaCRUD" data-toggle="modal" data-target="#classGoalsModal">@Language.Add</button>
+                <button id="editClassGoals" class="btn btn-outline-secondary btnGepaCRUD">@Language.Edit</button>
+                <button id="removeClassGoals" class="btn btn-outline-secondary btnGepaCRUD">@Language.Exclude</button>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>@Language.Evaluations</label>
+            <div id="evaluationsListGroup" class="list-group border">
+            </div>
+
+            <div style="margin: 10px 0;">
+                <button id="addEvaluation" type="button" class="btn btn-outline-secondary btnGepaCRUD" data-toggle="modal" data-target="#addEvaluationModal">@Language.Add</button>
+                <button id="editEvaluation" class="btn btn-outline-secondary btnGepaCRUD">@Language.Edit</button>
+                <button id="removeEvaluation" class="btn btn-outline-secondary btnGepaCRUD">@Language.Exclude</button>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Date)
+            @Html.EditorFor(m => m.Date, new { htmlAttributes = new { @class = "form-control date-picker" } })
         </div>
 
         <div class="form-group">
@@ -46,29 +87,199 @@
         <button class="btn gepaFormButtons">@Language.Cancel</button>
     }
 
-    @Html.Partial("_AddLessonContentModal");
+    @Html.Partial("_AddLessonContentModal")
+    @Html.Partial("_AddClassGoalsModal")
+    @Html.Partial("_AddEvaluationModal")
+    @Html.Partial("_NoItemSelectedModal")
 </div>
 
-<style>
-    .btnGepaCRUD {
-        width: 125px;
-        border-radius: 50px;
-        padding: 2.5px;
-    }
-</style>
-
 <script>
+    $(function () {
+        $(".date-picker").datepicker({
+            dateFormat: 'dd/mm/yy'
+        })
+    });
+
+    var lessonContentList = [];
+    var currentLessonContentObject = null;
+
+    var classGoalList = [];
+    var currentClassGoalObject = null;
+
+    var evaluationList = [];
+    var currentEvaluationObject = null;
+
     $(document).ready(function () {
         $("#addLessonContent").click(function (e) {
             e.preventDefault();
+            currentLessonContentObject = null;
         });
 
         $("#editLessonContent").click(function (e) {
             e.preventDefault();
+            if (currentLessonContentObject != null) {
+                $('#lessonContentModal').modal('toggle');
+            } else {
+                $("#noItemSelectedModal").modal('toggle');
+            }
         });
 
         $("#removeLessonContent").click(function (e) {
             e.preventDefault();
+
+            if (currentLessonContentObject != null) {
+                $(".gepaContentsItem").each(function (index) {
+                    if ($(this).attr('data-guid') == currentLessonContentObject.guid) {
+                        $(this).remove();
+
+                        for (var i = 0; i < lessonContentList.length; i++) {
+                            if (lessonContentList[i].guid == currentLessonContentObject.guid) {
+                                lessonContentList.splice(i, 1);
+                                currentLessonContentObject = null;
+                            }
+                        }
+                    }
+                });
+            } else {
+                $("#noItemSelectedModal").modal('toggle');
+            }
+        });
+
+        $("#addClassGoals").click(function (e) {
+            e.preventDefault();
+            currentClassGoalObject = null;
+        });
+
+        $("#editClassGoals").click(function (e) {
+            e.preventDefault();
+
+            if (currentClassGoalObject != null) {
+                $('#classGoalsModal').modal('toggle');
+            } else {
+                $("#noItemSelectedModal").modal('toggle');
+            }
+        });
+
+        $("#removeClassGoals").click(function (e) {
+            e.preventDefault();
+
+            if (currentClassGoalObject != null) {
+                $(".gepaClassGoalsItem").each(function (index) {
+                    if ($(this).attr('data-guid') == currentClassGoalObject.guid) {
+                        $(this).remove();
+
+                        for (var i = 0; i < classGoalList.length; i++) {
+                            if (classGoalList[i].guid == currentClassGoalObject.guid) {
+                                classGoalList.splice(i, 1);
+                                currentClassGoalObject = null;
+                            }
+                        }
+                    }
+                });
+            } else {
+                $("#noItemSelectedModal").modal('toggle');
+            }
+        });
+
+        $("#addEvaluation").click(function (e) {
+            e.preventDefault();
+            currentEvaluationObject = null;
+        });
+
+        $("#editEvaluation").click(function (e) {
+            e.preventDefault();
+            if (currentEvaluationObject != null) {
+                $('#addEvaluationModal').modal('toggle');
+            } else {
+                $("#noItemSelectedModal").modal('toggle');
+            }
+        });
+
+        $("#removeEvaluation").click(function (e) {
+            e.preventDefault();
+
+            if (currentEvaluationObject != null) {
+                $(".evaluationItem").each(function (index) {
+                    if ($(this).attr('data-guid') == currentEvaluationObject.guid) {
+                        $(this).remove();
+
+                        for (var i = 0; i < lessonContentList.length; i++) {
+                            if (lessonContentList[i].guid == evaluationList.guid) {
+                                evaluationList.splice(i, 1);
+                                currentEvaluationObject = null;
+                            }
+                        }
+                    }
+                });
+            } else {
+                $("#noItemSelectedModal").modal('toggle');
+            }
+        });
+
+        $(document).off("click", ".gepaContentsItem");
+        $(document).on("click", ".gepaContentsItem", function () {
+            if ($(this).hasClass("active")) {
+                currentLessonContentObject = null;
+                $(this).removeClass("active")
+            } else {
+                var selectedLessonContentGuid = $(this).attr('data-guid');
+
+                for (var i = 0; i < lessonContentList.length; i++) {
+                    if (lessonContentList[i].guid == selectedLessonContentGuid)
+                        currentLessonContentObject = lessonContentList[i];
+                }
+
+                $(".gepaContentsItem").removeClass("active")
+                $(this).addClass("active")
+            }
+        });
+
+        $(document).off("click", ".gepaClassGoalsItem");
+        $(document).on("click", ".gepaClassGoalsItem", function () {
+            if ($(this).hasClass("active")) {
+                currentClassGoalObject = null;
+                $(this).removeClass("active")
+            } else {
+                var selectedLessonContentGuid = $(this).attr('data-guid');
+
+                for (var i = 0; i < classGoalList.length; i++) {
+                    if (selectedLessonContentGuid == classGoalList[i].guid) {
+                        currentClassGoalObject = classGoalList[i];
+                    }
+                }
+
+                $(".gepaClassGoalsItem").removeClass("active")
+                $(this).addClass("active")
+            }
+        });
+
+        $(document).off("click", ".evaluationItem");
+        $(document).on("click", ".evaluationItem", function () {
+            if ($(this).hasClass("active")) {
+                currentEvaluationObject = null;
+                $(this).removeClass("active")
+            } else {
+                var selectedEvaluationGuid = $(this).attr('data-guid');
+
+                for (var i = 0; i < evaluationList.length; i++) {
+                    if (selectedEvaluationGuid == evaluationList[i].guid) {
+                        currentEvaluationObject = evaluationList[i];
+                    }
+                }
+
+                $(".evaluationItem").removeClass("active")
+                $(this).addClass("active")
+            }
+        });
+
+        $(document).off("click", ".objectiveStatus");
+        $(document).on("click", ".objectiveStatus", function () {
+            var currentGuid = $(this).parents(".gepaClassGoalsItem").attr("data-guid");
+            for (var i = 0; i < classGoalList.length; i++) {
+                if (classGoalList[i].guid == currentGuid) {
+                    classGoalList[i].IsCompleted = $(this).prop("checked");
+                }
+            }
         });
     });
 </script>

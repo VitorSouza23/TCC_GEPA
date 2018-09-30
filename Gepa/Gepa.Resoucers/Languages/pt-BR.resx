@@ -195,6 +195,9 @@
   <data name="EnterYourPassword" xml:space="preserve">
     <value>Informe sua senha:</value>
   </data>
+  <data name="Evaluations" xml:space="preserve">
+    <value>Avaliações</value>
+  </data>
   <data name="Exclude" xml:space="preserve">
     <value>Excluir</value>
   </data>
@@ -239,6 +242,9 @@
   </data>
   <data name="Name" xml:space="preserve">
     <value>Nome</value>
+  </data>
+  <data name="NoItemSelected" xml:space="preserve">
+    <value>Nenhum item selecionado!</value>
   </data>
   <data name="NoLessonContentSelected" xml:space="preserve">
     <value>Não há conteúdo selecionado!</value>

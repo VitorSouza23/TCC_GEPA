@@ -657,5 +657,27 @@ namespace Gepa.Resources
                 return GetString("AddClassGoal");
             }
         }
+
+        /// <summary>
+        /// Nenhum item selecionado!
+        /// </summary>
+        public static string NoItemSelected
+        {
+            get
+            {
+                return GetString("NoItemSelected");
+            }
+        }
+
+        /// <summary>
+        /// Avaliações
+        /// </summary>
+        public static string Evaluations
+        {
+            get
+            {
+                return GetString("Evaluations");
+            }
+        }
     }
 }

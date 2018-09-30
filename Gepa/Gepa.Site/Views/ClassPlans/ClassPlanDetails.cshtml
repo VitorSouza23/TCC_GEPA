@@ -51,6 +51,35 @@
         </div>
 
         <div class="form-group">
+            <label>@Language.Goals</label>
+            <div id="classGoalsListGroup" class="list-group border">
+            </div>
+
+            <div style="margin: 10px 0;">
+                <button id="addClassGoals" type="button" class="btn btn-outline-secondary btnGepaCRUD" data-toggle="modal" data-target="#classGoalsModal">@Language.Add</button>
+                <button id="editClassGoals" class="btn btn-outline-secondary btnGepaCRUD">@Language.Edit</button>
+                <button id="removeClassGoals" class="btn btn-outline-secondary btnGepaCRUD">@Language.Exclude</button>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label>@Language.Evaluations</label>
+            <div id="evaluationsListGroup" class="list-group border">
+            </div>
+
+            <div style="margin: 10px 0;">
+                <button id="addEvaluation" type="button" class="btn btn-outline-secondary btnGepaCRUD" data-toggle="modal" data-target="#addEvaluationModal">@Language.Add</button>
+                <button id="editEvaluation" class="btn btn-outline-secondary btnGepaCRUD">@Language.Edit</button>
+                <button id="removeEvaluation" class="btn btn-outline-secondary btnGepaCRUD">@Language.Exclude</button>
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(m => m.Date)
+            @Html.EditorFor(m => m.Date, new { htmlAttributes = new { @class = "form-control date-picker" } })
+        </div>
+
+        <div class="form-group">
             @Html.LabelFor(m => m.Observation)
             @Html.TextAreaFor(m => m.Observation, new { @class = "form-control gepaTextArea", placeholder = string.Format(Language.EnterFieldValueFormatted3, Language.Observations.ToLower()) })
         </div>
@@ -60,32 +89,39 @@
 
     @Html.Partial("_AddLessonContentModal")
     @Html.Partial("_AddClassGoalsModal")
-    @Html.Partial("_NoLessonContentSelected")
+    @Html.Partial("_AddEvaluationModal")
+    @Html.Partial("_NoItemSelectedModal")
 </div>
 
 <script>
+    $(function () {
+        $(".date-picker").datepicker({
+            dateFormat: 'dd/mm/yy'
+        })
+    });
+
     var lessonContentList = [];
     var currentLessonContentObject = null;
 
     var classGoalList = [];
     var currentClassGoalObject = null;
 
+    var evaluationList = [];
+    var currentEvaluationObject = null;
+
     $(document).ready(function () {
         $("#addLessonContent").click(function (e) {
             e.preventDefault();
             currentLessonContentObject = null;
-
         });
 
         $("#editLessonContent").click(function (e) {
             e.preventDefault();
-
             if (currentLessonContentObject != null) {
                 $('#lessonContentModal').modal('toggle');
             } else {
-                $("#noLessonContentSelectedModal").modal('toggle');
+                $("#noItemSelectedModal").modal('toggle');
             }
-
         });
 
         $("#removeLessonContent").click(function (e) {
@@ -105,13 +141,12 @@
                     }
                 });
             } else {
-                $("#noLessonContentSelectedModal").modal('toggle');
+                $("#noItemSelectedModal").modal('toggle');
             }
         });
 
         $("#addClassGoals").click(function (e) {
-
-            e.preventDefault();   
+            e.preventDefault();
             currentClassGoalObject = null;
         });
 
@@ -121,8 +156,7 @@
             if (currentClassGoalObject != null) {
                 $('#classGoalsModal').modal('toggle');
             } else {
-               
-                alert("Selecione um objetivo! (Mensagem provisória)");
+                $("#noItemSelectedModal").modal('toggle');
             }
         });
 
@@ -137,14 +171,48 @@
                         for (var i = 0; i < classGoalList.length; i++) {
                             if (classGoalList[i].guid == currentClassGoalObject.guid) {
                                 classGoalList.splice(i, 1);
-                                currentLessonContentObject = null;
+                                currentClassGoalObject = null;
                             }
                         }
                     }
                 });
             } else {
-                alert("Selecione um objetivo! (Mensagem provisória)");
-                //$("#noLessonContentSelectedModal").modal('toggle');
+                $("#noItemSelectedModal").modal('toggle');
+            }
+        });
+
+        $("#addEvaluation").click(function (e) {
+            e.preventDefault();
+            currentEvaluationObject = null;
+        });
+
+        $("#editEvaluation").click(function (e) {
+            e.preventDefault();
+            if (currentEvaluationObject != null) {
+                $('#addEvaluationModal').modal('toggle');
+            } else {
+                $("#noItemSelectedModal").modal('toggle');
+            }
+        });
+
+        $("#removeEvaluation").click(function (e) {
+            e.preventDefault();
+
+            if (currentEvaluationObject != null) {
+                $(".evaluationItem").each(function (index) {
+                    if ($(this).attr('data-guid') == currentEvaluationObject.guid) {
+                        $(this).remove();
+
+                        for (var i = 0; i < lessonContentList.length; i++) {
+                            if (lessonContentList[i].guid == evaluationList.guid) {
+                                evaluationList.splice(i, 1);
+                                currentEvaluationObject = null;
+                            }
+                        }
+                    }
+                });
+            } else {
+                $("#noItemSelectedModal").modal('toggle');
             }
         });
 
@@ -157,7 +225,8 @@
                 var selectedLessonContentGuid = $(this).attr('data-guid');
 
                 for (var i = 0; i < lessonContentList.length; i++) {
-                    currentLessonContentObject = lessonContentList[i];
+                    if (lessonContentList[i].guid == selectedLessonContentGuid)
+                        currentLessonContentObject = lessonContentList[i];
                 }
 
                 $(".gepaContentsItem").removeClass("active")
@@ -174,11 +243,42 @@
                 var selectedLessonContentGuid = $(this).attr('data-guid');
 
                 for (var i = 0; i < classGoalList.length; i++) {
-                    currentClassGoalObject = classGoalList[i];
+                    if (selectedLessonContentGuid == classGoalList[i].guid) {
+                        currentClassGoalObject = classGoalList[i];
+                    }
                 }
 
                 $(".gepaClassGoalsItem").removeClass("active")
                 $(this).addClass("active")
+            }
+        });
+
+        $(document).off("click", ".evaluationItem");
+        $(document).on("click", ".evaluationItem", function () {
+            if ($(this).hasClass("active")) {
+                currentEvaluationObject = null;
+                $(this).removeClass("active")
+            } else {
+                var selectedEvaluationGuid = $(this).attr('data-guid');
+
+                for (var i = 0; i < evaluationList.length; i++) {
+                    if (selectedEvaluationGuid == evaluationList[i].guid) {
+                        currentEvaluationObject = evaluationList[i];
+                    }
+                }
+
+                $(".evaluationItem").removeClass("active")
+                $(this).addClass("active")
+            }
+        });
+
+        $(document).off("click", ".objectiveStatus");
+        $(document).on("click", ".objectiveStatus", function () {
+            var currentGuid = $(this).parents(".gepaClassGoalsItem").attr("data-guid");
+            for (var i = 0; i < classGoalList.length; i++) {
+                if (classGoalList[i].guid == currentGuid) {
+                    classGoalList[i].IsCompleted = $(this).prop("checked");
+                }
             }
         });
     });

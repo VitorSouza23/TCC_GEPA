@@ -46,13 +46,17 @@
                 classGoalObject.IsCompleted = $("#IsCompleted").prop('checked');
                 classGoalObject.guid = generateNewGuid();
                 classGoalList.push(classGoalObject);
-                $("#classGoalsListGroup").append('<a class="list-group-item list-group-item-action gepaClassGoalsItem" data-guid="' + classGoalObject.guid + '" >' + classGoalObject.Objective + '</a>');
+
+                var checkBoxStatus = classGoalObject.IsCompleted ? "checked" : "";
+
+                $("#classGoalsListGroup").append('<a class="list-group-item list-group-item-action gepaClassGoalsItem" data-guid="' + classGoalObject.guid + '"><input type="checkbox" class="form-check-input objectiveStatus" ' + checkBoxStatus + '>' + classGoalObject.Objective + '</a>');
             } else {
                 currentClassGoalObject.Objective = $("#Objective").val();
                 currentClassGoalObject.IsCompleted = $("#IsCompleted").prop('checked');
                 $(".gepaClassGoalsItem").each(function (index) {
                     if ($(this).attr('data-guid') == currentClassGoalObject.guid) {
-                        $(this).text(currentClassGoalObject.Objective);
+                        var checkBoxStatus = currentClassGoalObject.IsCompleted ? "checked" : "";
+                        $(this).text('').append('<input type="checkbox" class="form-check-input objectiveStatus" ' + checkBoxStatus + ' >' + currentClassGoalObject.Objective);
                     }
                 });
             }

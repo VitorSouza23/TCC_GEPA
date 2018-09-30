@@ -155,3 +155,8 @@
     background-color: #2d9900;
     color: white;
 }
+
+.icon {
+    font-family: FontAwesome !important;
+    font-style: normal !important;
+}

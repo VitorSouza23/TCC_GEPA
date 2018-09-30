@@ -4,7 +4,9 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="lessonContentModalLabel">@Language.AddContent</h5>
+                <h5 class="modal-title" id="lessonContentModalLabel">
+                    @Language.AddContent
+                </h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -22,8 +24,15 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button id="CancelLessonContentBtn" type="button" class="btn btn-secondary btnModals btnCancelModals" data-dismiss="modal">@Language.Cancel</button>
-                    <button id="SaveLessonContentBtn" type="submit" class="btn btn-primary btnModals btnSaveModals">@Language.Save</button>
+                    <button type="submit" class="btn btn-primary btnModals btnSaveModals">
+                        <i class="fas fa-save icon"></i>
+                        @Language.Save
+                    </button>
+
+                    <button type="button" class="btn btn-secondary btnModals btnCancelModals" data-dismiss="modal">
+                        <i class="fas fa-times icon"></i>
+                        @Language.Cancel
+                    </button>
                 </div>
             </form>
 
@@ -53,7 +62,7 @@
 
         $('#lessonContentModal').on("show.bs.modal", function () {
             if (currentLessonContentObject != null) {
-                $("#ContentValue").val(currentLessonContentObject.ContentValue);               
+                $("#ContentValue").val(currentLessonContentObject.ContentValue);
             }
         });
 

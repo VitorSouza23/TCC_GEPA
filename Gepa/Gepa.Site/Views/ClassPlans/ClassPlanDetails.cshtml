@@ -7,66 +7,111 @@
 <div class="container">
     <h1 class="gepaTitles">@Language.RegisterClassPlan</h1>
 
+    <div class="classPlanFormArea">
+        @using (Html.BeginForm("CreateClassPlan", "ClassPlans", FormMethod.Post))
+        {
+            @Html.HiddenFor(m => m.Id)
     @using (Html.BeginForm("SaveClassPlan", "ClassPlans", FormMethod.Post, new { id = "classPlanForm" }))
     {
         @Html.HiddenFor(m => m.Id)
 
-        <div class="form-group">
-            @Html.LabelFor(m => m.Title)
-            @Html.TextBoxFor(m => m.Title, new { @class = "form-control", required = "required", placeholder = string.Format(Language.EnterFieldValueFormatted2, Language.Title.ToLower()) })
-            @Html.ValidationMessageFor(m => m.Title)
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(m => m.Description)
-            @Html.TextAreaFor(m => m.Description, new { @class = "form-control gepaTextArea", placeholder = string.Format(Language.EnterFieldValueFormatted, Language.Description.ToLower()) })
-        </div>
-        <div class="form-group">
-            @Html.LabelFor(m => m.Methodology)
-            @Html.TextAreaFor(m => m.Methodology, new { @class = "form-control gepaTextArea", placeholder = string.Format(Language.EnterFieldValueFormatted, Language.Methodology.ToLower()) })
-        </div>
-
-        <div class="form-group">
-            <label>@Language.DivisionOfContent</label>
-            <div id="lessonContentListGroup" class="list-group border">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Title)
+                @Html.TextBoxFor(m => m.Title, new { @class = "form-control", required = "required", placeholder = string.Format(Language.EnterFieldValueFormatted2, Language.Title.ToLower()) })
+                @Html.ValidationMessageFor(m => m.Title)
             </div>
 
-            <div style="margin: 10px 0;">
-                <button id="addLessonContent" type="button" class="btn btn-outline-secondary btnGepaCRUD" data-toggle="modal" data-target="#lessonContentModal">@Language.Add</button>
-                <button id="editLessonContent" class="btn btn-outline-secondary btnGepaCRUD">@Language.Edit</button>
-                <button id="removeLessonContent" class="btn btn-outline-secondary btnGepaCRUD">@Language.Exclude</button>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Description)
+                @Html.TextAreaFor(m => m.Description, new { @class = "form-control gepaTextArea", placeholder = string.Format(Language.EnterFieldValueFormatted, Language.Description.ToLower()) })
             </div>
-        </div>
-
-        <div class="form-group">
-            <label>@Language.Goals</label>
-            <div id="classGoalsListGroup" class="list-group border">
+            <div class="form-group">
+                @Html.LabelFor(m => m.Methodology)
+                @Html.TextAreaFor(m => m.Methodology, new { @class = "form-control gepaTextArea", placeholder = string.Format(Language.EnterFieldValueFormatted, Language.Methodology.ToLower()) })
             </div>
 
-            <div style="margin: 10px 0;">
-                <button id="addClassGoals" type="button" class="btn btn-outline-secondary btnGepaCRUD" data-toggle="modal" data-target="#classGoalsModal">@Language.Add</button>
-                <button id="editClassGoals" class="btn btn-outline-secondary btnGepaCRUD">@Language.Edit</button>
-                <button id="removeClassGoals" class="btn btn-outline-secondary btnGepaCRUD">@Language.Exclude</button>
+            <div class="form-group">
+                <label>@Language.DivisionOfContent</label>
+                <div id="lessonContentListGroup" class="list-group border">
+                </div>
+
+                <div style="margin: 10px 0;">
+                    <button id="addLessonContent" type="button" class="btn btn-outline-secondary btnGepaCRUD" data-toggle="modal" data-target="#lessonContentModal">
+                        <i class="fas fa-plus icon"></i>
+                        @Language.Add
+                    </button>
+                    <button id="editLessonContent" class="btn btn-outline-secondary btnGepaCRUD">
+                        <i class="fas fa-edit icon"></i>
+                        @Language.Edit
+                    </button>
+                    <button id="removeLessonContent" class="btn btn-outline-secondary btnGepaCRUD">
+                        <i class="fas fa-trash icon"></i>
+                        @Language.Exclude
+                    </button>
+                </div>
             </div>
-        </div>
 
-        <div class="form-group">
-            <label>@Language.Evaluations</label>
-            <div id="evaluationsListGroup" class="list-group border">
+            <div class="form-group">
+                <label>@Language.Goals</label>
+                <div id="classGoalsListGroup" class="list-group border">
+                </div>
+
+                <div style="margin: 10px 0;">
+                    <button id="addClassGoals" type="button" class="btn btn-outline-secondary btnGepaCRUD" data-toggle="modal" data-target="#classGoalsModal">
+                        <i class="fas fa-plus icon"></i>
+                        @Language.Add
+                    </button>
+                    <button id="editClassGoals" class="btn btn-outline-secondary btnGepaCRUD">
+                        <i class="fas fa-edit icon"></i>
+                        @Language.Edit
+                    </button>
+                    <button id="removeClassGoals" class="btn btn-outline-secondary btnGepaCRUD">
+                        <i class="fas fa-trash icon"></i>
+                        @Language.Exclude
+                    </button>
+                </div>
             </div>
 
-            <div style="margin: 10px 0;">
-                <button id="addEvaluation" type="button" class="btn btn-outline-secondary btnGepaCRUD" data-toggle="modal" data-target="#addEvaluationModal">@Language.Add</button>
-                <button id="editEvaluation" class="btn btn-outline-secondary btnGepaCRUD">@Language.Edit</button>
-                <button id="removeEvaluation" class="btn btn-outline-secondary btnGepaCRUD">@Language.Exclude</button>
+            <div class="form-group">
+                <label>@Language.Evaluations</label>
+                <div id="evaluationsListGroup" class="list-group border">
+                </div>
+
+                <div style="margin: 10px 0;">
+                    <button id="addEvaluation" type="button" class="btn btn-outline-secondary btnGepaCRUD" data-toggle="modal" data-target="#addEvaluationModal">
+                        <i class="fas fa-plus icon"></i>
+                        @Language.Add
+                    </button>
+                    <button id="editEvaluation" class="btn btn-outline-secondary btnGepaCRUD">
+                        <i class="fas fa-plus icon"></i>
+                        @Language.Edit
+                    </button>
+                    <button id="removeEvaluation" class="btn btn-outline-secondary btnGepaCRUD">
+                        <i class="fas fa-trash icon"></i>
+                        @Language.Exclude
+                    </button>
+                </div>
             </div>
-        </div>
 
-        <div class="form-group">
-            @Html.LabelFor(m => m.Date)
-            @Html.EditorFor(m => m.Date, new { htmlAttributes = new { @class = "form-control date-picker" } })
-        </div>
+            <div class="form-group">
+                @Html.LabelFor(m => m.Date)
+                @Html.EditorFor(m => m.Date, new { htmlAttributes = new { @class = "form-control date-picker gepaInputDate" } })
+            </div>
 
+            <div class="form-group">
+                @Html.LabelFor(m => m.Observation)
+                @Html.TextAreaFor(m => m.Observation, new { @class = "form-control gepaTextArea", placeholder = string.Format(Language.EnterFieldValueFormatted3, Language.Observations.ToLower()) })
+            </div>
+            <button type="submit" class="btn gepaFormButtons btnSubmitForms">
+                <i class="fas fa-save icon"></i>
+                @Language.Save
+            </button>
+            <button class="btn gepaFormButtons">
+                <i class="fas fa-times icon"></i>
+                @Language.Cancel
+            </button>
+        }
+    </div>
         <div class="form-group">
             @Html.LabelFor(m => m.Observation)
             @Html.TextAreaFor(m => m.Observation, new { @class = "form-control gepaTextArea", placeholder = string.Format(Language.EnterFieldValueFormatted3, Language.Observations.ToLower()) })
@@ -88,7 +133,14 @@
 <script>
     $(function () {
         $(".date-picker").datepicker({
-            dateFormat: 'dd/mm/yy'
+            dateFormat: 'dd/mm/yy',
+            dayNames: ['Domingo', 'Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado'],
+            dayNamesMin: ['D', 'S', 'T', 'Q', 'Q', 'S', 'S', 'D'],
+            dayNamesShort: ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom'],
+            monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
+            monthNamesShort: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+            nextText: 'Próximo',
+            prevText: 'Anterior'
         })
     });
 

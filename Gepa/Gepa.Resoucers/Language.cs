@@ -679,5 +679,27 @@ namespace Gepa.Resources
                 return GetString("Evaluations");
             }
         }
+
+        /// <summary>
+        /// Tarefa concluida
+        /// </summary>
+        public static string IsCompletedTask
+        {
+            get
+            {
+                return GetString("IsCompletedTask");
+            }
+        }
+
+        /// <summary>
+        /// Atividades
+        /// </summary>
+        public static string Chores
+        {
+            get
+            {
+                return GetString("Chores");
+            }
+        }
     }
 }

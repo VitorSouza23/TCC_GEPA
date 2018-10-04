@@ -70,6 +70,48 @@
             </div>
 
             <div class="form-group">
+                <label>@Language.Goals</label>
+                <div id="classGoalsListGroup" class="list-group border">
+                </div>
+
+                <div style="margin: 10px 0;">
+                    <button id="addClassGoals" type="button" class="btn btn-outline-secondary btnGepaCRUD" data-toggle="modal" data-target="#classGoalsModal">
+                        <i class="fas fa-plus icon"></i>
+                        @Language.Add
+                    </button>
+                    <button id="editClassGoals" class="btn btn-outline-secondary btnGepaCRUD">
+                        <i class="fas fa-edit icon"></i>
+                        @Language.Edit
+                    </button>
+                    <button id="removeClassGoals" class="btn btn-outline-secondary btnGepaCRUD">
+                        <i class="fas fa-trash icon"></i>
+                        @Language.Exclude
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>@Language.Chores</label>
+                <div id="choresListGroup" class="list-group border">
+                </div>
+
+                <div style="margin: 10px 0;">
+                    <button id="addChore" type="button" class="btn btn-outline-secondary btnGepaCRUD" data-toggle="modal" data-target="#addChoresModal">
+                        <i class="fas fa-plus icon"></i>
+                        @Language.Add
+                    </button>
+                    <button id="editChore" class="btn btn-outline-secondary btnGepaCRUD">
+                        <i class="fas fa-edit icon"></i>
+                        @Language.Edit
+                    </button>
+                    <button id="removeChore" class="btn btn-outline-secondary btnGepaCRUD">
+                        <i class="fas fa-trash icon"></i>
+                        @Language.Exclude
+                    </button>
+                </div>
+            </div>
+
+            <div class="form-group">
                 <label>@Language.Evaluations</label>
                 <div id="evaluationsListGroup" class="list-group border">
                 </div>
@@ -114,6 +156,7 @@
     @Html.Partial("_AddClassGoalsModal")
     @Html.Partial("_AddEvaluationModal")
     @Html.Partial("_NoItemSelectedModal")
+    @Html.Partial("_AddChoresModal")
 </div>
 
 <script>
@@ -138,6 +181,9 @@
 
     var evaluationList = [];
     var currentEvaluationObject = null;
+
+    var choreList = [];
+    var currentChoreObject = null;
 
     $(document).ready(function () {
         $("#addLessonContent").click(function (e) {
@@ -233,10 +279,45 @@
                     if ($(this).attr('data-guid') == currentEvaluationObject.guid) {
                         $(this).remove();
 
-                        for (var i = 0; i < lessonContentList.length; i++) {
-                            if (lessonContentList[i].guid == evaluationList.guid) {
+                        for (var i = 0; i < evaluationList.length; i++) {
+                            if (evaluationList[i].guid == currentEvaluationObject.guid) {
                                 evaluationList.splice(i, 1);
                                 currentEvaluationObject = null;
+                            }
+                        }
+                    }
+                });
+            } else {
+                $("#noItemSelectedModal").modal('toggle');
+            }
+        });
+
+        $("#addChore").click(function (e) {
+            e.preventDefault();
+            currentChoreObject = null;
+        });
+
+        $("#editChore").click(function (e) {
+            e.preventDefault();
+            if (currentChoreObject != null) {
+                $('#addChoresModal').modal('toggle');
+            } else {
+                $("#noItemSelectedModal").modal('toggle');
+            }
+        });
+
+        $("#removeChore").click(function (e) {
+            e.preventDefault();
+
+            if (currentChoreObject != null) {
+                $(".choreItem").each(function (index) {
+                    if ($(this).attr('data-guid') == currentChoreObject.guid) {
+                        $(this).remove();
+
+                        for (var i = 0; i < choreList.length; i++) {
+                            if (choreList[i].guid == currentChoreObject.guid) {
+                                choreList.splice(i, 1);
+                                currentChoreObject = null;
                             }
                         }
                     }
@@ -298,6 +379,25 @@
                 }
 
                 $(".evaluationItem").removeClass("active")
+                $(this).addClass("active")
+            }
+        });
+
+        $(document).off("click", ".choreItem");
+        $(document).on("click", ".choreItem", function () {
+            if ($(this).hasClass("active")) {
+                currentChoreObject = null;
+                $(this).removeClass("active")
+            } else {
+                var selectedEvaluationGuid = $(this).attr('data-guid');
+
+                for (var i = 0; i < choreList.length; i++) {
+                    if (selectedEvaluationGuid == choreList[i].guid) {
+                        currentChoreObject = choreList[i];
+                    }
+                }
+
+                $(".choreItem").removeClass("active")
                 $(this).addClass("active")
             }
         });

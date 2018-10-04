@@ -124,6 +124,15 @@ namespace Gepa.Resources.Languages {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Atividades.
+        /// </summary>
+        internal static string Chores {
+            get {
+                return ResourceManager.GetString("Chores", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Plano de Aula.
         /// </summary>
         internal static string ClassPlan {
@@ -372,6 +381,15 @@ namespace Gepa.Resources.Languages {
         internal static string IsCompletedGoal {
             get {
                 return ResourceManager.GetString("IsCompletedGoal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Tarefa concluida.
+        /// </summary>
+        internal static string IsCompletedTask {
+            get {
+                return ResourceManager.GetString("IsCompletedTask", resourceCulture);
             }
         }
         

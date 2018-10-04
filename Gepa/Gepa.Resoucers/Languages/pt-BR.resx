@@ -138,6 +138,9 @@
   <data name="Cancel" xml:space="preserve">
     <value>Cancelar</value>
   </data>
+  <data name="Chores" xml:space="preserve">
+    <value>Atividades</value>
+  </data>
   <data name="ClassPlan" xml:space="preserve">
     <value>Plano de Aula</value>
   </data>
@@ -221,6 +224,9 @@
   </data>
   <data name="IsCompletedGoal" xml:space="preserve">
     <value>Objetivo concluído</value>
+  </data>
+  <data name="IsCompletedTask" xml:space="preserve">
+    <value>Tarefa concluida</value>
   </data>
   <data name="Login" xml:space="preserve">
     <value>Login</value>

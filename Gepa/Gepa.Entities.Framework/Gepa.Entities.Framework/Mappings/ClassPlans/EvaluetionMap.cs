@@ -1,10 +1,5 @@
 ﻿using Gepa.Entities.Framework.Entities.ClassPlans;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Gepa.Entities.Framework.Mappings.ClassPlans
 {
@@ -12,10 +7,11 @@ namespace Gepa.Entities.Framework.Mappings.ClassPlans
     {
         public EvaluetionMap()
         {
-            this.HasKey(k => k.EvaluetionId);
-            this.HasMany(e => e.StudentNote)
-                .WithOptional(e => e.Evaluetion)
-                .WillCascadeOnDelete(false);
+            HasKey(k => k.EvaluetionId);
+            HasRequired(k => k.ClassPlan)
+                .WithMany(q => q.Evaluetions)
+                .HasForeignKey(k => k.ClassPlanId)
+                .WillCascadeOnDelete();
         }
     }
 }

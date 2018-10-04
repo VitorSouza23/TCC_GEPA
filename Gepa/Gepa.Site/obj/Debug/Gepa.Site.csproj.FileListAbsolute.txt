@@ -316,3 +316,5 @@ C:\Solutions\Gepa\Gepa.Site\obj\Debug\Gepa.Site.csproj.CoreCompileInputs.cache
 C:\Solutions\Gepa\Gepa.Site\obj\Debug\Gepa.Site.csproj.CopyComplete
 C:\Solutions\Gepa\Gepa.Site\obj\Debug\Gepa.Site.dll
 C:\Solutions\Gepa\Gepa.Site\obj\Debug\Gepa.Site.pdb
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\Gepa.Management.Services.dll.config
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Site\bin\Gepa.Business.dll.config

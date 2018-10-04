@@ -12,7 +12,7 @@ namespace Gepa.Entities.Framework.Mappings.Calendar
     {
         public AbstractSchoolEventMap()
         {
-            this.HasKey(k => k.AbstractSchoolEventId);
+            HasKey(k => k.AbstractSchoolEventId);
         }
     }
 }

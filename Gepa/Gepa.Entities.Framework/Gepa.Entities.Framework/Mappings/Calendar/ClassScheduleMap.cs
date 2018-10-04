@@ -12,7 +12,11 @@ namespace Gepa.Entities.Framework.Mappings.Calendar
     {
         public ClassScheduleMap()
         {
-            this.HasKey(k => k.AbstractSchoolEventId);
+            HasKey(k => k.AbstractSchoolEventId);
+            HasRequired(k => k.SchoolCalendar)
+                .WithMany(q => q.ClassSchedules)
+                .HasForeignKey(k => k.SchoolCalendarId)
+                .WillCascadeOnDelete();
         }
     }
 }

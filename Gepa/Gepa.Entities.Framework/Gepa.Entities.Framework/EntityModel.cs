@@ -62,5 +62,18 @@ namespace Gepa.Entities.Framework
             modelBuilder.Configurations.Add(new StudentPresenceMap());
             modelBuilder.Configurations.Add(new TeacherMap());
         }
+
+        public override int SaveChanges()
+        {
+            try
+            {
+                return base.SaveChanges();
+            }
+            catch(Exception ex)
+            {
+                throw ex;
+            }
+            
+        }
     }
 }

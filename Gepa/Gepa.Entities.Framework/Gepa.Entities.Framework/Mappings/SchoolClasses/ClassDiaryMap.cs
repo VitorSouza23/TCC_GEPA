@@ -1,10 +1,5 @@
 ﻿using Gepa.Entities.Framework.Entities.SchoolClasses;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Gepa.Entities.Framework.Mappings.SchoolClasses
 {
@@ -12,10 +7,11 @@ namespace Gepa.Entities.Framework.Mappings.SchoolClasses
     {
         public ClassDiaryMap()
         {
-            this.HasKey(k => k.ClassDiaryId);
-            this.HasMany(e => e.StudentNote)
-                .WithRequired(e => e.ClassDiary)
-                .WillCascadeOnDelete(false);
+            HasKey(k => k.ClassDiaryId);
+            HasRequired(k => k.SchoolClass)
+                .WithMany(q => q.ClassDiary)
+                .HasForeignKey(k => k.SchoolClassId)
+                .WillCascadeOnDelete();
         }
     }
 }

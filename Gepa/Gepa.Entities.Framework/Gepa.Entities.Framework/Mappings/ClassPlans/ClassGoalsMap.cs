@@ -1,10 +1,5 @@
 ﻿using Gepa.Entities.Framework.Entities.ClassPlans;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Gepa.Entities.Framework.Mappings.ClassPlans
 {
@@ -12,7 +7,11 @@ namespace Gepa.Entities.Framework.Mappings.ClassPlans
     {
         public ClassGoalsMap()
         {
-            this.HasKey(k => k.ClassGoalsId);
+            HasKey(k => k.ClassGoalsId);
+            HasRequired(k => k.ClassPlan)
+                .WithMany(b => b.ClassGoals)
+                .HasForeignKey(k => k.ClassPlanId)
+                .WillCascadeOnDelete();
         }
     }
 }

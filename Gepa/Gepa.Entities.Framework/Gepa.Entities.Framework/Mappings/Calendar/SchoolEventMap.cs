@@ -1,10 +1,5 @@
 ﻿using Gepa.Entities.Framework.Entities.Calendar;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Gepa.Entities.Framework.Mappings.Calendar
 {
@@ -12,7 +7,11 @@ namespace Gepa.Entities.Framework.Mappings.Calendar
     {
         public SchoolEventMap()
         {
-            this.HasKey(k => k.AbstractSchoolEventId);
+            HasKey(k => k.AbstractSchoolEventId);
+            HasRequired(k => k.SchoolCalendar)
+                .WithMany(q => q.SchoolEvents)
+                .HasForeignKey(k => k.SchoolCalendarId)
+                .WillCascadeOnDelete();
         }
     }
 }

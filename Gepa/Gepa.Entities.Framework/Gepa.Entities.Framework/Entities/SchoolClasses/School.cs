@@ -10,10 +10,9 @@ namespace Gepa.Entities.Framework.Entities.SchoolClasses
     [Table("School")]
     public partial class School
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public School()
         {
-            SchoolClass = new HashSet<SchoolClass>();
+            SchoolClasses = new List<SchoolClass>();
         }
 
         public long SchoolId { get; set; }
@@ -22,9 +21,10 @@ namespace Gepa.Entities.Framework.Entities.SchoolClasses
         [StringLength(50)]
         public string Name { get; set; }
 
-        public virtual Teacher Teacher { get; set; }
+        public List<SchoolClass> SchoolClasses { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<SchoolClass> SchoolClass { get; set; }
+        public long TeacherId { get; set; }
+
+        public Teacher Teacher { get; set; }
     }
 }

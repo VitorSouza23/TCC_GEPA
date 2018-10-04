@@ -12,10 +12,11 @@ namespace Gepa.Entities.Framework.Mappings.SchoolClasses
     {
         public SchoolMap()
         {
-            this.HasKey(k => k.SchoolId);
-            this.HasMany(e => e.SchoolClass)
-                .WithRequired(e => e.School)
-                .WillCascadeOnDelete(false);
+            HasKey(k => k.SchoolId);
+            HasRequired(k => k.Teacher)
+                .WithMany(q => q.School)
+                .HasForeignKey(k => k.TeacherId)
+                .WillCascadeOnDelete();
         }
     }
 }

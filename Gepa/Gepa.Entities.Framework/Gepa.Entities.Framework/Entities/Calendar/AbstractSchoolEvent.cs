@@ -9,7 +9,6 @@ namespace Gepa.Entities.Framework.Entities.Calendar
     [Table("AbstractSchoolEvent")]
     public partial class AbstractSchoolEvent
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public AbstractSchoolEvent()
         {
         }
@@ -25,5 +24,9 @@ namespace Gepa.Entities.Framework.Entities.Calendar
         public DateTime StartDate { get; set; }
 
         public DateTime EndDate { get; set; }
+
+        public long SchoolCalendarId { get; set; }
+
+        public SchoolCalendar SchoolCalendar { get; set; }
     }
 }

@@ -8,7 +8,7 @@
     <h1 class="gepaTitles">@Language.RegisterClassPlan</h1>
 
     <div class="classPlanFormArea">
-        @using (Html.BeginForm("CreateClassPlan", "ClassPlans", FormMethod.Post))
+        @using (Html.BeginForm("SaveClassPlan", "ClassPlans", FormMethod.Post, new { id = "classPlanForm" }))
         {
             @Html.HiddenFor(m => m.Id)
 
@@ -152,9 +152,13 @@
         }
     </div>
 
-    @Html.Partial("_AddLessonContentModal")
-    @Html.Partial("_AddClassGoalsModal")
-    @Html.Partial("_AddEvaluationModal")
+    @{
+        Html.RenderAction("ClassGoalsModalView", "ClassPlans", new { classGoalsModel = Model.ClassGoals });
+        Html.RenderAction("LessonContentModalView", "ClassPlans", new { lessonsContentModel = Model.Contents });
+        Html.RenderAction("EvaluationModalView", "ClassPlans", new { evaluationModel = Model.Evaluations });
+
+    }
+
     @Html.Partial("_NoItemSelectedModal")
     @Html.Partial("_AddChoresModal")
 </div>
@@ -410,6 +414,26 @@
                     classGoalList[i].IsCompleted = $(this).prop("checked");
                 }
             }
+        });
+
+        $("#classPlanForm").submit(function (e) {
+            e.preventDefault();
+            var classPlan = objectifyForm($(this).serializeArray());
+            classPlan.Contents = lessonContentList;
+            classPlan.ClassGoals = classGoalList;
+            classPlan.Evaluations = evaluationList;
+            var data = JSON.stringify(classPlan);
+            $.ajax({
+                type: "POST",
+                url: $(this).attr('action'),
+                data: data,
+                contentType: "application/json",
+                success: function (data) {
+                    if (data) {
+                        window.location.href = data;
+                    }
+                }
+            })
         });
     });
 </script>

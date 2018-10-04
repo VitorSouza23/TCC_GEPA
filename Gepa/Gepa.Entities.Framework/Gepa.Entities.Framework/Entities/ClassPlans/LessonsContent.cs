@@ -1,10 +1,6 @@
 namespace Gepa.Entities.Framework.Entities.ClassPlans
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
     [Table("LessonsContent")]
     public partial class LessonsContent
@@ -13,6 +9,8 @@ namespace Gepa.Entities.Framework.Entities.ClassPlans
 
         public string ContentValue { get; set; }
 
-        public virtual ClassPlan ClassPlan { get; set; }
+        public long ClassPlanId { get; set; }
+
+        public ClassPlan ClassPlan { get; set; }
     }
 }

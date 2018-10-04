@@ -8,12 +8,9 @@
     <h1 class="gepaTitles">@Language.RegisterClassPlan</h1>
 
     <div class="classPlanFormArea">
-        @using (Html.BeginForm("CreateClassPlan", "ClassPlans", FormMethod.Post))
+        @using (Html.BeginForm("SaveClassPlan", "ClassPlans", FormMethod.Post, new { id = "classPlanForm" }))
         {
             @Html.HiddenFor(m => m.Id)
-    @using (Html.BeginForm("SaveClassPlan", "ClassPlans", FormMethod.Post, new { id = "classPlanForm" }))
-    {
-        @Html.HiddenFor(m => m.Id)
 
             <div class="form-group">
                 @Html.LabelFor(m => m.Title)
@@ -112,13 +109,6 @@
             </button>
         }
     </div>
-        <div class="form-group">
-            @Html.LabelFor(m => m.Observation)
-            @Html.TextAreaFor(m => m.Observation, new { @class = "form-control gepaTextArea", placeholder = string.Format(Language.EnterFieldValueFormatted3, Language.Observations.ToLower()) })
-        </div>
-        <button id="btnSaveClassPlan" type="submit" class="btn gepaFormButtons">@Language.Save</button>
-        <button id="btnCancelSaveClassPlan" class="btn gepaFormButtons">@Language.Cancel</button>
-    }
 
     @{
         Html.RenderAction("ClassGoalsModalView", "ClassPlans", new { classGoalsModel = Model.ClassGoals });

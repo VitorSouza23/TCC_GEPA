@@ -20,10 +20,8 @@ namespace Gepa.Entities.Framework.Entities.SchoolClasses
 
         public string Observation { get; set; }
 
-        public virtual ClassDiary ClassDiary { get; set; }
+        public long StudentId { get; set; }
 
-        public virtual Evaluetion Evaluetion { get; set; }
-
-        public virtual Student Student { get; set; }
+        public Student Student { get; set; }
     }
 }

@@ -1,11 +1,7 @@
 namespace Gepa.Entities.Framework.Entities.SchoolClasses
 {
     using Gepa.Entities.Framework.Utils;
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
     [Table("StudentPresence")]
     public partial class StudentPresence
@@ -16,8 +12,8 @@ namespace Gepa.Entities.Framework.Entities.SchoolClasses
 
         public ClassPresenceEnum PesenceStatus { get; set; }
 
-        public virtual ClassFrequency ClassFrequency { get; set; }
+        public long StudentId { get; set; }
 
-        public virtual Student Student { get; set; }
+        public Student Student { get; set; }
     }
 }

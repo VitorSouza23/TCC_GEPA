@@ -14,6 +14,8 @@ namespace Gepa.Entities.Framework.Entities.ClassPlans
 
         public bool Completed { get; set; }
 
-        public virtual ClassPlan ClassPlan { get; set; }
+        public long ClassPlanId { get; set; }
+
+        public ClassPlan ClassPlan { get; set; }
     }
 }

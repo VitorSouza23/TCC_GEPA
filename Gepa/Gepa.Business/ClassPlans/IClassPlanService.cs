@@ -1,8 +1,5 @@
 ﻿using Gepa.Entities.Framework.Entities.ClassPlans;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+using Gepa.Entities.Framework.Entities.Users;
 using System.Threading.Tasks;
 
 namespace Gepa.Business.ClassPlans
@@ -14,5 +11,6 @@ namespace Gepa.Business.ClassPlans
         void DeleteClassPlan(ClassPlan classPlan);
         ClassPlan FindClassPlan(long classPlanId);
         Task<ClassPlan> FindClassPlanAsync(long classPlanId);
+        Task InsertClassPlanAsync(ClassPlan newClassPlan);
     }
 }

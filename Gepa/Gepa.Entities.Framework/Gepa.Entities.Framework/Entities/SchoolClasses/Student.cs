@@ -1,19 +1,16 @@
 namespace Gepa.Entities.Framework.Entities.SchoolClasses
 {
-    using System;
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
     [Table("Student")]
     public partial class Student
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Student()
         {
-            StudentNote = new HashSet<StudentNote>();
-            StudentPresence = new HashSet<StudentPresence>();
+            StudentNotes = new List<StudentNote>();
+            StudentPresences = new List<StudentPresence>();
         }
 
         public long StudentId { get; set; }
@@ -24,12 +21,12 @@ namespace Gepa.Entities.Framework.Entities.SchoolClasses
 
         public string Observation { get; set; }
 
-        public virtual SchoolClass SchoolClass { get; set; }
+        public List<StudentNote> StudentNotes { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<StudentNote> StudentNote { get; set; }
+        public List<StudentPresence> StudentPresences { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<StudentPresence> StudentPresence { get; set; }
+        public long SchoolClassId { get; set; }
+
+        public SchoolClass SchoolClass { get; set; }
     }
 }

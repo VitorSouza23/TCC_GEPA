@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Gepa.DAO.ClassPlans;
 using Gepa.Entities.Framework.Entities.ClassPlans;
+using Gepa.Entities.Framework.Entities.Users;
 
 namespace Gepa.Business.ClassPlans
 {
@@ -40,6 +41,11 @@ namespace Gepa.Business.ClassPlans
         public void UpdateClassPlan(ClassPlan classPlan)
         {
             _classPlanDAO.UpdateClassPlan(classPlan);
+        }
+
+        public async Task InsertClassPlanAsync(ClassPlan newClassPlan)
+        {
+            await _classPlanDAO.InsertClassPlanAsync(newClassPlan);
         }
     }
 }

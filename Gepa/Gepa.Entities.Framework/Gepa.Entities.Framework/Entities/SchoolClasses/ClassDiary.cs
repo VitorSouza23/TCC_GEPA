@@ -9,19 +9,19 @@ namespace Gepa.Entities.Framework.Entities.SchoolClasses
     [Table("ClassDiary")]
     public partial class ClassDiary
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public ClassDiary()
         {
-            StudentNote = new HashSet<StudentNote>();
+            StudentNote = new List<StudentNote>();
         }
 
         public long ClassDiaryId { get; set; }
 
         public DateTime Date { get; set; }
 
-        public virtual SchoolClass SchoolClass { get; set; }
+        public List<StudentNote> StudentNote { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<StudentNote> StudentNote { get; set; }
+        public long SchoolClassId { get; set; }
+
+        public SchoolClass SchoolClass { get; set; }
     }
 }

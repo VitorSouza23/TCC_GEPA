@@ -1,10 +1,5 @@
 ﻿using Gepa.Entities.Framework.Entities.SchoolClasses;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity.ModelConfiguration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Gepa.Entities.Framework.Mappings.SchoolClasses
 {
@@ -12,7 +7,11 @@ namespace Gepa.Entities.Framework.Mappings.SchoolClasses
     {
         public StudentPresenceMap()
         {
-            this.HasKey(k => k.StudentPresenceId);
+            HasKey(k => k.StudentPresenceId);
+            HasRequired(k => k.Student)
+                .WithMany(b => b.StudentPresences)
+                .HasForeignKey(k => k.StudentId)
+                .WillCascadeOnDelete();
         }
     }
 }

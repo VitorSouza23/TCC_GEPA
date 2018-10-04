@@ -5,18 +5,16 @@ namespace Gepa.Entities.Framework.Entities.ClassPlans
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
-    using System.Data.Entity.Spatial;
 
     [Table("ClassPlan")]
     public partial class ClassPlan
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public ClassPlan()
         {
-            Chores = new HashSet<Chores>();
-            ClassGoals = new HashSet<ClassGoals>();
-            Evaluetion = new HashSet<Evaluetion>();
-            LessonsContent = new HashSet<LessonsContent>();
+            Chores = new List<Chores>();
+            ClassGoals = new List<ClassGoals>();
+            Evaluetions = new List<Evaluetion>();
+            LessonsContents = new List<LessonsContent>();
         }
 
         public long ClassPlanId { get; set; }
@@ -33,18 +31,16 @@ namespace Gepa.Entities.Framework.Entities.ClassPlans
 
         public string Description { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Chores> Chores { get; set; }
+        public List<Chores> Chores { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ClassGoals> ClassGoals { get; set; }
+        public List<ClassGoals> ClassGoals { get; set; }
 
-        public virtual Teacher Teacher { get; set; }
+        public List<Evaluetion> Evaluetions { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Evaluetion> Evaluetion { get; set; }
+        public List<LessonsContent> LessonsContents { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<LessonsContent> LessonsContent { get; set; }
+        public long TeacherId { get; set; }
+
+        public Teacher Teacher { get; set; }
     }
 }

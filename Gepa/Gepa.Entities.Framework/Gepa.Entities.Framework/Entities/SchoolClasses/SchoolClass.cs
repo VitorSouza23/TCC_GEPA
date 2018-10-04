@@ -10,12 +10,11 @@ namespace Gepa.Entities.Framework.Entities.SchoolClasses
     [Table("SchoolClass")]
     public partial class SchoolClass
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public SchoolClass()
         {
-            ClassDiary = new HashSet<ClassDiary>();
-            ClassFrequency = new HashSet<ClassFrequency>();
-            Student = new HashSet<Student>();
+            ClassDiary = new List<ClassDiary>();
+            ClassFrequency = new List<ClassFrequency>();
+            Students = new List<Student>();
         }
 
         public long SchoolClassId { get; set; }
@@ -26,17 +25,14 @@ namespace Gepa.Entities.Framework.Entities.SchoolClasses
 
         public string Observation { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ClassDiary> ClassDiary { get; set; }
+        public List<ClassDiary> ClassDiary { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ClassFrequency> ClassFrequency { get; set; }
+        public List<ClassFrequency> ClassFrequency { get; set; }
 
-        public virtual School School { get; set; }
+        public List<Student> Students { get; set; }
 
-        public virtual Teacher Teacher { get; set; }
+        public long SchoolId { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Student> Student { get; set; }
+        public School School { get; set; }
     }
 }

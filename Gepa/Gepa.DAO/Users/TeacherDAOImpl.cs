@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Common;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Gepa.Entities.Framework;
+﻿using Gepa.Entities.Framework;
 using Gepa.Entities.Framework.Entities.Users;
 using System.Data.Entity;
+using System.Threading.Tasks;
 
 namespace Gepa.DAO.Users
 {

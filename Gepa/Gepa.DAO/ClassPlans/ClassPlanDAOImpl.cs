@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data.Common;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Gepa.Entities.Framework;
+﻿using Gepa.Entities.Framework;
 using Gepa.Entities.Framework.Entities.ClassPlans;
+using System.Data.Entity;
+using System.Linq;
+using System.Threading.Tasks;
 
 namespace Gepa.DAO.ClassPlans
 {
@@ -46,10 +43,58 @@ namespace Gepa.DAO.ClassPlans
 
         public void InsertClassPlan(ClassPlan newClassPlan)
         {
-            using (EntityModel em = new EntityModel())
+            if (newClassPlan.TeacherId > 0)
             {
-                em.ClassPlan.Add(newClassPlan);
-                em.SaveChanges();
+                using (EntityModel em = new EntityModel())
+                {
+                    var teacher = em.Teacher
+                    .Where(z => z.TeacherId == newClassPlan.TeacherId)
+                    .Include(t => t.ClassPlan)
+                    .FirstOrDefault();
+                    if (teacher != null)
+                    {
+                        teacher.ClassPlan.Add(newClassPlan);
+                       em.SaveChanges();
+                    }
+                    else
+                    {
+                        throw new System.Exception(string.Format("ID de professor ({0}) não salvo na base de dados!", newClassPlan.TeacherId));
+                    }
+
+                }
+            }
+            else
+            {
+                throw new System.Exception(string.Format("ID de professor ({0}) inválido!", newClassPlan.TeacherId));
+            }
+
+        }
+
+        public async Task InsertClassPlanAsync(ClassPlan newClassPlan)
+        {
+            if (newClassPlan.TeacherId > 0)
+            {
+                using (EntityModel em = new EntityModel())
+                {
+                    var teacher = await em.Teacher
+                    .Where(z => z.TeacherId == newClassPlan.TeacherId)
+                    .Include(t => t.ClassPlan)
+                    .FirstOrDefaultAsync();
+                    if(teacher != null)
+                    {
+                        teacher.ClassPlan.Add(newClassPlan);
+                        await em.SaveChangesAsync();
+                    }
+                    else
+                    {
+                        throw new System.Exception(string.Format("ID de professor ({0}) não salvo na base de dados!", newClassPlan.TeacherId));
+                    }
+                    
+                }
+            }
+            else
+            {
+                throw new System.Exception(string.Format("ID de professor ({0}) inválido!", newClassPlan.TeacherId));
             }
         }
 
@@ -57,7 +102,7 @@ namespace Gepa.DAO.ClassPlans
         {
             using (EntityModel em = new EntityModel())
             {
-                em.Entry(classPlan).State = System.Data.Entity.EntityState.Modified;
+                em.Entry(classPlan).State = EntityState.Modified;
                 em.SaveChanges();
             }
         }

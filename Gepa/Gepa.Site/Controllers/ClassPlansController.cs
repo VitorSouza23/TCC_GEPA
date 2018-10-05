@@ -45,5 +45,10 @@ namespace Gepa.Site.Controllers
         {
             return PartialView("_AddEvaluationModal", evaluationModel);
         }
+        
+        public ActionResult ChoresModalView(ChoresModel choresModel)
+        {
+            return PartialView("_AddChoresModal", choresModel);
+        }
     }
 }

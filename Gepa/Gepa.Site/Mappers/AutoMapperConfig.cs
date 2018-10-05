@@ -38,6 +38,7 @@ namespace Gepa.Site.Mappers
                     .AfterMap((src, dest) =>
                     {
                         dest.ChoresId = src.Id;
+                        dest.Completed = src.IsCompletedTask;
                     });
 
                 mapper.CreateMap<ClassGoalsModel, ClassGoals>()

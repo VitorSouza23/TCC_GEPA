@@ -1,5 +1,6 @@
 ﻿using Gepa.Entities.Framework;
 using Gepa.Entities.Framework.Entities.ClassPlans;
+using System.Collections.Generic;
 using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
@@ -19,6 +20,18 @@ namespace Gepa.DAO.ClassPlans
                 em.ClassPlan.Remove(classPlan);
                 em.SaveChanges();
             }
+        }
+
+        public List<ClassPlan> FindAllClassPlans()
+        {
+            List<ClassPlan> classPlans = new List<ClassPlan>();
+
+            using (EntityModel em = new EntityModel())
+            {
+                classPlans = em.ClassPlan.ToList();
+            }
+
+            return classPlans;
         }
 
         public ClassPlan FindClassPlan(long classPlanId)
@@ -54,7 +67,7 @@ namespace Gepa.DAO.ClassPlans
                     if (teacher != null)
                     {
                         teacher.ClassPlan.Add(newClassPlan);
-                       em.SaveChanges();
+                        em.SaveChanges();
                     }
                     else
                     {
@@ -80,7 +93,7 @@ namespace Gepa.DAO.ClassPlans
                     .Where(z => z.TeacherId == newClassPlan.TeacherId)
                     .Include(t => t.ClassPlan)
                     .FirstOrDefaultAsync();
-                    if(teacher != null)
+                    if (teacher != null)
                     {
                         teacher.ClassPlan.Add(newClassPlan);
                         await em.SaveChangesAsync();
@@ -89,7 +102,7 @@ namespace Gepa.DAO.ClassPlans
                     {
                         throw new System.Exception(string.Format("ID de professor ({0}) não salvo na base de dados!", newClassPlan.TeacherId));
                     }
-                    
+
                 }
             }
             else

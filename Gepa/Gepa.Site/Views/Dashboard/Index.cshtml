@@ -1,4 +1,6 @@
-﻿@{
+﻿@model List<Gepa.Site.Models.ClassPlans.ClassPlanModel>
+
+@{
     ViewBag.Title = "Painel Principal";
 }
 
@@ -30,3 +32,47 @@
         @Html.Partial("_UserMenuPartial")
     </div>
 </nav>
+
+<div>
+
+    <h1 class="gepaTitles" style="text-align: center;">Planos de Aula</h1>
+
+    <table id="classPlansTable" class="table table-bordered table-striped">
+        <thead>
+            <tr>
+
+                <th scope="col">@Language.Title</th>
+                <th scope="col">@Language.Date</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            @foreach (var classPlan in Model)
+            {
+                <tr>
+                    <td>@classPlan.Title</td>
+
+                    <td>
+                        @if (classPlan.Date != null)
+                        {
+                            @(((DateTime)classPlan.Date).ToString("dd/MM/yyyy"))
+                        }
+
+                    </td>
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+
+<style>
+    #classPlansTable{
+        width: 95%;
+        margin: 50px auto;
+    }
+
+    #classPlansTable th, #classPlansTable tr {
+        text-align: center;
+    }
+</style>

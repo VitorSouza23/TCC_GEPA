@@ -1,5 +1,6 @@
 ﻿using Gepa.Entities.Framework.Entities.ClassPlans;
 using Gepa.Entities.Framework.Entities.Users;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Gepa.DAO.ClassPlans
@@ -12,5 +13,6 @@ namespace Gepa.DAO.ClassPlans
         ClassPlan FindClassPlan(long classPlanId);
         Task<ClassPlan> FindClassPlanAsync(long classPlanId);
         Task InsertClassPlanAsync(ClassPlan newClassPlan);
+        List<ClassPlan> FindAllClassPlans();
     }
 }

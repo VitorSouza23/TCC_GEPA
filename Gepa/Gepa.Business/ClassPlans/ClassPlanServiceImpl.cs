@@ -47,5 +47,10 @@ namespace Gepa.Business.ClassPlans
         {
             await _classPlanDAO.InsertClassPlanAsync(newClassPlan);
         }
+
+        public List<ClassPlan> FindAllClassPlans()
+        {
+            return _classPlanDAO.FindAllClassPlans();
+        }
     }
 }

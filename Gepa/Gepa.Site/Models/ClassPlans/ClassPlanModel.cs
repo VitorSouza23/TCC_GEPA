@@ -9,6 +9,14 @@ namespace Gepa.Site.Models.ClassPlans
 {
     public class ClassPlanModel
     {
+        public ClassPlanModel()
+        {
+            ClassGoals = new List<ClassGoalsModel>();
+            Contents = new List<LessonsContentModel>();
+            Chores = new List<ChoresModel>();
+            Evaluations = new List<EvaluationModel>();
+        }
+
         public long Id { get; set; }
         [Required]
         [Display(Name = "Title", ResourceType = typeof(Resources.Language))]

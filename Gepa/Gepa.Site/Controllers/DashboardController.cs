@@ -1,9 +1,11 @@
 ﻿using AutoMapper;
+using Gepa.Entities.Framework.Entities.ClassPlans;
 using Gepa.Site.Helpers;
 using Gepa.Site.Models.ClassPlans;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 

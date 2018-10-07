@@ -11,6 +11,7 @@ namespace Gepa.Site.Models.ClassPlans
         public long Id { get; set; }
         [Display(Name = "Description", ResourceType = typeof(Resources.Language))]
         public string EvaluationDescription { get; set; }
+        public long ClassPlanId { get; set; }
 
     }
 }

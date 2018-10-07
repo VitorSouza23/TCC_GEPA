@@ -12,11 +12,12 @@
                 </button>
             </div>
 
+            @Html.HiddenFor(m => m.Id)
+            @Html.HiddenFor(m => m.ClassPlanId)
+
             <form id="lessonContentForm">
                 <div class="modal-body">
                     <div class="form-group">
-                        @Html.HiddenFor(m => m.Id)
-
                         @Html.LabelFor(m => m.ContentValue)
                         @Html.TextBoxFor(m => m.ContentValue, new { @class = "form-control", required = "required" })
                         @Html.ValidationMessageFor(m => m.ContentValue)

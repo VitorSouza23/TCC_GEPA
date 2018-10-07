@@ -27,6 +27,12 @@ namespace Gepa.Site.Controllers
                 await ClassPlanService.InsertClassPlanAsync(newClassPlan);
                 return Json(Url.Action("Index", "Dashboard"));
             }
+            else if(classPlanModel.Id > 0)
+            {
+                var classPlan = Mapper.Map<ClassPlanModel, ClassPlan>(classPlanModel);
+                ClassPlanService.UpdateClassPlan(classPlan);
+                return Json(Url.Action("Index", "Dashboard"));
+            }
 
             return View("ClassPlanDetails", classPlanModel);
         }
@@ -49,6 +55,13 @@ namespace Gepa.Site.Controllers
         public ActionResult ChoresModalView(ChoresModel choresModel)
         {
             return PartialView("_AddChoresModal", choresModel);
+        }
+
+        public async Task<ActionResult> EditClassPlan(long classPlanId)
+        {
+            var classPlan = await ClassPlanService.FindClassPlanAsync(classPlanId);
+            var model = Mapper.Map<ClassPlan, ClassPlanModel>(classPlan);
+            return View("ClassPlanDetails", model);
         }
     }
 }

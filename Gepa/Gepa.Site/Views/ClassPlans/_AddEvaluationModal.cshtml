@@ -12,7 +12,7 @@
             <form id="evaluationForm">
                 <div class="modal-body">
                     @Html.HiddenFor(m => m.Id)
-
+                    @Html.HiddenFor(m => m.ClassPlanId)
                     <div class="form-group">
                         @Html.LabelFor(m => m.EvaluationDescription)
                         @Html.TextBoxFor(m => m.EvaluationDescription, new { @class = "form-control", required = "required" })

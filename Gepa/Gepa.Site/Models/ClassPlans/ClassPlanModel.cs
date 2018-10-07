@@ -27,5 +27,6 @@ namespace Gepa.Site.Models.ClassPlans
         public List<ClassGoalsModel> ClassGoals { get; set; }
         public List<ChoresModel> Chores { get; set; }
         public List<EvaluationModel> Evaluations { get; set; }
+        public long TeacherId { get; set; }
     }
 }

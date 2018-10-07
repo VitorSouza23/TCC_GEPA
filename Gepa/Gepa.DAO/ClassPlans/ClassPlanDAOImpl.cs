@@ -39,7 +39,13 @@ namespace Gepa.DAO.ClassPlans
             ClassPlan classPlan = null;
             using (EntityModel em = new EntityModel())
             {
-                classPlan = em.ClassPlan.Single(a => a.ClassPlanId == classPlanId);
+                classPlan = em.ClassPlan
+                     .Where(c => c.ClassPlanId == classPlanId)
+                     .Include(c => c.Chores)
+                     .Include(c => c.ClassGoals)
+                     .Include(c => c.Evaluetions)
+                     .Include(c => c.LessonsContents)
+                     .FirstOrDefault();
             }
             return classPlan;
         }
@@ -49,7 +55,13 @@ namespace Gepa.DAO.ClassPlans
             ClassPlan classPlan = null;
             using (EntityModel em = new EntityModel())
             {
-                classPlan = await em.ClassPlan.FindAsync(classPlanId);
+                classPlan = await em.ClassPlan
+                     .Where(c => c.ClassPlanId == classPlanId)
+                     .Include(c => c.Chores)
+                     .Include(c => c.ClassGoals)
+                     .Include(c => c.Evaluetions)
+                     .Include(c => c.LessonsContents)
+                     .FirstOrDefaultAsync();
             }
             return classPlan;
         }
@@ -115,7 +127,60 @@ namespace Gepa.DAO.ClassPlans
         {
             using (EntityModel em = new EntityModel())
             {
-                em.Entry(classPlan).State = EntityState.Modified;
+                var current = em.ClassPlan
+                     .Where(c => c.ClassPlanId == classPlan.ClassPlanId)
+                     .Include(c => c.Chores)
+                     .Include(c => c.ClassGoals)
+                     .Include(c => c.Evaluetions)
+                     .Include(c => c.LessonsContents)
+                     .FirstOrDefault();
+                if (current == null)
+                {
+                    return;
+                }
+
+                current.Chores.RemoveAll(c => classPlan.Chores.Exists(ch => ch.ChoresId == c.ChoresId) == false);
+                current.ClassGoals.RemoveAll(c => classPlan.ClassGoals.Exists(ch => ch.ClassGoalsId == c.ClassGoalsId) == false);
+                current.Evaluetions.RemoveAll(c => classPlan.Evaluetions.Exists(ch => ch.EvaluetionId == c.EvaluetionId) == false);
+                current.LessonsContents.RemoveAll(c => classPlan.LessonsContents.Exists(ch => ch.LessonsContentId == c.LessonsContentId) == false);
+
+                foreach (var chore in classPlan.Chores)
+                {
+                    var currentChore = current.Chores.FirstOrDefault(c => c.ChoresId == chore.ChoresId);
+                    if (currentChore == null)
+                        current.Chores.Add(chore);
+                    else
+                        em.Entry(currentChore).CurrentValues.SetValues(chore);
+                }
+
+                foreach (var classGoals in classPlan.ClassGoals)
+                {
+                    var currentClassGoals = current.ClassGoals.FirstOrDefault(c => c.ClassGoalsId == classGoals.ClassGoalsId);
+                    if (currentClassGoals == null)
+                        current.ClassGoals.Add(classGoals);
+                    else
+                        em.Entry(currentClassGoals).CurrentValues.SetValues(classGoals);
+                }
+
+                foreach (var evaluations in classPlan.Evaluetions)
+                {
+                    var currentEvaluation = current.Evaluetions.FirstOrDefault(c => c.EvaluetionId == evaluations.EvaluetionId);
+                    if (currentEvaluation == null)
+                        current.Evaluetions.Add(evaluations);
+                    else
+                        em.Entry(currentEvaluation).CurrentValues.SetValues(evaluations);
+                }
+
+                foreach (var lessonsContent in classPlan.LessonsContents)
+                {
+                    var currentLessonContent = current.LessonsContents.FirstOrDefault(c => c.LessonsContentId == lessonsContent.LessonsContentId);
+                    if (currentLessonContent == null)
+                        current.LessonsContents.Add(lessonsContent);
+                    else
+                        em.Entry(currentLessonContent).CurrentValues.SetValues(lessonsContent);
+                }
+
+                em.Entry(current).CurrentValues.SetValues(classPlan);
                 em.SaveChanges();
             }
         }

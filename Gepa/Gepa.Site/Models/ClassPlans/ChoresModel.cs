@@ -13,5 +13,6 @@ namespace Gepa.Site.Models.ClassPlans
         public string Task { get; set; }
         [Display(Name = "IsCompletedTask", ResourceType = typeof(Resources.Language))]
         public bool IsCompletedTask { get; set; }
+        public long ClassPlanId { get; set; }
     }
 }

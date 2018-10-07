@@ -14,5 +14,6 @@ namespace Gepa.Site.Models.ClassPlans
         public string Objective { get; set; }
         [Display(Name = "IsCompletedGoal", ResourceType = typeof(Resources.Language))]
         public bool IsCompleted { get; set; }
+        public long ClassPlanId { get; set; }
     }
 }

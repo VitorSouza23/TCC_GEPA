@@ -11,25 +11,33 @@
         @using (Html.BeginForm("SaveClassPlan", "ClassPlans", FormMethod.Post, new { id = "classPlanForm" }))
         {
             @Html.HiddenFor(m => m.Id)
+            @Html.HiddenFor(m => m.TeacherId)
 
             <div class="form-group">
                 @Html.LabelFor(m => m.Title)
-                @Html.TextBoxFor(m => m.Title, new { @class = "form-control", required = "required", placeholder = string.Format(Language.EnterFieldValueFormatted2, Language.Title.ToLower()) })
+                @Html.TextBoxFor(m => m.Title, new { @class = "form-control gepa-form-controller", required = "required", placeholder = string.Format(Language.EnterFieldValueFormatted2, Language.Title.ToLower()) })
                 @Html.ValidationMessageFor(m => m.Title)
             </div>
 
             <div class="form-group">
                 @Html.LabelFor(m => m.Description)
-                @Html.TextAreaFor(m => m.Description, new { @class = "form-control gepaTextArea", placeholder = string.Format(Language.EnterFieldValueFormatted, Language.Description.ToLower()) })
+                @Html.TextAreaFor(m => m.Description, new { @class = "form-control gepaTextArea gepa-form-controller", placeholder = string.Format(Language.EnterFieldValueFormatted, Language.Description.ToLower()) })
             </div>
             <div class="form-group">
                 @Html.LabelFor(m => m.Methodology)
-                @Html.TextAreaFor(m => m.Methodology, new { @class = "form-control gepaTextArea", placeholder = string.Format(Language.EnterFieldValueFormatted, Language.Methodology.ToLower()) })
+                @Html.TextAreaFor(m => m.Methodology, new { @class = "form-control gepaTextArea gepa-form-controller", placeholder = string.Format(Language.EnterFieldValueFormatted, Language.Methodology.ToLower()) })
             </div>
 
-            <div class="form-group">
+            <hr />
+
+            <button type="button" data-toggle="collapse" data-target="#divisionOfContentDiv" class="btn btnColapse" title="@Language.DivisionOfContent">
+                @Language.DivisionOfContent
+                <i class="fas fa-eye icon"></i>
+            </button>
+
+            <div class="form-group collapse" id="divisionOfContentDiv">
                 <label>@Language.DivisionOfContent</label>
-                <div id="lessonContentListGroup" class="list-group border">
+                <div id="lessonContentListGroup" class="list-group gepa-form-controller">
                 </div>
 
                 <div style="margin: 10px 0;">
@@ -48,9 +56,16 @@
                 </div>
             </div>
 
-            <div class="form-group">
+            <hr />
+
+            <button type="button" data-toggle="collapse" data-target="#goalsDiv" class="btn btnColapse" title="@Language.Goals">
+                @Language.Goals
+                <i class="fas fa-eye icon"></i>
+            </button>
+
+            <div class="form-group collapse" id="goalsDiv">
                 <label>@Language.Goals</label>
-                <div id="classGoalsListGroup" class="list-group border">
+                <div id="classGoalsListGroup" class="list-group gepa-form-controller">
                 </div>
 
                 <div style="margin: 10px 0;">
@@ -69,9 +84,16 @@
                 </div>
             </div>
 
-            <div class="form-group">
+            <hr />
+
+            <button type="button" data-toggle="collapse" data-target="#choresDiv" class="btn btnColapse" title="@Language.Chores">
+                @Language.Chores
+                <i class="fas fa-eye icon"></i>
+            </button>
+
+            <div class="form-group collapse" id="choresDiv">
                 <label>@Language.Chores</label>
-                <div id="choresListGroup" class="list-group border">
+                <div id="choresListGroup" class="list-group gepa-form-controller">
                 </div>
 
                 <div style="margin: 10px 0;">
@@ -90,9 +112,16 @@
                 </div>
             </div>
 
-            <div class="form-group">
+            <hr />
+
+            <button type="button" data-toggle="collapse" data-target="#evaluationsDiv" class="btn btnColapse" title="@Language.Evaluations">
+                @Language.Evaluations
+                <i class="fas fa-eye icon"></i>
+            </button>
+
+            <div class="form-group collapse" id="evaluationsDiv">
                 <label>@Language.Evaluations</label>
-                <div id="evaluationsListGroup" class="list-group border">
+                <div id="evaluationsListGroup" class="list-group gepa-form-controller">
                 </div>
 
                 <div style="margin: 10px 0;">
@@ -111,23 +140,25 @@
                 </div>
             </div>
 
+            <hr />
+
             <div class="form-group">
                 @Html.LabelFor(m => m.Date)
-                @Html.EditorFor(m => m.Date, new { htmlAttributes = new { @class = "form-control date-picker gepaInputDate" } })
+                @Html.EditorFor(m => m.Date, new { htmlAttributes = new { @class = "form-control date-picker gepaInputDate gepa-form-controller" } })
             </div>
 
             <div class="form-group">
                 @Html.LabelFor(m => m.Observation)
-                @Html.TextAreaFor(m => m.Observation, new { @class = "form-control gepaTextArea", placeholder = string.Format(Language.EnterFieldValueFormatted3, Language.Observations.ToLower()) })
+                @Html.TextAreaFor(m => m.Observation, new { @class = "form-control gepaTextArea gepa-form-controller", placeholder = string.Format(Language.EnterFieldValueFormatted3, Language.Observations.ToLower()) })
             </div>
-            <button type="submit" class="btn gepaFormButtons btnSubmitForms">
+            <button type="submit" class="btn btn-primary btnModals btnSaveModals">
                 <i class="fas fa-save icon"></i>
                 @Language.Save
             </button>
-            <button class="btn gepaFormButtons">
+            <a class="btn btn-secondary btnModals btnCancelModals" href="@Url.Action("Index", "Dashboard")">
                 <i class="fas fa-times icon"></i>
                 @Language.Cancel
-            </button>
+            </a>
         }
     </div>
 
@@ -156,19 +187,45 @@
         })
     });
 
-    var lessonContentList = [];
+    var lessonContentList = @Html.Raw(Json.Encode(Model.Contents));
     var currentLessonContentObject = null;
 
-    var classGoalList = [];
+    var classGoalList = @Html.Raw(Json.Encode(Model.ClassGoals));
     var currentClassGoalObject = null;
 
-    var evaluationList = [];
+    var evaluationList = @Html.Raw(Json.Encode(Model.Evaluations));
     var currentEvaluationObject = null;
 
-    var choreList = [];
+    var choreList = @Html.Raw(Json.Encode(Model.Chores));
     var currentChoreObject = null;
 
+    function loadExistedContent() {
+        lessonContentList.forEach(function (element) {
+            element.guid = generateNewGuid();
+            $("#lessonContentListGroup").append('<a class="list-group-item list-group-item-action gepaContentsItem" data-guid="' + element.guid + '" >' + element.ContentValue + '</a>');
+        });
+
+        classGoalList.forEach(function (element) {
+            element.guid = generateNewGuid();
+            var checkBoxStatus = element.IsCompleted ? "checked" : "";
+            $("#classGoalsListGroup").append('<a class="list-group-item list-group-item-action gepaClassGoalsItem" data-guid="' + element.guid + '"><input type="checkbox" class="form-check-input objectiveStatus" ' + checkBoxStatus + '>' + element.Objective + '</a>');
+        });
+
+        choreList.forEach(function (element) {
+            element.guid = generateNewGuid();
+            var checkBoxStatus = element.IsCompletedTask ? "checked" : "";
+            $("#choresListGroup").append('<a class="list-group-item list-group-item-action choreItem" data-guid="' + element.guid + '"><input type="checkbox" class="form-check-input objectiveStatus" ' + checkBoxStatus + '>' + element.Task + '</a>');
+        });
+
+        evaluationList.forEach(function (element) {
+            element.guid = generateNewGuid();
+            $("#evaluationsListGroup").append('<a class="list-group-item list-group-item-action evaluationItem" data-guid="' + element.guid + '">' + element.EvaluationDescription + '</a>');
+        });
+    }
+
     $(document).ready(function () {
+        loadExistedContent();
+
         $("#addLessonContent").click(function (e) {
             e.preventDefault();
             currentLessonContentObject = null;
@@ -401,6 +458,7 @@
             classPlan.Contents = lessonContentList;
             classPlan.ClassGoals = classGoalList;
             classPlan.Evaluations = evaluationList;
+            classPlan.Chores = choreList;
             var data = JSON.stringify(classPlan);
             $.ajax({
                 type: "POST",
@@ -413,6 +471,18 @@
                     }
                 }
             })
+        });
+
+        $(".collapse").on("hide.bs.collapse", function () {
+            var targget = $("button[data-target='#" + $(this).attr('id') + "']");
+            $(targget.children()[0]).removeClass("fa-eye-slash");
+            $(targget.children()[0]).addClass("fa-eye");
+        });
+
+        $(".collapse").on("show.bs.collapse", function () {
+            var targget = $("button[data-target='#" + $(this).attr('id') + "']");
+            $(targget.children()[0]).removeClass("fa-eye");
+            $(targget.children()[0]).addClass("fa-eye-slash");
         });
     });
 </script>

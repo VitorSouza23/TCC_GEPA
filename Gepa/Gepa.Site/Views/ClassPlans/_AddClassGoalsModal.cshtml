@@ -13,7 +13,7 @@
             <form id="classGoalForm">
                 <div class="modal-body">
                     @Html.HiddenFor(m => m.Id)
-
+                    @Html.HiddenFor(m => m.ClassPlanId)
                     <div class="form-group">
                         @Html.LabelFor(m => m.Objective)
                         @Html.TextBoxFor(m => m.Objective, new { @class = "form-control", required = "required" })

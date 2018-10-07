@@ -132,10 +132,12 @@
 .btnCancelModals {
     background-color: #bfbfbf !important;
     border-color: #bfbfbf;
+    color: #5c5c3d;
 }
 
     .btnCancelModals:hover {
         border-color: #989898;
+        color: #5c5c3d;
     }
 
 .btnModals {
@@ -156,7 +158,43 @@
     color: white;
 }
 
+    .btnSubmitForms:hover {
+        background-color: #aeff8b;
+        color: #267f00;
+    }
+
 .icon {
     font-family: FontAwesome !important;
     font-style: normal !important;
 }
+
+.btnColapse {
+    width: auto;
+    border-radius: 50px;
+    padding: 5px 10px;
+    font-weight: 400;
+    color: white;
+    background-color: #2d9900;
+    margin-bottom: 10px;
+}
+
+    .btnColapse:hover {
+        background-color: #aeff8b;
+        color: #267f00;
+    }
+
+hr {
+    background-color: #2d9900;
+}
+
+.gepa-form-controller {
+    border: 1px solid #2d9900 !important;
+    background-color: #d3ffe0;
+}
+
+.link-row {
+    cursor: pointer;
+}
+
+
+

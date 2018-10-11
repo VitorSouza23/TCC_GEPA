@@ -17,6 +17,7 @@ namespace Gepa.DAO.ClassPlans
         {
             using (EntityModel em = new EntityModel())
             {
+                em.ClassPlan.Attach(classPlan);
                 em.ClassPlan.Remove(classPlan);
                 em.SaveChanges();
             }

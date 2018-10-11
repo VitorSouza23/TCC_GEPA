@@ -457,6 +457,15 @@ namespace Gepa.Resources.Languages {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Não há planos de aula cadastrados ainda.
+        /// </summary>
+        internal static string NoClassPlanSaved {
+            get {
+                return ResourceManager.GetString("NoClassPlanSaved", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Nenhum item selecionado!.
         /// </summary>
         internal static string NoItemSelected {

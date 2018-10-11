@@ -249,6 +249,9 @@
   <data name="Name" xml:space="preserve">
     <value>Nome</value>
   </data>
+  <data name="NoClassPlanSaved" xml:space="preserve">
+    <value>Não há planos de aula cadastrados ainda</value>
+  </data>
   <data name="NoItemSelected" xml:space="preserve">
     <value>Nenhum item selecionado!</value>
   </data>

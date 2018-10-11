@@ -196,5 +196,32 @@ hr {
     cursor: pointer;
 }
 
+.noClassPlansMessage {
+    text-align: center;
+}
 
+    .noClassPlansMessage h3 {
+        margin: 125px 0;
+        color: #79b261;
+    }
 
+.removeClassPlan {
+    font-size: 20px;
+}
+
+    .removeClassPlan i {
+        color: #b2b2b2;
+    }
+
+    .removeClassPlan:hover i {
+        color: #808080;
+    }
+
+#classPlansTable th, #classPlansTable tr {
+    text-align: center;
+}
+
+#classPlansTable, .noClassPlansMessage {
+    width: 95%;
+    margin: 50px auto;
+}

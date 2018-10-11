@@ -2,6 +2,7 @@
 using Gepa.Entities.Framework.Entities.ClassPlans;
 using Gepa.Site.Helpers;
 using Gepa.Site.Models.ClassPlans;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Web.Mvc;
 
@@ -62,6 +63,17 @@ namespace Gepa.Site.Controllers
             var classPlan = await ClassPlanService.FindClassPlanAsync(classPlanId);
             var model = Mapper.Map<ClassPlan, ClassPlanModel>(classPlan);
             return View("ClassPlanDetails", model);
+        }
+
+        public ActionResult RemoveClassPlan(long classPlanId)
+        {
+            var classPlan = ClassPlanService.FindClassPlan(classPlanId);
+            ClassPlanService .DeleteClassPlan(classPlan);
+
+            var classPlans = ClassPlanService.FindAllClassPlans();
+            var model = Mapper.Map<List<ClassPlanModel>>(classPlans);
+
+            return RedirectToAction("Index", "Dashboard", model);
         }
     }
 }

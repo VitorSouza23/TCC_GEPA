@@ -701,5 +701,16 @@ namespace Gepa.Resources
                 return GetString("Chores");
             }
         }
+
+        /// <summary>
+        /// Não há planos de aula cadastrados ainda
+        /// </summary>
+        public static string NoClassPlanSaved
+        {
+            get
+            {
+                return GetString("NoClassPlanSaved");
+            }
+        }
     }
 }

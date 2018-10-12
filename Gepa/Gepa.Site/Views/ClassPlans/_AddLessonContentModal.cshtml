@@ -50,6 +50,7 @@
                 lessonContentObject.guid = generateNewGuid();
                 lessonContentList.push(lessonContentObject);
                 $("#lessonContentListGroup").append('<a class="list-group-item list-group-item-action gepaContentsItem" data-guid="' + lessonContentObject.guid + '" >' + lessonContentObject.ContentValue + '</a>');
+                showOrHideLessonContentPlaceholder();
             } else {
                 currentLessonContentObject.ContentValue = $("#ContentValue").val();
                 $(".gepaContentsItem").each(function (index) {

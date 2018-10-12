@@ -124,11 +124,29 @@ namespace Gepa.Resources.Languages {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Para inserir uma atividade, clique no botão &apos;Adicionar&apos;..
+        /// </summary>
+        internal static string ChorePlaceholder {
+            get {
+                return ResourceManager.GetString("ChorePlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Atividades.
         /// </summary>
         internal static string Chores {
             get {
                 return ResourceManager.GetString("Chores", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Para inserir um objetivo, clique no botão &apos;Adicionar&apos;..
+        /// </summary>
+        internal static string ClassGoalPlaceholder {
+            get {
+                return ResourceManager.GetString("ClassGoalPlaceholder", resourceCulture);
             }
         }
         
@@ -304,6 +322,15 @@ namespace Gepa.Resources.Languages {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Para inserir uma avaliação, clique no botão &apos;Adicionar&apos;..
+        /// </summary>
+        internal static string EvaluationPlaceholder {
+            get {
+                return ResourceManager.GetString("EvaluationPlaceholder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Avaliações.
         /// </summary>
         internal static string Evaluations {
@@ -390,6 +417,15 @@ namespace Gepa.Resources.Languages {
         internal static string IsCompletedTask {
             get {
                 return ResourceManager.GetString("IsCompletedTask", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Para inserir um conteúdo, clique no botão &apos;Adicionar&apos;..
+        /// </summary>
+        internal static string LessonContentPlaceholder {
+            get {
+                return ResourceManager.GetString("LessonContentPlaceholder", resourceCulture);
             }
         }
         

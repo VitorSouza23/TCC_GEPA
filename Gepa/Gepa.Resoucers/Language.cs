@@ -712,5 +712,51 @@ namespace Gepa.Resources
                 return GetString("NoClassPlanSaved");
             }
         }
+
+        /// <summary>
+        /// Para inserir um conteúdo, clique no botão 'Adicionar'.
+        /// </summary>
+        public static string LessonContentPlaceholder
+        {
+            get
+            {
+                return GetString("LessonContentPlaceholder");
+            }
+        }
+
+
+        /// <summary>
+        /// Para inserir um objetivo, clique no botão 'Adicionar'.
+        /// </summary>
+        public static string ClassGoalPlaceholder
+        {
+            get
+            {
+                return GetString("ClassGoalPlaceholder");
+            }
+        }
+
+        /// <summary>
+        /// Para inserir uma atividade, clique no botão 'Adicionar'.
+        /// </summary>
+        public static string ChorePlaceholder
+        {
+            get
+            {
+                return GetString("ChorePlaceholder");
+            }
+        }
+
+        /// <summary>
+        /// Para inserir uma avaliação, clique no botão 'Adicionar'.
+        /// </summary>
+        public static string EvaluationPlaceholder
+        {
+            get
+            {
+                return GetString("EvaluationPlaceholder");
+            }
+        }
+
     }
 }

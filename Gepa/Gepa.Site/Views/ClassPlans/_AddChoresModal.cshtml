@@ -57,6 +57,7 @@
                 var checkBoxStatus = choreObject.IsCompletedTask ? "checked" : "";
 
                 $("#choresListGroup").append('<a class="list-group-item list-group-item-action choreItem" data-guid="' + choreObject.guid + '"><input type="checkbox" class="form-check-input objectiveStatus" ' + checkBoxStatus + '>' + choreObject.Task + '</a>');
+                showOrHideChorePlaceholder();
             } else {
                 currentChoreObject.Task = $("#Task").val();
                 currentChoreObject.IsCompletedTask = $("#IsCompletedTask").prop('checked');

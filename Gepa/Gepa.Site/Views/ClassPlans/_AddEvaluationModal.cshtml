@@ -46,6 +46,7 @@
                 evaluationList.push(evaluationObject);
 
                 $("#evaluationsListGroup").append('<a class="list-group-item list-group-item-action evaluationItem" data-guid="' + evaluationObject.guid + '">' + evaluationObject.EvaluationDescription + '</a>');
+                showOrHideEvaluationPlaceholder();
             } else {
                 currentEvaluationObject.EvaluationDescription = $("#EvaluationDescription").val();
 

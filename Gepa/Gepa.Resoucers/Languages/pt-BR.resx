@@ -138,8 +138,14 @@
   <data name="Cancel" xml:space="preserve">
     <value>Cancelar</value>
   </data>
+  <data name="ChorePlaceholder" xml:space="preserve">
+    <value>Para inserir uma atividade, clique no botão 'Adicionar'.</value>
+  </data>
   <data name="Chores" xml:space="preserve">
     <value>Atividades</value>
+  </data>
+  <data name="ClassGoalPlaceholder" xml:space="preserve">
+    <value>Para inserir um objetivo, clique no botão 'Adicionar'.</value>
   </data>
   <data name="ClassPlan" xml:space="preserve">
     <value>Plano de Aula</value>
@@ -198,6 +204,9 @@
   <data name="EnterYourPassword" xml:space="preserve">
     <value>Informe sua senha:</value>
   </data>
+  <data name="EvaluationPlaceholder" xml:space="preserve">
+    <value>Para inserir uma avaliação, clique no botão 'Adicionar'.</value>
+  </data>
   <data name="Evaluations" xml:space="preserve">
     <value>Avaliações</value>
   </data>
@@ -227,6 +236,9 @@
   </data>
   <data name="IsCompletedTask" xml:space="preserve">
     <value>Tarefa concluida</value>
+  </data>
+  <data name="LessonContentPlaceholder" xml:space="preserve">
+    <value>Para inserir um conteúdo, clique no botão 'Adicionar'.</value>
   </data>
   <data name="Login" xml:space="preserve">
     <value>Login</value>

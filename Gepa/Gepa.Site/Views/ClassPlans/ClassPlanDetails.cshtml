@@ -36,8 +36,11 @@
             </button>
 
             <div class="form-group collapse" id="divisionOfContentDiv">
-                <label>@Language.DivisionOfContent</label>
+
                 <div id="lessonContentListGroup" class="list-group gepa-form-controller">
+                    <span class="placeholderListGroup lessonContentPlaceholder">
+                        @Language.LessonContentPlaceholder
+                    </span>
                 </div>
 
                 <div style="margin: 10px 0;">
@@ -64,8 +67,11 @@
             </button>
 
             <div class="form-group collapse" id="goalsDiv">
-                <label>@Language.Goals</label>
+
                 <div id="classGoalsListGroup" class="list-group gepa-form-controller">
+                    <span class="placeholderListGroup classGoalPlaceholder">
+                        @Language.ClassGoalPlaceholder
+                    </span>
                 </div>
 
                 <div style="margin: 10px 0;">
@@ -92,8 +98,11 @@
             </button>
 
             <div class="form-group collapse" id="choresDiv">
-                <label>@Language.Chores</label>
+
                 <div id="choresListGroup" class="list-group gepa-form-controller">
+                    <span class="placeholderListGroup chorePlaceholder">
+                        @Language.ChorePlaceholder
+                    </span>
                 </div>
 
                 <div style="margin: 10px 0;">
@@ -120,8 +129,11 @@
             </button>
 
             <div class="form-group collapse" id="evaluationsDiv">
-                <label>@Language.Evaluations</label>
+
                 <div id="evaluationsListGroup" class="list-group gepa-form-controller">
+                    <span class="placeholderListGroup evaluationPlaceholder">
+                        @Language.EvaluationPlaceholder
+                    </span>
                 </div>
 
                 <div style="margin: 10px 0;">
@@ -223,12 +235,49 @@
         });
     }
 
+    function showOrHideLessonContentPlaceholder() {
+        if ($(".gepaContentsItem").length == 0) {
+            $(".lessonContentPlaceholder").show();
+        } else {
+            $(".lessonContentPlaceholder").hide();
+        }
+    }
+
+    function showOrHideClassGoalPlaceholder() {
+        if ($(".gepaClassGoalsItem").length == 0) {
+            $(".classGoalPlaceholder").show();
+        } else {
+            $(".classGoalPlaceholder").hide();
+        }
+    }
+
+    function showOrHideChorePlaceholder() {
+        if ($(".choreItem").length == 0) {
+            $(".chorePlaceholder").show();
+        } else {
+            $(".chorePlaceholder").hide();
+        }
+    }
+
+    function showOrHideEvaluationPlaceholder() {
+        if ($(".evaluationItem").length == 0) {
+            $(".evaluationPlaceholder").show();
+        } else {
+            $(".evaluationPlaceholder").hide();
+        }
+    }
+
     $(document).ready(function () {
         loadExistedContent();
+        showOrHideLessonContentPlaceholder();
+        showOrHideClassGoalPlaceholder();
+        showOrHideChorePlaceholder();
+        showOrHideEvaluationPlaceholder();
 
         $("#addLessonContent").click(function (e) {
             e.preventDefault();
             currentLessonContentObject = null;
+
         });
 
         $("#editLessonContent").click(function (e) {
@@ -252,6 +301,7 @@
                             if (lessonContentList[i].guid == currentLessonContentObject.guid) {
                                 lessonContentList.splice(i, 1);
                                 currentLessonContentObject = null;
+                                showOrHideLessonContentPlaceholder();
                             }
                         }
                     }
@@ -288,6 +338,7 @@
                             if (classGoalList[i].guid == currentClassGoalObject.guid) {
                                 classGoalList.splice(i, 1);
                                 currentClassGoalObject = null;
+                                showOrHideClassGoalPlaceholder();
                             }
                         }
                     }
@@ -323,6 +374,7 @@
                             if (evaluationList[i].guid == currentEvaluationObject.guid) {
                                 evaluationList.splice(i, 1);
                                 currentEvaluationObject = null;
+                                showOrHideEvaluationPlaceholder();
                             }
                         }
                     }
@@ -358,6 +410,7 @@
                             if (choreList[i].guid == currentChoreObject.guid) {
                                 choreList.splice(i, 1);
                                 currentChoreObject = null;
+                                showOrHideChorePlaceholder();
                             }
                         }
                     }

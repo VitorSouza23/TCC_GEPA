@@ -58,6 +58,7 @@
                 var checkBoxStatus = classGoalObject.IsCompleted ? "checked" : "";
 
                 $("#classGoalsListGroup").append('<a class="list-group-item list-group-item-action gepaClassGoalsItem" data-guid="' + classGoalObject.guid + '"><input type="checkbox" class="form-check-input objectiveStatus" ' + checkBoxStatus + '>' + classGoalObject.Objective + '</a>');
+                showOrHideClassGoalPlaceholder();
             } else {
                 currentClassGoalObject.Objective = $("#Objective").val();
                 currentClassGoalObject.IsCompleted = $("#IsCompleted").prop('checked');

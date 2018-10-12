@@ -1,8 +1,9 @@
-﻿@if (Request.IsAuthenticated)
+﻿@model string
+@if (Request.IsAuthenticated)
 {
     <div class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropDown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            @Language.WelComeUserMessage(Helper.GetCurrentUser().UserName)
+            @Language.WelComeUserMessage(Model)
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
             <a class="dropdown-item" href="@Url.Action("TeacherSettingsView", "Account")">@Language.TeacherSettings</a>

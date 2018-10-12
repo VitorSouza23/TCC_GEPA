@@ -23,6 +23,8 @@ namespace Gepa.Entities.Framework.Entities.ClassPlans
 
         public string Methodology { get; set; }
 
+        public string Subject { get; set; }
+
         [Required]
         [StringLength(50)]
         public string Title { get; set; }

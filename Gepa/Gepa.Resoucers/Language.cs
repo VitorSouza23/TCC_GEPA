@@ -1,10 +1,5 @@
 ﻿using Gepa.Resources.Languages;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace Gepa.Resources
 {
@@ -710,6 +705,17 @@ namespace Gepa.Resources
             get
             {
                 return GetString("NoClassPlanSaved");
+            }
+        }
+
+        /// <summary>
+        /// Disciplina
+        /// </summary>
+        public static string Subject
+        {
+            get
+            {
+                return GetString("Subject");
             }
         }
     }

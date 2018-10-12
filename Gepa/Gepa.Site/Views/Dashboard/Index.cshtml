@@ -42,7 +42,7 @@
         <table id="classPlansTable" class="table table-bordered table-striped">
             <thead>
                 <tr>
-
+                    <th scope="col" style="width: 50px;"></th>
                     <th scope="col">@Language.Title</th>
                     <th scope="col">@Language.Date</th>
                     <th scope="col" style="width: 75px;"></th>
@@ -53,6 +53,24 @@
                 @foreach (var classPlan in Model)
                 {
                     <tr class="classPlanRow link-row" data-href="@Url.Action("EditClassPlan", "ClassPlans", new { classPlanId = classPlan.Id })">
+                        <td>
+                            <div style="display: flex">
+                                @if (classPlan.Chores.FindAll(c => c.IsCompletedTask == false).ToList().Count > 0)
+                                {
+                                    <span class="alertPendencies" data-toggle="tooltip" data-placement="top" title="@Language.ChorePendencyMessage">
+                                        <i class="fas fa-exclamation-triangle icon chorePendencies"></i>
+                                    </span>
+                                }
+
+                                @if (classPlan.ClassGoals.FindAll(c => c.IsCompleted == false).ToList().Count > 0)
+                                {
+                                    <span class="alertPendencies" data-toggle="tooltip" data-placement="top" title="@Language.ClassGoalPendencyMessage">
+                                        <i class="fas fa-exclamation-triangle icon classGoalsPendencies"></i>
+                                    </span>
+                                }
+                            </div>
+                        </td>
+
                         <td>@classPlan.Title</td>
 
                         <td>
@@ -103,5 +121,4 @@
 </script>
 
 <style>
-   
 </style>

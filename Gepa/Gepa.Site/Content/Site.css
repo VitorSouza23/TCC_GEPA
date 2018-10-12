@@ -231,3 +231,15 @@ hr {
     margin: auto;
     color: #495057;
 }
+
+.alertPendencies {
+    margin: 0 2px;
+}
+
+    .alertPendencies .chorePendencies {
+        color: orange;
+    }
+
+    .alertPendencies .classGoalsPendencies {
+        color: rebeccapurple;
+    }

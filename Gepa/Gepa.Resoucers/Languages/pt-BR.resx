@@ -141,11 +141,17 @@
   <data name="Cancel" xml:space="preserve">
     <value>Cancelar</value>
   </data>
+  <data name="ChorePendencyMessage" xml:space="preserve">
+    <value>Há uma atividade que ainda não foi concluída!</value>
+  </data>
   <data name="ChorePlaceholder" xml:space="preserve">
     <value>Para inserir uma atividade, clique no botão 'Adicionar'.</value>
   </data>
   <data name="Chores" xml:space="preserve">
     <value>Atividades</value>
+  </data>
+  <data name="ClassGoalPendencyMessage" xml:space="preserve">
+    <value>Há um objetivo que ainda não foi concluído!</value>
   </data>
   <data name="ClassGoalPlaceholder" xml:space="preserve">
     <value>Para inserir um objetivo, clique no botão 'Adicionar'.</value>

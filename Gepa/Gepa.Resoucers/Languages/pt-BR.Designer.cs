@@ -133,6 +133,15 @@ namespace Gepa.Resources.Languages {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Há uma atividade que ainda não foi concluída!.
+        /// </summary>
+        internal static string ChorePendencyMessage {
+            get {
+                return ResourceManager.GetString("ChorePendencyMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Para inserir uma atividade, clique no botão &apos;Adicionar&apos;..
         /// </summary>
         internal static string ChorePlaceholder {
@@ -147,6 +156,15 @@ namespace Gepa.Resources.Languages {
         internal static string Chores {
             get {
                 return ResourceManager.GetString("Chores", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Há um objetivo que ainda não foi concluído!.
+        /// </summary>
+        internal static string ClassGoalPendencyMessage {
+            get {
+                return ResourceManager.GetString("ClassGoalPendencyMessage", resourceCulture);
             }
         }
         

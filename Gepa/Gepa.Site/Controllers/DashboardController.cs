@@ -18,7 +18,7 @@ namespace Gepa.Site.Controllers
         public async Task<ActionResult> Index()
         {
             var currentTeacher = await Helper.GetCurrentTeacherAsync();
-            var classPlans = await ClassPlanService.FindAllTeacherClassPlans(currentTeacher.TeacherId);
+            var classPlans = await ClassPlanService.FindAllTeacherClassPlans(currentTeacher.TeacherId, true);
             var model = Mapper.Map<List<ClassPlanModel>>(classPlans);
             var user = Helper.GetCurrentUser();
             if (string.IsNullOrWhiteSpace(currentTeacher.Name))

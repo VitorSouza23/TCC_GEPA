@@ -830,5 +830,27 @@ namespace Gepa.Resources
                 return GetString("ExcludeChore");
             }
         }
+
+        /// <summary>
+        /// Há uma atividade que ainda não foi concluída!
+        /// </summary>
+        public static string ChorePendencyMessage
+        {
+            get
+            {
+                return GetString("ChorePendencyMessage");
+            }
+        }
+
+        /// <summary>
+        /// Há um objetivo que ainda não foi concluído!
+        /// </summary>
+        public static string ClassGoalPendencyMessage
+        {
+            get
+            {
+                return GetString("ClassGoalPendencyMessage");
+            }
+        }
     }
 }

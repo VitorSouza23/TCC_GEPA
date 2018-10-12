@@ -151,3 +151,4 @@ C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\bin\De
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\obj\Debug\Gepa.Entities.Framework.Migrations.Initial.resources
 C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\obj\Debug\Gepa.Entities.Framework.csproj.GenerateResource.cache
+C:\Projetos\TCC_GEPA\Gepa\Gepa.Entities.Framework\Gepa.Entities.Framework\obj\Debug\Gepa.Entities.Framework.Migrations.AddClassPlanSubject.resources

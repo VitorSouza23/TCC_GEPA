@@ -14,5 +14,6 @@ namespace Gepa.DAO.ClassPlans
         Task<ClassPlan> FindClassPlanAsync(long classPlanId);
         Task InsertClassPlanAsync(ClassPlan newClassPlan);
         List<ClassPlan> FindAllClassPlans();
+        Task<List<ClassPlan>> FindAllTeacherClassPlans(long teacherId, bool loadAllData = false);
     }
 }

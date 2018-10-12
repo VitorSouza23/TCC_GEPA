@@ -52,5 +52,10 @@ namespace Gepa.Business.ClassPlans
         {
             return _classPlanDAO.FindAllClassPlans();
         }
+
+        public async Task<List<ClassPlan>> FindAllTeacherClassPlans(long teacherId, bool loadAllData = false)
+        {
+            return await _classPlanDAO.FindAllTeacherClassPlans(teacherId, loadAllData);
+        }
     }
 }

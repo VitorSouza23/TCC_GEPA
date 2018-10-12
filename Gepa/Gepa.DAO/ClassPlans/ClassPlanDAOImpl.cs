@@ -185,5 +185,24 @@ namespace Gepa.DAO.ClassPlans
                 em.SaveChanges();
             }
         }
+
+        public async Task<List<ClassPlan>> FindAllTeacherClassPlans(long teacherId, bool loadAllData = false)
+        {
+            using (EntityModel em = new EntityModel())
+            {
+                if (loadAllData)
+                    return await em.ClassPlan
+                         .Where(c => c.TeacherId == teacherId)
+                         .Include(c => c.Chores)
+                         .Include(c => c.ClassGoals)
+                         .Include(c => c.Evaluetions)
+                         .Include(c => c.LessonsContents)
+                         .ToListAsync();
+                else
+                    return await em.ClassPlan
+                        .Where(c => c.TeacherId == teacherId)
+                        .ToListAsync();
+            }
+        }
     }
 }

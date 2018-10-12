@@ -15,12 +15,16 @@ namespace Gepa.Site.Controllers
     public class DashboardController : GepaBaseController
     {
         // GET: Dashboard
-        public ActionResult Index()
+        public async Task<ActionResult> Index()
         {
-
-            var classPlans = ClassPlanService.FindAllClassPlans();
+            var currentTeacher = await Helper.GetCurrentTeacherAsync();
+            var classPlans = await ClassPlanService.FindAllTeacherClassPlans(currentTeacher.TeacherId);
             var model = Mapper.Map<List<ClassPlanModel>>(classPlans);
-
+            var user = Helper.GetCurrentUser();
+            if (string.IsNullOrWhiteSpace(currentTeacher.Name))
+                ViewBag.UserName = user.UserName;
+            else
+                ViewBag.UserName = currentTeacher.Name;
             return View(model);
         }
     }

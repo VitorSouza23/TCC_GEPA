@@ -198,6 +198,9 @@
 </div>
 
 <script>
+    var isCompletedGoalText = '@Language.IsCompletedGoal';
+    var isCompletedTaskText = '@Language.IsCompletedTask';
+
     $(function () {
         $(".date-picker").datepicker({
             dateFormat: 'dd/mm/yy',
@@ -232,13 +235,13 @@
         classGoalList.forEach(function (element) {
             element.guid = generateNewGuid();
             var checkBoxStatus = element.IsCompleted ? "checked" : "";
-            $("#classGoalsListGroup").append('<a class="list-group-item list-group-item-action gepaClassGoalsItem" data-guid="' + element.guid + '"><input type="checkbox" class="form-check-input objectiveStatus" ' + checkBoxStatus + '>' + element.Objective + '</a>');
+            $("#classGoalsListGroup").append('<a class="list-group-item list-group-item-action gepaClassGoalsItem" data-guid="' + element.guid + '"><input type="checkbox" class="form-check-input objectiveStatus" data-toggle="tooltip" data-placement="top" title="' + isCompletedGoalText + '" ' + checkBoxStatus + '>' + element.Objective + '</a>');
         });
 
         choreList.forEach(function (element) {
             element.guid = generateNewGuid();
             var checkBoxStatus = element.IsCompletedTask ? "checked" : "";
-            $("#choresListGroup").append('<a class="list-group-item list-group-item-action choreItem" data-guid="' + element.guid + '"><input type="checkbox" class="form-check-input objectiveStatus" ' + checkBoxStatus + '>' + element.Task + '</a>');
+            $("#choresListGroup").append('<a class="list-group-item list-group-item-action choreItem" data-guid="' + element.guid + '"><input type="checkbox" class="form-check-input objectiveStatus" data-toggle="tooltip" data-placement="top"  title="' + isCompletedTaskText + '" ' + checkBoxStatus + '>' + element.Task + '</a>');
         });
 
         evaluationList.forEach(function (element) {
@@ -499,6 +502,7 @@
                 for (var i = 0; i < choreList.length; i++) {
                     if (selectedEvaluationGuid == choreList[i].guid) {
                         currentChoreObject = choreList[i];
+                        
                     }
                 }
 

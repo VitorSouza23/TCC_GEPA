@@ -82,7 +82,12 @@
     }
 </div>
 
+@Html.Partial("_RemoveClassPlanConfirmationDialog")
+
 <script type="text/javascript">
+
+    var removeSelectedClassPlanUrl = null;
+
     $(document).ready(function (e) {
         $('.classPlanRow').click(function (e) {
             window.location = $(this).data("href");
@@ -90,7 +95,9 @@
 
         $('.removeClassPlan').click(function (e) {
             e.stopPropagation();
-            window.location = $(this).data("href");
+            $("#confirmDeleteClassPlanModal").modal('toggle');
+            removeSelectedClassPlanUrl = $(this).data("href");
+            //window.location = $(this).data("href");
         });
     });
 </script>

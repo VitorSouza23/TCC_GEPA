@@ -56,7 +56,8 @@
 
                 var checkBoxStatus = choreObject.IsCompletedTask ? "checked" : "";
 
-                $("#choresListGroup").append('<a class="list-group-item list-group-item-action choreItem" data-guid="' + choreObject.guid + '"><input type="checkbox" class="form-check-input objectiveStatus" ' + checkBoxStatus + '>' + choreObject.Task + '</a>');
+                $("#choresListGroup").append('<a class="list-group-item list-group-item-action choreItem" data-guid="' + choreObject.guid + '"><input type="checkbox" class="form-check-input objectiveStatus" data-toggle="tooltip" data-placement="top" title="' + isCompletedTaskText + '" ' + checkBoxStatus + '>' + choreObject.Task + '</a>');
+               
                 showOrHideChorePlaceholder();
             } else {
                 currentChoreObject.Task = $("#Task").val();
@@ -64,7 +65,7 @@
                 $(".choreItem").each(function (index) {
                     if ($(this).attr('data-guid') == currentChoreObject.guid) {
                         var checkBoxStatus = currentChoreObject.IsCompletedTask ? "checked" : "";
-                        $(this).text('').append('<input type="checkbox" class="form-check-input objectiveStatus" ' + checkBoxStatus + ' >' + currentChoreObject.Task);
+                        $(this).text('').append('<input type="checkbox" class="form-check-input objectiveStatus" data-toggle="tooltip" data-placement="top" title="' + isCompletedTaskText + '" ' + checkBoxStatus + ' >' + currentChoreObject.Task);
                     }
                 });
             }

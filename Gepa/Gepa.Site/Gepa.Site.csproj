@@ -359,6 +359,7 @@
     <Content Include="Views\ClassPlans\_AddEvaluationModal.cshtml" />
     <Content Include="Views\ClassPlans\_NoItemSelectedModal.cshtml" />
     <Content Include="Views\ClassPlans\_AddChoresModal.cshtml" />
+    <Content Include="Views\Dashboard\_RemoveClassPlanConfirmationDialog.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

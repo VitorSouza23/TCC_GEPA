@@ -129,6 +129,9 @@
   <data name="AlreadyRegisteredSignIn" xml:space="preserve">
     <value>Já é cadastrado? Faça o login</value>
   </data>
+  <data name="AreYouSureYouWantToRemoveThisItem" xml:space="preserve">
+    <value>Você tem certeza que deseja remover esse item?</value>
+  </data>
   <data name="AssociateYourAccount" xml:space="preserve">
     <value>Associe sua conta</value>
   </data>
@@ -212,6 +215,18 @@
   </data>
   <data name="Exclude" xml:space="preserve">
     <value>Excluir</value>
+  </data>
+  <data name="ExcludeChore" xml:space="preserve">
+    <value>Excluir atividade</value>
+  </data>
+  <data name="ExcludeClassGoal" xml:space="preserve">
+    <value>Excluir objetivo</value>
+  </data>
+  <data name="ExcludeContent" xml:space="preserve">
+    <value>Excluir conteúdo</value>
+  </data>
+  <data name="ExcludeEvaluation" xml:space="preserve">
+    <value>Excluir avaliação</value>
   </data>
   <data name="ForgotYourPassword" xml:space="preserve">
     <value>Esqueceu sua senha?</value>

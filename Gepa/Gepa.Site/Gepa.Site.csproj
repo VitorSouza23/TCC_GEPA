@@ -360,6 +360,10 @@
     <Content Include="Views\ClassPlans\_NoItemSelectedModal.cshtml" />
     <Content Include="Views\ClassPlans\_AddChoresModal.cshtml" />
     <Content Include="Views\Dashboard\_RemoveClassPlanConfirmationDialog.cshtml" />
+    <Content Include="Views\ClassPlans\_RemoveLessonContentConfirmationModal.cshtml" />
+    <Content Include="Views\ClassPlans\_RemoveClassGoalConfirmationModal.cshtml" />
+    <Content Include="Views\ClassPlans\_RemoveEvaluationConfirmationModal.cshtml" />
+    <Content Include="Views\ClassPlans\_RemoveChoreConfirmationModal.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -97,6 +97,15 @@ namespace Gepa.Resources.Languages {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Você tem certeza que deseja remover esse item?.
+        /// </summary>
+        internal static string AreYouSureYouWantToRemoveThisItem {
+            get {
+                return ResourceManager.GetString("AreYouSureYouWantToRemoveThisItem", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Associe sua conta.
         /// </summary>
         internal static string AssociateYourAccount {
@@ -345,6 +354,42 @@ namespace Gepa.Resources.Languages {
         internal static string Exclude {
             get {
                 return ResourceManager.GetString("Exclude", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Excluir atividade.
+        /// </summary>
+        internal static string ExcludeChore {
+            get {
+                return ResourceManager.GetString("ExcludeChore", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Excluir objetivo.
+        /// </summary>
+        internal static string ExcludeClassGoal {
+            get {
+                return ResourceManager.GetString("ExcludeClassGoal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Excluir conteúdo.
+        /// </summary>
+        internal static string ExcludeContent {
+            get {
+                return ResourceManager.GetString("ExcludeContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Excluir avaliação.
+        /// </summary>
+        internal static string ExcludeEvaluation {
+            get {
+                return ResourceManager.GetString("ExcludeEvaluation", resourceCulture);
             }
         }
         

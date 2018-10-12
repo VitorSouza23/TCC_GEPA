@@ -775,5 +775,60 @@ namespace Gepa.Resources
                 return GetString("SelectTheDate");
             }
         }
+
+        /// <summary>
+        /// Você tem certeza que deseja remover esse item?
+        /// </summary>
+        public static string AreYouSureYouWantToRemoveThisItem
+        {
+            get
+            {
+                return GetString("AreYouSureYouWantToRemoveThisItem");
+            }
+        }
+
+        /// <summary>
+        /// Excluir conteúdo
+        /// </summary>
+        public static string ExcludeContent
+        {
+            get
+            {
+                return GetString("ExcludeContent");
+            }
+        }
+
+        /// <summary>
+        /// Excluir conteúdo
+        /// </summary>
+        public static string ExcludeEvaluation
+        {
+            get
+            {
+                return GetString("ExcludeEvaluation");
+            }
+        }
+
+        /// <summary>
+        /// Excluir objetivo
+        /// </summary>
+        public static string ExcludeClassGoal
+        {
+            get
+            {
+                return GetString("ExcludeClassGoal");
+            }
+        }
+
+        /// <summary>
+        /// Excluir atividade
+        /// </summary>
+        public static string ExcludeChore
+        {
+            get
+            {
+                return GetString("ExcludeChore");
+            }
+        }
     }
 }

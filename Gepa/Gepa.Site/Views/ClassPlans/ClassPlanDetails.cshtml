@@ -195,6 +195,11 @@
     }
 
     @Html.Partial("_NoItemSelectedModal")
+
+    @Html.Partial("_RemoveLessonContentConfirmationModal")
+    @Html.Partial("_RemoveClassGoalConfirmationModal")
+    @Html.Partial("_RemoveChoreConfirmationModal")
+    @Html.Partial("_RemoveEvaluationConfirmationModal")
 </div>
 
 <script>
@@ -308,19 +313,7 @@
             e.preventDefault();
 
             if (currentLessonContentObject != null) {
-                $(".gepaContentsItem").each(function (index) {
-                    if ($(this).attr('data-guid') == currentLessonContentObject.guid) {
-                        $(this).remove();
-
-                        for (var i = 0; i < lessonContentList.length; i++) {
-                            if (lessonContentList[i].guid == currentLessonContentObject.guid) {
-                                lessonContentList.splice(i, 1);
-                                currentLessonContentObject = null;
-                                showOrHideLessonContentPlaceholder();
-                            }
-                        }
-                    }
-                });
+                $("#removeLessonContentConfirmationModal").modal('toggle');
             } else {
                 $("#noItemSelectedModal").modal('toggle');
             }
@@ -345,19 +338,7 @@
             e.preventDefault();
 
             if (currentClassGoalObject != null) {
-                $(".gepaClassGoalsItem").each(function (index) {
-                    if ($(this).attr('data-guid') == currentClassGoalObject.guid) {
-                        $(this).remove();
-
-                        for (var i = 0; i < classGoalList.length; i++) {
-                            if (classGoalList[i].guid == currentClassGoalObject.guid) {
-                                classGoalList.splice(i, 1);
-                                currentClassGoalObject = null;
-                                showOrHideClassGoalPlaceholder();
-                            }
-                        }
-                    }
-                });
+                $("#removeClassGoalConfirmationModal").modal('toggle');
             } else {
                 $("#noItemSelectedModal").modal('toggle');
             }
@@ -381,19 +362,7 @@
             e.preventDefault();
 
             if (currentEvaluationObject != null) {
-                $(".evaluationItem").each(function (index) {
-                    if ($(this).attr('data-guid') == currentEvaluationObject.guid) {
-                        $(this).remove();
-
-                        for (var i = 0; i < evaluationList.length; i++) {
-                            if (evaluationList[i].guid == currentEvaluationObject.guid) {
-                                evaluationList.splice(i, 1);
-                                currentEvaluationObject = null;
-                                showOrHideEvaluationPlaceholder();
-                            }
-                        }
-                    }
-                });
+                $("#removeEvaluationConfirmationModal").modal('toggle');
             } else {
                 $("#noItemSelectedModal").modal('toggle');
             }
@@ -417,19 +386,7 @@
             e.preventDefault();
 
             if (currentChoreObject != null) {
-                $(".choreItem").each(function (index) {
-                    if ($(this).attr('data-guid') == currentChoreObject.guid) {
-                        $(this).remove();
-
-                        for (var i = 0; i < choreList.length; i++) {
-                            if (choreList[i].guid == currentChoreObject.guid) {
-                                choreList.splice(i, 1);
-                                currentChoreObject = null;
-                                showOrHideChorePlaceholder();
-                            }
-                        }
-                    }
-                });
+                $("#removeChoreConfirmationModal").modal('toggle');
             } else {
                 $("#noItemSelectedModal").modal('toggle');
             }
@@ -502,7 +459,7 @@
                 for (var i = 0; i < choreList.length; i++) {
                     if (selectedEvaluationGuid == choreList[i].guid) {
                         currentChoreObject = choreList[i];
-                        
+
                     }
                 }
 

@@ -13,10 +13,22 @@
             @Html.HiddenFor(m => m.Id)
             @Html.HiddenFor(m => m.TeacherId)
 
-            <div class="form-group">
-                @Html.LabelFor(m => m.Title)
-                @Html.TextBoxFor(m => m.Title, new { @class = "form-control gepa-form-controller", required = "required", placeholder = string.Format(Language.EnterFieldValueFormatted2, Language.Title.ToLower()) })
-                @Html.ValidationMessageFor(m => m.Title)
+            <div style="display: flex;">
+                <div class="form-group" style="width: 70%; margin-right: 5.5px;">
+                    @Html.LabelFor(m => m.Title)
+                    @Html.TextBoxFor(m => m.Title, new { @class = "form-control gepa-form-controller", required = "required", placeholder = string.Format(Language.EnterFieldValueFormatted2, Language.Title.ToLower()) })
+                    @Html.ValidationMessageFor(m => m.Title)
+                </div>
+
+                <div class="form-group" style="width: 30%; margin-left: 5.5px;">
+                    @Html.LabelFor(m => m.Date)
+                    <div style="display: flex;">
+                        @Html.EditorFor(m => m.Date, new { htmlAttributes = new { @class = "form-control date-picker gepaInputDate gepa-form-controller", style = "border-radius: unset !important;", placeholder = Language.SelectTheDate } })
+                        <span class="gepa-form-controller" style="border-left: none !important;">
+                            <i class="fas fa-calendar icon" style="margin: 0 5px; vertical-align: sub;"></i>
+                        </span>
+                    </div>
+                </div>
             </div>
 
             <div class="form-group">
@@ -158,11 +170,6 @@
             </div>
 
             <hr />
-
-            <div class="form-group">
-                @Html.LabelFor(m => m.Date)
-                @Html.EditorFor(m => m.Date, new { htmlAttributes = new { @class = "form-control date-picker gepaInputDate gepa-form-controller" } })
-            </div>
 
             <div class="form-group">
                 @Html.LabelFor(m => m.Observation)

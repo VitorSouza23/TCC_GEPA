@@ -764,5 +764,16 @@ namespace Gepa.Resources
             }
         }
 
+
+        /// <summary>
+        /// Selecione a data
+        /// </summary>
+        public static string SelectTheDate
+        {
+            get
+            {
+                return GetString("SelectTheDate");
+            }
+        }
     }
 }

@@ -24,3 +24,12 @@
 .form-group {
     margin-bottom: 30px !important;
 }
+
+.list-group-item {
+    background-color: #bcffd0 !important;
+    border: 1px solid #a9e5bb !important;
+}
+
+    .list-group-item.active {
+        background-color: #81ff4c !important;
+    }

@@ -10,7 +10,7 @@
                 </button>
             </div>
             <form id="choresForm">
-                
+
                 <div class="modal-body">
                     @Html.HiddenFor(m => m.Id)
                     @Html.HiddenFor(m => m.ClassPlanId)
@@ -28,11 +28,11 @@
                 </div>
 
                 <div class="modal-footer">
-                    <button type="submit" class="btn btn-primary">
+                    <button type="submit" class="btn btn-primary btnModals btnSaveModals">
                         <i class="fas fa-save icon"></i>
                         @Language.Save
                     </button>
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                    <button type="button" class="btn btn-secondary btnModals btnCancelModals" data-dismiss="modal">
                         <i class="fas fa-times icon"></i>
                         @Language.Cancel
                     </button>
@@ -45,7 +45,7 @@
 
 <script>
     $(document).ready(function () {
-        $("#choresForm").submit(function (event) {           
+        $("#choresForm").submit(function (event) {
             event.preventDefault();
 
             if (currentChoreObject == null) {

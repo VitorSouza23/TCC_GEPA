@@ -412,7 +412,7 @@ namespace Gepa.Resources.Languages {
         }
         
         /// <summary>
-        ///   Consulta uma cadeia de caracteres localizada semelhante a Tarefa concluida.
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Atividade concluída.
         /// </summary>
         internal static string IsCompletedTask {
             get {
@@ -606,6 +606,15 @@ namespace Gepa.Resources.Languages {
         internal static string SelectContentToContinueOperationMessage {
             get {
                 return ResourceManager.GetString("SelectContentToContinueOperationMessage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Selecione a data.
+        /// </summary>
+        internal static string SelectTheDate {
+            get {
+                return ResourceManager.GetString("SelectTheDate", resourceCulture);
             }
         }
         

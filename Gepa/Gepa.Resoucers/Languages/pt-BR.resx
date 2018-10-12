@@ -235,7 +235,7 @@
     <value>Objetivo concluído</value>
   </data>
   <data name="IsCompletedTask" xml:space="preserve">
-    <value>Tarefa concluida</value>
+    <value>Atividade concluída</value>
   </data>
   <data name="LessonContentPlaceholder" xml:space="preserve">
     <value>Para inserir um conteúdo, clique no botão 'Adicionar'.</value>
@@ -299,6 +299,9 @@
   </data>
   <data name="SelectContentToContinueOperationMessage" xml:space="preserve">
     <value>Selecione um conteúdo para continuar a operação desejada.</value>
+  </data>
+  <data name="SelectTheDate" xml:space="preserve">
+    <value>Selecione a data</value>
   </data>
   <data name="Subject" xml:space="preserve">
     <value>Disciplina</value>

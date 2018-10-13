@@ -25,12 +25,17 @@ namespace Gepa.Site
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/tablesorter").Include(
+                    "~/Scripts/jquery.metadata.js",
+                    "~/Scripts/jquery.tablesorter.min.js"));
+
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/font-awesome.min.css",
                       "~/Content/themes/base/jquery-ui.min.css",
                       "~/Content/bootstrap-custom.css",
-                      "~/Content/Site.css"));
+                      "~/Content/Site.css",
+                      "~/Content/tablesorter-style.css"));
         }
     }
 }

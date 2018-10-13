@@ -23,8 +23,8 @@
                 <div class="form-group" style="width: 30%; margin-left: 5.5px;">
                     @Html.LabelFor(m => m.Date)
                     <div style="display: flex;">
-                        @Html.EditorFor(m => m.Date, new { htmlAttributes = new { @class = "form-control date-picker gepaInputDate gepa-form-controller", style = "border-radius: unset !important;", placeholder = Language.SelectTheDate } })
-                        <span class="gepa-form-controller" style="border-left: none !important;">
+                        @Html.EditorFor(m => m.Date, new { htmlAttributes = new { @class = "form-control date-picker gepaInputDate gepa-form-controller", style = "border-radius: unset !important;", placeholder = Language.SelectTheDate, autocomplete = "off" } })
+                        <span class="gepa-form-controller" style="border-left: none !important;" onclick="$('#Date').trigger('focus')">
                             <i class="fas fa-calendar icon" style="margin: 0 5px; vertical-align: sub;"></i>
                         </span>
                     </div>

@@ -39,11 +39,13 @@
 
     @if (Model.Count > 0)
     {
-        <table id="classPlansTable" class="table table-bordered table-striped">
+        <input class="form-control gepa-table-search " id="classPlanSearch" type="text" placeholder="Procurar...">
+        <table id="classPlansTable" class="table table-bordered table-striped tablesorter">
             <thead>
                 <tr>
                     <th scope="col" style="width: 50px;"></th>
                     <th scope="col">@Language.Title</th>
+                    <th scope="col">@Language.Subject</th>
                     <th scope="col">@Language.Date</th>
                     <th scope="col" style="width: 75px;"></th>
                 </tr>
@@ -72,7 +74,7 @@
                         </td>
 
                         <td>@classPlan.Title</td>
-
+                        <td>@classPlan.Subject</td>
                         <td>
                             @if (classPlan.Date != null)
                             {
@@ -102,6 +104,10 @@
 
 @Html.Partial("_RemoveClassPlanConfirmationDialog")
 
+@section Scripts {
+    @Scripts.Render("~/bundles/tablesorter")
+}
+
 <script type="text/javascript">
 
     var removeSelectedClassPlanUrl = null;
@@ -116,6 +122,26 @@
             $("#confirmDeleteClassPlanModal").modal('toggle');
             removeSelectedClassPlanUrl = $(this).data("href");
             //window.location = $(this).data("href");
+        });
+
+        $("#classPlansTable").tablesorter(
+            {
+                dateFormat: 'pt',
+                headers: {
+                    0: {
+                        sorter: false
+                    }, 
+                    4: {
+                        sorter: false
+                    }
+                }
+            });
+
+        $("#classPlanSearch").on("keyup", function () {
+            var value = $(this).val().toLowerCase();
+            $("#classPlansTable tbody tr").filter(function () {
+                $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+            });
         });
     });
 </script>

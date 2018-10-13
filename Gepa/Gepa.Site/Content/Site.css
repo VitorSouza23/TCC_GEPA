@@ -224,7 +224,7 @@ hr {
 
 #classPlansTable, .noClassPlansMessage {
     width: 95%;
-    margin: 50px auto;
+    margin: 30px auto;
 }
 
 .placeholderListGroup {
@@ -243,3 +243,8 @@ hr {
     .alertPendencies .classGoalsPendencies {
         color: rebeccapurple;
     }
+
+.gepa-table-search {
+    width: 30%;
+    margin: 0 auto;
+}

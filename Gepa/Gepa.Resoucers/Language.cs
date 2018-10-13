@@ -852,5 +852,27 @@ namespace Gepa.Resources
                 return GetString("ClassGoalPendencyMessage");
             }
         }
+
+        /// <summary>
+        /// Planos de aula
+        /// </summary>
+        public static string ClassPlans
+        {
+            get
+            {
+                return GetString("ClassPlans");
+            }
+        }
+
+        /// <summary>
+        /// Pesquisar
+        /// </summary>
+        public static string Search
+        {
+            get
+            {
+                return GetString("Search");
+            }
+        }
     }
 }

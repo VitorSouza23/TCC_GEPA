@@ -35,11 +35,11 @@
 
 <div>
 
-    <h1 class="gepaTitles" style="text-align: center;">Planos de Aula</h1>
+    <h1 class="gepaTitles" style="text-align: center;">@Language.ClassPlans</h1>
 
     @if (Model.Count > 0)
     {
-        <input class="form-control gepa-table-search " id="classPlanSearch" type="text" placeholder="Procurar...">
+        <input class="form-control gepa-table-search " id="classPlanSearch" type="text" placeholder="@(Language.Search + "...")">
         <table id="classPlansTable" class="table table-bordered table-striped tablesorter">
             <thead>
                 <tr>

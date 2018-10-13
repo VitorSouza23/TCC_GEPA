@@ -187,6 +187,15 @@ namespace Gepa.Resources.Languages {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Planos de Aula.
+        /// </summary>
+        internal static string ClassPlans {
+            get {
+                return ResourceManager.GetString("ClassPlans", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Confirmar senha.
         /// </summary>
         internal static string ConfirmPassword {
@@ -660,6 +669,15 @@ namespace Gepa.Resources.Languages {
         internal static string Save {
             get {
                 return ResourceManager.GetString("Save", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Pesquisar.
+        /// </summary>
+        internal static string Search {
+            get {
+                return ResourceManager.GetString("Search", resourceCulture);
             }
         }
         

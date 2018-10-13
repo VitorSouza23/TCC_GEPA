@@ -159,6 +159,9 @@
   <data name="ClassPlan" xml:space="preserve">
     <value>Plano de Aula</value>
   </data>
+  <data name="ClassPlans" xml:space="preserve">
+    <value>Planos de Aula</value>
+  </data>
   <data name="ConfirmPassword" xml:space="preserve">
     <value>Confirmar senha</value>
   </data>
@@ -317,6 +320,9 @@
   </data>
   <data name="Save" xml:space="preserve">
     <value>Salvar</value>
+  </data>
+  <data name="Search" xml:space="preserve">
+    <value>Pesquisar</value>
   </data>
   <data name="SelectContentToContinueOperationMessage" xml:space="preserve">
     <value>Selecione um conteúdo para continuar a operação desejada.</value>

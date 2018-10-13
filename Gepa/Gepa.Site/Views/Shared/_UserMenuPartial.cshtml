@@ -5,7 +5,7 @@
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropDown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             @Language.WelComeUserMessage(Model)
         </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="left: -50px;">
             <a class="dropdown-item" href="@Url.Action("TeacherSettingsView", "Account")">@Language.TeacherSettings</a>
             <div class="dropdown-divider"></div>
             @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "navbar-right" }))

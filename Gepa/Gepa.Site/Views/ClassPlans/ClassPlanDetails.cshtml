@@ -13,6 +13,11 @@
             @Html.HiddenFor(m => m.Id)
             @Html.HiddenFor(m => m.TeacherId)
 
+            <div class="form-group">
+                @Html.LabelFor(m => m.Subject)
+                @Html.TextAreaFor(m => m.Subject, new { @class = "form-control gepaTextArea gepa-form-controller", placeholder = string.Format(Language.EnterFieldValueFormatted, Language.Subject.ToLower()) })
+            </div>
+
             <div style="display: flex;">
                 <div class="form-group" style="width: 70%; margin-right: 5.5px;">
                     @Html.LabelFor(m => m.Title)
@@ -29,11 +34,6 @@
                         </span>
                     </div>
                 </div>
-            </div>
-
-            <div class="form-group">
-                @Html.LabelFor(m => m.Subject)
-                @Html.TextAreaFor(m => m.Subject, new { @class = "form-control gepaTextArea gepa-form-controller", placeholder = string.Format(Language.EnterFieldValueFormatted, Language.Subject.ToLower()) })
             </div>
 
             <div class="form-group">

@@ -234,6 +234,7 @@
     <Content Include="Content\Images\desc.gif" />
     <Content Include="Content\Images\Gepa_Logo.png" />
     <Content Include="Content\Images\teacher_home1.png" />
+    <Content Include="Content\Images\teacher_home2.jpg" />
     <Content Include="Content\tablesorter-style.css" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />

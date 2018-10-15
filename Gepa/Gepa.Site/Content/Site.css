@@ -248,3 +248,17 @@ hr {
     width: 30%;
     margin: 0 auto;
 }
+
+.gepa-features-title{
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.gepa-features-content {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+.gepa-features-content span{
+    font-weight: bold;
+}

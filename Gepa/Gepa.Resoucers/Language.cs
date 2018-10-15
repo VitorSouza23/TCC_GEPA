@@ -874,5 +874,51 @@ namespace Gepa.Resources
                 return GetString("Search");
             }
         }
+
+        /// <summary>
+        /// Crie seus planos de aula
+        /// </summary>
+        public static string GepaFeatureTitle1
+        {
+            get
+            {
+                return GetString("GepaFeatureTitle1");
+            }
+        }
+
+        /// <summary>
+        /// Professor, conte com auxílio do Gepa para criar e organizar seus planos de aula. Você terá a oportunidade de criar seus planos
+        /// de aula com os itens mais importantes: <span>Atividades</span>, <span>Conteúdos</span> e <span>Avaliações</span>.
+        /// </summary>
+        public static string GepaFeatureContent1
+        {
+            get
+            {
+                return GetString("GepaFeatureContent1");
+            }
+        }
+
+        /// <summary>
+        /// Organize, pesquise e filtre planos de aula facilmente
+        /// </summary>
+        public static string GepaFeatureTitle2
+        {
+            get
+            {
+                return GetString("GepaFeatureTitle2");
+            }
+        }
+
+        /// <summary>
+        /// Não se preocupe, o Gepa irá auxiliar na organização dos seus planos de aula pelo título, data ou disciplina. Cadastrou vários
+        /// planos de aula? Não tem problema também, com a ferramenta de pesquisa, você encontrará o que deseja de maneira ágil e fácil.
+        /// </summary>
+        public static string GepaFeatureContent2
+        {
+            get
+            {
+                return GetString("GepaFeatureContent2");
+            }
+        }
     }
 }

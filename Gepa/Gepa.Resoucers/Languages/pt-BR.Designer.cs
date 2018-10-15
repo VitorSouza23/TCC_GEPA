@@ -439,6 +439,42 @@ namespace Gepa.Resources.Languages {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Professor, conte com auxílio do Gepa para criar e organizar seus planos de aula. Você terá a oportunidade de criar seus planos de aula com os itens mais importantes: &lt;span&gt;Atividades&lt;/span&gt;, &lt;span&gt;Conteúdos&lt;/span&gt; e &lt;span&gt;Avaliações&lt;/span&gt;..
+        /// </summary>
+        internal static string GepaFeatureContent1 {
+            get {
+                return ResourceManager.GetString("GepaFeatureContent1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Não se preocupe, o Gepa irá auxiliar na organização dos seus planos de aula pelo título, data ou disciplina. Cadastrou vários planos de aula? Não tem problema também, com a ferramenta de pesquisa, você encontrará o que deseja de maneira ágil e fácil..
+        /// </summary>
+        internal static string GepaFeatureContent2 {
+            get {
+                return ResourceManager.GetString("GepaFeatureContent2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Crie seus planos de aula.
+        /// </summary>
+        internal static string GepaFeatureTitle1 {
+            get {
+                return ResourceManager.GetString("GepaFeatureTitle1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Organize, pesquise e filtre planos de aula facilmente.
+        /// </summary>
+        internal static string GepaFeatureTitle2 {
+            get {
+                return ResourceManager.GetString("GepaFeatureTitle2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Sair.
         /// </summary>
         internal static string GetOut {

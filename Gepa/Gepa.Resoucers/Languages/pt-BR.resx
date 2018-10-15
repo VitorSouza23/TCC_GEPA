@@ -243,6 +243,18 @@
   <data name="Gepa" xml:space="preserve">
     <value>Gepa</value>
   </data>
+  <data name="GepaFeatureContent1" xml:space="preserve">
+    <value>Professor, conte com auxílio do Gepa para criar e organizar seus planos de aula. Você terá a oportunidade de criar seus planos de aula com os itens mais importantes: &lt;span&gt;Atividades&lt;/span&gt;, &lt;span&gt;Conteúdos&lt;/span&gt; e &lt;span&gt;Avaliações&lt;/span&gt;.</value>
+  </data>
+  <data name="GepaFeatureContent2" xml:space="preserve">
+    <value>Não se preocupe, o Gepa irá auxiliar na organização dos seus planos de aula pelo título, data ou disciplina. Cadastrou vários planos de aula? Não tem problema também, com a ferramenta de pesquisa, você encontrará o que deseja de maneira ágil e fácil.</value>
+  </data>
+  <data name="GepaFeatureTitle1" xml:space="preserve">
+    <value>Crie seus planos de aula</value>
+  </data>
+  <data name="GepaFeatureTitle2" xml:space="preserve">
+    <value>Organize, pesquise e filtre planos de aula facilmente</value>
+  </data>
   <data name="GetOut" xml:space="preserve">
     <value>Sair</value>
   </data>

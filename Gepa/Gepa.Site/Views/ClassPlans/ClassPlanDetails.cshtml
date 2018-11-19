@@ -13,6 +13,9 @@
             @Html.HiddenFor(m => m.Id)
             @Html.HiddenFor(m => m.TeacherId)
 
+            <div style="color: red; text-align: left;">
+                * @Html.Label(Language.RequiredFields)
+            </div>
             <div class="form-group">
                 @Html.LabelFor(m => m.Subject)
                 @Html.TextAreaFor(m => m.Subject, new { @class = "form-control gepaTextArea gepa-form-controller", placeholder = string.Format(Language.EnterFieldValueFormatted, Language.Subject.ToLower()) })
@@ -20,6 +23,7 @@
 
             <div style="display: flex;">
                 <div class="form-group" style="width: 70%; margin-right: 5.5px;">
+                    <span style="color:red">*</span>
                     @Html.LabelFor(m => m.Title)
                     @Html.TextBoxFor(m => m.Title, new { @class = "form-control gepa-form-controller", required = "required", placeholder = string.Format(Language.EnterFieldValueFormatted2, Language.Title.ToLower()) })
                     @Html.ValidationMessageFor(m => m.Title)

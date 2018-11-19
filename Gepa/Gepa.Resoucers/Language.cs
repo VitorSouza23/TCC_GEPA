@@ -920,5 +920,16 @@ namespace Gepa.Resources
                 return GetString("GepaFeatureContent2");
             }
         }
+
+        /// <summary>
+        /// Campos obrigatórios
+        /// </summary>
+        public static string RequiredFields
+        {
+            get
+            {
+                return GetString("RequiredFields");
+            }
+        }
     }
 }

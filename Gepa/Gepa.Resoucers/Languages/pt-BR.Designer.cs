@@ -700,6 +700,15 @@ namespace Gepa.Resources.Languages {
         }
         
         /// <summary>
+        ///   Consulta uma cadeia de caracteres localizada semelhante a Campos obrigatórios.
+        /// </summary>
+        internal static string RequiredFields {
+            get {
+                return ResourceManager.GetString("RequiredFields", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Consulta uma cadeia de caracteres localizada semelhante a Salvar.
         /// </summary>
         internal static string Save {

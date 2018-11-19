@@ -25,9 +25,9 @@
                 </div>
             </li>
 
-            <li class="nav-item">
+            @*<li class="nav-item">
                 <a class="nav-link" href="#">Módulos</a>
-            </li>
+            </li>*@
         </ul>
         @Html.Partial("_UserMenuPartial", (string)ViewBag.UserName)
     </div>
@@ -47,7 +47,7 @@
                     <th scope="col">@Language.Title</th>
                     <th scope="col">@Language.Subject</th>
                     <th scope="col">@Language.Date</th>
-                    <th scope="col" style="width: 75px;"></th>
+                    <th scope="col" style="width: 150px;"></th>
                 </tr>
             </thead>
             <tbody>
@@ -60,7 +60,7 @@
                                 @if (classPlan.Chores.FindAll(c => c.IsCompletedTask == false).ToList().Count > 0)
                                 {
                                     <span class="alertPendencies" data-toggle="tooltip" data-placement="top" title="@Language.ChorePendencyMessage">
-                                        <i class="fas fa-exclamation-triangle icon chorePendencies"></i>
+                                        <i class="fas fa-exclamation-circle icon chorePendencies"></i>
                                     </span>
                                 }
 
@@ -86,6 +86,7 @@
                         <td>
                             <a class="removeClassPlan" data-href="@Url.Action("RemoveClassPlan", "ClassPlans", new { classPlanId = classPlan.Id })" data-toggle="tooltip" data-placement="top" title="@Language.Exclude">
                                 <i class="fas fa-trash icon"></i>
+                                @Language.Exclude
                             </a>
                         </td>
                     </tr>

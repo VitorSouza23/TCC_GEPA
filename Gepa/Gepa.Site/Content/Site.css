@@ -207,15 +207,11 @@ hr {
     }
 
 .removeClassPlan {
-    font-size: 20px;
+    font-size: 18px;
+    color: #f44b42 !important;
 }
-
-    .removeClassPlan i {
-        color: #f44b42;
-    }
-
-    .removeClassPlan:hover i {
-        color: #808080;
+    .removeClassPlan:hover {
+        text-decoration: underline !important;
     }
 
 #classPlansTable th, #classPlansTable tr {
@@ -262,3 +258,11 @@ hr {
 .gepa-features-content span{
     font-weight: bold;
 }
+
+.classPlanRow {
+    font-size: 18px;
+}
+
+    .classPlanRow:hover td {
+        background-color: #d3ffe0;
+    }

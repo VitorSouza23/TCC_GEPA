@@ -330,6 +330,9 @@
   <data name="RegisterClassPlan" xml:space="preserve">
     <value>Cadastrar plano de aula</value>
   </data>
+  <data name="RequiredFields" xml:space="preserve">
+    <value>Campos obrigatórios</value>
+  </data>
   <data name="Save" xml:space="preserve">
     <value>Salvar</value>
   </data>
